@@ -5,7 +5,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>17. プロセシングプラグインを書く &mdash; QGIS Documentation  ドキュメント</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/qgis_docs.css?v=01847ad1" />
       <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
       <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -20,7 +20,7 @@
         <script src="../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../../_static/documentation_options.js?v=c033477b"></script>
-        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
         <script src="../../_static/copybutton.js?v=f281be69"></script>
@@ -28,7 +28,7 @@
         <script>let toggleHintHide = 'Click to hide';</script>
         <script>let toggleOpenOnPrint = 'true';</script>
         <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
-        <script src="../../_static/translations.js?v=4dbe4bdc"></script>
+        <script src="../../_static/translations.js?v=91613774"></script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/js/theme.js"></script>
@@ -218,22 +218,22 @@
 </div>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">initGui</span></code> メソッドによってプラグインのセットアップを担うPythonファイルでは、幾つかのコードを直す必要があります。</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="n">QgsApplication</span>
-<span class="linenos"> 2</span><span class="kn">from</span> <span class="nn">.processing_provider.provider</span> <span class="kn">import</span> <span class="n">Provider</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">QgsApplication</span>
+<span class="linenos"> 2</span><span class="kn">from</span><span class="w"> </span><span class="nn">.processing_provider.provider</span><span class="w"> </span><span class="kn">import</span> <span class="n">Provider</span>
 <span class="linenos"> 3</span>
-<span class="linenos"> 4</span><span class="k">class</span> <span class="nc">YourPluginName</span><span class="p">:</span>
+<span class="linenos"> 4</span><span class="k">class</span><span class="w"> </span><span class="nc">YourPluginName</span><span class="p">:</span>
 <span class="linenos"> 5</span>
-<span class="linenos"> 6</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos"> 6</span>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos"> 7</span>        <span class="bp">self</span><span class="o">.</span><span class="n">provider</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="linenos"> 8</span>
-<span class="linenos"> 9</span>    <span class="k">def</span> <span class="nf">initProcessing</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos"> 9</span>    <span class="k">def</span><span class="w"> </span><span class="nf">initProcessing</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos">10</span>        <span class="bp">self</span><span class="o">.</span><span class="n">provider</span> <span class="o">=</span> <span class="n">Provider</span><span class="p">()</span>
 <span class="linenos">11</span>        <span class="n">QgsApplication</span><span class="o">.</span><span class="n">processingRegistry</span><span class="p">()</span><span class="o">.</span><span class="n">addProvider</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">provider</span><span class="p">)</span>
 <span class="linenos">12</span>
-<span class="linenos">13</span>    <span class="k">def</span> <span class="nf">initGui</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">13</span>    <span class="k">def</span><span class="w"> </span><span class="nf">initGui</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos">14</span>        <span class="bp">self</span><span class="o">.</span><span class="n">initProcessing</span><span class="p">()</span>
 <span class="linenos">15</span>
-<span class="linenos">16</span>    <span class="k">def</span> <span class="nf">unload</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">16</span>    <span class="k">def</span><span class="w"> </span><span class="nf">unload</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos">17</span>        <span class="n">QgsApplication</span><span class="o">.</span><span class="n">processingRegistry</span><span class="p">()</span><span class="o">.</span><span class="n">removeProvider</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">provider</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -242,23 +242,23 @@
 <ul>
 <li><p>白紙の <code class="file docutils literal notranslate"><span class="pre">__init__.py</span></code> ファイル。このファイルは妥当なPythonパッケージを作るために必要です。</p></li>
 <li><p><code class="file docutils literal notranslate"><span class="pre">provider.py</span></code> ファイルはプロセッシングプロバイダを生成しあなたのアルゴリズムを外部から使えるようにします。</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="n">QgsProcessingProvider</span>
-<span class="linenos"> 2</span><span class="kn">from</span> <span class="nn">qgis.PyQt.QtGui</span> <span class="kn">import</span> <span class="n">QIcon</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">QgsProcessingProvider</span>
+<span class="linenos"> 2</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.PyQt.QtGui</span><span class="w"> </span><span class="kn">import</span> <span class="n">QIcon</span>
 <span class="linenos"> 3</span>
-<span class="linenos"> 4</span><span class="kn">from</span> <span class="nn">.example_processing_algorithm</span> <span class="kn">import</span> <span class="n">ExampleProcessingAlgorithm</span>
+<span class="linenos"> 4</span><span class="kn">from</span><span class="w"> </span><span class="nn">.example_processing_algorithm</span><span class="w"> </span><span class="kn">import</span> <span class="n">ExampleProcessingAlgorithm</span>
 <span class="linenos"> 5</span>
 <span class="linenos"> 6</span>
-<span class="linenos"> 7</span><span class="k">class</span> <span class="nc">Provider</span><span class="p">(</span><span class="n">QgsProcessingProvider</span><span class="p">):</span>
+<span class="linenos"> 7</span><span class="k">class</span><span class="w"> </span><span class="nc">Provider</span><span class="p">(</span><span class="n">QgsProcessingProvider</span><span class="p">):</span>
 <span class="linenos"> 8</span>
 <span class="linenos"> 9</span><span class="w">    </span><span class="sd">&quot;&quot;&quot; The provider of our plugin. &quot;&quot;&quot;</span>
 <span class="linenos">10</span>
-<span class="linenos">11</span>    <span class="k">def</span> <span class="nf">loadAlgorithms</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">11</span>    <span class="k">def</span><span class="w"> </span><span class="nf">loadAlgorithms</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos">12</span><span class="w">        </span><span class="sd">&quot;&quot;&quot; Load each algorithm into the current provider. &quot;&quot;&quot;</span>
 <span class="linenos">13</span>        <span class="bp">self</span><span class="o">.</span><span class="n">addAlgorithm</span><span class="p">(</span><span class="n">ExampleProcessingAlgorithm</span><span class="p">())</span>
 <span class="linenos">14</span>        <span class="c1"># add additional algorithms here</span>
 <span class="linenos">15</span>        <span class="c1"># self.addAlgorithm(MyOtherAlgorithm())</span>
 <span class="linenos">16</span>
-<span class="linenos">17</span>    <span class="k">def</span> <span class="nf">id</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="linenos">17</span>    <span class="k">def</span><span class="w"> </span><span class="nf">id</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="linenos">18</span><span class="w">        </span><span class="sd">&quot;&quot;&quot;The ID of your plugin, used for identifying the provider.</span>
 <span class="linenos">19</span>
 <span class="linenos">20</span><span class="sd">        This string should be a unique, short, character only string,</span>
@@ -266,7 +266,7 @@
 <span class="linenos">22</span><span class="sd">        &quot;&quot;&quot;</span>
 <span class="linenos">23</span>        <span class="k">return</span> <span class="s1">&#39;yourplugin&#39;</span>
 <span class="linenos">24</span>
-<span class="linenos">25</span>    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="linenos">25</span>    <span class="k">def</span><span class="w"> </span><span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
 <span class="linenos">26</span><span class="w">        </span><span class="sd">&quot;&quot;&quot;The human friendly name of your plugin in Processing.</span>
 <span class="linenos">27</span>
 <span class="linenos">28</span><span class="sd">        This string should be as short as possible (e.g. &quot;Lastools&quot;, not</span>
@@ -274,7 +274,7 @@
 <span class="linenos">30</span><span class="sd">        &quot;&quot;&quot;</span>
 <span class="linenos">31</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s1">&#39;Your plugin&#39;</span><span class="p">)</span>
 <span class="linenos">32</span>
-<span class="linenos">33</span>    <span class="k">def</span> <span class="nf">icon</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QIcon</span><span class="p">:</span>
+<span class="linenos">33</span>    <span class="k">def</span><span class="w"> </span><span class="nf">icon</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">QIcon</span><span class="p">:</span>
 <span class="linenos">34</span><span class="w">        </span><span class="sd">&quot;&quot;&quot;Should return a QIcon which is used for your provider inside</span>
 <span class="linenos">35</span><span class="sd">        the Processing toolbox.</span>
 <span class="linenos">36</span><span class="sd">        &quot;&quot;&quot;</span>
@@ -282,7 +282,7 @@
 </pre></div>
 </div>
 </li>
-<li><p><code class="file docutils literal notranslate"><span class="pre">example_processing_algorithm.py</span></code> ファイルはサンプルアルゴリズムを含みます。 <a class="reference external" href="https://github.com/qgis/QGIS/blob/release-3_40/python/plugins/processing/script/ScriptTemplate.py">script template file</a> の内容をコピー＆ペーストして、自分の必要に合わせて修正してください。</p></li>
+<li><p><code class="file docutils literal notranslate"><span class="pre">example_processing_algorithm.py</span></code> ファイルはサンプルアルゴリズムを含みます。 <a class="extlink-source reference external" href="https://github.com/qgis/QGIS/blob/release-3_40/python/plugins/processing/script/ScriptTemplate.py">script template file</a> の内容をコピー＆ペーストして、自分の必要に合わせて修正してください。</p></li>
 </ul>
 </li>
 </ol>
@@ -315,7 +315,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 6月 28, 14:20 +0900
+      <span class="lastupdated">最終更新: 2025 6月 29, 00:54 +0900
       </span></p>
   </div>
 

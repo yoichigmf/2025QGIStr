@@ -5,7 +5,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>23.9. 新たなプロセシングアルゴリズムをPythonスクリプトで作成する &mdash; QGIS Documentation  ドキュメント</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/qgis_docs.css?v=01847ad1" />
       <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
       <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
@@ -20,7 +20,7 @@
         <script src="../../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../../../_static/documentation_options.js?v=c033477b"></script>
-        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/doctools.js?v=9a2dae69"></script>
         <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
         <script src="../../../_static/copybutton.js?v=f281be69"></script>
@@ -28,7 +28,7 @@
         <script>let toggleHintHide = 'Click to hide';</script>
         <script>let toggleOpenOnPrint = 'true';</script>
         <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
-        <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
+        <script src="../../../_static/translations.js?v=91613774"></script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/js/theme.js"></script>
@@ -244,8 +244,8 @@
 <li><p>バッファ操作の結果を使ってラスタレイヤを作ります</p></li>
 <li><p>バッファレイヤ,ラスタレイヤと地物の数を返します</p></li>
 </ol>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span><span class="kn">from</span> <span class="nn">qgis.PyQt.QtCore</span> <span class="kn">import</span> <span class="n">QCoreApplication</span>
-<span class="linenos">  2</span><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="p">(</span><span class="n">QgsProcessing</span><span class="p">,</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">  1</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.PyQt.QtCore</span><span class="w"> </span><span class="kn">import</span> <span class="n">QCoreApplication</span>
+<span class="linenos">  2</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.core</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span><span class="n">QgsProcessing</span><span class="p">,</span>
 <span class="linenos">  3</span>                       <span class="n">QgsProcessingAlgorithm</span><span class="p">,</span>
 <span class="linenos">  4</span>                       <span class="n">QgsProcessingException</span><span class="p">,</span>
 <span class="linenos">  5</span>                       <span class="n">QgsProcessingOutputNumber</span><span class="p">,</span>
@@ -253,57 +253,57 @@
 <span class="linenos">  7</span>                       <span class="n">QgsProcessingParameterFeatureSource</span><span class="p">,</span>
 <span class="linenos">  8</span>                       <span class="n">QgsProcessingParameterVectorDestination</span><span class="p">,</span>
 <span class="linenos">  9</span>                       <span class="n">QgsProcessingParameterRasterDestination</span><span class="p">)</span>
-<span class="linenos"> 10</span><span class="kn">from</span> <span class="nn">qgis</span> <span class="kn">import</span> <span class="n">processing</span>
+<span class="linenos"> 10</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis</span><span class="w"> </span><span class="kn">import</span> <span class="n">processing</span>
 <span class="linenos"> 11</span>
 <span class="linenos"> 12</span>
-<span class="linenos"> 13</span><span class="k">class</span> <span class="nc">ExampleProcessingAlgorithm</span><span class="p">(</span><span class="n">QgsProcessingAlgorithm</span><span class="p">):</span>
+<span class="linenos"> 13</span><span class="k">class</span><span class="w"> </span><span class="nc">ExampleProcessingAlgorithm</span><span class="p">(</span><span class="n">QgsProcessingAlgorithm</span><span class="p">):</span>
 <span class="linenos"> 14</span><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="linenos"> 15</span><span class="sd">    This is an example algorithm that takes a vector layer,</span>
 <span class="linenos"> 16</span><span class="sd">    creates some new layers and returns some results.</span>
 <span class="linenos"> 17</span><span class="sd">    &quot;&quot;&quot;</span>
 <span class="linenos"> 18</span>
-<span class="linenos"> 19</span>    <span class="k">def</span> <span class="nf">tr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">string</span><span class="p">):</span>
+<span class="linenos"> 19</span>    <span class="k">def</span><span class="w"> </span><span class="nf">tr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">string</span><span class="p">):</span>
 <span class="linenos"> 20</span><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="linenos"> 21</span><span class="sd">        Returns a translatable string with the self.tr() function.</span>
 <span class="linenos"> 22</span><span class="sd">        &quot;&quot;&quot;</span>
 <span class="linenos"> 23</span>        <span class="k">return</span> <span class="n">QCoreApplication</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="s1">&#39;Processing&#39;</span><span class="p">,</span> <span class="n">string</span><span class="p">)</span>
 <span class="linenos"> 24</span>
-<span class="linenos"> 25</span>    <span class="k">def</span> <span class="nf">createInstance</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos"> 25</span>    <span class="k">def</span><span class="w"> </span><span class="nf">createInstance</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos"> 26</span>        <span class="c1"># Must return a new copy of your algorithm.</span>
 <span class="linenos"> 27</span>        <span class="k">return</span> <span class="n">ExampleProcessingAlgorithm</span><span class="p">()</span>
 <span class="linenos"> 28</span>
-<span class="linenos"> 29</span>    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos"> 29</span>    <span class="k">def</span><span class="w"> </span><span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos"> 30</span><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="linenos"> 31</span><span class="sd">        Returns the unique algorithm name.</span>
 <span class="linenos"> 32</span><span class="sd">        &quot;&quot;&quot;</span>
 <span class="linenos"> 33</span>        <span class="k">return</span> <span class="s1">&#39;bufferrasterextend&#39;</span>
 <span class="linenos"> 34</span>
-<span class="linenos"> 35</span>    <span class="k">def</span> <span class="nf">displayName</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos"> 35</span>    <span class="k">def</span><span class="w"> </span><span class="nf">displayName</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos"> 36</span><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="linenos"> 37</span><span class="sd">        Returns the translated algorithm name.</span>
 <span class="linenos"> 38</span><span class="sd">        &quot;&quot;&quot;</span>
 <span class="linenos"> 39</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s1">&#39;Buffer and export to raster (extend)&#39;</span><span class="p">)</span>
 <span class="linenos"> 40</span>
-<span class="linenos"> 41</span>    <span class="k">def</span> <span class="nf">group</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos"> 41</span>    <span class="k">def</span><span class="w"> </span><span class="nf">group</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos"> 42</span><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="linenos"> 43</span><span class="sd">        Returns the name of the group this algorithm belongs to.</span>
 <span class="linenos"> 44</span><span class="sd">        &quot;&quot;&quot;</span>
 <span class="linenos"> 45</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s1">&#39;Example scripts&#39;</span><span class="p">)</span>
 <span class="linenos"> 46</span>
-<span class="linenos"> 47</span>    <span class="k">def</span> <span class="nf">groupId</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos"> 47</span>    <span class="k">def</span><span class="w"> </span><span class="nf">groupId</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos"> 48</span><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="linenos"> 49</span><span class="sd">        Returns the unique ID of the group this algorithm belongs</span>
 <span class="linenos"> 50</span><span class="sd">        to.</span>
 <span class="linenos"> 51</span><span class="sd">        &quot;&quot;&quot;</span>
 <span class="linenos"> 52</span>        <span class="k">return</span> <span class="s1">&#39;examplescripts&#39;</span>
 <span class="linenos"> 53</span>
-<span class="linenos"> 54</span>    <span class="k">def</span> <span class="nf">shortHelpString</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos"> 54</span>    <span class="k">def</span><span class="w"> </span><span class="nf">shortHelpString</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos"> 55</span><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="linenos"> 56</span><span class="sd">        Returns a localised short help string for the algorithm.</span>
 <span class="linenos"> 57</span><span class="sd">        &quot;&quot;&quot;</span>
 <span class="linenos"> 58</span>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">tr</span><span class="p">(</span><span class="s1">&#39;Example algorithm short description&#39;</span><span class="p">)</span>
 <span class="linenos"> 59</span>
-<span class="linenos"> 60</span>    <span class="k">def</span> <span class="nf">initAlgorithm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="linenos"> 60</span>    <span class="k">def</span><span class="w"> </span><span class="nf">initAlgorithm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="linenos"> 61</span><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="linenos"> 62</span><span class="sd">        Here we define the inputs and outputs of the algorithm.</span>
 <span class="linenos"> 63</span><span class="sd">        &quot;&quot;&quot;</span>
@@ -354,7 +354,7 @@
 <span class="linenos">108</span>            <span class="p">)</span>
 <span class="linenos">109</span>        <span class="p">)</span>
 <span class="linenos">110</span>
-<span class="linenos">111</span>    <span class="k">def</span> <span class="nf">processAlgorithm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">feedback</span><span class="p">):</span>
+<span class="linenos">111</span>    <span class="k">def</span><span class="w"> </span><span class="nf">processAlgorithm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">feedback</span><span class="p">):</span>
 <span class="linenos">112</span><span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="linenos">113</span><span class="sd">        Here is where the processing itself takes place.</span>
 <span class="linenos">114</span><span class="sd">        &quot;&quot;&quot;</span>
@@ -493,9 +493,9 @@
 <li><p>バッファ操作の結果を使ってラスタレイヤを作ります</p></li>
 <li><p>バッファレイヤ,ラスタレイヤと地物の数を返します</p></li>
 </ol>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">qgis</span> <span class="kn">import</span> <span class="n">processing</span>
-<span class="linenos"> 2</span><span class="kn">from</span> <span class="nn">qgis.processing</span> <span class="kn">import</span> <span class="n">alg</span>
-<span class="linenos"> 3</span><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="n">QgsProject</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis</span><span class="w"> </span><span class="kn">import</span> <span class="n">processing</span>
+<span class="linenos"> 2</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.processing</span><span class="w"> </span><span class="kn">import</span> <span class="n">alg</span>
+<span class="linenos"> 3</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">QgsProject</span>
 <span class="linenos"> 4</span>
 <span class="linenos"> 5</span><span class="nd">@alg</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;bufferrasteralg&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Buffer and export to raster (alg)&#39;</span><span class="p">,</span>
 <span class="linenos"> 6</span>     <span class="n">group</span><span class="o">=</span><span class="s1">&#39;examplescripts&#39;</span><span class="p">,</span> <span class="n">group_label</span><span class="o">=</span><span class="s1">&#39;Example scripts&#39;</span><span class="p">)</span>
@@ -513,7 +513,7 @@
 <span class="linenos">18</span><span class="nd">@alg</span><span class="o">.</span><span class="n">output</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="n">alg</span><span class="o">.</span><span class="n">NUMBER</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;NUMBEROFFEATURES&#39;</span><span class="p">,</span>
 <span class="linenos">19</span>            <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Number of features processed&#39;</span><span class="p">)</span>
 <span class="linenos">20</span>
-<span class="linenos">21</span><span class="k">def</span> <span class="nf">bufferrasteralg</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">feedback</span><span class="p">,</span> <span class="n">inputs</span><span class="p">):</span>
+<span class="linenos">21</span><span class="k">def</span><span class="w"> </span><span class="nf">bufferrasteralg</span><span class="p">(</span><span class="n">instance</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">feedback</span><span class="p">,</span> <span class="n">inputs</span><span class="p">):</span>
 <span class="linenos">22</span><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="linenos">23</span><span class="sd">    Description of the algorithm.</span>
 <span class="linenos">24</span><span class="sd">    (If there is no comment here, you will get an error)</span>
@@ -605,7 +605,7 @@
 <li><p>あなたのアルゴリズム作成する出力について常に宣言して下さい.</p></li>
 <li><p>メッセージボックスを表示したり、スクリプトのGUI要素を使用したりしないでください。ユーザーと通信する場合は、フィードバックオブジェクトのメソッド（ <a class="reference external" href="https://qgis.org/pyqgis/3.40/core/QgsProcessingFeedback.html#qgis.core.QgsProcessingFeedback" title="(in QGIS Python API v3.40)"><code class="xref py py-class docutils literal notranslate"><span class="pre">QgsProcessingFeedback</span></code></a> ）を使用するか、 <a class="reference external" href="https://qgis.org/pyqgis/3.40/core/QgsProcessingException.html#qgis.core.QgsProcessingException" title="(in QGIS Python API v3.40)"><code class="xref py py-class docutils literal notranslate"><span class="pre">QgsProcessingException</span></code></a> をスローします。</p></li>
 </ul>
-<p>QGISにはすでに多くのプロセシングアルゴリズムが用意されています。コードは <a class="reference external" href="https://github.com/qgis/QGIS/blob/release-3_40/python/plugins/processing/algs/qgis">QGIS</a> のレポにあります。</p>
+<p>QGISにはすでに多くのプロセシングアルゴリズムが用意されています。コードは <a class="extlink-source reference external" href="https://github.com/qgis/QGIS/blob/release-3_40/python/plugins/processing/algs/qgis">QGIS</a> のレポにあります。</p>
 </section>
 </section>
 
@@ -621,7 +621,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 6月 28, 14:20 +0900
+      <span class="lastupdated">最終更新: 2025 6月 29, 00:54 +0900
       </span></p>
   </div>
 

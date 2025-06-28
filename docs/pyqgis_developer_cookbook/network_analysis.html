@@ -5,7 +5,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>19. ネットワーク分析ライブラリ &mdash; QGIS Documentation  ドキュメント</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/qgis_docs.css?v=01847ad1" />
       <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
       <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -20,7 +20,7 @@
         <script src="../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../../_static/documentation_options.js?v=c033477b"></script>
-        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
         <script src="../../_static/copybutton.js?v=f281be69"></script>
@@ -28,7 +28,7 @@
         <script>let toggleHintHide = 'Click to hide';</script>
         <script>let toggleOpenOnPrint = 'true';</script>
         <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
-        <script src="../../_static/translations.js?v=4dbe4bdc"></script>
+        <script src="../../_static/translations.js?v=91613774"></script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/js/theme.js"></script>
@@ -199,7 +199,7 @@
 <div class="admonition hint">
 <p class="admonition-title">ヒント</p>
 <p>pyqgisコンソールを使わない場合、このページにあるコードスニペットは次のインポートが必要です:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="p">(</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.core</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
   <span class="n">QgsVectorLayer</span><span class="p">,</span>
   <span class="n">QgsPointXY</span><span class="p">,</span>
 <span class="p">)</span>
@@ -243,7 +243,7 @@
 <p>辺のプロパティを計算するために、プログラミングパターン <a class="reference external" href="https://en.wikipedia.org/wiki/Strategy_pattern">strategy</a> が使用されます。今のところ（経路の長さを考慮する） <a class="reference external" href="https://qgis.org/pyqgis/3.40/analysis/QgsNetworkDistanceStrategy.html#qgis.analysis.QgsNetworkDistanceStrategy" title="(in QGIS Python API v3.40)"><code class="xref py py-class docutils literal notranslate"><span class="pre">QgsNetworkDistanceStrategy</span></code></a> 戦略と（速度も考慮する）:class:<cite>QgsNetworkSpeedStrategy &lt;qgis.analysis.QgsNetworkSpeedStrategy&gt;</cite> 戦略のみが利用可能です。すべての必要なパラメータを使用する独自の戦略を実装することができます。例えば、RoadGraphプラグインでは、属性から辺の長さと速度の値を使用して移動時間を計算する戦略を使用しています。</p>
 <p>では手順に行きましょう。</p>
 <p>まず、このライブラリを使うには、解析モジュールをインポートする必要があります</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">qgis.analysis</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.analysis</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 </pre></div>
 </div>
 <p>それからディレクタを作成するためのいくつかの例</p>
@@ -357,11 +357,11 @@
 <p class="admonition-title">警告</p>
 <p>このコードは例としてだけ使ってください。これは <a class="reference external" href="https://qgis.org/pyqgis/3.40/gui/QgsRubberBand.html#qgis.gui.QgsRubberBand" title="(in QGIS Python API v3.40)"><code class="xref py py-class docutils literal notranslate"><span class="pre">QgsRubberBand</span></code></a> オブジェクトを大量に生成するので、大きなデータセットでは遅くなるかもしれません。</p>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="linenos"> 2</span><span class="kn">from</span> <span class="nn">qgis.gui</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="linenos"> 3</span><span class="kn">from</span> <span class="nn">qgis.analysis</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="linenos"> 4</span><span class="kn">from</span> <span class="nn">qgis.PyQt.QtCore</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="linenos"> 5</span><span class="kn">from</span> <span class="nn">qgis.PyQt.QtGui</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.core</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="linenos"> 2</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.gui</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="linenos"> 3</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.analysis</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="linenos"> 4</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.PyQt.QtCore</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="linenos"> 5</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.PyQt.QtGui</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="linenos"> 6</span>
 <span class="linenos"> 7</span><span class="n">vectorLayer</span> <span class="o">=</span> <span class="n">QgsVectorLayer</span><span class="p">(</span><span class="s1">&#39;testdata/network.gpkg|layername=network_lines&#39;</span><span class="p">,</span> <span class="s1">&#39;lines&#39;</span><span class="p">)</span>
 <span class="linenos"> 8</span><span class="n">director</span> <span class="o">=</span> <span class="n">QgsVectorLayerDirector</span><span class="p">(</span><span class="n">vectorLayer</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">QgsVectorLayerDirector</span><span class="o">.</span><span class="n">DirectionBoth</span><span class="p">)</span>
@@ -389,11 +389,11 @@
 </pre></div>
 </div>
 <p>同じことですが、<a class="reference external" href="https://qgis.org/pyqgis/3.40/analysis/QgsGraphAnalyzer.html#qgis.analysis.QgsGraphAnalyzer.dijkstra" title="(in QGIS Python API v3.40)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">dijkstra()</span></code></a> メソッドを使います</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="linenos"> 2</span><span class="kn">from</span> <span class="nn">qgis.gui</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="linenos"> 3</span><span class="kn">from</span> <span class="nn">qgis.analysis</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="linenos"> 4</span><span class="kn">from</span> <span class="nn">qgis.PyQt.QtCore</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="linenos"> 5</span><span class="kn">from</span> <span class="nn">qgis.PyQt.QtGui</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.core</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="linenos"> 2</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.gui</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="linenos"> 3</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.analysis</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="linenos"> 4</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.PyQt.QtCore</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="linenos"> 5</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.PyQt.QtGui</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="linenos"> 6</span>
 <span class="linenos"> 7</span><span class="n">vectorLayer</span> <span class="o">=</span> <span class="n">QgsVectorLayer</span><span class="p">(</span><span class="s1">&#39;testdata/network.gpkg|layername=network_lines&#39;</span><span class="p">,</span> <span class="s1">&#39;lines&#39;</span><span class="p">)</span>
 <span class="linenos"> 8</span>
@@ -435,12 +435,12 @@
 </div>
 <p>この時点において、この経路で走行中に訪問される頂点の反転リストの形（頂点は逆順で終点から始点へと列挙されている）で、経路が得られます。</p>
 <p>以下は、QGIS Pythonコンソールで <a class="reference external" href="https://qgis.org/pyqgis/3.40/analysis/QgsGraphAnalyzer.html#qgis.analysis.QgsGraphAnalyzer.shortestTree" title="(in QGIS Python API v3.40)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">shortestTree()</span></code></a> メソッドを使うサンプルコードです（TOCにあるラインストリングレイヤを読み込んで選択し、コード内の座標を自分のものに置き換える必要があるかもしれません）</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="linenos"> 2</span><span class="kn">from</span> <span class="nn">qgis.gui</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="linenos"> 3</span><span class="kn">from</span> <span class="nn">qgis.analysis</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.core</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="linenos"> 2</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.gui</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="linenos"> 3</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.analysis</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="linenos"> 4</span>
-<span class="linenos"> 5</span><span class="kn">from</span> <span class="nn">qgis.PyQt.QtCore</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="linenos"> 6</span><span class="kn">from</span> <span class="nn">qgis.PyQt.QtGui</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="linenos"> 5</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.PyQt.QtCore</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="linenos"> 6</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.PyQt.QtGui</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="linenos"> 7</span>
 <span class="linenos"> 8</span><span class="n">vectorLayer</span> <span class="o">=</span> <span class="n">QgsVectorLayer</span><span class="p">(</span><span class="s1">&#39;testdata/network.gpkg|layername=network_lines&#39;</span><span class="p">,</span> <span class="s1">&#39;lines&#39;</span><span class="p">)</span>
 <span class="linenos"> 9</span><span class="n">builder</span> <span class="o">=</span> <span class="n">QgsGraphBuilder</span><span class="p">(</span><span class="n">vectorLayer</span><span class="o">.</span><span class="n">sourceCrs</span><span class="p">())</span>
@@ -488,12 +488,12 @@
 </pre></div>
 </div>
 <p>以下は同じサンプルですが、 <a class="reference external" href="https://qgis.org/pyqgis/3.40/analysis/QgsGraphAnalyzer.html#qgis.analysis.QgsGraphAnalyzer.dijkstra" title="(in QGIS Python API v3.40)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">dijkstra()</span></code></a> メソッドを使用しています</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="linenos"> 2</span><span class="kn">from</span> <span class="nn">qgis.gui</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="linenos"> 3</span><span class="kn">from</span> <span class="nn">qgis.analysis</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.core</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="linenos"> 2</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.gui</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="linenos"> 3</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.analysis</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="linenos"> 4</span>
-<span class="linenos"> 5</span><span class="kn">from</span> <span class="nn">qgis.PyQt.QtCore</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="linenos"> 6</span><span class="kn">from</span> <span class="nn">qgis.PyQt.QtGui</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="linenos"> 5</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.PyQt.QtCore</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="linenos"> 6</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.PyQt.QtGui</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 <span class="linenos"> 7</span>
 <span class="linenos"> 8</span><span class="n">vectorLayer</span> <span class="o">=</span> <span class="n">QgsVectorLayer</span><span class="p">(</span><span class="s1">&#39;testdata/network.gpkg|layername=network_lines&#39;</span><span class="p">,</span> <span class="s1">&#39;lines&#39;</span><span class="p">)</span>
 <span class="linenos"> 9</span><span class="n">director</span> <span class="o">=</span> <span class="n">QgsVectorLayerDirector</span><span class="p">(</span><span class="n">vectorLayer</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">QgsVectorLayerDirector</span><span class="o">.</span><span class="n">DirectionBoth</span><span class="p">)</span>
@@ -608,7 +608,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 6月 28, 14:20 +0900
+      <span class="lastupdated">最終更新: 2025 6月 29, 00:54 +0900
       </span></p>
   </div>
 

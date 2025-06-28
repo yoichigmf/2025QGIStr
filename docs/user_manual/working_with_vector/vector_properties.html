@@ -5,7 +5,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>12.1. ベクタプロパティダイアログ &mdash; QGIS Documentation  ドキュメント</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/qgis_docs.css?v=01847ad1" />
       <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
       <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
@@ -20,7 +20,7 @@
         <script src="../../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../../../_static/documentation_options.js?v=c033477b"></script>
-        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/doctools.js?v=9a2dae69"></script>
         <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
         <script src="../../../_static/copybutton.js?v=f281be69"></script>
@@ -28,7 +28,7 @@
         <script>let toggleHintHide = 'Click to hide';</script>
         <script>let toggleOpenOnPrint = 'true';</script>
         <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
-        <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
+        <script src="../../../_static/translations.js?v=91613774"></script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/js/theme.js"></script>
@@ -421,7 +421,7 @@
 <p><a class="reference internal" href="../../../_images/metadata.png"><img alt="metadata" src="../../../_images/metadata.png" style="width: 1.5em;" /></a> <span class="guilabel">情報</span> タブは読み取り専用で、現在のレイヤの要約された情報やメタデータをさっと掴むことができる興味深い場所です。提供される情報には、以下のものがあります：</p>
 <ul class="simple">
 <li><p>一般情報：プロジェクト内での名前、ソースへのパス、付随的なファイルのリスト、最終更新時刻、ファイルの大きさ、使用しているプロバイダ</p></li>
-<li><p>カスタムプロパティは、アクティブなプロジェクトにレイヤに関する追加情報を格納するために使用されます。デフォルトのカスタムプロパティには、<a class="reference internal" href="../introduction/general_tools.html#layer-notes"><span class="std std-ref">レイヤノート</span></a>、<a class="reference internal" href="#vectorlegendmenu"><span class="std std-ref">凡例ウィジェット</span></a>、<a class="reference internal" href="../introduction/general_tools.html#general-tools-variables"><span class="std std-ref">レイヤ変数</span></a>、<a class="reference internal" href="#vector-attributes-menu"><span class="std std-ref">フォームプロパティ</span></a> などが含まれます。追加のカスタムプロパティは、PyQGIS を使用して作成および管理できます。具体的には、<a class="reference external" href="https://qgis.org/pyqgis/3.40/qgis.core.QgsMapLayer.setCustomProperty">setCustomProperty()</a> メソッドを通じて行います。</p></li>
+<li><p>カスタムプロパティは、アクティブなプロジェクトにレイヤに関する追加情報を格納するために使用されます。デフォルトのカスタムプロパティには、<a class="reference internal" href="../introduction/general_tools.html#layer-notes"><span class="std std-ref">レイヤノート</span></a>、<a class="reference internal" href="#vectorlegendmenu"><span class="std std-ref">凡例ウィジェット</span></a>、<a class="reference internal" href="../introduction/general_tools.html#general-tools-variables"><span class="std std-ref">レイヤ変数</span></a>、<a class="reference internal" href="#vector-attributes-menu"><span class="std std-ref">フォームプロパティ</span></a> などが含まれます。追加のカスタムプロパティは、PyQGIS を使用して作成および管理できます。具体的には、<a class="extlink-pyqgis reference external" href="https://qgis.org/pyqgis/3.40/qgis.core.QgsMapLayer.setCustomProperty">setCustomProperty()</a> メソッドを通じて行います。</p></li>
 <li><p>レイヤのプロバイダからの情報：ストレージ形式、ジオメトリタイプ、データソースの文字コード、領域、地物数など</p></li>
 <li><p>空間参照システム（CRS）：CRSの名前、単位、投影法、精度、参照（静的か動的か）</p></li>
 <li><p><a class="reference internal" href="#vectormetadatamenu"><span class="std std-ref">入力されたメタデータ</span></a> からの情報：アクセス、領域、リンク、連絡先、履歴など</p></li>
@@ -691,7 +691,7 @@ within( $geometry, @atlas_geometry )
 <li><p>はじめに、カテゴリ値または連続値によるレンダリングをレイヤに適用します。すべてのクラスが同じタイプのシンボルです。</p></li>
 <li><p>次に、クラスに比例シンボロジを適用します：</p>
 <ol class="arabic simple">
-<li><p>分類フレームの上にある <span class="guilabel">変更</span> ボタンをクリックすると、 <span class="xref std std-ref">シンボルセレクタ</span> ダイアログが開きます。</p></li>
+<li><p>分類フレームの上にある <span class="guilabel">変更</span> ボタンをクリックすると、 <a class="reference internal" href="../style_library/symbol_selector.html#symbol-selector"><span class="std std-ref">シンボルセレクタ</span></a> ダイアログが開きます。</p></li>
 <li><p>上で見たのと同様、 <a class="reference internal" href="../../../_images/mIconDataDefine.png"><img alt="dataDefine" src="../../../_images/mIconDataDefine.png" style="width: 1.5em;" /></a> <a class="reference internal" href="../introduction/general_tools.html#data-defined"><span class="std std-ref">データによって定義された上書き</span></a> ウィジェットを使用して、シンボルレイヤの大きさや幅を再スケーリングします。</p></li>
 </ol>
 </li>
@@ -738,10 +738,10 @@ within( $geometry, @atlas_geometry )
 <li><p>選択したラインシンボルの <span class="guilabel">幅を変更する...</span></p></li>
 <li><p>選択したポイントシンボルの <span class="guilabel">サイズを変更...</span></p></li>
 <li><p>選択したポイントシンボルの <span class="guilabel">角度を変更...</span></p></li>
-<li><p><span class="guilabel">現在のルールを再調整する</span> サブメニューを開き、現在のルールを <strong>スケール</strong> 、 <strong>カテゴリ</strong> または <strong>範囲</strong> で絞りこむことができます。ダイアログ下部にある <a class="reference internal" href="#refine-selected-rule"><span class="std std-ref">対応したメニュー</span></a> を選択したときと同様です。</p></li>
+<li><p><span class="guilabel">現在のルールを再調整する</span> サブメニューを開き、現在のルールを <strong>スケール</strong>  、  <strong>カテゴリ</strong>  または  <strong>範囲</strong>  で絞りこむことができます。ダイアログ下部にある <a class="reference internal" href="#refine-selected-rule"><span class="std std-ref">対応したメニュー</span></a>  を選択したときと同様です。</p></li>
 </ul>
 <p>ルールによる定義レンダラーダイアログの行のチェックを外すと、特定のルールやその入れ子になったルールに当てはまる地物がマップキャンバスから隠されます。</p>
-<p>作成したルールはマップの凡例においてもツリー階層で表示されます。マップの凡例でエントリをダブルクリックすると、適用されたシンボルを編集できます。右クリックすると <a class="reference internal" href="../introduction/general_tools.html#editing-style-layer"><span class="std std-ref">さらにオプション</span></a> が表示されます。</p>
+<p>作成したルールはマップの凡例においてもツリー階層で表示されます。マップの凡例でエントリをダブルクリックすると、適用されたシンボルを編集できます。右クリックすると <a class="reference internal" href="../introduction/general_tools.html#editing-style-layer"><span class="std std-ref">さらにオプション</span></a>  が表示されます。</p>
 <p><a class="reference internal" href="#figure-rule-based-symbology"><span class="std std-numref">図 12.7</span></a> の例は、QGISサンプルデータセットの河川レイヤに対するルールによるレンダリングダイアログを示しています。</p>
 <figure class="align-center" id="id27">
 <span id="figure-rule-based-symbology"></span><img alt="../../../_images/rulesymbol_ng_line.png" src="../../../_images/rulesymbol_ng_line.png" />
@@ -755,9 +755,9 @@ within( $geometry, @atlas_geometry )
 <p><a class="reference internal" href="../../../_images/rendererPointDisplacementSymbol.png"><img alt="pointDisplacementSymbol" src="../../../_images/rendererPointDisplacementSymbol.png" style="width: 1.5em;" /></a> <span class="guilabel">点の競合回避</span> レンダラは、互いに与えられた距離の許容範囲内にあるポイント地物を取り、異なる配置方法に従って、それらのシンボルをそれらの重心の周りに配置します。これは、点レイヤの地物が同じ場所にあっても（例 建物内の施設）、すべての地物を視覚化する便利な方法です。</p>
 <p>点の競合回避レンダラを設定するには:</p>
 <ol class="arabic simple">
-<li><p><span class="guilabel">中央シンボル</span> を設定します: 中心にある仮想的な点がどのように表示されるか</p></li>
+<li><p><span class="guilabel">中央シンボル</span>  を設定します: 中心にある仮想的な点がどのように表示されるか</p></li>
 <li><p><span class="guilabel">レンダラ</span> の種類を選びます: レイヤ内の地物をどのように分類するか（単一、カテゴリ値、ルール...）</p></li>
-<li><p><span class="guilabel">レンダラの設定...</span> ボタンを押して選択したレンダラに応じた地物のシンボロジを設定します</p></li>
+<li><p><span class="guilabel">レンダラの設定...</span>  ボタンを押して選択したレンダラに応じた地物のシンボロジを設定します</p></li>
 <li><p>近い地物が重なっているとみなされ、同じ仮想的な点上で競合回避する <span class="guilabel">距離</span> 許容範囲を設定します。共通のシンボル単位をサポートします。</p></li>
 <li><p><span class="guilabel">競合する点の配置方法</span> を設定します:</p>
 <ul class="simple">
@@ -766,7 +766,7 @@ within( $geometry, @atlas_geometry )
 <li><p><strong>グリッド</strong> ：規則的な格子を生成し、格子の交点にポイントシンボルを配置します。</p></li>
 </ul>
 </li>
-<li><p>競合回避シンボルは <span class="guilabel">置き換え線</span> 上に配置されます。置き換え線の最小間隔はポイントシンボルレンダラに依存しますが、 <span class="guilabel">ストローク幅</span>、 <span class="guilabel">ストローク色</span>、 <span class="guilabel">サイズ調整</span> などの設定をカスタマイズすることができます（例えば、レンダリングされたポイントの間隔を広げるなど）。</p></li>
+<li><p>競合回避シンボルは <span class="guilabel">置き換え線</span> 上に配置されます。置き換え線の最小間隔はポイントシンボルレンダラに依存しますが、 <span class="guilabel">ストローク幅</span> 、 <span class="guilabel">ストローク色</span> 、 <span class="guilabel">サイズ調整</span> などの設定をカスタマイズすることができます（例えば、レンダリングされたポイントの間隔を広げるなど）。</p></li>
 <li><p><span class="guilabel">ラベル</span> グループオプションを使用して、ポイントのラベル付けを行います: ラベルは競合回避シンボルの近くに配置され、地物の実際の位置には配置されません。</p>
 <ol class="arabic simple">
 <li><p><span class="guilabel">ラベル属性</span>: ラベル付けに使うレイヤのフィールドを選択します。</p></li>
@@ -790,10 +790,10 @@ within( $geometry, @atlas_geometry )
 </section>
 <section id="point-cluster-renderer">
 <span id="point-cluster"></span><span id="index-9"></span><h4><a class="toc-backref" href="#id105" role="doc-backlink">点のクラスタレンダラー</a><a class="headerlink" href="#point-cluster-renderer" title="Link to this heading"></a></h4>
-<p><a class="reference internal" href="../../../_images/rendererPointDisplacementSymbol.png"><img alt="pointDisplacementSymbol" src="../../../_images/rendererPointDisplacementSymbol.png" style="width: 1.5em;" /></a> <span class="guilabel">点の競合回避</span> レンダラーが最も近いか重ね合うポイント地物の配置を吹き飛ばすのとは異なり、<a class="reference internal" href="../../../_images/rendererPointClusterSymbol.png"><img alt="pointClusterSymbol" src="../../../_images/rendererPointClusterSymbol.png" style="width: 1.5em;" /></a> <span class="guilabel">点のクラスタ</span> レンダラーは近接した点を1つのレンダリングされたマーカーシンボルにグループ化します。互いに指定された距離内にある点は1つのシンボルに統合されます。点の集約は、単に検索距離内の最初のグループを割り当てるのではなく、最も近いグループが形成されるように行われます。</p>
+<p><a class="reference internal" href="../../../_images/rendererPointDisplacementSymbol.png"><img alt="pointDisplacementSymbol" src="../../../_images/rendererPointDisplacementSymbol.png" style="width: 1.5em;" /></a> <span class="guilabel">点の競合回避</span> レンダラーが最も近いか重ね合うポイント地物の配置を吹き飛ばすのとは異なり、<a class="reference internal" href="../../../_images/rendererPointClusterSymbol.png"><img alt="pointClusterSymbol" src="../../../_images/rendererPointClusterSymbol.png" style="width: 1.5em;" /></a> <span class="guilabel">点のクラスタ</span>  レンダラーは近接した点を1つのレンダリングされたマーカーシンボルにグループ化します。互いに指定された距離内にある点は1つのシンボルに統合されます。点の集約は、単に検索距離内の最初のグループを割り当てるのではなく、最も近いグループが形成されるように行われます。</p>
 <p>メインダイアログでは、以下の設定ができます。</p>
 <ol class="arabic simple">
-<li><p><span class="guilabel">クラスタシンボル</span> に点のクラスタを表すシンボルを設定する; デフォルトのレンダリングでは、フォントマーカーシンボルレイヤの <code class="docutils literal notranslate"><span class="pre">&#64;cluster_size</span></code> <a class="reference internal" href="../introduction/general_tools.html#general-tools-variables"><span class="std std-ref">variable</span></a> により集約された地物の数が表示されます。</p></li>
+<li><p><span class="guilabel">クラスタシンボル</span> に点のクラスタを表すシンボルを設定する; デフォルトのレンダリングでは、フォントマーカーシンボルレイヤの <code class="docutils literal notranslate"><span class="pre">&#64;cluster_size</span></code> <a class="reference internal" href="../introduction/general_tools.html#general-tools-variables"><span class="std std-ref">variable</span></a>  により集約された地物の数が表示されます。</p></li>
 <li><p><span class="guilabel">レンダラ</span> の種類、つまりレイヤ内の地物をどのように分類したいか（単一、カテゴリ値、ルール...）を選びます</p></li>
 <li><p><span class="guilabel">レンダラの設定</span> ボタンを押すと、地物のシンボルを通常通り設定することができます。このシンボルはクラスタ化されていない地物にのみ表示され、それ以外の地物には <span class="guilabel">クラスタシンボル</span> が適用されることに注意してください。また、クラスタ内のすべての点地物が同じレンダリングクラスに属し、同じ色が適用される場合、その色はクラスタの <code class="docutils literal notranslate"><span class="pre">&#64;cluster_color</span></code> 変数を表します。</p></li>
 <li><p>地物をクラスタ化する際に考慮する <span class="guilabel">距離</span> の最大値を指定します。共通のシンボル単位をサポートします。</p></li>
@@ -1054,7 +1054,7 @@ in the <span class="guilabel">Layout</span>.</p>
 </section>
 <section id="labels-properties">
 <span id="vector-labels-tab"></span><h2><a class="toc-backref" href="#id117" role="doc-backlink"><span class="section-number">12.1.4. </span>ラベルプロパティ</a><a class="headerlink" href="#labels-properties" title="Link to this heading"></a></h2>
-<p><a class="reference internal" href="../../../_images/labelingSingle.png"><img alt="labelingSingle" src="../../../_images/labelingSingle.png" style="width: 1.5em;" /></a> <span class="guilabel">ラベル</span> プロパティは、ベクタレイヤに対するスマートなラベル付けを設定するために必要かつ適切なすべての機能を提供します。このダイアログには、 <span class="guilabel">レイヤスタイル</span> パネルや <strong>ラベルツールバー</strong> の <a class="reference internal" href="../../../_images/labelingSingle.png"><img alt="labelingSingle" src="../../../_images/labelingSingle.png" style="width: 1.5em;" /></a> <sup>レイヤラベリングオプション</sup> ボタンからもアクセスできます。</p>
+<p><a class="reference internal" href="../../../_images/labelingSingle.png"><img alt="labelingSingle" src="../../../_images/labelingSingle.png" style="width: 1.5em;" /></a> <span class="guilabel">ラベル</span> プロパティは、ベクタレイヤに対するスマートなラベル付けを設定するために必要かつ適切なすべての機能を提供します。このダイアログには、 <span class="guilabel">レイヤスタイル</span>  パネルや  <strong>ラベルツールバー</strong>  の <a class="reference internal" href="../../../_images/labelingSingle.png"><img alt="labelingSingle" src="../../../_images/labelingSingle.png" style="width: 1.5em;" /></a> <sup>レイヤラベリングオプション</sup>  ボタンからもアクセスできます。</p>
 <p>At the top of the dialog, you have:</p>
 <ul class="simple">
 <li><p>a combobox for selecting the appropriate labeling method for the active layer</p></li>
@@ -1079,10 +1079,10 @@ More details at <a class="reference internal" href="#automated-placement"><span 
 <p><span class="caption-number">図 12.26 </span><span class="caption-text">レイヤのラベル設定 - 単一定義</span><a class="headerlink" href="#id46" title="Link to this image"></a></p>
 </figcaption>
 </figure>
-<p>ダイアログの最上部には、 <span class="guilabel">値（Value）</span> のドロップダウンリストがあります。ラベル付けに使用する属性カラムを選択することができます。デフォルトでは、 <a class="reference internal" href="#maptips"><span class="std std-ref">表示名フィールド</span></a> が使用されます。式に基づいてラベルを定義したい場合には、 <a class="reference internal" href="../../../_images/mIconExpression.png"><img alt="expression" src="../../../_images/mIconExpression.png" style="width: 1.5em;" /></a> をクリックします。詳細は <a class="reference internal" href="#labeling-with-expressions"><span class="std std-ref">式に基づいてラベルを定義する</span></a> を参照してください。</p>
+<p>ダイアログの最上部には、 <span class="guilabel">値（Value）</span>  のドロップダウンリストがあります。ラベル付けに使用する属性カラムを選択することができます。デフォルトでは、 <a class="reference internal" href="#maptips"><span class="std std-ref">表示名フィールド</span></a>  が使用されます。式に基づいてラベルを定義したい場合には、 <a class="reference internal" href="../../../_images/mIconExpression.png"><img alt="expression" src="../../../_images/mIconExpression.png" style="width: 1.5em;" /></a> をクリックします。詳細は  <a class="reference internal" href="#labeling-with-expressions"><span class="std std-ref">式に基づいてラベルを定義する</span></a>  を参照してください。</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p><a class="reference internal" href="#vectorlegendmenu"><span class="std std-ref">凡例</span></a> タブでラベル凡例表示を有効にした場合、フォーマット付きのラベルが凡例内のエントリとして表示されます。</p>
+<p><a class="reference internal" href="#vectorlegendmenu"><span class="std std-ref">凡例</span></a>  タブでラベル凡例表示を有効にした場合、フォーマット付きのラベルが凡例内のエントリとして表示されます。</p>
 </div>
 <p>以下は、様々なタブの下でラベルをカスタマイズするために表示されるオプションです。</p>
 <ul class="simple">
@@ -1096,7 +1096,7 @@ More details at <a class="reference internal" href="#automated-placement"><span 
 <li><p><a class="reference internal" href="../../../_images/labelplacement.png"><img alt="labelplacement" src="../../../_images/labelplacement.png" style="width: 1.5em;" /></a> <a class="reference internal" href="../style_library/label_settings.html#labels-placement"><span class="std std-ref">配置</span></a></p></li>
 <li><p><a class="reference internal" href="../../../_images/render.png"><img alt="render" src="../../../_images/render.png" style="width: 1.5em;" /></a> <a class="reference internal" href="../style_library/label_settings.html#labels-rendering"><span class="std std-ref">レンダリング</span></a></p></li>
 </ul>
-<p>各プロパティの設定方法は、 <a class="reference internal" href="../style_library/label_settings.html#showlabels"><span class="std std-ref">ラベルの設定</span></a> にあります。</p>
+<p>各プロパティの設定方法は、 <a class="reference internal" href="../style_library/label_settings.html#showlabels"><span class="std std-ref">ラベルの設定</span></a>  にあります。</p>
 <section id="configuring-project-labeling-rules">
 <span id="labeling-rules"></span><h3><a class="toc-backref" href="#id118" role="doc-backlink"><span class="section-number">12.1.4.1. </span>Configuring project labeling rules</a><a class="headerlink" href="#configuring-project-labeling-rules" title="Link to this heading"></a></h3>
 <p>Pressing the <a class="reference internal" href="../../../_images/mIconLabelingRules.png"><img alt="labelingRules" src="../../../_images/mIconLabelingRules.png" style="width: 1.5em;" /></a> <sup>Configure project labeling rules</sup> button
@@ -1129,7 +1129,7 @@ GEOS version in use.</p>
 </div>
 </li>
 <li><p>Fill the properties at your will; you can provide a more meaningful name to the rule.</p></li>
-<li><p><span class="guilabel">OK</span> を押します。</p></li>
+<li><p><span class="guilabel">OK</span>  を押します。</p></li>
 <li><p>Add as many rules as necessary.</p></li>
 <li><p>If necessary, press <a class="reference internal" href="../../../_images/symbologyEdit.png"><img alt="symbologyEdit" src="../../../_images/symbologyEdit.png" style="width: 1.5em;" /></a> <sup>Edit rule</sup> to modify the selected rule
 or <a class="reference internal" href="../../../_images/symbologyRemove.png"><img alt="symbologyRemove" src="../../../_images/symbologyRemove.png" style="width: 1.5em;" /></a> <sup>Remove rule</sup> to delete it from the project.</p></li>
@@ -1147,7 +1147,7 @@ Hover over a rule to preview its details.</p>
 </section>
 <section id="setting-the-automated-placement-engine">
 <span id="automated-placement"></span><span id="index-19"></span><h3><a class="toc-backref" href="#id119" role="doc-backlink"><span class="section-number">12.1.4.2. </span>自動配置エンジンの設定</a><a class="headerlink" href="#setting-the-automated-placement-engine" title="Link to this heading"></a></h3>
-<p>ラベルの自動的なふるまいに関するプロジェクトレベルの設定を行うために、自動配置設定を使用することができます。 <span class="guilabel">ラベル</span> タブの右上隅にある <a class="reference internal" href="../../../_images/mIconAutoPlacementSettings.png"><img alt="autoPlacementSettings" src="../../../_images/mIconAutoPlacementSettings.png" style="width: 1.5em;" /></a> <sup>自動配置設定（全レイヤに適用）</sup> ボタンをクリックするとダイアログが開き、以下の設定ができます：</p>
+<p>ラベルの自動的なふるまいに関するプロジェクトレベルの設定を行うために、自動配置設定を使用することができます。 <span class="guilabel">ラベル</span> タブの右上隅にある <a class="reference internal" href="../../../_images/mIconAutoPlacementSettings.png"><img alt="autoPlacementSettings" src="../../../_images/mIconAutoPlacementSettings.png" style="width: 1.5em;" /></a> <sup>自動配置設定（全レイヤに適用）</sup>  ボタンをクリックするとダイアログが開き、以下の設定ができます：</p>
 <figure class="align-center" id="id48">
 <span id="figure-automated-placement"></span><img alt="../../../_images/placement_engine.png" src="../../../_images/placement_engine.png" />
 <figcaption>
@@ -1155,7 +1155,7 @@ Hover over a rule to preview its details.</p>
 </figcaption>
 </figure>
 <ul class="simple">
-<li><p><span class="guilabel">候補の数</span> ：ライン地物やポリゴン地物について、地物のサイズに基づき可能なラベル配置の数を計算し割り当てます。地物が長いあるいは広いほど、より多くの候補を持ち、そのラベルは衝突のリスクが減ってより良い配置が可能となります。</p></li>
+<li><p><span class="guilabel">候補の数</span>  :ライン地物やポリゴン地物について、地物のサイズに基づき可能なラベル配置の数を計算し割り当てます。地物が長いあるいは広いほど、より多くの候補を持ち、そのラベルは衝突のリスクが減ってより良い配置が可能となります。</p></li>
 </ul>
 <ul id="render-labels-text">
 <li><p><span class="guilabel">Text rendering</span>: sets the default value for label rendering
@@ -1178,23 +1178,23 @@ when opening the created files, or default fallback fonts will be used to displa
 (Although PDF exports MAY automatically embed some fonts when possible, depending on the user’s platform).</p>
 </div>
 </li>
-<li><p><a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">地図の端のラベルは省略</span> ：マップ範囲から部分的に外れたラベルをレンダリングするかどうかを制御します。チェックを入れると、（見える範囲内で完全なラベルを配置できない場合、）切れたラベルが表示されます。チェックを外すと、部分的にしか見えないラベルはスキップされます。この設定は、 <a class="reference internal" href="../print_composer/composer_items/composer_map.html#layout-map-item"><span class="std std-ref">地図レイアウトのアイテム</span></a> のラベル表示には影響しないことに留意してください。</p></li>
-<li><p><a class="reference internal" href="../../../_images/unchecked.png"><img alt="unchecked" src="../../../_images/unchecked.png" style="width: 1.3em;" /></a> <span class="guilabel">全レイヤの全ラベルを表示（衝突ラベルを含む）</span> ：このオプションはレイヤ単位で設定することもできます（ <a class="reference internal" href="../style_library/label_settings.html#labels-rendering"><span class="std std-ref">レンダリング</span></a> を参照）。</p></li>
-<li><p><a class="reference internal" href="../../../_images/unchecked.png"><img alt="unchecked" src="../../../_images/unchecked.png" style="width: 1.3em;" /></a> <span class="guilabel">位置未定ラベルの表示</span> ：これにより、重要なラベルがマップから（重複やその他の制約のためなどで）欠落しているかどうかを判断することができます。これらのラベルの表示色はカスタマイズ可能です。</p></li>
-<li><p><a class="reference internal" href="../../../_images/unchecked.png"><img alt="unchecked" src="../../../_images/unchecked.png" style="width: 1.3em;" /></a> <span class="guilabel">候補を表示（デバッグ用）</span> ：ラベル配置のために生成された候補を示すボックスすべてをマップ上に描画するかどうかを制御します。ラベル名のとおり、これはさまざまなラベル設定がもたらす効果のデバッグとテストのためにのみ有用です。これは、 <a class="reference internal" href="#label-toolbar"><span class="std std-ref">ラベルツールバー</span></a> のツールを使用して手動でより良い配置を行うのにも便利です。</p></li>
+<li><p><a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">地図の端のラベルは省略</span> : マップ範囲から部分的に外れたラベルをレンダリングするかどうかを制御します。チェックを入れると、（見える範囲内で完全なラベルを配置できない場合、）切れたラベルが表示されます。チェックを外すと、部分的にしか見えないラベルはスキップされます。この設定は、 <a class="reference internal" href="../print_composer/composer_items/composer_map.html#layout-map-item"><span class="std std-ref">地図レイアウトのアイテム</span></a>  のラベル表示には影響しないことに留意してください。</p></li>
+<li><p><a class="reference internal" href="../../../_images/unchecked.png"><img alt="unchecked" src="../../../_images/unchecked.png" style="width: 1.3em;" /></a> <span class="guilabel">全レイヤの全ラベルを表示（衝突ラベルを含む）</span>  :このオプションはレイヤ単位で設定することもできます（  <a class="reference internal" href="../style_library/label_settings.html#labels-rendering"><span class="std std-ref">レンダリング</span></a>  を参照）。</p></li>
+<li><p><a class="reference internal" href="../../../_images/unchecked.png"><img alt="unchecked" src="../../../_images/unchecked.png" style="width: 1.3em;" /></a> <span class="guilabel">位置未定ラベルの表示</span>  :これにより、重要なラベルがマップから（重複やその他の制約のためなどで）欠落しているかどうかを判断することができます。これらのラベルの表示色はカスタマイズ可能です。</p></li>
+<li><p><a class="reference internal" href="../../../_images/unchecked.png"><img alt="unchecked" src="../../../_images/unchecked.png" style="width: 1.3em;" /></a> <span class="guilabel">候補を表示（デバッグ用）</span>  :ラベル配置のために生成された候補を示すボックスすべてをマップ上に描画するかどうかを制御します。ラベル名のとおり、これはさまざまなラベル設定がもたらす効果のデバッグとテストのためにのみ有用です。これは、 <a class="reference internal" href="#label-toolbar"><span class="std std-ref">ラベルツールバー</span></a>  のツールを使用して手動でより良い配置を行うのにも便利です。</p></li>
 <li><p><a class="reference internal" href="../../../_images/unchecked.png"><img alt="unchecked" src="../../../_images/unchecked.png" style="width: 1.3em;" /></a> <span class="guilabel">Show label metrics (for debugging)</span>:
 displays the text bounds of the label in red and baselines in blue</p></li>
-<li><p><span class="guilabel">ラベルバージョン</span> ：QGISはラベルの自動配置について2つの異なるバージョンをサポートしています：</p>
+<li><p><span class="guilabel">プロジェクトラベルバージョン</span>  :QGISはラベルの自動配置について2つの異なるバージョンをサポートしています:</p>
 <ul class="simple">
-<li><p><span class="guilabel">Version 1</span> ：古いシステム（QGIS3.10 以前のバージョンで使用されており、これらのバージョンで作成されたプロジェクトをQGIS3.12以降で開く時に使用）です。 Version 1 では、ラベルや障害物の優先順位を「大まかな目安」としてのみ扱っており、優先度の高い障害物の上に優先度の低いラベルが配置される可能性があります。このため、このバージョンを使用する場合には望むラベル付け結果を得ることが難しい場合があり、古いプロジェクトとの互換性を保つためでしか推奨されません。</p></li>
-<li><p><span class="guilabel">Version 2 （推奨）</span> ：これは、QGIS 3.12以降で作成された新規プロジェクトでのデフォルトのシステムです。Version 2 では、どんな時にラベルが <a class="reference internal" href="../style_library/label_settings.html#labels-obstacles"><span class="std std-ref">障害物</span></a> に重なるのを許可するかを決定するロジックが変更修正されました。新しいロジックでは、 ラベル優先度に比べて障害物の重みづけが大きい障害物にラベルが重なることを禁止しています。その結果、このバージョンではラベル付けの結果がより予測しやすく、理解しやすくなりました。</p></li>
+<li><p><span class="guilabel">Version 1</span> : 古いシステム（QGIS3.10 以前のバージョンで使用されており、これらのバージョンで作成されたプロジェクトをQGIS3.12以降で開く時に使用）です。 Version 1 では、ラベルや障害物の優先順位を「大まかな目安」としてのみ扱っており、優先度の高い障害物の上に優先度の低いラベルが配置される可能性があります。このため、このバージョンを使用する場合には望むラベル付け結果を得ることが難しい場合があり、古いプロジェクトとの互換性を保つためでしか推奨されません。</p></li>
+<li><p><span class="guilabel">Version 2 （推奨）</span> : これは、QGIS 3.12以降で作成された新規プロジェクトでのデフォルトのシステムです。Version 2 では、どんな時にラベルが <a class="reference internal" href="../style_library/label_settings.html#labels-obstacles"><span class="std std-ref">障害物</span></a>  に重なるのを許可するかを決定するロジックが変更修正されました。新しいロジックでは、 ラベル優先度に比べて障害物の重みづけが大きい障害物にラベルが重なることを禁止しています。その結果、このバージョンではラベル付けの結果がより予測しやすく、理解しやすくなりました。</p></li>
 </ul>
 </li>
 </ul>
 </section>
 <section id="rule-based-labeling">
 <span id="id11"></span><h3><a class="toc-backref" href="#id120" role="doc-backlink"><span class="section-number">12.1.4.3. </span>ルールに基づくラベル付け</a><a class="headerlink" href="#rule-based-labeling" title="Link to this heading"></a></h3>
-<p>ルールに基づくラベル付けは <a class="reference internal" href="#rule-based-rendering"><span class="std std-ref">ルールに基づくレンダリング</span></a> と同様、複数のラベルの設定を定義し、式フィルタとスケール範囲に基づいて選択的にルールを適用できます。</p>
+<p>ルールに基づくラベル付けは <a class="reference internal" href="#rule-based-rendering"><span class="std std-ref">ルールに基づくレンダリング</span></a>  と同様、複数のラベルの設定を定義し、式フィルタとスケール範囲に基づいて選択的にルールを適用できます。</p>
 <p>ルールを作成するには：</p>
 <ol class="arabic">
 <li><p><span class="guilabel">ラベル</span> タブのメインドロップダウンリストで <a class="reference internal" href="../../../_images/labelingRuleBased.png"><img alt="labelingRuleBased" src="../../../_images/labelingRuleBased.png" style="width: 1.5em;" /></a> <a href="#id1"><span class="problematic" id="id2">**</span></a>ルールに基づく定義（rule-based）* オプションを選択します</p></li>
@@ -1816,7 +1816,7 @@ that are dynamically calculated.</p>
 </ul>
 <p>すべての場合において、呼び出される関数の名前を入力する必要があります（下の例では <cite>open</cite> ）。</p>
 <p>例（MyForms.pyモジュール）：</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">open</span><span class="p">(</span><span class="n">dialog</span><span class="p">,</span><span class="n">layer</span><span class="p">,</span><span class="n">feature</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">open</span><span class="p">(</span><span class="n">dialog</span><span class="p">,</span><span class="n">layer</span><span class="p">,</span><span class="n">feature</span><span class="p">):</span>
     <span class="n">geom</span> <span class="o">=</span> <span class="n">feature</span><span class="o">.</span><span class="n">geometry</span><span class="p">()</span>
     <span class="n">control</span> <span class="o">=</span> <span class="n">dialog</span><span class="o">.</span><span class="n">findChild</span><span class="p">(</span><span class="n">QWidget</span><span class="p">,</span><span class="s2">&quot;My line edit&quot;</span><span class="p">)</span>
 </pre></div>
@@ -2040,7 +2040,7 @@ will be automatically recognized by QGIS and assigned a <strong>Value Map</stron
 </section>
 <section id="symbology">
 <h3><a class="toc-backref" href="#id154" role="doc-backlink"><span class="section-number">12.1.11.2. </span>シンボロジ</a><a class="headerlink" href="#symbology" title="Link to this heading"></a></h3>
-<p>上で述べたラベルのカスタマイズ方法と同じように、補助属性を使ってシンボルやダイアグラムのスタイル設定ができます。これを行うには、 <a class="reference internal" href="../../../_images/mIconDataDefine.png"><img alt="dataDefine" src="../../../_images/mIconDataDefine.png" style="width: 1.5em;" /></a> <sup>データによって定義された上書き</sup> をクリックして、特定のプロパティに対して <span class="guilabel">データをプロジェクトに格納する</span> を選択します。例えば、 <span class="guilabel">塗りつぶし色</span> 属性の場合には以下の図のようになります。</p>
+<p>上で述べたラベルのカスタマイズ方法と同じように、補助属性を使ってシンボルやダイアグラムのスタイル設定ができます。これを行うには、 <a class="reference internal" href="../../../_images/mIconDataDefine.png"><img alt="dataDefine" src="../../../_images/mIconDataDefine.png" style="width: 1.5em;" /></a> <sup>データによって定義された上書き</sup> をクリックして、特定のプロパティに対して <span class="guilabel">データをプロジェクトに格納する</span> を選択します。例えば、 <span class="guilabel">塗りつぶし色</span>  属性の場合には以下の図のようになります。</p>
 <figure class="align-center" id="id74">
 <img alt="../../../_images/auxiliary_storage_symbol.png" src="../../../_images/auxiliary_storage_symbol.png" />
 <figcaption>
@@ -2212,14 +2212,14 @@ identical to the description of any other existing action, &quot;_1&quot; will b
 </li>
 </ol>
 <p>これでアクションが完成し、使用できるようになりました。</p>
-<p><span class="guilabel">レイヤプロパティ</span> ダイアログを閉じ、地図を見たい領域にズームして下さい。  <code class="docutils literal notranslate"><span class="pre">lakes</span></code> レイヤがアクティブであることを確認して、地物情報表示ツールで湖をクリックして下さい。地物情報ボックスの中にアクションが表示されているはずです：</p>
+<p><span class="guilabel">レイヤプロパティ</span>  ダイアログを閉じ、地図を見たい領域にズームして下さい。  <code class="docutils literal notranslate"><span class="pre">lakes</span></code> レイヤがアクティブであることを確認して、地物情報表示ツールで湖をクリックして下さい。地物情報ボックスの中にアクションが表示されているはずです：</p>
 <figure class="align-center" id="id81">
 <span id="figure-actions-selection"></span><img alt="../../../_images/action_identifyaction.png" src="../../../_images/action_identifyaction.png" />
 <figcaption>
 <p><span class="caption-number">図 12.61 </span><span class="caption-text">地物を選択し、アクションを選択する状態</span><a class="headerlink" href="#id81" title="Link to this image"></a></p>
 </figcaption>
 </figure>
-<p>アクションをクリックすると、デフォルトのブラウザが立ち上がり、 URL <a class="reference external" href="https://www.google.com/search?q=Tustumena">https://www.google.com/search?q=Tustumena</a> に移動します。アクションにさらに属性フィールドを追加することも可能です。これにはアクションテキストの末尾に <code class="docutils literal notranslate"><span class="pre">+</span></code> を追加し、別のフィールドを選択して <span class="guilabel">挿入</span> をクリックします。ただしこの例では、検索する意味があるような他のフィールドは持っていません。</p>
+<p>アクションをクリックすると、デフォルトのブラウザが立ち上がり、 URL <a class="reference external" href="https://www.google.com/search?q=Tustumena">https://www.google.com/search?q=Tustumena</a> に移動します。アクションにさらに属性フィールドを追加することも可能です。これにはアクションテキストの末尾に <code class="docutils literal notranslate"><span class="pre">+</span></code> を追加し、別のフィールドを選択して <span class="guilabel">挿入</span>  をクリックします。ただしこの例では、検索する意味があるような他のフィールドは持っていません。</p>
 <p>レイヤには複数のアクションを定義することができ、 <span class="guilabel">地物情報</span> ダイアログにはそれぞれが表示されます。</p>
 <p>また、属性テーブルからアクションを呼び出すには、属性テーブルの行を選択して右クリックし、ポップアップメニューからアクションを選択します。</p>
 <p>アクションにはさまざまな使い方があります。例えば、画像や写真の位置とファイル名を含むポイントレイヤがあれば、画像を表示するビューアを起動するアクションを作成することができます。また、アクションを使って、Google検索の例と同じように属性フィールドやフィールドの組み合わせを指定して、webベースのレポートを起動することもできるでしょう。</p>
@@ -2228,13 +2228,13 @@ identical to the description of any other existing action, &quot;_1&quot; will b
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">command</span> <span class="o">=</span> <span class="s2">&quot;firefox&quot;</span>
 <span class="n">imagerelpath</span> <span class="o">=</span> <span class="s2">&quot;images_test/test_image.jpg&quot;</span>
 <span class="n">layer</span> <span class="o">=</span> <span class="n">qgis</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">iface</span><span class="o">.</span><span class="n">activeLayer</span><span class="p">()</span>
-<span class="kn">import</span> <span class="nn">os.path</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os.path</span>
 <span class="n">layerpath</span> <span class="o">=</span> <span class="n">layer</span><span class="o">.</span><span class="n">source</span><span class="p">()</span> <span class="k">if</span> <span class="n">layer</span><span class="o">.</span><span class="n">providerType</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;ogr&#39;</span>
   <span class="k">else</span> <span class="p">(</span><span class="n">qgis</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">QgsDataSourceURI</span><span class="p">(</span><span class="n">layer</span><span class="o">.</span><span class="n">source</span><span class="p">())</span><span class="o">.</span><span class="n">database</span><span class="p">()</span>
     <span class="k">if</span> <span class="n">layer</span><span class="o">.</span><span class="n">providerType</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;spatialite&#39;</span> <span class="k">else</span> <span class="kc">None</span><span class="p">)</span>
 <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">layerpath</span><span class="p">))</span>
 <span class="n">image</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span><span class="n">imagerelpath</span><span class="p">)</span>
-<span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
 <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span> <span class="p">[</span><span class="n">command</span><span class="p">,</span> <span class="n">image</span> <span class="p">]</span> <span class="p">)</span>
 </pre></div>
 </div>
@@ -2243,10 +2243,10 @@ identical to the description of any other existing action, &quot;_1&quot; will b
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">command</span> <span class="o">=</span> <span class="s2">&quot;firefox&quot;</span>
 <span class="n">imagerelpath</span> <span class="o">=</span> <span class="s2">&quot;images_test/test_image.jpg&quot;</span>
 <span class="n">projectpath</span> <span class="o">=</span> <span class="n">qgis</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">QgsProject</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">fileName</span><span class="p">()</span>
-<span class="kn">import</span> <span class="nn">os.path</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os.path</span>
 <span class="n">path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">projectpath</span><span class="p">))</span> <span class="k">if</span> <span class="n">projectpath</span> <span class="o">!=</span> <span class="s1">&#39;&#39;</span> <span class="k">else</span> <span class="kc">None</span>
 <span class="n">image</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">imagerelpath</span><span class="p">)</span>
-<span class="kn">import</span> <span class="nn">subprocess</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
 <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span> <span class="p">[</span><span class="n">command</span><span class="p">,</span> <span class="n">image</span> <span class="p">]</span> <span class="p">)</span>
 </pre></div>
 </div>
@@ -2452,7 +2452,7 @@ Vertical reference systems are supported for vector layers by:</p>
 <p>レイヤの設定によっては、断面図のシンボルをカスタム・スタイルで表現することができます：</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../style_library/symbol_selector.html#vector-marker-symbols"><span class="std std-ref">マーカースタイル</span></a>: 押し出しのないポイント地物とライン地物、および断面図線に接する押し出しのないポリゴン地物用</p></li>
-<li><p>:ref:<a href="#id1"><span class="problematic" id="id2">`</span></a>線のスタイル <a href="#id3"><span class="problematic" id="id4">`</span></a>: 押し出しのあるポイント地物とライン地物、および断面図線と交差する押し出しのないポリゴン地物用</p></li>
+<li><p><a class="reference internal" href="../style_library/symbol_selector.html#vector-line-symbols"><span class="std std-ref">Line style</span></a>:  押し出しのあるポイント地物とライン地物、および断面図線と交差する押し出しのないポリゴン地物用</p></li>
 <li><p><a class="reference internal" href="../style_library/symbol_selector.html#vector-fill-symbols"><span class="std std-ref">塗りつぶしスタイル</span></a>: 押し出しのあるポリゴン地物用</p></li>
 </ul>
 </li>
@@ -2463,7 +2463,7 @@ visualisation and is designed for vector layers which represent a
 continuous elevation surface, e.g. contour lines or surveyed elevation points.
 The profile <span class="guilabel">Style</span> can be set as:</p>
 <ul class="simple">
-<li><p>特定の <a class="reference internal" href="../style_library/symbol_selector.html#vector-line-symbols"><span class="std std-ref">線のスタイル</span></a> を持った <span class="guilabel">線</span></p></li>
+<li><p>特定の <a class="reference internal" href="../style_library/symbol_selector.html#vector-line-symbols"><span class="std std-ref">Line style</span></a> を持った  <span class="guilabel">線</span></p></li>
 <li><p>塗りつぶしシンボルを使って、標高曲線の上（<span class="guilabel">Fill above</span>）または下（<span class="guilabel">Fill below</span>）にレンダリングされた標高面。表面のシンボロジは以下のように表されます:</p>
 <ul>
 <li><p><a class="reference internal" href="../style_library/symbol_selector.html#vector-fill-symbols"><span class="std std-ref">塗りつぶしスタイル</span></a></p></li>
@@ -2471,7 +2471,7 @@ The profile <span class="guilabel">Style</span> can be set as:</p>
 </ul>
 </li>
 </ul>
-<p>さらに、<a class="reference internal" href="../../../_images/unchecked.png"><img alt="unchecked" src="../../../_images/unchecked.png" style="width: 1.3em;" /></a> <span class="guilabel">マーカーをサンプリング表示</span> をチェックすることで、判読線上にマーカーを表示し、それらに <span class="guilabel">マーカースタイル</span> を割り当てることができます。</p>
+<p>さらに、<a class="reference internal" href="../../../_images/unchecked.png"><img alt="unchecked" src="../../../_images/unchecked.png" style="width: 1.3em;" /></a> <span class="guilabel">マーカーをサンプリング表示</span>  をチェックすることで、判読線上にマーカーを表示し、それらに  <span class="guilabel">マーカースタイル</span>  を割り当てることができます。</p>
 </li>
 </ul>
 </li>
@@ -2497,7 +2497,7 @@ layer's geometry.</p>
 settings for the <a class="reference internal" href="../introduction/general_tools.html#label-legend"><span class="std std-ref">Layers panel</span></a> and/or the <a class="reference internal" href="../print_composer/composer_items/composer_legend.html#layout-legend-item"><span class="std std-ref">print
 layout legend</span></a>. These options include:</p>
 <ul class="simple">
-<li><p>レイヤに適用しているシンボロジにもよりますが、凡例に複数のエントリが表示されることで、必ずしも読みやすく便利な表示になるとは限りません。 <span class="guilabel">凡例の枠の画像 ` で代わりとなる :ref:`画像の選択 &lt;embedded_file_selector&gt;</span> を行うことができ、 <span class="guilabel">レイヤ</span> パネルや印刷レイアウトの凡例の両者で表示されます。</p></li>
+<li><p>レイヤに適用しているシンボロジにもよりますが、凡例に複数のエントリが表示されることで、必ずしも読みやすく便利な表示になるとは限りません。<span class="guilabel">凡例の枠の画像</span> で代わりとなる <a class="reference internal" href="../introduction/general_tools.html#embedded-file-selector"><span class="std std-ref">select an image</span></a>  を行うことができ <span class="guilabel">レイヤ</span> パネルや印刷レイアウトの凡例の両者で表示されます。</p></li>
 <li><p><a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">ラベル凡例を表示</span> ：さまざまなラベル設定の概要を凡例内のエントリとして表示します。 <a class="reference internal" href="../style_library/label_settings.html#showlabels"><span class="std std-ref">ラベルのスタイル</span></a> が、説明とともにプレビューされます。</p></li>
 <li><p><a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">シンボル上のテキスト</span> ：場合によっては、凡例内のシンボルに追加の情報を加えると便利なことがあります。このフレームでは、レイヤのシンボロジで使用されているシンボルのどれにでもテキストつけることができます。このテキストは、 <span class="guilabel">レイヤ</span> パネルとプリントレイアウトの凡例の両方でシンボル上に表示されます。テーブルウィジェットでシンボルの横に各テキストを入力するか、 <span class="guilabel">式でラベルを設定</span> ボタンを使ってテーブルに入力することで、凡例とテキストの対応付けがなされます。 テキストの外観は <span class="guilabel">テキスト形式</span> ボタンのフォント・色セレクタウィジェットで設定します。</p></li>
 </ul>
@@ -2563,7 +2563,7 @@ to ensure the quality of digitized geometries.</p>
 </section>
 <section id="topology-checks">
 <h3><a class="toc-backref" href="#id174" role="doc-backlink"><span class="section-number">12.1.22.3. </span>トポロジチェック</a><a class="headerlink" href="#topology-checks" title="Link to this heading"></a></h3>
-<p><span class="guilabel">トポロジチェック</span> のセクションでは、トポロジの追加的な検証を有効にできます。トポロジのチェックはユーザーがレイヤを保存した際に実行されます。チェックしたエラーは <span class="guilabel">ジオメトリ検証</span> パネルに報告されます。検証エラーが存在する限りは、レイヤを保存することができません。トポロジのチェックは、修正のあった地物のバウンディングボックス領域内で実行されます。同じ領域内に他の地物が存在することもあるため、現在の編集セッションで発生したエラーだけでなく、他の地物に関するトポロジエラーも報告されます。</p>
+<p><span class="guilabel">トポロジチェック</span>  のセクションでは、トポロジの追加的な検証を有効にできます。トポロジのチェックはユーザーがレイヤを保存した際に実行されます。チェックしたエラーは <span class="guilabel">ジオメトリ検証</span> パネルに報告されます。検証エラーが存在する限りは、レイヤを保存することができません。トポロジのチェックは、修正のあった地物のバウンディングボックス領域内で実行されます。同じ領域内に他の地物が存在することもあるため、現在の編集セッションで発生したエラーだけでなく、他の地物に関するトポロジエラーも報告されます。</p>
 <table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>トポロジチェックのオプション</p></th>
@@ -2571,19 +2571,19 @@ to ensure the quality of digitized geometries.</p>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">隙間がないか</span> は、隣接するポリゴンとの間に隙間がないかをチェックします。</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">隙間がないか</span>  は、隣接するポリゴンとの間に隙間がないかをチェックします。</p></td>
 <td><figure class="align-default">
 <img alt="../../../_images/gapcheck.png" src="../../../_images/gapcheck.png" />
 </figure>
 </td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">重なり（Overlap）</span> は、隣接するポリゴンとの重なりがないかをチェックします。</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">重なり（Overlap）</span>  は、隣接するポリゴンとの重なりがないかをチェックします。</p></td>
 <td><figure class="align-default">
 <img alt="../../../_images/overlapcheck.png" src="../../../_images/overlapcheck.png" />
 </figure>
 </td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">頂点欠損（点で分割されるべき直線）</span> のチェックは、隣接するポリゴンの共有された境界について、頂点が一方の境界には無く、他方の境界にはあるようなものをチェックします。</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">頂点欠損（点で分割されるべき直線）</span>  のチェックは、隣接するポリゴンの共有された境界について、頂点が一方の境界には無く、他方の境界にはあるようなものをチェックします。</p></td>
 <td><figure class="align-default">
 <img alt="../../../_images/missingvertexcheck.png" src="../../../_images/missingvertexcheck.png" />
 </figure>
@@ -2593,8 +2593,8 @@ to ensure the quality of digitized geometries.</p>
 </table>
 <section id="gap-check-exceptions">
 <h4><a class="toc-backref" href="#id175" role="doc-backlink">隙間チェックの例外</a><a class="headerlink" href="#gap-check-exceptions" title="Link to this heading"></a></h4>
-<p>他の部分はポリゴンで完全に覆われているものの、ポリゴンレイヤのある領域内には隙間を作っておくのが望ましい場合もあります。例えば、土地利用レイヤでは湖のために穴があり得るかもしれません。隙間チェックでは、無視される領域を定義することができます。このような領域内の隙間は許容されるものであるから、ここでは <em>許容される隙間（Allowed Gaps）</em> 領域と呼ぶことにします。</p>
-<p><span class="guilabel">許容される隙間</span> の隙間チェックに関するオプションでは、 <em>レイヤ</em> を設定できます。</p>
+<p>他の部分はポリゴンで完全に覆われているものの、ポリゴンレイヤのある領域内には隙間を作っておくのが望ましい場合もあります。例えば、土地利用レイヤでは湖のために穴があり得るかもしれません。隙間チェックでは、無視される領域を定義することができます。このような領域内の隙間は許容されるものであるから、ここでは <em>許容される隙間（Allowed Gaps）</em>  領域と呼ぶことにします。</p>
+<p><span class="guilabel">許容される隙間</span>  の隙間チェックに関するオプションでは、 <em>レイヤ</em> を設定できます。</p>
 <p>隙間チェックが実行される際に、 <em>許容される隙間のレイヤ</em> の1つ以上のポリゴンでカバーされている隙間はトポロジエラーとしては報告されません。</p>
 <p>また、 <span class="guilabel">バッファ</span> を追加設定することもできます。このバッファは <em>許容される隙間のレイヤ</em> の各ポリゴンに適用されます。これにより、隙間の境目にあるアウトラインのわずかな変化に影響されにくいテストが可能となります。</p>
 <p><em>許容される隙間</em> を有効にすると、検出された隙間エラーのための追加ボタン（ <span class="guilabel">許容される隙間を追加</span> ）が、デジタイズ中に隙間が報告されるジオメトリ検証ドックで利用できます。 <span class="guilabel">許容される隙間を追加</span> ボタンを押すと、検出された隙間のジオメトリを持つ新しいポリゴンが <em>許容される隙間レイヤ</em> に挿入されます。これにより、許容されている隙間に素早くフラグを立てることができます。</p>
@@ -2629,7 +2629,7 @@ to ensure the quality of digitized geometries.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 6月 28, 14:20 +0900
+      <span class="lastupdated">最終更新: 2025 6月 29, 03:27 +0900
       </span></p>
   </div>
 
