@@ -112,9 +112,9 @@
 <li class="toctree-l3"><a class="reference internal" href="opening_data.html">11.1. データを開く</a></li>
 <li class="toctree-l3"><a class="reference internal" href="create_layers.html">11.2. レイヤを作成する</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">11.3. ジオリファレンサ</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#georeferencing-raster-layer">11.3.1. Georeferencing raster layer</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#georeferencing-vector-layer">11.3.2. Georeferencing vector layer</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#show-and-adapt-layer-properties">11.3.3. Show and adapt layer properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#georeferencing-raster-layer">11.3.1. ラスタレイヤをジオリファレンスする</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#georeferencing-vector-layer">11.3.2. ベクタレイヤをジオリファレンスする</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#show-and-adapt-layer-properties">11.3.3. レイヤプロパティの表示と調整</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#configure-the-georeferencer">11.3.4. ジオリファレンサの構成</a></li>
 </ul>
 </li>
@@ -201,14 +201,14 @@
   <blockquote>
 <div><div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 80.67% 翻訳されています。</p>
+<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 100.00% 翻訳されています。</p>
 </div>
 </div></blockquote>
 <section id="georeferencer">
 <span id="georef"></span><span id="index-0"></span><h1><span class="section-number">11.3. </span>ジオリファレンサ<a class="headerlink" href="#georeferencer" title="Link to this heading"></a></h1>
 <nav class="contents local" id="id1">
 <ul class="simple">
-<li><p><a class="reference internal" href="#georeferencing-raster-layer" id="id6">Georeferencing raster layer</a></p>
+<li><p><a class="reference internal" href="#georeferencing-raster-layer" id="id6">ラスタレイヤをジオリファレンスする</a></p>
 <ul>
 <li><p><a class="reference internal" href="#entering-ground-control-points-gcps" id="id7">グラウンドコントロールポイント（GCP）の入力</a></p></li>
 <li><p><a class="reference internal" href="#defining-the-transformation-settings" id="id8">変換の設定の定義</a></p>
@@ -221,17 +221,12 @@
 <li><p><a class="reference internal" href="#running-the-transformation" id="id12">変換の実行</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#georeferencing-vector-layer" id="id13">Georeferencing vector layer</a></p></li>
-<li><p><a class="reference internal" href="#show-and-adapt-layer-properties" id="id14">Show and adapt layer properties</a></p></li>
+<li><p><a class="reference internal" href="#georeferencing-vector-layer" id="id13">ベクタレイヤをジオリファレンスする</a></p></li>
+<li><p><a class="reference internal" href="#show-and-adapt-layer-properties" id="id14">レイヤプロパティの表示と調整</a></p></li>
 <li><p><a class="reference internal" href="#configure-the-georeferencer" id="id15">ジオリファレンサの構成</a></p></li>
 </ul>
 </nav>
-<p>The <a class="reference internal" href="../../../_images/mGeorefRun.png"><img alt="georefRun" src="../../../_images/mGeorefRun.png" style="width: 1.5em;" /></a> Georeferencer is a tool for aligning unreferenced raster or vector layers
-to known coordinate systems using Ground Control Points (GCPs).
-It supports exporting transformed rasters (GeoTIFF) and vectors (shapefiles, geopackages, etc.)
-or writing accompanying world files (for raster only). The basic
-approach to georeferencing a layer is to locate points on it for which
-you can accurately determine coordinates.</p>
+<p><a class="reference internal" href="../../../_images/mGeorefRun.png"><img alt="georefRun" src="../../../_images/mGeorefRun.png" style="width: 1.5em;" /></a> ジオリファレンサは、既知の座標系に対して、参照されていないラスターレイヤーやベクターレイヤーを、GCP (Ground Control Point) を使用して位置合わせを行うツールです。変換されたラスター（GeoTIFF）やベクター（シェープファイル、GeoPackageなど）を出力したり、ワールドファイル（ラスターのみ）を書き出したりできます。レイヤーをジオリファレンスする基本的なアプローチは、正確な座標を特定できるポイントをレイヤー上で見つけることです。</p>
 <p><strong>機能</strong></p>
 <span id="index-1"></span><table class="docutils align-default" id="table-georeferencer-tools">
 <thead>
@@ -263,9 +258,9 @@ you can accurately determine coordinates.</p>
 <td><p>変換を設定</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="../../../_images/mActionAddGCPPoint.png"><img alt="addGCPPoint" src="../../../_images/mActionAddGCPPoint.png" style="width: 1.5em;" /></a></p></td>
-<td><p>Add GCP Point</p></td>
+<td><p>GCPを追加</p></td>
 <td><p><a class="reference internal" href="../../../_images/mActionDeleteGCPPoint.png"><img alt="deleteGCPPoint" src="../../../_images/mActionDeleteGCPPoint.png" style="width: 1.5em;" /></a></p></td>
-<td><p>Delete GCP Point</p></td>
+<td><p>GCPを削除</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="../../../_images/mActionMoveGCPPoint.png"><img alt="moveGCPPoint" src="../../../_images/mActionMoveGCPPoint.png" style="width: 1.5em;" /></a></p></td>
 <td><p>GCPを移動</p></td>
@@ -301,7 +296,7 @@ you can accurately determine coordinates.</p>
 </table>
 <p>表：ジオリファレンサのツール</p>
 <section id="georeferencing-raster-layer">
-<h2><a class="toc-backref" href="#id6" role="doc-backlink"><span class="section-number">11.3.1. </span>Georeferencing raster layer</a><a class="headerlink" href="#georeferencing-raster-layer" title="Link to this heading"></a></h2>
+<h2><a class="toc-backref" href="#id6" role="doc-backlink"><span class="section-number">11.3.1. </span>ラスタレイヤをジオリファレンスする</a><a class="headerlink" href="#georeferencing-raster-layer" title="Link to this heading"></a></h2>
 <p>画像上の選択された点に対応するX、Y座標（度分秒（dd mm ss.ss）や度（dd.dd）、あるいは投影された座標（mmmm.mm））の設定手順には、 2つの選択肢があります：</p>
 <ul class="simple">
 <li><p>ラスタ自体が、画像上に座標値のある十字が「描かれて」いる場合があります。この場合には、その座標値を手動で入力します。</p></li>
@@ -320,9 +315,7 @@ you can accurately determine coordinates.</p>
 <span id="georeferencer-entering"></span><h3><a class="toc-backref" href="#id7" role="doc-backlink"><span class="section-number">11.3.1.1. </span>グラウンドコントロールポイント（GCP）の入力</a><a class="headerlink" href="#entering-ground-control-points-gcps" title="Link to this heading"></a></h3>
 <ol class="arabic">
 <li><p>ジオリファレンスされていないラスタのジオリファレンスを開始するには、 <a class="reference internal" href="../../../_images/mActionAddRasterLayer.png"><img alt="addRasterLayer" src="../../../_images/mActionAddRasterLayer.png" style="width: 1.5em;" /></a> ボタンを使用してそのラスタをロードする必要があります。ラスタはダイアログのメインの作業領域に表示されます。ラスタがロードされると、基準点の入力を開始できます。</p></li>
-<li><p>Using the <a class="reference internal" href="../../../_images/mActionAddGCPPoint.png"><img alt="addGCPPoint" src="../../../_images/mActionAddGCPPoint.png" style="width: 1.5em;" /></a> <sup>Add GCP Point</sup> button, add points to the
-main working area and enter their coordinates (see Figure <a class="reference internal" href="#figure-georeferencer-add-points"><span class="std std-numref">図 11.35</span></a>).
-For this procedure you have the following options:</p>
+<li><p><a class="reference internal" href="../../../_images/mActionAddGCPPoint.png"><img alt="addGCPPoint" src="../../../_images/mActionAddGCPPoint.png" style="width: 1.5em;" /></a> <sup>GCPを追加</sup> ボタンを使用して、メインの作業エリアにポイントを追加し、その座標を入力します（図 :numref: figure_georeferencer_add_points を参照）。この手順には、以下のオプションがあります。</p>
 <ul class="simple">
 <li><p>ラスタ画像内の点をクリックして、その点のCRSとともにX座標とY座標を手動で入力する。</p></li>
 <li><p>ラスタ画像内の点をクリックし、 <a class="reference internal" href="../../../_images/pencil.png"><img alt="pencil" src="../../../_images/pencil.png" style="width: 1.5em;" /></a> <sup>地図キャンバスから</sup> ボタンを押して、既にQGISのマップキャンバスに読み込まれたジオリファレンス済みの地図を使用して、X座標とY座標を追加する。CRSは自動的に設定されます。</p></li>
@@ -332,14 +325,10 @@ For this procedure you have the following options:</p>
 <li><p>点の入力を繰り返します。最低4点の指定が必要ですが、より多くの座標を入力すれば、より良い結果が得られます。また、関連するGCPポイントの組を適切な場所に置くために、作業領域をズームしたりパンしたりするツールもあります。</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>To avoid constant switching between <a class="reference internal" href="../../../_images/mActionPan.png"><img alt="pan" src="../../../_images/mActionPan.png" style="width: 1.5em;" /></a> <sup>Pan</sup>, <a class="reference internal" href="../../../_images/mActionAddGCPPoint.png"><img alt="addGCPPoint" src="../../../_images/mActionAddGCPPoint.png" style="width: 1.5em;" /></a> <sup>Add GCP point</sup>
-and <a class="reference internal" href="../../../_images/mActionMoveGCPPoint.png"><img alt="moveGCPPoint" src="../../../_images/mActionMoveGCPPoint.png" style="width: 1.5em;" /></a> <sup>Move GCP point</sup> buttons,
-you may use the keyboard arrow keys for moving and the mouse wheel for scaling the georeferenced map conveniently.</p>
+<p><a class="reference internal" href="../../../_images/mActionPan.png"><img alt="pan" src="../../../_images/mActionPan.png" style="width: 1.5em;" /></a> <sup>パン</sup> 、 <a class="reference internal" href="../../../_images/mActionAddGCPPoint.png"><img alt="addGCPPoint" src="../../../_images/mActionAddGCPPoint.png" style="width: 1.5em;" /></a> :sup: <cite>GCPを追加</cite>、 <a class="reference internal" href="../../../_images/mActionMoveGCPPoint.png"><img alt="moveGCPPoint" src="../../../_images/mActionMoveGCPPoint.png" style="width: 1.5em;" /></a> <sup>GCPを移動</sup>  の各ボタンを頻繁に切り替える手間を省くため、キーボードの矢印キーで移動し、マウスホイールでジオリファレンスされたマップの縮尺を変更すると便利です。</p>
 </div>
 </li>
-<li><p>After you provide a few points, you can use the <a class="reference internal" href="../../../_images/mActionLinkQGisToGeoref.png"><img alt="linkQGisToGeoref" src="../../../_images/mActionLinkQGisToGeoref.png" style="width: 2.5em;" /></a> <sup>Link QGIS to Georeferencer</sup>
-and/or <a class="reference internal" href="../../../_images/mActionLinkGeorefToQGis.png"><img alt="linkGeorefToQGis" src="../../../_images/mActionLinkGeorefToQGis.png" style="width: 2.5em;" /></a> <sup>Link Georeferencer to QGIS</sup> buttons that will adjust, respectively,
-the map extent of the main QGIS window to the present view in Georeferencer and/or vice versa.</p></li>
+<li><p>いくつかのポイントを指定後、 <a class="reference internal" href="../../../_images/mActionLinkQGisToGeoref.png"><img alt="linkQGisToGeoref" src="../../../_images/mActionLinkQGisToGeoref.png" style="width: 2.5em;" /></a> <sup>QGISをジオリファレンサにリンクする</sup> ボタンおよび／または <a class="reference internal" href="../../../_images/mActionLinkGeorefToQGis.png"><img alt="linkGeorefToQGis" src="../../../_images/mActionLinkGeorefToQGis.png" style="width: 2.5em;" /></a> <sup>ジオリファレンサをQGISにリンクする</sup> ボタンを使用できます。これらはそれぞれ、QGIS メインウィンドウのマップ表示範囲をジオレファレンサーの現在の表示に、またはその逆に調整します。</p></li>
 <li><p><a class="reference internal" href="../../../_images/mActionMoveGCPPoint.png"><img alt="moveGCPPoint" src="../../../_images/mActionMoveGCPPoint.png" style="width: 1.5em;" /></a> ツールを使用すると、GCPを修正する必要がある場合に、マップキャンバスとジオリファレンスウィンドウの両方でGCPを移動させることができます。</p></li>
 </ol>
 <figure class="align-center" id="id3">
@@ -379,10 +368,10 @@ the map extent of the main QGIS window to the present view in Georeferencer and/
 <p>5つの異なるリサンプリング方法から選択できます：</p>
 <ol class="arabic simple">
 <li><p>最近傍（Nearest neighbour）</p></li>
-<li><p>Bilinear (2x2 kernel)</p></li>
-<li><p>Cubic (4x4 kernel)</p></li>
-<li><p>Cubic B-Spline (4x4 kernel)</p></li>
-<li><p>Lanczos (6x6 kernel)</p></li>
+<li><p>バイリニア（2x2 カーネル）</p></li>
+<li><p>キュービック（4x4 カーネル）</p></li>
+<li><p>キュービックBスプライン（4x4 カーネル）</p></li>
+<li><p>ランチョス（6x6 カーネル）</p></li>
 </ol>
 </section>
 <section id="define-the-transformation-settings">
@@ -406,52 +395,36 @@ the map extent of the main QGIS window to the present view in Georeferencer and/
 </section>
 </section>
 <section id="georeferencing-vector-layer">
-<h2><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">11.3.2. </span>Georeferencing vector layer</a><a class="headerlink" href="#georeferencing-vector-layer" title="Link to this heading"></a></h2>
-<p>Georeferencing vector layers works similarly to raster georeferencing, but instead of matching image pixels,
-you match vector geometries (points, lines, or polygons) to known spatial references.</p>
-<p>The standard procedure starts the same as for raster georeferencing:
-open QGIS and add a layer to the map canvas to use as a reference.
-This can be a georeferenced raster or vector layer, or a WMS layer.</p>
-<p>Open the Georeferencer dialog from <span class="menuselection">Layer ►</span> <a class="reference internal" href="../../../_images/mGeorefRun.png"><img alt="georefRun" src="../../../_images/mGeorefRun.png" style="width: 1.5em;" /></a> <span class="menuselection">Georeferencer</span>.</p>
-<p>Start georeferencing by following these steps (in this example, we use an unreferenced <code class="docutils literal notranslate"><span class="pre">alaska.shp</span></code>):</p>
+<h2><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">11.3.2. </span>ベクタレイヤをジオリファレンスする</a><a class="headerlink" href="#georeferencing-vector-layer" title="Link to this heading"></a></h2>
+<p>ベクタレイヤをジオリファレンスする作業はラスタのジオリファレンスと似ていますが、画像ピクセルを合わせる代わりに、ベクタのジオメトリ（点、線、またはポリゴン）を既知の空間参照に合わせます。</p>
+<p>標準的な手順は、ラスタのジオリファレンスと同じく、QGIS を開き、参照として使用するレイヤをマップキャンバスに追加することから始まります。これは、ジオリファレンスされたラスタレイヤ、ベクタレイヤ、または WMS レイヤのいずれでも構いません。</p>
+<p><span class="menuselection">レイヤ ►</span> <a class="reference internal" href="../../../_images/mGeorefRun.png"><img alt="georefRun" src="../../../_images/mGeorefRun.png" style="width: 1.5em;" /></a> <span class="menuselection">ジオリファレンサ</span> からジオリファレンサダイアログを開きます。</p>
+<p>ジオリファレンスを開始するには、以下の手順に従います（この例では、参照されていない <code class="docutils literal notranslate"><span class="pre">alaska.shp</span></code> を使用します）。</p>
 <figure class="align-center" id="id5">
 <span id="figure-vector-georeferencer-dialog"></span><img alt="../../../_images/vector_georeferencer_dialog.png" src="../../../_images/vector_georeferencer_dialog.png" />
 <figcaption>
-<p><span class="caption-number">図 11.37 </span><span class="caption-text">Vector Georeferencer Dialog</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
+<p><span class="caption-number">図 11.37 </span><span class="caption-text">ベクタジオリファレンサダイアログ</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <ol class="arabic simple">
-<li><p>Load the unreferenced vector layer using the <a class="reference internal" href="../../../_images/mActionAddOgrLayer.png"><img alt="addOgrLayer" src="../../../_images/mActionAddOgrLayer.png" style="width: 1.5em;" /></a> button.
-The vector layer will appear in the main working area of the dialog.</p></li>
-<li><p>Use the <a class="reference internal" href="../../../_images/mActionAddGCPPoint.png"><img alt="addGCPPoint" src="../../../_images/mActionAddGCPPoint.png" style="width: 1.5em;" /></a> <sup>Add GCP Point</sup> button to add a point to the working area.
-Enter its coordinates manually and set the CRS, or click the <a class="reference internal" href="../../../_images/pencil.png"><img alt="pencil" src="../../../_images/pencil.png" style="width: 1.5em;" /></a> <sup>From map canvas</sup> button
-to pick the coordinates from a georeferenced layer in the main QGIS map canvas.
-In that case, the CRS will be set automatically.</p></li>
-<li><p>Define the transformation settings:</p>
+<li><p><a class="reference internal" href="../../../_images/mActionAddOgrLayer.png"><img alt="addOgrLayer" src="../../../_images/mActionAddOgrLayer.png" style="width: 1.5em;" /></a> ボタンを使って、参照されていないベクタレイヤを読み込みます。このベクタレイヤは、ダイアログのメイン作業エリアに表示されます。</p></li>
+<li><p><a class="reference internal" href="../../../_images/mActionAddGCPPoint.png"><img alt="addGCPPoint" src="../../../_images/mActionAddGCPPoint.png" style="width: 1.5em;" /></a> <sup>GCPを追加</sup> ボタンを使用して、作業エリアにポイントを追加します。座標を手動で入力し、CRS を設定するか、 <a class="reference internal" href="../../../_images/pencil.png"><img alt="pencil" src="../../../_images/pencil.png" style="width: 1.5em;" /></a> :sup: <cite>地図キャンバスから</cite> ボタンをクリックして、QGIS メインマップキャンバスにあるジオリファレンスされたレイヤから座標を選択します。この場合、CRS は自動的に設定されます。</p></li>
+<li><p>変換設定を定義する</p>
 <ul class="simple">
-<li><p>Select the <span class="guilabel">Transformation type</span>.
-The transformation algorithms are the same as those for raster georeferencing.
-See <a class="reference internal" href="#georeferencer-transformation"><span class="std std-ref">変換の設定の定義</span></a> for more details.</p></li>
-<li><p>Define the <span class="guilabel">Target CRS</span> (Coordinate Reference System) for the georeferenced vector
-(see <a class="reference internal" href="../working_with_projections/working_with_projections.html#label-projections"><span class="std std-ref">投影法の操作</span></a>).</p></li>
-<li><p>Set the output file format and path (e.g., GeoPackage, Shapefile).
-By default, a new file with suffix <code class="docutils literal notranslate"><span class="pre">_modified</span></code> will be created in the same folder
-as the original vector file.</p></li>
-<li><p>Optionally, enable <strong>Generate PDF map</strong> and <strong>Generate PDF report</strong>.
-The report includes transformation parameters, GCP residuals, and a summary of RMS errors.</p></li>
-<li><p>Enable <a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">Save GCP Points</span> to store GCPs in a file alongside the output vector layer.</p></li>
-<li><p>Enable <a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">Load in project when done</span> to add the result directly to the map canvas.</p></li>
+<li><p><span class="guilabel">変換タイプ</span> を選択します。変換アルゴリズムはラスタのジオリファレンスと同じです。詳細については、 <span class="xref std std-ref">変換の設定の定義</span> をご参照ください。</p></li>
+<li><p>ジオリファレンスされたベクタの <span class="guilabel">変換先CRS</span> （座標参照系）を定義します（ <a class="reference internal" href="../working_with_projections/working_with_projections.html#label-projections"><span class="std std-ref">投影法の操作</span></a> を参照）。</p></li>
+<li><p>出力ファイルの形式とパスを設定します（例: GeoPackage、シェープファイル）。デフォルトでは、元のベクタファイルと同じフォルダに、接尾辞 <code class="docutils literal notranslate"><span class="pre">_modified</span></code> が付いた新しいファイルが作成されます。</p></li>
+<li><p>必要ならば、 <strong>PDF マップを生成</strong> と <strong>PDF レポートを生成</strong> を有効にしてください。このレポートには、変換パラメーター、GCP の残差、および RMS エラーの概要が含まれます。</p></li>
+<li><p><a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">GCPを保存</span> を有効にすると、GCP が出力ベクタレイヤとともにファイルに保存されます。</p></li>
+<li><p><a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">完了後にプロジェクトに読み込む</span> を有効にすると、結果が直接マップキャンバスに追加されます。</p></li>
 </ul>
 </li>
-<li><p>Click <a class="reference internal" href="../../../_images/mActionStart.png"><img alt="start" src="../../../_images/mActionStart.png" style="width: 1.5em;" /></a> <sup>Start georeferencing</sup> to run the transformation and generate the georeferenced vector layer.</p></li>
+<li><p><a class="reference internal" href="../../../_images/mActionStart.png"><img alt="start" src="../../../_images/mActionStart.png" style="width: 1.5em;" /></a> <sup>ジオリファレンスを開始</sup> をクリックして変換を実行し、ジオリファレンスされたベクタレイヤを生成します。</p></li>
 </ol>
 </section>
 <section id="show-and-adapt-layer-properties">
-<h2><a class="toc-backref" href="#id14" role="doc-backlink"><span class="section-number">11.3.3. </span>Show and adapt layer properties</a><a class="headerlink" href="#show-and-adapt-layer-properties" title="Link to this heading"></a></h2>
-<p>Clicking on the <span class="guilabel">Source properties</span> option in the <span class="guilabel">Settings</span>
-menu opens the <a class="reference internal" href="../working_with_raster/raster_properties.html#raster-properties-dialog"><span class="std std-ref">Raster Layer properties</span></a>
-or <a class="reference internal" href="../working_with_vector/vector_properties.html#vector-properties-dialog"><span class="std std-ref">Vector Layer properties</span></a> depending on the
-type of layer you are georeferencing.</p>
+<h2><a class="toc-backref" href="#id14" role="doc-backlink"><span class="section-number">11.3.3. </span>レイヤプロパティの表示と調整</a><a class="headerlink" href="#show-and-adapt-layer-properties" title="Link to this heading"></a></h2>
+<p>設定メニューの <span class="guilabel">ソースプロパティ</span> オプションをクリックすると、ジオリファレンスするレイヤの種類に応じて、 <a class="reference internal" href="../working_with_raster/raster_properties.html#raster-properties-dialog"><span class="std std-ref">ラスタレイヤプロパティ</span></a> または <a class="reference internal" href="../working_with_vector/vector_properties.html#vector-properties-dialog"><span class="std std-ref">ベクタレイヤプロパティ</span></a> が開きます。</p>
 </section>
 <section id="configure-the-georeferencer">
 <span id="configure-georeferencer"></span><h2><a class="toc-backref" href="#id15" role="doc-backlink"><span class="section-number">11.3.4. </span>ジオリファレンサの構成</a><a class="headerlink" href="#configure-the-georeferencer" title="Link to this heading"></a></h2>
@@ -478,7 +451,7 @@ type of layer you are georeferencing.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 6月 29, 00:54 +0900
+      <span class="lastupdated">最終更新: 2025 6月 29, 21:17 +0900
       </span></p>
   </div>
 
