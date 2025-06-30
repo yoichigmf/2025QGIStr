@@ -204,7 +204,7 @@
   <blockquote>
 <div><div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 90.72% 翻訳されています。</p>
+<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 92.39% 翻訳されています。</p>
 </div>
 </div></blockquote>
 <section id="opening-data">
@@ -269,22 +269,15 @@
 </nav>
 <p>オープンソース・ソフトウェアのエコシステムの一部として、QGISは様々なライブラリの上に構築されています。これらのライブラリは、QGIS独自のプロバイダと組み合わされることで、多くのフォーマットを読み込む機能と、そして多くの場合は書き出す機能も提供しています：</p>
 <ul class="simple">
-<li><p>Vector data formats include GeoPackage, GML, GeoJSON, GPX, KML,
-Comma Separated Values, ESRI formats (Shapefile, Geodatabase...),
-MapInfo and MicroStation file formats, AutoCAD DWG/DXF,
-GRASS and many more...
-Read the complete list of <a class="reference external" href="https://gdal.org/en/latest/drivers/vector/index.html">supported vector formats</a>.</p></li>
-<li><p>Raster data formats include GeoTIFF, JPEG, ASCII Gridded XYZ,
-MBTiles, R or Idrisi rasters, GDAL Virtual, SRTM, Sentinel Data,
-ERDAS IMAGINE, ArcInfo Binary Grid, ArcInfo ASCII Grid, and
-many more...
-Read the complete list of <a class="reference external" href="https://gdal.org/en/latest/drivers/raster/index.html">supported raster formats</a>.</p></li>
+<li><p>ベクターデータ形式には、GeoPackage、GML、GeoJSON、GPX、KML、CSV(カンマ区切り値形式)、ESRI形式（シェープファイル、ジオデータベースなど）、MapInfoやMicroStationファイル形式、AutoCADのDWG/DXF、GRASS形式などがあります。その他にも多くの形式がサポートされています。
+詳しくは <cite>supported vector formats &lt;https://gdal.org/en/latest/drivers/vector/index.html&gt;</cite> をご覧ください。</p></li>
+<li><p>ラスターデータ形式には、GeoTIFF、JPEG、ASCIIグリッドXYZ、MBTiles、RやIdrisi形式のラスターデータ、GDAL仮想フォーマット、SRTM、Sentinelデータ、ERDAS IMAGINE、ArcInfoバイナリグリッド、ArcInfo ASCIIグリッドなどがあります。その他にも多くの形式がサポートされています。
+詳しくは  <cite>supported raster formats &lt;https://gdal.org/en/latest/drivers/raster/index.html&gt;</cite> をご覧ください。</p></li>
 <li><p>データベース形式：PostgreSQL/PostGIS, SQLite/SpatiaLite, Oracle, MS SQL Server, SAP HANA, MySQL等</p></li>
 <li><p>WebマップとWebデータサービス（WM(T)S、WFS、WCS、CSW、XYZ tiles、ArcGIS services等）もQGISのプロバイダで扱うことが可能です。これらの一部についてのより詳しい情報は <a class="reference internal" href="../working_with_ogc/ogc_client_support.html#working-with-ogc"><span class="std std-ref">OGC / ISOプロトコルの操作</span></a> を参照してください。</p></li>
 <li><p>アーカイブされたフォルダからサポートしているフォーマットのファイルを読み込んだり、QML ファイル （ <a class="reference internal" href="../appendices/qgis_file_formats.html#qgisstylefile"><span class="std std-ref">QML-QGISスタイルファイル形式</span></a> ）などのQGISネイティブ形式や仮想レイヤ、メモリレイヤを使用することができます。</p></li>
 </ul>
-<p>More than 80 vector and 140 raster formats are supported by
-<a class="reference external" href="https://gdal.org/en/latest/">GDAL</a> and QGIS native providers.</p>
+<p>80以上のベクター形式と、140以上のラスター形式が <cite>GDAL &lt;https://gdal.org/en/latest/&gt;</cite> とQGISネイティブプロバイダーによってサポートされています。</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
 <p>さまざまな理由により、リストに挙げたすべてのフォーマットがQGISで動作するわけではありません。例えば、外部のプロプライエタリなライブラリを必要とする場合や、お使いのOSのGDAL/OGRのインストールが、使用したいフォーマットをサポートするようにビルドされていない場合もあります。利用可能なフォーマットのリストを確認するには、コマンドラインで <code class="docutils literal notranslate"><span class="pre">ogrinfo</span> <span class="pre">--formats</span></code> （ベクタ用）や <code class="docutils literal notranslate"><span class="pre">gdalinfo</span> <span class="pre">--formats</span></code> （ラスタ用）を実行するか、QGIS上で  <span class="menuselection">設定 ► オプション ► GDAL</span> のメニューを確認してください。</p>
@@ -375,7 +368,7 @@ Read the complete list of <a class="reference external" href="https://gdal.org/e
 <li><p><span class="menuselection">レイヤエクスポート ► ファイルへ...</span></p></li>
 <li><p><span class="guilabel">レイヤをプロジェクトに追加する</span></p></li>
 <li><p><span class="guilabel">レイヤのプロパティ</span></p></li>
-<li><p><span class="guilabel">Open with Data Source Manager...</span></p></li>
+<li><p><span class="guilabel">データソースマネージャで開く...</span></p></li>
 <li><p><span class="menuselection">管理 ► &quot;&lt;name of file&gt;&quot; の名前を変更...</span> または <span class="guilabel">&quot;&lt;name of file&gt;&quot; を削除...</span></p></li>
 <li><p><span class="guilabel">ファイルに表示</span></p></li>
 <li><p><span class="guilabel">ファイルプロパティ...</span></p></li>
@@ -386,12 +379,9 @@ Read the complete list of <a class="reference external" href="https://gdal.org/e
 <li><p><span class="guilabel">プレビュー</span> パネル</p></li>
 <li><p>ベクタソースの場合は属性テーブル（ <span class="guilabel">属性</span> パネル内）</p></li>
 </ul>
-<p>Use <span class="guilabel">Open with Data Source Manager...</span> to directly open and configure the
-data source in the <span class="guilabel">Data Source Manager</span> using the URI of your data source.
-This simplifies the process of adding a layer from the <span class="guilabel">Browser</span>
-by allowing you to set specific opening options for the data source.
-It is currently available for vector (including the dedicated GeoPackage entry), raster,
-and SpatiaLite data sources.</p>
+<p><span class="guilabel">データソースマネージャで開く...</span> を使用すると、データソースのURLを使って直接 <span class="guilabel">データソースマネージャ</span> でデータソースを開いて設定することができます。
+これにより、特定のオープンオプションを設定できるため、 <span class="guilabel">ブラウザ</span> からレイヤーを追加する際の操作が簡単になります。
+この操作は現在、ベクターデータ（専用のGeoPackageエントリも含む）、ラスターデータ、SpatiaLiteデータソースで利用可能です。</p>
 <p><span class="guilabel">ブラウザ</span> を使用してプロジェクトにレイヤを追加するには、次の手順で操作します：</p>
 <ol class="arabic">
 <li><p><span class="guilabel">ブラウザ</span> を上記の方法で有効にします。ファイルシステム、データベース、webサービスのブラウザツリーが表示されます。データベースやwebサービスが表示される前に、データベースやwebサービスへ接続する必要があるかもしれません（専用のセクションを参照してください）。</p></li>
@@ -483,14 +473,9 @@ and SpatiaLite data sources.</p>
 <li><p>ファイルシステムを検索し、サポートされているデータソースを読み込みます。ダイアログで <kbd class="kbd docutils literal notranslate">Ctrl</kbd> キーを押しながら複数のアイテムをクリックするか、 <kbd class="kbd docutils literal notranslate">Shift</kbd> キーを押しながら最初と最後のアイテムを選択することでアイテム範囲を選択することで、複数のレイヤを同時に読み込むことが可能です。ファイル形式のフィルタには、十分にテストされたファイル形式のみが表示されます。他のファイル形式は、  <code class="docutils literal notranslate"><span class="pre">全ファイル</span></code> （プルダウンメニューの一番上のアイテム）を選択することで読み込むことができます。</p></li>
 <li><p>Press <span class="guilabel">Open</span> to load the selected file into <span class="guilabel">Data
 Source Manager</span> dialog.</p>
-<p>Depending on the selected layer type, additional <span class="guilabel">Options</span>
-(encoding, geometry type, table filtering, file locking, data formatting ...)
-are available for configuring.
-These options are described in detail in the specific GDAL
-<a class="reference external" href="https://gdal.org/en/latest/drivers/vector/">vector</a>
-or <a class="reference external" href="https://gdal.org/en/latest/drivers/raster">raster</a> driver documentation.
-At the top of the options, a text with hyperlink will directly lead to the documentation
-of the appopriate driver for the selected file format.</p>
+<p>選択したレイヤータイプによっては、追加の <span class="guilabel">オプション</span> （エンコーディング、geometryタイプ、テーブルフィルタリング、ファイルロック、データフォーマット設定 など）が設定用に利用可能です。
+これらのオプションは該当するGDALの <cite>ベクタ形式&lt;https://gdal.org/en/latest/drivers/vector/&gt;</cite> や <cite>ラスタ形式&lt;https://gdal.org/en/latest/drivers/raster&gt;</cite> のドライバードキュメントで説明されています。
+オプション一覧の一番上には、選択したファイル形式に対応するドライバーのドキュメントに直接リンクする、ハイパーリンクテキストが表示されます。</p>
 <figure class="align-center" id="id8">
 <span id="figure-vector-layer-open-options"></span><img alt="../../../_images/openoptionsvectorlayer.png" src="../../../_images/openoptionsvectorlayer.png" />
 <figcaption>
@@ -532,10 +517,8 @@ of the appopriate driver for the selected file format.</p>
 when adding OGR vector or GDAL raster layers.
 You need to fill in the <span class="guilabel">Bucket or container</span> and the
 <span class="guilabel">Object key</span> first. After that, you can add the necessary <span class="guilabel">Credential Options</span>.</p>
-<p>When adding OGR vector or GDAL raster layers from the cloud based protocols,
-you can also set additional <span class="guilabel">Credential options</span> for that specific driver and bucket.
-When credential options are found in a layer's URI, they will also be automatically set.
-This allows different layers to use different credentials.</p>
+<p>ORGベクタレイヤやGDALラスタレイヤをクラウドベースのプロトコル経由で追加する場合、特定のドライバやバケットに対して <span class="guilabel">資格情報オプション</span> を追加することができます。
+レイヤのURIに資格情報オプションが含まれている場合は、それらも自動的に設定されます。これにより、異なるレイヤーごとに別々の資格情報を使うことができます。</p>
 </li>
 <li><p>OGC <code class="docutils literal notranslate"><span class="pre">WFS</span> <span class="pre">3</span></code> をサポートするサービス（まだ実験段階です）。 <code class="docutils literal notranslate"><span class="pre">GeoJSON</span></code> または <code class="docutils literal notranslate"><span class="pre">GEOJSON</span> <span class="pre">-</span> <span class="pre">Newline</span> <span class="pre">Delimited</span></code> フォーマットを使用しているか、 <code class="docutils literal notranslate"><span class="pre">CouchDB</span></code> データベースに基づくものです。 <span class="guilabel">URI</span> が必須で、 <a class="reference internal" href="../auth_system/index.html#authentication-index"><span class="std std-ref">認証</span></a> はオプションです。</p></li>
 <li><p>ベクタソースタイプ全てについて、 <span class="guilabel">文字コード</span> の指定が可能です。 <span class="menuselection">自動 ►</span> 設定を使うこともできます。</p></li>
@@ -547,10 +530,8 @@ and <a class="reference external" href="https://gdal.org/en/latest/drivers/raste
 from servers that implement the OGC API standards.
 To use this option:</p>
 <ol class="arabic simple">
-<li><p>Select <a class="reference internal" href="../../../_images/radiobuttonon.png"><img alt="radioButtonOn" src="../../../_images/radiobuttonon.png" style="width: 1.5em;" /></a> <span class="guilabel">OGC API</span> from the <span class="guilabel">Data Source Manager</span>
-dialog.</p></li>
-<li><p>Enter the endpoint of the OGC API service you want to connect to. Note that you
-don't need to prefix the endpoint with &quot;OGCAPI:&quot;.</p></li>
+<li><p><span class="guilabel">データソースマネージャ</span> ダイアログから <a class="reference internal" href="../../../_images/radiobuttonon.png"><img alt="radioButtonOn" src="../../../_images/radiobuttonon.png" style="width: 1.5em;" /></a> <span class="guilabel">OGC API</span> を選びます。</p></li>
+<li><p>接続したいOGC APIサービスのエンドポイントを入力してください。この際、エンドポイントの先頭に &quot;OGCAPI:&quot; と付け加える必要はありません。</p></li>
 <li><p>Click <span class="guilabel">Connect</span> to establish a connection to the server.</p></li>
 </ol>
 </li>
@@ -1288,7 +1269,7 @@ or <span class="guilabel">Load Connection</span> from an XML file.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 6月 29, 00:54 +0900
+      <span class="lastupdated">最終更新: 2025 6月 30, 23:43 +0900
       </span></p>
   </div>
 
