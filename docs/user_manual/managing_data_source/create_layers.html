@@ -202,7 +202,7 @@
   <blockquote>
 <div><div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 93.28% 翻訳されています。</p>
+<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 100.00% 翻訳されています。</p>
 </div>
 </div></blockquote>
 <section id="creating-layers">
@@ -531,7 +531,7 @@
 <figure class="align-center" id="id10">
 <span id="figure-saveas-pointcloud"></span><img alt="../../../_images/saveas_pointcloud.png" src="../../../_images/saveas_pointcloud.png" />
 <figcaption>
-<p><span class="caption-number">図 11.31 </span><span class="caption-text">Saving a point cloud layer as a new layer</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
+<p><span class="caption-number">図 11.31 </span><span class="caption-text">点群レイヤを新規レイヤとして保存</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>
@@ -552,51 +552,35 @@
 <li><p>データの <span class="guilabel">文字コード</span> を選択します。</p></li>
 <li><p>適用する <span class="guilabel">CRS</span> を選択します。選択したレイヤは指定したCRSに再投影されます。</p></li>
 <li><p>DXFファイルに含めるレイヤを、テーブルウィジェットでチェックを付けるか、既存の <a class="reference internal" href="../introduction/general_tools.html#map-themes"><span class="std std-ref">地図のテーマ</span></a> からの自動抽出で選択します。 <span class="guilabel">すべて選択</span> ボタンと <span class="guilabel">すべての選択を解除</span> ボタンは、エクスポートするデータを素早く設定するのに役立ちます。</p>
-<p>For each layer, you can:</p>
+<p>各レイヤについて、以下のことが可能です。</p>
 <ul class="simple">
-<li><p>Override the output layer name without altering the original project layer.
-For this, click on the <span class="guilabel">Layer</span> name in the dialog and
-write the output name to use.</p></li>
-<li><p><span class="guilabel">Output layer attribute</span>: Choose whether to export all the features
-in a single DXF layer or rely on a field whose values are used
-to split the features into layers in the DXF output.
-In the latter case, each layer will take its name from the corresponding field value.</p></li>
-<li><p><span class="guilabel">Allow data defined symbol blocks</span>:</p></li>
-<li><p><span class="guilabel">Maximum number of symbol blocks</span>: creates symbol blocks up to the specified limit,
-starting with the ones containing the highest number of references.
-The other symbols are written as they are. <code class="docutils literal notranslate"><span class="pre">-1</span></code> means no limitation.</p></li>
+<li><p>元のプロジェクトのレイヤを変更せずに、出力レイヤ名を上書きします。そのためには、ダイアログの <span class="guilabel">レイヤ</span> 名をクリックし、使用する出力名を記述します。</p></li>
+<li><p><span class="guilabel">出力レイヤ属性</span>： すべてのフィーチャーを1つのDXFレイヤにエクスポートするか、DXF出力でフィーチャーをレイヤに分割するために使用されるフィールドの値に依存するかを選択します。後者の場合、各レイヤーの名前は対応するフィールド値から取られます。</p></li>
+<li><p><span class="guilabel">データ定義されたシンボルブロックを許可します。</span>:</p></li>
+<li><p><span class="guilabel">最大シンボルブロック数</span>: 指定された上限までのシンボルブロックを作成し、参照数が最も多いものから始めます。他のシンボルはそのまま書かれます。-1``は制限なしを意味します。</p></li>
 </ul>
 </li>
 </ol>
 <p>下記オプションを選択することもできます：</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../../../_images/unchecked.png"><img alt="unchecked" src="../../../_images/unchecked.png" style="width: 1.3em;" /></a> <span class="guilabel">Use the layer title as name if set</span> instead of the
-layer name itself: the title is taken from the <a class="reference internal" href="../working_with_vector/vector_properties.html#vectormetadatamenu"><span class="std std-ref">metadata</span></a>
-or <a class="reference internal" href="../working_with_vector/vector_properties.html#vectorservermenu"><span class="std std-ref">server</span></a> properties of the layer;</p></li>
-<li><p><a class="reference internal" href="../../../_images/unchecked.png"><img alt="unchecked" src="../../../_images/unchecked.png" style="width: 1.3em;" /></a> <span class="guilabel">Export features intersecting the current map extent</span>;</p></li>
+<li><p><a class="reference internal" href="../../../_images/unchecked.png"><img alt="unchecked" src="../../../_images/unchecked.png" style="width: 1.3em;" /></a> :guilabel: レイヤ名そのものではなくレイヤのタイトルを使用します。このタイトルはプロパティレイヤの <a class="reference internal" href="../working_with_vector/vector_properties.html#vectormetadatamenu"><span class="std std-ref">メタデータ</span></a> または <a class="reference internal" href="../working_with_vector/vector_properties.html#vectorservermenu"><span class="std std-ref">サーバ</span></a> から取得できます。</p></li>
+<li><p><a class="reference internal" href="../../../_images/unchecked.png"><img alt="unchecked" src="../../../_images/unchecked.png" style="width: 1.3em;" /></a> <span class="guilabel">現在のマップ範囲が交差する特徴をエクスポートをします。</span>;</p></li>
 <li><p><a class="reference internal" href="../../../_images/unchecked.png"><img alt="unchecked" src="../../../_images/unchecked.png" style="width: 1.3em;" /></a> <span class="guilabel">2D出力を強制する（例えばポリライン幅をサポートするため）</span></p></li>
-<li><p><a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">Export label as MTEXT elements</span> or TEXT elements;</p></li>
-<li><p><a class="reference internal" href="../../../_images/unchecked.png"><img alt="unchecked" src="../../../_images/unchecked.png" style="width: 1.3em;" /></a> <span class="guilabel">Use only selected features</span>;</p></li>
-<li><p><a class="reference internal" href="../../../_images/unchecked.png"><img alt="unchecked" src="../../../_images/unchecked.png" style="width: 1.3em;" /></a> <span class="guilabel">Export lines with zero width</span>: all the lines are exported
-with minimal width <code class="docutils literal notranslate"><span class="pre">0</span></code> (hairline) if enabled.
-This helps keep the lines minimal in the file regardless of the zoom level,
-and can be handy for doing further CAD-editing with the exported dxf,
-especially if there are many features next to each other on the map.</p></li>
+<li><p><a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a><span class="guilabel">ラベルをMTEXT要素</span> またはTEXT要素としてエクスポートします；</p></li>
+<li><p><a class="reference internal" href="../../../_images/unchecked.png"><img alt="unchecked" src="../../../_images/unchecked.png" style="width: 1.3em;" /></a> :<cite>選択した機能だけを使用します</cite>;</p></li>
+<li><p><a class="reference internal" href="../../../_images/unchecked.png"><img alt="unchecked" src="../../../_images/unchecked.png" style="width: 1.3em;" /></a><span class="guilabel">線の幅をゼロでエクスポート</span>: 有効にすると、すべての線が最小幅 <code class="docutils literal notranslate"><span class="pre">0</span></code> (ヘアライン) でエクスポートされます。これは、ズームレベルに関係なく、ファイル内の線を最小に保つのに役立ち、特に地図上で多くのフィーチャーが隣り合っている場合、エクスポートされたdxfでさらにCAD編集を行うのに便利です。</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>The precedence for defining the output layer name is as follows:</p>
+<p>出力レイヤ名の定義の優先順位は以下の通りです。</p>
 <ol class="arabic simple">
-<li><p>The field value from <span class="guilabel">Output layer attribute</span></p></li>
-<li><p>The overridden name in <span class="guilabel">Layer</span> column</p></li>
-<li><p>The <span class="guilabel">Use the layer title as name if set</span> option</p></li>
-<li><p>The layer name</p></li>
+<li><p><span class="guilabel">出力レイヤ属性</span> のフィールド値です。</p></li>
+<li><p>The overridden name in <span class="guilabel">レイヤ</span> カラムで名前の上書き保存をします。</p></li>
+<li><p>The :guilabel:<a href="#id1"><span class="problematic" id="id2">`</span></a>セットする場合レイヤタイトルを名前として使います a</p></li>
+<li><p>レイヤ名</p></li>
 </ol>
 </div>
-<p>Current settings defined in the <span class="guilabel">DXF Export</span> dialog may be stored in
-an XML file for reusing them in other sessions. For this, the
-<span class="guilabel">Settings</span> combo box has two options: <span class="guilabel">Load Settings from
-File...</span> and <span class="guilabel">Save Settings to File...</span>.</p>
+<p><span class="guilabel">DXF Export</span> ダイアログで定義された現在の設定は、 may be stored in an XML file for reusing them in other sessions. For this, the <span class="guilabel">Settings</span> combo box has two options: <span class="guilabel">Load Settings from File...</span> and <span class="guilabel">Save Settings to File...</span>.</p>
 </section>
 <section id="creating-new-layers-from-the-clipboard">
 <span id="paste-into-layer"></span><h2><a class="toc-backref" href="#id26" role="doc-backlink"><span class="section-number">11.2.4. </span>クリップボードから新しいレイヤを作成する</a><a class="headerlink" href="#creating-new-layers-from-the-clipboard" title="Link to this heading"></a></h2>
@@ -719,7 +703,7 @@ File...</span> and <span class="guilabel">Save Settings to File...</span>.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 6月 29, 00:54 +0900
+      <span class="lastupdated">最終更新: 2025 7月 03, 03:03 +0900
       </span></p>
   </div>
 

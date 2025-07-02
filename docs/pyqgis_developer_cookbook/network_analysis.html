@@ -191,7 +191,7 @@
   <blockquote>
 <div><div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>翻訳は <a class="reference internal" href="../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 100.00% 翻訳されています。</p>
+<p>翻訳は <a class="reference internal" href="../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 98.59% 翻訳されています。</p>
 </div>
 </div></blockquote>
 <section id="network-analysis-library">
@@ -348,7 +348,12 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tree</span> <span class="o">=</span> <span class="n">QgsGraphAnalyzer</span><span class="o">.</span><span class="n">shortestTree</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">startId</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
-<p><a class="reference external" href="https://qgis.org/pyqgis/3.40/analysis/QgsGraphAnalyzer.html#qgis.analysis.QgsGraphAnalyzer.dijkstra" title="(in QGIS Python API v3.40)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">dijkstra()</span></code></a> メソッドは同じ引数を持ちますが、2つの配列を返します。最初の配列要素 <cite>n</cite> には入力辺のインデックス、または、入力辺がないときは-1が格納されます。2 番目の配列の要素 <cite>n</cite> には、木の根から頂点 <cite>n</cite> までの距離、または頂点 <cite>n</cite> が根から到達できない場合は DOUBLE_MAX が格納されます。</p>
+<p>The <a class="reference external" href="https://qgis.org/pyqgis/3.40/analysis/QgsGraphAnalyzer.html#qgis.analysis.QgsGraphAnalyzer.dijkstra" title="(in QGIS Python API v3.40)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">dijkstra()</span></code></a> method has the
+same arguments, but returns two arrays.
+In the first array element <cite>n</cite> contains index of the incoming edge or -1 if there
+are no incoming edges. In the second array element <cite>n</cite> contains the distance from
+the root of the tree to vertex <cite>n</cite> or DOUBLE_MAX if vertex <cite>n</cite> is unreachable
+from the root.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">tree</span><span class="p">,</span> <span class="n">cost</span><span class="p">)</span> <span class="o">=</span> <span class="n">QgsGraphAnalyzer</span><span class="o">.</span><span class="n">dijkstra</span><span class="p">(</span><span class="n">graph</span><span class="p">,</span> <span class="n">startId</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -608,7 +613,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 6月 29, 00:54 +0900
+      <span class="lastupdated">最終更新: 2025 7月 03, 03:03 +0900
       </span></p>
   </div>
 

@@ -204,7 +204,7 @@
   <blockquote>
 <div><div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 92.39% 翻訳されています。</p>
+<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 93.69% 翻訳されています。</p>
 </div>
 </div></blockquote>
 <section id="opening-data">
@@ -240,7 +240,7 @@
 <li><p><a class="reference internal" href="#database-related-tools" id="id45">データベース関連ツール</a></p>
 <ul>
 <li><p><a class="reference internal" href="#creating-a-stored-connection" id="id46">保存された接続の作成</a></p></li>
-<li><p><a class="reference internal" href="#connecting-to-postgresql" id="id47">Connecting to PostgreSQL</a></p>
+<li><p><a class="reference internal" href="#connecting-to-postgresql" id="id47">PostgreSQLへの接続</a></p>
 <ul>
 <li><p><a class="reference internal" href="#postgresql-service-connection-file" id="id48">PostgreSQLサービス接続ファイル</a></p></li>
 <li><p><a class="reference internal" href="#connecting-to-oracle-spatial" id="id49">Oracle Spatialのへの接続</a></p></li>
@@ -595,11 +595,7 @@ To use this option:</p>
 </section>
 <section id="field-type-detection">
 <h4><a class="toc-backref" href="#id36" role="doc-backlink">フィールド型を検出</a><a class="headerlink" href="#field-type-detection" title="Link to this heading"></a></h4>
-<p>QGIS tries to detect the field types automatically (unless
-<a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a><span class="guilabel">Detect field types</span> is not checked) by examining
-the content of an optional sidecar CSVT file (see <a class="reference external" href="https://giswiki.ch/GeoCSV#CSVT_file_format_specification">GeoCSV specification</a>)
-and by scanning the whole file to make sure that all values can actually
-be converted without errors, the fall-back field type is text.</p>
+<p>QGIS は、フィールドタイプを自動的に検出しようとします（ただし、<a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">フィールド型を検出</span> がオフの場合を除きます）。オプションの CSVT ファイル（ <cite>GeoCSV 仕様</cite> 参照）の内容を確認し、ファイル全体をスキャンして、すべての値がエラーなく変換できることをチェックします。変換できない場合は、デフォルトでフィールド型は「テキスト」になります。</p>
 <p>検出されたフィールド型は、サンプルデータのプレビューテーブルのフィールド名の下に表示され、必要な場合は手動で変更できます。</p>
 <p>次のフィールド型がサポートされています:</p>
 <ul class="simple">
@@ -729,20 +725,15 @@ be converted without errors, the fall-back field type is text.</p>
 <p><strong>QGISブラウザパネルからデータベースへの接続を作成する</strong></p>
 <p>ブラウザツリー内で対応するデータベース形式を選択し、右クリックして接続を選択すると、データベース接続ダイアログが開きます。</p>
 </div>
-<p>Most of the connection dialogs follow a common structure:</p>
+<p>ほとんどの接続ダイアログは、共通の構造になっています。</p>
 <ul class="simple">
-<li><p>a section with credentials information to connect to the database</p></li>
-<li><p>a section with options to tune which data can be requested in the database</p></li>
+<li><p>データベースに接続するための資格情報セクション</p></li>
+<li><p>データベース内で要求できるデータを調整するためのオプションセクション</p></li>
 </ul>
 </section>
 <section id="connecting-to-postgresql">
-<span id="create-postgresql-connection"></span><h4><a class="toc-backref" href="#id47" role="doc-backlink">Connecting to PostgreSQL</a><a class="headerlink" href="#connecting-to-postgresql" title="Link to this heading"></a></h4>
-<p>The first time you use a PostGIS data source, you must create a connection
-to a database that contains the data.
-Press the appropriate button as exposed above, opening the <span class="guilabel">PostgreSQL</span> tab
-of the <span class="guilabel">Data Source Manager</span> dialog.
-To access the connection manager, click on the <span class="guilabel">New</span> button
-to display the <span class="guilabel">Create a New PostGIS Connection</span> dialog.</p>
+<span id="create-postgresql-connection"></span><h4><a class="toc-backref" href="#id47" role="doc-backlink">PostgreSQLへの接続</a><a class="headerlink" href="#connecting-to-postgresql" title="Link to this heading"></a></h4>
+<p>初めて PostGIS データソースを使用する場合は、データが含まれたデータベースへの接続を作成する必要があります。上記で説明した該当するボタンをクリックし、 <span class="guilabel">データソースマネージャ</span> ダイアログの <span class="guilabel">PostgreSQL</span> タブを開きます。接続マネージャにアクセスするには、 <span class="guilabel">新規</span> ボタンをクリックし、 <span class="guilabel">新規PostGISを作成</span> ダイアログを表示させます。</p>
 <figure class="align-center" id="id14">
 <span id="figure-new-postgis-connection"></span><img alt="../../../_images/newpostgisconnection.png" src="../../../_images/newpostgisconnection.png" />
 <figcaption>
@@ -755,8 +746,7 @@ to display the <span class="guilabel">Create a New PostGIS Connection</span> dia
 <li><p><span class="guilabel">ホスト</span> ：データベースのホスト名です。これは、TCP/IP接続を開いたり、ホストをpingしたりするために使用されるような、解決可能なホスト名でなければなりません。データベースがQGISと同じコンピュータ上にある場合は、ここには単に <em>localhost</em> と入力します。</p></li>
 <li><p><span class="guilabel">ポート</span> ： PostgreSQLデータベースサーバーがリッスンするポート番号です。PostGISのデフォルトのポートは <code class="docutils literal notranslate"><span class="pre">5432</span></code> です。</p></li>
 <li><p><span class="guilabel">データベース</span> ：データベース名です。</p></li>
-<li><p><span class="guilabel">SSL mode</span>: SSL encryption setup.
-The following options are available:</p>
+<li><p><span class="guilabel">SSL モード</span>: SSL 暗号化の設定。以下のオプションを選択可能です:</p>
 <ul class="simple">
 <li><p><span class="guilabel">Prefer</span> （デフォルト）：セキュリティはどうでもよいが、サーバがそれをサポートするのであれば暗号化のオーバヘッドを払ってもよい</p></li>
 <li><p><span class="guilabel">Require</span> ：データを暗号化して欲しい。そしてオーバヘッドも受け入れる。サーバに接続する必要時に常にネットワークが確認してくれることを信用する</p></li>
@@ -1269,7 +1259,7 @@ or <span class="guilabel">Load Connection</span> from an XML file.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 6月 30, 23:43 +0900
+      <span class="lastupdated">最終更新: 2025 7月 03, 03:03 +0900
       </span></p>
   </div>
 
