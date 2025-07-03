@@ -243,26 +243,26 @@
 <h2><a class="toc-backref" href="#id22" role="doc-backlink"><span class="section-number">21.1.2. </span>カスタム認証データベース</a><a class="headerlink" href="#custom-authentication-databases" title="Link to this heading"></a></h2>
 <p>QGIS は、上記で説明したデフォルトのSQLite認証データベースの代わりに、Qt SQLモジュールでサポートされている任意のデータベース(例PostgreSQL、MySQLなど)を利用するよう設定できます。ただし、そのデータベース用のQt SQLドライバーがシステムにインストールされている必要があります。</p>
 <p>これは、複数のQGISインストール間で同じ認証データベースを共有したい場合や、デフォルトの SQLite とは別の認証データベースを使いたい場合、あるいはQGIS サーバーで集中管理された認証データベースを利用している場合などに便利です。</p>
-<p>カスタム認証データベースを設定する唯一の方法は、環境変数QGIS_AUTH_DB_URIに接続情報のURIを設定することです。URIの形式は次のとおりです。driver://username:password&#64;hostname:port/database?options</p>
+<p>カスタム認証データベースを設定する唯一の方法は、環境変数``QGIS_AUTH_DB_URI``に接続情報のURIを設定することです。URIの形式は次のとおりです。<code class="docutils literal notranslate"><span class="pre">driver://username:password&#64;hostname:port/database?options</span></code></p>
 <dl class="simple">
 <dt>項目</dt><dd><ul class="simple">
-<li><p>driver:使用するQtSQLドライバー名
-例:PostgreSQL用は QPSQL、MySQL用はQMYSQLなど</p></li>
-<li><p>username:データベース接続に用いるユーザー名</p></li>
-<li><p>password:データベースに接続する際に用いるパスワード</p></li>
-<li><p>hostname:データベースサーバーのホスト名</p></li>
-<li><p>port:データベースサーバーのポート番号</p></li>
-<li><p>database:利用するデータベース名</p></li>
-<li><p>options:ドライバーに渡す追加オプション
+<li><p><code class="docutils literal notranslate"><span class="pre">driver</span></code>:使用するQtSQLドライバー名
+例:PostgreSQL用は <code class="docutils literal notranslate"><span class="pre">QPSQL</span></code>、MySQL用は``QMYSQL``など</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code>:データベース接続に用いるユーザー名</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code>:データベースに接続する際に用いるパスワード</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hostname</span></code>:データベースサーバーのホスト名</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code>:データベースサーバーのポート番号</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">database</span></code>:利用するデータベース名</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">options</span></code>:ドライバーに渡す追加オプション
 例：PostgreSQL の場合 <code class="docutils literal notranslate"><span class="pre">sslmode=require</span></code></p></li>
 </ul>
 </dd>
 </dl>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>URIのオプションでschemaを指定できます。
-例:QPSQL://username:password&#64;hostname:port/database?schema=schema_name</p>
-<p>データベースはQGIS起動前にあらかじめ作成しておく必要があります。ユーザーには当該データベースへの接続権限と、テーブルが存在しない場合にそれらを作成する権限が付与されている必要があります。</p>
+<p>URIのオプションで``schema``を指定できます。
+例:<code class="docutils literal notranslate"><span class="pre">QPSQL://username:password&#64;hostname:port/database?schema=schema_name</span></code></p>
+<p>データベースはQGIS起動前にあらかじめ作成しておく必要があります。ユーザーには当該データベースへの接続権限と、必要なテーブルが存在しない場合にそれらを作成する権限が付与されている必要があります。</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
@@ -272,7 +272,7 @@
 <p class="admonition-title">警告</p>
 <p>SQLite以外のデータベースはすべて読み取り専用として扱われます（必要に応じてPythonプラグインで書き込み可能に変更できます）。</p>
 </div>
-<p>本機能は上級者向けで、複数のカスタム認証データベースや、Pythonプラグインによる独自の資格情報ストレージ実装を QGIS から利用できるよう設計されています。</p>
+<p>本機能は上級者向けで、複数のカスタム認証データベースや、独自の資格情報付きストレージにアクセスするためのPython実装を、 QGIS から利用できるよう設計されています。</p>
 <p>また、複数の認証データベースを併用する仕組みも備えていますが、複数の資格情報ストレージを管理するためのユーザー向けインターフェイスは現時点で提供されていません。そのため、通常はPythonプラグインなどを用いた手動での設定・運用が必要です。</p>
 </section>
 <section id="master-password">
@@ -451,7 +451,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 6月 29, 00:54 +0900
+      <span class="lastupdated">最終更新: 2025 7月 04, 03:13 +0900
       </span></p>
   </div>
 
