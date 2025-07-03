@@ -200,7 +200,7 @@
   <blockquote>
 <div><div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 98.83% 翻訳されています。</p>
+<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 100.00% 翻訳されています。</p>
 </div>
 </div></blockquote>
 <section id="d-map-view">
@@ -242,7 +242,7 @@
 <li><p><a class="reference internal" href="../../../_images/mActionIdentify.png"><img alt="identify" src="../../../_images/mActionIdentify.png" style="width: 1.5em;" /></a> <sup>地物情報表示</sup>: クリックされた地点の地形情報、もしくはクリックされた3次元地物の情報を表示します（詳細については <a class="reference internal" href="../introduction/general_tools.html#identify"><span class="std std-ref">地物の識別</span></a> を参照）</p></li>
 <li><p><a class="reference internal" href="../../../_images/mActionMeasure.png"><img alt="measure" src="../../../_images/mActionMeasure.png" style="width: 1.5em;" /></a> <sup>計測ライン</sup>: ポイント間の水平距離を測定します</p></li>
 <li><p><a class="reference internal" href="../../../_images/mActionPlay.png"><img alt="play" src="../../../_images/mActionPlay.png" style="width: 1.5em;" /></a> <sup>アニメーション</sup>: <a class="reference internal" href="#create-animation"><span class="std std-ref">アニメーションプレーヤー</span></a> ウィジェットを表示/非表示 にします</p></li>
-<li><p><a class="reference internal" href="../../../_images/mActionSharingExport.png"><img alt="sharingExport" src="../../../_images/mActionSharingExport.png" style="width: 1.5em;" /></a> :sup: <cite>エクスポート</cite> メニューでは、シーンをさまざまな形式でエクスポートすることができます:</p>
+<li><p><a class="reference internal" href="../../../_images/mActionSharingExport.png"><img alt="sharingExport" src="../../../_images/mActionSharingExport.png" style="width: 1.5em;" /></a> <sup>エクスポート</sup> メニューでは、シーンをさまざまな形式でエクスポートすることができます:</p>
 <ul>
 <li><p><a class="reference internal" href="../../../_images/mActionSaveMapAsImage.png"><img alt="saveMapAsImage" src="../../../_images/mActionSaveMapAsImage.png" style="width: 1.5em;" /></a> <sup>画像として保存...</sup>: 現在のビューを画像ファイル形式でエクスポートします</p></li>
 <li><p><a class="reference internal" href="../../../_images/3d.png"><img alt="3d" src="../../../_images/3d.png" style="width: 1.5em;" /></a> <sup>3Dシーンの出力</sup> ：現在のビューを3Dシーン（ <code class="file docutils literal notranslate"><span class="pre">.obj</span></code> ファイル）として出力し、Blender等のアプリケーションで後処理できるようにします。地形とベクタ地物が3Dオブジェクトとしてエクスポートされます。エクスポート設定には以下のものが含まれ、レイヤの <a class="reference internal" href="../working_with_vector/vector_properties.html#sec-3-d-view"><span class="std std-ref">プロパティ</span></a> やマップビューの <a class="reference internal" href="#scene-configuration"><span class="std std-ref">設定</span></a> を上書きします。</p>
@@ -259,17 +259,15 @@
 </ul>
 </li>
 <li><p><a class="reference internal" href="../../../_images/mActionShowPresets.png"><img alt="showPresets" src="../../../_images/mActionShowPresets.png" style="width: 1.5em;" /></a> <sup>ビューテーマを設定</sup> ：定義済みの <a class="reference internal" href="../introduction/general_tools.html#map-themes"><span class="std std-ref">地図テーマ</span></a> から、から、マップビューに表示するレイヤの組み合わせを選択できます。</p></li>
-<li><p>The <a class="reference internal" href="../../../_images/mIconCamera.png"><img alt="camera" src="../../../_images/mIconCamera.png" style="width: 1.5em;" /></a> :sup:<a href="#id1"><span class="problematic" id="id2">`</span></a>カメラ`メニューは、2Dビューと3Dビューの関係を操作するのに役立ちます:</p>
+<li><p>The <a class="reference internal" href="../../../_images/mIconCamera.png"><img alt="camera" src="../../../_images/mIconCamera.png" style="width: 1.5em;" /></a> <sup>カメラ</sup> メニューは、2Dビューと3Dビューの関係を操作するのに役立ちます:</p>
 <ul>
 <li><p>ビューの同期（ <span class="guilabel">2D地図ビューが3Dカメラに従う</span> や、 <span class="guilabel">3Dカメラが2D地図ビューに従う</span> ）</p></li>
 <li><p><span class="guilabel">2D地図ビューにカメラの視界を表示</span></p></li>
-<li><p><span class="guilabel">Set 3D scene on 2D map view</span>: allows to clip the 3D scene
-and display only the terrain and features intersecting an extent drawn on the 2D map canvas.
-More options are available in the <a class="reference internal" href="#scene-extent"><span class="std std-ref">General configuration</span></a> tab.</p></li>
+<li><p><span class="guilabel">2Dマップビューに3Dシーンを設定</span> 2Dマップキャンバス上で描画した範囲に基づいて、3Dシーンを切り取り、その範囲と交差する地形や特徴のみを表示することができます. より詳細なオプションは :ref: <cite>General configuration &lt;scene_extent&gt;</cite> tab.</p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="../../../_images/mIconShadow.png"><img alt="shadow" src="../../../_images/mIconShadow.png" style="width: 1.5em;" /></a> :sup: <cite>効果</cite> では、3Dレンダリングに視覚効果を追加できます。たとえば、影の表示 :ref: <cite>影&lt;shadows&gt;</cite>, :ref: <cite>アイドームライティング&lt;eye_dome_lighting&gt;</cite>, :ref: <cite>アンビエントオクルージョン&lt;ambient_occlusion&gt;</cite> などがあります。</p></li>
-<li><p>The <a class="reference internal" href="../../../_images/mActionOptions.png"><img alt="options" src="../../../_images/mActionOptions.png" style="width: 1em;" /></a> <sup>選択</sup> ボタンをクリックすると、3Dマップビューの設定ダイアログが開きます <a class="reference internal" href="#scene-configuration"><span class="std std-ref">設定</span></a>.</p></li>
+<li><p><a class="reference internal" href="../../../_images/mIconShadow.png"><img alt="shadow" src="../../../_images/mIconShadow.png" style="width: 1.5em;" /></a> :sup: <cite>効果</cite> では、3Dレンダリングに視覚効果を追加できます。たとえば、影の表示 :ref: <cite>shadows&lt;shadows&gt;</cite>, :ref: <cite>eye dome lighting&lt;eye_dome_lighting&gt;</cite>, :ref: <cite>ambient occlusion&lt;ambient_occlusion&gt;</cite> などがあります。</p></li>
+<li><p><a class="reference internal" href="../../../_images/mActionOptions.png"><img alt="options" src="../../../_images/mActionOptions.png" style="width: 1em;" /></a> <sup>選択</sup> ボタンをクリックすると、3Dマップビューの設定ダイアログが開きます <a class="reference internal" href="#scene-configuration"><span class="std std-ref">settings</span></a>.</p></li>
 <li><p><a class="reference internal" href="../../../_images/dock.png"><img alt="dock" src="../../../_images/dock.png" style="width: 1.5em;" /></a> <sup>3Dマップビューを合体</sup>: ドッキング可能なウィジェットからトップレベルウィンドウへと切り替えます</p></li>
 </ul>
 <section id="scene-configuration">
@@ -309,7 +307,7 @@ More options are available in the <a class="reference internal" href="#scene-ext
 <li><p>読み込まれた <span class="guilabel">DEM ラスタ</span></p></li>
 <li><p><span class="guilabel">オンライン</span> サービスは、Mapzen ツールによって作成された <a class="reference external" href="http://s3.amazonaws.com/elevation-tiles-prod/">標高タイル</a> を読み込みます。 -- 詳細については <a class="reference external" href="https://registry.opendata.aws/terrain-tiles/">https://registry.opendata.aws/terrain-tiles/</a> を参照してください。</p></li>
 <li><p>読み込んだ <span class="guilabel">メッシュ</span> データセット</p></li>
-<li><p>a <span class="guilabel">Quantized Mesh</span> layer from the project</p></li>
+<li><p>プロジェクト内の <span class="guilabel">量子化メッシュ</span> レイヤー</p></li>
 </ul>
 </li>
 <li><p><span class="guilabel">高さ</span> ：地形の生成に使用するラスタレイヤまたはメッシュレイヤを選択します。ラスタレイヤには標高を表すバンドが含まれている必要があります。メッシュレイヤは、頂点のZ値が使用されます。</p></li>
@@ -530,7 +528,7 @@ More options are available in the <a class="reference internal" href="#scene-ext
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 6月 29, 00:54 +0900
+      <span class="lastupdated">最終更新: 2025 7月 03, 13:22 +0900
       </span></p>
   </div>
 

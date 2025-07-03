@@ -419,7 +419,7 @@
 </section>
 <section id="creating-new-layers-from-an-existing-layer">
 <span id="general-saveas"></span><span id="index-7"></span><h2><a class="toc-backref" href="#id20" role="doc-backlink"><span class="section-number">11.2.2. </span>既存のレイヤから新しいレイヤを作成する</a><a class="headerlink" href="#creating-new-layers-from-an-existing-layer" title="Link to this heading"></a></h2>
-<p>レイヤ（ラスター、ベクトル、点群）は <span class="menuselection">レイヤ ► 名前を付けて保存...</span> メニューを使うか、 <span class="guilabel">レイヤパネル</span> でレイヤを右クリックして選択することで、別のフォーマットで保存したり、別の座標参照系（CRS）に再投影することができます：</p>
+<p>レイヤ（ラスタ、ベクトル、点群）は <span class="menuselection">レイヤ ► 名前を付けて保存...</span> メニューを使うか、 <span class="guilabel">レイヤパネル</span> でレイヤを右クリックして選択することで、別のフォーマットや別の座標参照系（CRS）に再投影しても保存することができます：</p>
 <ul class="simple">
 <li><p><span class="menuselection">エクスポート ► 名前を付けて保存...</span> ラスタと点群レイヤの場合</p></li>
 <li><p>ベクタレイヤの場合は <span class="menuselection">エクスポート ► 地物の保存...</span> または <span class="menuselection">エクスポート ► 選択地物の保存...</span></p></li>
@@ -434,7 +434,7 @@
 <li><p><span class="guilabel">領域</span> ： <a class="reference internal" href="../introduction/general_tools.html#extent-selector"><span class="std std-ref">範囲セレクタ</span></a> ウィジェットを使用して、エクスポートされる入力の範囲を制限します</p></li>
 <li><p><span class="guilabel">保存されたファイルを地図に追加する</span> ：新しいレイヤをマップキャンバスに追加します。</p></li>
 </ul>
-<p>ただし、いくつかのパラメータは特定のフォーマットの固有のものです。</p>
+<p>ただし、いくつかのパラメータは特定のフォーマットの固有のものです:</p>
 </section>
 <section id="raster-specific-parameters">
 <h3><a class="toc-backref" href="#id22" role="doc-backlink"><span class="section-number">11.2.2.2. </span>ラスタに固有のパラメータ</a><a class="headerlink" href="#raster-specific-parameters" title="Link to this heading"></a></h3>
@@ -522,7 +522,7 @@
 </section>
 <section id="point-cloud-specific-parameters">
 <h3><a class="toc-backref" href="#id24" role="doc-backlink"><span class="section-number">11.2.2.4. </span>点群固有のマラメータ</a><a class="headerlink" href="#point-cloud-specific-parameters" title="Link to this heading"></a></h3>
-<p>ラスタレイヤやベクタレイヤと同様に、点群レイヤーも異なるフォーマットで保存したり、異なる座標参照系（CRS）に再投影することができます。これにより、点群レイヤをベクトルまたは点群フォーマットにエクスポートできます。現在サポートされているフォーマットは以下の通りです。 Temporary scratch（メモリレイヤー）、GeoPackage、ESRI シェープファイル、DXF、LAS/LAZ 点群。上記の共通パラメータに加え、点群レイヤのエクスポートには以下のオプションがあります。</p>
+<p>ラスタレイヤやベクタレイヤと同様に、点群レイヤーも異なるフォーマットや異なる座標参照系（CRS）に再投影しても保存することができます。これにより、点群レイヤをベクトルまたは点群フォーマットにエクスポートできます。現在サポートされているフォーマットは以下の通りです。 Temporary scratch（メモリレイヤー）、GeoPackage、ESRI シェープファイル、DXF、LAS/LAZ 点群。上記の共通パラメータに加え、点群レイヤのエクスポートには以下のオプションがあります。</p>
 <ul class="simple">
 <li><p><span class="guilabel">ポリゴンレイヤによるフィルタ</span>： ポリゴンレイヤに基づいて点群データをフィルタリングできるようにします。</p></li>
 <li><p><span class="guilabel">標高範囲</span>： 指定したZ範囲に基づいて点群データのフィルタリングを有効にします。</p></li>
@@ -552,9 +552,9 @@
 <li><p>データの <span class="guilabel">文字コード</span> を選択します。</p></li>
 <li><p>適用する <span class="guilabel">CRS</span> を選択します。選択したレイヤは指定したCRSに再投影されます。</p></li>
 <li><p>DXFファイルに含めるレイヤを、テーブルウィジェットでチェックを付けるか、既存の <a class="reference internal" href="../introduction/general_tools.html#map-themes"><span class="std std-ref">地図のテーマ</span></a> からの自動抽出で選択します。 <span class="guilabel">すべて選択</span> ボタンと <span class="guilabel">すべての選択を解除</span> ボタンは、エクスポートするデータを素早く設定するのに役立ちます。</p>
-<p>各レイヤについて、以下のことが可能です。</p>
+<p>各レイヤについて、以下のことが可能です:</p>
 <ul class="simple">
-<li><p>元のプロジェクトのレイヤを変更せずに、出力レイヤ名を上書きします。そのためには、ダイアログの <span class="guilabel">レイヤ</span> 名をクリックし、使用する出力名を記述します。</p></li>
+<li><p>元のプロジェクトレイヤを変更せずに、出力レイヤ名を上書きします。そのためには、ダイアログの <span class="guilabel">レイヤ</span> 名をクリックし、使用する出力名を記述します。</p></li>
 <li><p><span class="guilabel">出力レイヤ属性</span>： すべてのフィーチャーを1つのDXFレイヤにエクスポートするか、DXF出力でフィーチャーをレイヤに分割するために使用されるフィールドの値に依存するかを選択します。後者の場合、各レイヤーの名前は対応するフィールド値から取られます。</p></li>
 <li><p><span class="guilabel">データ定義されたシンボルブロックを許可します。</span>:</p></li>
 <li><p><span class="guilabel">最大シンボルブロック数</span>: 指定された上限までのシンボルブロックを作成し、参照数が最も多いものから始めます。他のシンボルはそのまま書かれます。-1``は制限なしを意味します。</p></li>
@@ -574,13 +574,13 @@
 <p class="admonition-title">注釈</p>
 <p>出力レイヤ名の定義の優先順位は以下の通りです。</p>
 <ol class="arabic simple">
-<li><p><span class="guilabel">出力レイヤ属性</span> のフィールド値です。</p></li>
-<li><p>The overridden name in <span class="guilabel">レイヤ</span> カラムで名前の上書き保存をします。</p></li>
-<li><p>The :guilabel:<a href="#id1"><span class="problematic" id="id2">`</span></a>セットする場合レイヤタイトルを名前として使います a</p></li>
+<li><p><span class="guilabel">出力レイヤ属性</span> のフィールド値</p></li>
+<li><p><span class="guilabel">レイヤ</span> カラムで名前の上書き保存をします。</p></li>
+<li><p>The :guilabel:<a href="#id1"><span class="problematic" id="id2">`</span></a>セットする場合レイヤタイトルを名前として使います。</p></li>
 <li><p>レイヤ名</p></li>
 </ol>
 </div>
-<p><span class="guilabel">DXF Export</span> ダイアログで定義された現在の設定は、 may be stored in an XML file for reusing them in other sessions. For this, the <span class="guilabel">Settings</span> combo box has two options: <span class="guilabel">Load Settings from File...</span> and <span class="guilabel">Save Settings to File...</span>.</p>
+<p><span class="guilabel">DXF エクスポート</span> ダイアログで定義された現在の設定は、 他のセッションで再利用するためにXMLファイルに保存することができます。そのために <span class="guilabel">設定</span> コンボボックスには <span class="guilabel">ファイルから設定をロード...</span> と  <span class="guilabel">ファイルに設定を保存...</span> の二つのオプションがあります。.</p>
 </section>
 <section id="creating-new-layers-from-the-clipboard">
 <span id="paste-into-layer"></span><h2><a class="toc-backref" href="#id26" role="doc-backlink"><span class="section-number">11.2.4. </span>クリップボードから新しいレイヤを作成する</a><a class="headerlink" href="#creating-new-layers-from-the-clipboard" title="Link to this heading"></a></h2>
@@ -703,7 +703,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 03, 03:03 +0900
+      <span class="lastupdated">最終更新: 2025 7月 03, 13:22 +0900
       </span></p>
   </div>
 
