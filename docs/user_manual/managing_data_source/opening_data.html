@@ -204,7 +204,7 @@
   <blockquote>
 <div><div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 95.36% 翻訳されています。</p>
+<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 96.47% 翻訳されています。</p>
 </div>
 </div></blockquote>
 <section id="opening-data">
@@ -261,7 +261,7 @@
 <li><p><a class="reference internal" href="#using-vector-tiles-services" id="id57">ベクタタイルサービスを利用する</a></p></li>
 <li><p><a class="reference internal" href="#using-xyz-tile-services" id="id58">XYZタイルサービスを利用する</a></p></li>
 <li><p><a class="reference internal" href="#using-arcgis-rest-servers" id="id59">ArcGIS REST Serversを利用する</a></p></li>
-<li><p><a class="reference internal" href="#using-3d-tiled-scene-services" id="id60">Using 3D tiled scene services</a></p></li>
+<li><p><a class="reference internal" href="#using-3d-tiled-scene-services" id="id60">3Dタイルシーンサービスの使用</a></p></li>
 <li><p><a class="reference internal" href="#using-cloud-connections" id="id61">Using Cloud Connections</a></p></li>
 </ul>
 </li>
@@ -937,8 +937,8 @@ To use this option:</p>
 <p>データベースに1つ以上の接続が定義できたら（ <a class="reference internal" href="#vector-create-stored-connection"><span class="std std-ref">保存された接続の作成</span></a> を参照）、そこからレイヤを読み込むことができます。もちろん、このためにはデータが利用可能なものである必要があります。PostGISデータベースへのデータのインポートについての議論は、 <a class="reference internal" href="supported_data.html#vector-import-data-in-postgis"><span class="std std-ref">PostgreSQLへデータをインポートする</span></a> のセクションを参照してください。</p>
 <p>データベースからレイヤを読み込むには、以下の手順に従います：</p>
 <ol class="arabic simple">
-<li><p>Open the corresponding tab of the database in the <span class="guilabel">Data Source Manager</span> dialog.</p></li>
-<li><p>Choose the connection name from the drop-down list and press <span class="guilabel">Connect</span>.</p></li>
+<li><p><span class="guilabel">データソースマネージャ</span> ダイアログで、該当するデータベースのタブを開きます。</p></li>
+<li><p>ドロップダウンリストから接続名を選択し、 <span class="guilabel">接続</span> をクリックします。</p></li>
 <li><p><a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">ジオメトリを持たないテーブルもリストする</span>　を選択または非選択にできます</p></li>
 <li><p>オプションとして、いくつかの <a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">検索オプション</span> を使用して、検索にマッチしたもののみにテーブルのリストを削減できます。このオプションを <span class="guilabel">接続</span> ボタンを押す前に設定することもでき、データベースからのテーブル取得を高速化することができます。</p></li>
 <li><p>利用可能なレイヤのリスト内で、追加したいレイヤを探してください。</p></li>
@@ -1016,12 +1016,11 @@ The service must provide tiles in <code class="file docutils literal notranslate
 <li><p><a class="reference internal" href="../auth_system/index.html#authentication-index"><span class="std std-ref">認証</span></a> ：必要に応じて設定</p></li>
 <li><p><span class="guilabel">リファラー</span></p></li>
 </ul>
-<p><a class="reference internal" href="#figure-vector-tiles-configuration"><span class="std std-numref">図 11.17</span></a> shows the dialog with the
-Vector Tiles service configuration.</p>
+<p><a class="reference internal" href="#figure-vector-tiles-configuration"><span class="std std-numref">図 11.17</span></a> ベクタタイルサービスの設定ダイアログ</p>
 <figure class="align-center" id="id19">
 <span id="figure-vector-tiles-configuration"></span><img alt="../../../_images/vector_tiles_configuration.png" src="../../../_images/vector_tiles_configuration.png" />
 <figcaption>
-<p><span class="caption-number">図 11.17 </span><span class="caption-text">Vector Tiles - Service configuration</span><a class="headerlink" href="#id19" title="Link to this image"></a></p>
+<p><span class="caption-number">図 11.17 </span><span class="caption-text">ベクタタイル-サービスの設定</span><a class="headerlink" href="#id19" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p>接続設定は、 <span class="guilabel">データソースマネージャ</span> ダイアログ内の <span class="guilabel">ベクタタイル</span> エントリや、 <span class="guilabel">ブラウザ</span> パネルのVector Tilesのコンテキストメニューを通じて <code class="file docutils literal notranslate"><span class="pre">.XML</span></code> ファイルに保存（ <span class="guilabel">接続を保存</span> ）することができます。同様に、接続をファイルから追加する（ <span class="guilabel">接続を読み込む</span> ）こともできます。</p>
@@ -1144,9 +1143,8 @@ which is necessary for some ArcGIS servers that use web proxy prefixes.</p></li>
 </ul>
 </section>
 <section id="using-3d-tiled-scene-services">
-<span id="d-tiles"></span><span id="index-18"></span><h3><a class="toc-backref" href="#id60" role="doc-backlink"><span class="section-number">11.1.7.4. </span>Using 3D tiled scene services</a><a class="headerlink" href="#using-3d-tiled-scene-services" title="Link to this heading"></a></h3>
-<p>QGIS supports multiple formats of 3D tiled datasets, grouped together as &quot;tiled
-scenes&quot;. These include Cesium 3D Tiles and Quantized Mesh tiles.</p>
+<span id="d-tiles"></span><span id="index-18"></span><h3><a class="toc-backref" href="#id60" role="doc-backlink"><span class="section-number">11.1.7.4. </span>3Dタイルシーンサービスの使用</a><a class="headerlink" href="#using-3d-tiled-scene-services" title="Link to this heading"></a></h3>
+<p>QGIS は、複数の形式の 3D タイルデータセットに対応しており、これらは「タイルシーン」としてまとめられています。対応形式には、Cesium 3D Tiles や Quantized Mesh タイル などが含まれます。</p>
 <p>To load a tiled scene dataset into QGIS, use the <a class="reference internal" href="../../../_images/mActionAddTiledSceneLayer.png"><img alt="addTiledSceneLayer" src="../../../_images/mActionAddTiledSceneLayer.png" style="width: 1.5em;" /></a>
 <span class="guilabel">Scene</span> tab in the <span class="guilabel">Data Source Manager</span> dialog.</p>
 <figure class="align-center" id="id21">
@@ -1215,7 +1213,7 @@ or <span class="guilabel">Load Connection</span> from an XML file.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 04, 03:13 +0900
+      <span class="lastupdated">最終更新: 2025 7月 07, 19:49 +0900
       </span></p>
   </div>
 
