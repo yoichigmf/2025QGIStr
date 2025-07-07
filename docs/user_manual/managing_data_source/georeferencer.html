@@ -315,7 +315,7 @@
 <span id="georeferencer-entering"></span><h3><a class="toc-backref" href="#id7" role="doc-backlink"><span class="section-number">11.3.1.1. </span>グラウンドコントロールポイント（GCP）の入力</a><a class="headerlink" href="#entering-ground-control-points-gcps" title="Link to this heading"></a></h3>
 <ol class="arabic">
 <li><p>ジオリファレンスされていないラスタのジオリファレンスを開始するには、 <a class="reference internal" href="../../../_images/mActionAddRasterLayer.png"><img alt="addRasterLayer" src="../../../_images/mActionAddRasterLayer.png" style="width: 1.5em;" /></a> ボタンを使用してそのラスタをロードする必要があります。ラスタはダイアログのメインの作業領域に表示されます。ラスタがロードされると、基準点の入力を開始できます。</p></li>
-<li><p><a class="reference internal" href="../../../_images/mActionAddGCPPoint.png"><img alt="addGCPPoint" src="../../../_images/mActionAddGCPPoint.png" style="width: 1.5em;" /></a> <sup>GCPを追加</sup> ボタンを使用して、メインの作業エリアにポイントを追加し、その座標を入力します（図 :numref: figure_georeferencer_add_points を参照）。この手順には、以下のオプションがあります。</p>
+<li><p><a class="reference internal" href="../../../_images/mActionAddGCPPoint.png"><img alt="addGCPPoint" src="../../../_images/mActionAddGCPPoint.png" style="width: 1.5em;" /></a> <sup>GCPを追加</sup> ボタンを使用して、メインの作業エリアにポイントを追加し、その座標を入力します（図  <a class="reference internal" href="#figure-georeferencer-add-points"><span class="std std-numref">図 11.35</span></a> を参照）。この手順には、以下のオプションがあります。</p>
 <ul class="simple">
 <li><p>ラスタ画像内の点をクリックして、その点のCRSとともにX座標とY座標を手動で入力する。</p></li>
 <li><p>ラスタ画像内の点をクリックし、 <a class="reference internal" href="../../../_images/pencil.png"><img alt="pencil" src="../../../_images/pencil.png" style="width: 1.5em;" /></a> <sup>地図キャンバスから</sup> ボタンを押して、既にQGISのマップキャンバスに読み込まれたジオリファレンス済みの地図を使用して、X座標とY座標を追加する。CRSは自動的に設定されます。</p></li>
@@ -411,7 +411,7 @@
 <li><p><a class="reference internal" href="../../../_images/mActionAddGCPPoint.png"><img alt="addGCPPoint" src="../../../_images/mActionAddGCPPoint.png" style="width: 1.5em;" /></a> <sup>GCPを追加</sup> ボタンを使用して、作業エリアにポイントを追加します。座標を手動で入力し、CRS を設定するか、 <a class="reference internal" href="../../../_images/pencil.png"><img alt="pencil" src="../../../_images/pencil.png" style="width: 1.5em;" /></a>:sup: <cite>地図キャンバスから</cite> ボタンをクリックして、QGIS メインマップキャンバスにあるジオリファレンスされたレイヤから座標を選択します。この場合、CRS は自動的に設定されます。</p></li>
 <li><p>変換設定を定義する</p>
 <ul class="simple">
-<li><p><span class="guilabel">変換タイプ</span> を選択します。変換アルゴリズムはラスタのジオリファレンスと同じです。詳細については、 <span class="xref std std-ref">変換の設定の定義</span> をご参照ください。</p></li>
+<li><p><span class="guilabel">変換タイプ</span> を選択します。変換アルゴリズムはラスタのジオリファレンスと同じです。詳細については、 <a class="reference internal" href="#georeferencer-transformation"><span class="std std-ref">変換の設定の定義</span></a> をご参照ください。</p></li>
 <li><p>ジオリファレンスされたベクタの <span class="guilabel">変換先CRS</span> （座標参照系）を定義します（ <a class="reference internal" href="../working_with_projections/working_with_projections.html#label-projections"><span class="std std-ref">投影法の操作</span></a> を参照）。</p></li>
 <li><p>出力ファイルの形式とパスを設定します（例: GeoPackage、シェープファイル）。デフォルトでは、元のベクタファイルと同じフォルダに、接尾辞 <code class="docutils literal notranslate"><span class="pre">_modified</span></code> が付いた新しいファイルが作成されます。</p></li>
 <li><p>必要ならば、 <strong>PDF マップを生成</strong> と <strong>PDF レポートを生成</strong> を有効にしてください。このレポートには、変換パラメーター、GCP の残差、および RMS エラーの概要が含まれます。</p></li>
@@ -451,7 +451,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 08, 04:20 +0900
+      <span class="lastupdated">最終更新: 2025 7月 08, 06:50 +0900
       </span></p>
   </div>
 
