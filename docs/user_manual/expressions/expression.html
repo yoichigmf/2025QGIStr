@@ -197,7 +197,7 @@
   <blockquote>
 <div><div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 92.80% 翻訳されています。</p>
+<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 91.34% 翻訳されています。</p>
 </div>
 </div></blockquote>
 <section id="expressions">
@@ -454,28 +454,37 @@
 <li><p><a class="reference internal" href="../../../_images/symbologyAdd.png"><img alt="symbologyAdd" src="../../../_images/symbologyAdd.png" style="width: 1.5em;" /></a> <sup>新規ファイル</sup> ボタンをクリックします。</p></li>
 <li><p>Select where to store the new function. You can choose to save it either in a
 <span class="guilabel">Function file</span> or in <span class="guilabel">Project functions</span>.</p>
-<ul class="simple">
+<ul>
 <li><p>If you select <span class="guilabel">Function file</span>, you need to enter a name for the Python <code class="file docutils literal notranslate"><span class="pre">.py</span></code> file,
 which is based on a QGIS template file and is stored in the <code class="file docutils literal notranslate"><span class="pre">/python/expressions</span></code> folder
-under the active <a class="reference internal" href="../introduction/qgis_configuration.html#user-profiles"><span class="std std-ref">user profile</span></a> directory.</p></li>
-<li><p>If you select <span class="guilabel">Project functions</span>, the new function is stored in the project file.</p></li>
+under the active <a class="reference internal" href="../introduction/qgis_configuration.html#user-profiles"><span class="std std-ref">user profile</span></a> directory,
+thus available for all projects you may open with that profile.</p>
+<p>Custom Python functions stored as Function files are auto loaded
+whenever you start a new project under the user profile.
+Be aware that for sharing such Python functions,
+you need to share the <code class="file docutils literal notranslate"><span class="pre">.py</span></code> file in the <code class="file docutils literal notranslate"><span class="pre">/python/expressions</span></code> folder.</p>
+</li>
+<li><p>If you select <span class="guilabel">Project functions</span>, the new function is stored in the project file
+and only available for that project.</p>
+<p>Custom Python functions stored as Project functions can be easily shared
+by sharing the project file where they were saved.
+When opening a project with project functions, QGIS can load or ignore them
+depending on whether <a class="reference internal" href="../introduction/qgis_configuration.html#load-project-code"><span class="std std-ref">embedded Python code is enabled</span></a>.</p>
+</li>
 </ul>
 <p>A new item is added in the left panel of the <span class="guilabel">Function Editor</span> tab.</p>
 </li>
-<li><p>The right panel displays the content of the file: a python script template.
-Update the code and its help according to your needs.</p></li>
+<li><p>The right panel displays the content of the file: a python script template.</p></li>
+<li><p>Uncomment the code block and start editing it according to your needs.
+You can rely on code autocompletion, code formatting and typing helpers,
+as defined in <a class="reference internal" href="../introduction/qgis_configuration.html#console-options"><span class="std std-ref">Python設定</span></a>.</p>
+<p>You will find in the <span class="guilabel">Help</span> widget general information
+for setting the &#64;qgsfunction decorator.</p>
+</li>
 <li><p><a class="reference internal" href="../../../_images/mActionStart.png"><img alt="start" src="../../../_images/mActionStart.png" style="width: 1.5em;" /></a> <span class="guilabel">関数の保存と読み込み</span> ボタンをクリックします。あなたの書いた関数が <span class="guilabel">式</span> タブの関数ツリーの中に追加されます。デフォルトでは <code class="docutils literal notranslate"><span class="pre">Custom</span></code> グループの中に追加されます。</p></li>
 <li><p>新しい関数を使いましょう。</p></li>
 <li><p>関数に改善が必要なときは、 <span class="guilabel">関数エディタ</span> タブに戻って修正を加えた後、再度 <a class="reference internal" href="../../../_images/mActionStart.png"><img alt="start" src="../../../_images/mActionStart.png" style="width: 1.5em;" /></a> <span class="guilabel">関数の保存と読み込み</span> ボタンをクリックして、ファイル内、つまりは任意の式タブで利用できるようにします。</p></li>
 </ol>
-<p>Custom Python functions stored as Function files are stored under the user profile
-directory, meaning that at each QGIS startup, it will auto load all the functions
-defined with the current user profile. Be aware that for sharing Python functions stored
-in Function files you need to share the <code class="file docutils literal notranslate"><span class="pre">.py</span></code> file in the <code class="file docutils literal notranslate"><span class="pre">/python/expressions</span></code> folder.</p>
-<p>On the other hand, custom Python functions stored as Project functions can be easily
-shared by sharing the project file where they were saved. When opening a project
-with project functions, QGIS can load or ignore them depending on whether
-<a class="reference internal" href="../introduction/qgis_configuration.html#load-project-code"><span class="std std-ref">embedded Python code is enabled</span></a> in General settings.</p>
 <p>カスタム関数を削除するには：</p>
 <ol class="arabic simple">
 <li><p><span class="guilabel">関数エディタ</span> タブを有効にします。</p></li>
@@ -485,8 +494,11 @@ removed from the list and, depending on the storage, the corresponding <code cla
 file is deleted from the user profile folder, or the Python functions are removed
 from the project file.</p></li>
 </ol>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
 <p>When a project file with Project functions is closed, the corresponding Project
 functions are unloaded and are no longer available in the QGIS session.</p>
+</div>
 <p><strong>例</strong></p>
 <p>これは、2つの値を操作する独自の <code class="docutils literal notranslate"><span class="pre">my_sum</span></code> 関数を作成する簡単な例です。</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.core</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
@@ -543,7 +555,7 @@ functions are unloaded and are no longer available in the QGIS session.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 01, 23:57 +0900
+      <span class="lastupdated">最終更新: 2025 7月 08, 04:20 +0900
       </span></p>
   </div>
 
