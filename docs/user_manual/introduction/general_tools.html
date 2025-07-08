@@ -234,7 +234,7 @@
   <blockquote>
 <div><div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 93.23% 翻訳されています。</p>
+<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 97.63% 翻訳されています。</p>
 </div>
 </div></blockquote>
 <section id="general-tools">
@@ -332,8 +332,7 @@
 <ul>
 <li><p><span class="guilabel">コンテンツで凡例を絞り込む</span>: レイヤが可視状態に設定されていて、かつ地物が現在の地図キャンバス内に表示されているレイヤのみが、レイヤパネルでスタイルが表示されるようになります。それ以外の場合は、一般的なNULLシンボルがレイヤに適用されます。このオプションは、関心のある領域に存在するのがどのレイヤのどの地物なのかをレイヤシンボルに基づいて識別するのに便利な方法です。</p></li>
 <li><p><span class="guilabel">プライベートレイヤを表示</span>: プロジェクトの設定を変更せずに <a class="reference internal" href="qgis_configuration.html#project-layer-capabilities"><span class="std std-ref">プライベートレイヤ</span></a>  を <span class="guilabel">レイヤ</span> パネル内に表示したり、操作するのに便利なショートカットです。</p></li>
-<li><p><span class="guilabel">Show Broken Layers Only</span>: only layers with broken data sources
-are displayed.</p></li>
+<li><p><span class="guilabel">破損したレイヤーのみ表示</span>: データソースが破損しているレイヤーのみが表示されます。</p></li>
 </ul>
 </li>
 <li><p><a class="reference internal" href="../../../_images/mIconExpressionFilter.png"><img alt="expressionFilter" src="../../../_images/mIconExpressionFilter.png" style="width: 1.5em;" /></a> <sup>条件式による凡例フィルタ</sup>：式を適用して、条件を満たす地物がないスタイルを選択したレイヤツリーから削除します。これは、別のレイヤの特定の領域/地物内にある地物を強調表示するために使用できます。ドロップダウンリストから、現在適用されている式を編集およびクリアできます。</p></li>
@@ -409,7 +408,7 @@ are displayed.</p></li>
 <th class="head"><p>ラスタレイヤ</p></th>
 <th class="head"><p>メッシュレイヤ</p></th>
 <th class="head"><p>点群レイヤ</p></th>
-<th class="head"><p>3D Layer</p></th>
+<th class="head"><p>3Dレイヤ</p></th>
 </tr>
 </thead>
 <tbody>
@@ -1184,12 +1183,9 @@ are displayed.</p></li>
 <span id="debug-dev-tools"></span><span id="index-13"></span><h3><a class="toc-backref" href="#id57" role="doc-backlink"><span class="section-number">8.2.8. </span>デバッグ開発ツールパネル</a><a class="headerlink" href="#debugging-development-tools-panel" title="Link to this heading"></a></h3>
 <p><span class="guilabel">デバッグ開発ツール</span> パネル（<kbd class="kbd docutils literal notranslate">F12</kbd>）は、QGIS内での対処やデバッグのための統一された場所を提供します。利用可能なツールは次のタブに整理されています:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../../../_images/network_and_proxy.png"><img alt="networkAndProxy" src="../../../_images/network_and_proxy.png" style="width: 1.5em;" /></a> <span class="guilabel">Network Logger</span>: records and displays network requests
-and interactions</p></li>
-<li><p><a class="reference internal" href="../../../_images/dbmanager.png"><img alt="dbManager" src="../../../_images/dbmanager.png" style="width: 1.5em;" /></a> <span class="guilabel">Query Logger</span>: logs SQL commands issued by data providers
-and duration of execution</p></li>
-<li><p><a class="reference internal" href="../../../_images/mIconStopwatch.png"><img alt="stopwatch" src="../../../_images/mIconStopwatch.png" style="width: 1.5em;" /></a> <span class="guilabel">Profiler</span>: provides load times for every actions
-in order to detect causes of slow down</p></li>
+<li><p><a class="reference internal" href="../../../_images/network_and_proxy.png"><img alt="networkAndProxy" src="../../../_images/network_and_proxy.png" style="width: 1.5em;" /></a> <span class="guilabel">ネットワークロガー</span> は、ネットワークリクエストとやり取りを記録・表示します。</p></li>
+<li><p><a class="reference internal" href="../../../_images/dbmanager.png"><img alt="dbManager" src="../../../_images/dbmanager.png" style="width: 1.5em;" /></a> <span class="guilabel">クエリロガー</span> は、データプロバイダーが発行した SQL コマンドと実行時間を記録・表示します。</p></li>
+<li><p><a class="reference internal" href="../../../_images/mIconStopwatch.png"><img alt="stopwatch" src="../../../_images/mIconStopwatch.png" style="width: 1.5em;" /></a> <span class="guilabel">プロファイラー</span> は、あらゆるアクションの読み込み時間を提供し、処理速度低下の原因を特定するために役立ちます。</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
@@ -1244,9 +1240,9 @@ in order to detect causes of slow down</p></li>
 </figure>
 </section>
 <section id="profiler">
-<h4><span class="section-number">8.2.8.3. </span>プロファイラ<a class="headerlink" href="#profiler" title="Link to this heading"></a></h4>
+<h4><span class="section-number">8.2.8.3. </span>プロファイラー<a class="headerlink" href="#profiler" title="Link to this heading"></a></h4>
 <p><a class="reference internal" href="../../../_images/mIconStopwatch.png"><img alt="stopwatch" src="../../../_images/mIconStopwatch.png" style="width: 1.5em;" /></a> <span class="guilabel">プロファイル</span> タブを使用すると、ユーザーによって要求されたアクションに関わるあらゆる操作の読み込み時間を取得することができます。コンテキストによって、これらの操作は設定の読み込み、メニュー、マップキャンバスや3Dビューの作成、マップレイヤの参照解決、ブックマークやレイアウトの読み込みなどがあります。これは、読み込み時間が遅い原因を特定するのに役立ちます。</p>
-<p>Default supported actions can be selected from the <span class="guilabel">Category</span> drop-down menu:</p>
+<p><span class="guilabel">カテゴリ</span> ドロップダウンメニュー: から、デフォルトでサポートされているアクションを選択できます。</p>
 <ul class="simple">
 <li><p><span class="guilabel">Startup</span> 時々発生する QGIS の起動時間が長くなるのを診断 (および修正) するのに役立ちます。</p></li>
 <li><p><span class="guilabel">Project Load</span> を使用すると、プロジェクトの読み込み時間が遅い原因を特定するために、プロジェクト読み込みのさまざまな段階の内訳を取得できます。</p></li>
@@ -1321,18 +1317,13 @@ in order to detect causes of slow down</p></li>
 <p class="admonition-title">Tip</p>
 <p><span class="menuselection">編集 ► 選択 ► 地物を再選択</span> ツールを使うと、直前に行った選択をやり直せます。これは苦労して選択をした後、うっかりどこか別の場所をクリックしてしまい、選択がクリアされてしまった時に非常に便利です。</p>
 </div>
-<p>While using the <a class="reference internal" href="../../../_images/mActionSelectRectangle.png"><img alt="selectRectangle" src="../../../_images/mActionSelectRectangle.png" style="width: 1.5em;" /></a> <span class="guilabel">Select Feature(s)</span> tool,
-holding <kbd class="kbd docutils literal notranslate">Shift</kbd> or <kbd class="kbd docutils literal notranslate">Ctrl</kbd> (<kbd class="kbd docutils literal notranslate">Cmd</kbd> on macOS) toggles whether a feature is selected
-(i.e., either adds to the current selection or removes from it).</p>
+<p><a class="reference internal" href="../../../_images/mActionSelectRectangle.png"><img alt="selectRectangle" src="../../../_images/mActionSelectRectangle.png" style="width: 1.5em;" /></a> <span class="guilabel">地物を選択する</span> ツールを使用中に、<kbd class="kbd docutils literal notranslate">Shift</kbd> または  <kbd class="kbd docutils literal notranslate">Ctrl</kbd> キー（macOS の場合は <kbd class="kbd docutils literal notranslate">Cmd</kbd> キー）を押すと、地物の選択が切り替わります（つまり、現在の選択に追加するか、選択から削除します）。</p>
 <p>他のツールについては、以下のキーを押しながら選択した際の動作が異なります：</p>
 <ul class="simple">
 <li><p><kbd class="kbd docutils literal notranslate">Shift</kbd> ：地物を現在の選択に追加します</p></li>
-<li><p><kbd class="kbd docutils literal notranslate">Ctrl</kbd>/<kbd class="kbd docutils literal notranslate">Cmd</kbd>: subtract features from the current selection</p></li>
-<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Shift</kbd></kbd>/<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Cmd</kbd>+<kbd class="kbd docutils literal notranslate">Shift</kbd></kbd>: intersect with the current selection, i.e., only keep
-overlapping features from the current selection</p></li>
-<li><p><kbd class="kbd docutils literal notranslate">Alt</kbd>: select features that are totally within the selection shape.
-Combined with <kbd class="kbd docutils literal notranslate">Shift</kbd> or <kbd class="kbd docutils literal notranslate">Ctrl</kbd>/<kbd class="kbd docutils literal notranslate">Cmd</kbd> keys, you can add or subtract
-features to/from the current selection.</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Ctrl</kbd>/<kbd class="kbd docutils literal notranslate">Cmd</kbd>: 現在の選択範囲から地物を減らします。</p></li>
+<li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Shift</kbd></kbd>/<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Cmd</kbd>+<kbd class="kbd docutils literal notranslate">Shift</kbd></kbd>: 現在の選択範囲と交差させます。つまり、現在の選択範囲から重なっている地物のみを保持します。</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Alt</kbd>: 選択範囲の形状内に完全に収まっている地物を選択します。 <kbd class="kbd docutils literal notranslate">Shift</kbd> または  <kbd class="kbd docutils literal notranslate">Ctrl</kbd>/<kbd class="kbd docutils literal notranslate">Cmd</kbd> キーと組み合わせると、現在の選択範囲に地物を追加したり、現在の選択範囲から地物を削除したりできます。</p></li>
 </ul>
 </section>
 <section id="automatic-selection">
@@ -1509,15 +1500,19 @@ see <a class="reference internal" href="../processing_algs/qgis/vectorselection.
 <li><p>or <strong>Graph</strong>: ラスターベースのレイヤーのみで利用可能</p></li>
 </ul>
 </li>
-<li id="identify-mode"><p>'Mode' は、結果が返されるレイヤーを選択するのに役立ちます。これらのレイヤーは可視化され、マップキャンバスにデータが表示され、Project properties ► Data Sources ► Layers capabilities で識別可能と設定されている必要があります。利用可能なモードは次の通りです:</p>
+<li id="identify-mode"><p>The <span class="guilabel">Mode</span> helps you select the layers from which results could be returned.
+These layers should be set visible, displaying data in the map canvas,
+and set <a class="reference internal" href="qgis_configuration.html#project-layer-capabilities"><span class="std std-ref">identifiable</span></a>
+from the <span class="menuselection">Project properties ► Data Sources ► Layers capabilities</span>.
+Available modes are:</p>
 <ul>
-<li><p><strong>Current layer</strong>: ’Layers’ パネルで選択されたlayer(s)のみが結果を返します。グループが選択されている場合、結果はそのleaf layersから取得されます。</p></li>
+<li><p><strong>Current layer</strong>: <span class="guilabel">Layers</span>  パネルで選択されたlayer(s)のみが結果を返します。グループが選択されている場合、結果はそのleaf layersから取得されます。</p></li>
 <li><p><strong>Top down, stop at first</strong>: 結果は、マウス下の最上位の地物またはピクセルのレイヤーから取得されます。</p></li>
 <li><p><strong>Top down</strong>: 結果は、マウス下の地物またはピクセルが存在するすべてのレイヤーから取得されます。</p></li>
 <li><p>Layer selection: コンテキストメニューを開き、ユーザーがフィーチャーを識別するレイヤーを選択します。マウスの下に単一の地物しかない場合、結果は自動的に表示されます。</p></li>
 </ul>
 </li>
-<li><p><span class="guilabel">Identify Results</span> ダイアログの上部には、地物から返された :ref:<a href="#id1"><span class="problematic" id="id2">`</span></a>情報 ` を表、グラフ、またはツリーとして表示するフレームがあります。表示形式は :ref:<a href="#id3"><span class="problematic" id="id4">`</span></a>選択されたビュー ` によって異なります。ツリービューの場合、結果の上にいくつかのツールがあります:</p>
+<li><p><span class="guilabel">Identify Results</span> ダイアログの上部には、地物から返された <a class="reference internal" href="#identified-information"><span class="std std-ref">information</span></a> を表、グラフ、またはツリーとして表示するフレームがあります。表示形式は <a class="reference internal" href="#identify-view"><span class="std std-ref">selected view</span></a>. によって異なります。ツリービューの場合、結果の上にいくつかのツールがあります:</p>
 <ul>
 <li><p><a class="reference internal" href="../../../_images/mActionFormView.png"><img alt="formView" src="../../../_images/mActionFormView.png" style="width: 1.2em;" /></a> <sup>地物フォームを見る</sup> 現在の地物の属性フォームを開きます</p></li>
 <li><p><a class="reference internal" href="../../../_images/mActionExpandTree.png"><img alt="expandTree" src="../../../_images/mActionExpandTree.png" style="width: 1.5em;" /></a> <sup>ツリーを展開する</sup></p></li>
@@ -1543,34 +1538,25 @@ see <a class="reference internal" href="../processing_algs/qgis/vectorselection.
 <span id="identify-selection"></span><h4><span class="section-number">8.4.2.2. </span>地物情報表示ツールを使用する<a class="headerlink" href="#using-the-identify-features-tool" title="Link to this heading"></a></h4>
 <p>デフォルト表示 (<span class="guilabel">ツリー表示</span>) では、<span class="guilabel">Identify Results</span> パネルには、レイヤーに対してクエリを実行するためのいくつかのツールが提供されています。これらのツールと <a class="reference internal" href="#identify-mode"><span class="std std-ref">ターゲットレイヤーセレクタ</span></a> の賢い組み合わせにより、識別操作が大幅に向上する可能性があります。</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../../../_images/mActionIdentifyByRectangle.png"><img alt="identifyByRectangle" src="../../../_images/mActionIdentifyByRectangle.png" style="width: 1.5em;" /></a> <sup>Identify Feature(s)</sup> by single click or click-and-drag</p>
+<li><p><a class="reference internal" href="../../../_images/mActionIdentifyByRectangle.png"><img alt="identifyByRectangle" src="../../../_images/mActionIdentifyByRectangle.png" style="width: 1.5em;" /></a> <sup>地物情報表示</sup> は、シングルクリックまたはクリック＆ドラッグで利用できます。</p>
 <ul>
-<li><p>single click or click-and-drag: overlaying features in the target layers are returned</p></li>
+<li><p>シングルクリックまたはクリック＆ドラッグで、変換先レイヤーの重なり合う地物が返されます。</p></li>
 <li><p>right-click: overlaying features from target layers are listed in the contextual menu,
 grouped by layers. You can then choose to:</p>
 <ul>
-<li><p>display the result for a specific feature,</p></li>
+<li><p>特定の地物の結果を表示する</p></li>
 <li><p>display the result for all the features of a specific layer,</p></li>
-<li><p>for vector layers, it is also possible to open its attribute table
-filtered to the returned features</p></li>
+<li><p>ベクタレイヤの場合、返された地物でフィルタリングされた属性テーブルを開くことも可能です。</p></li>
 <li><p>or show all of the returned features.</p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="../../../_images/mActionIdentifyByMouseOver.png"><img alt="identifyByMouseOver" src="../../../_images/mActionIdentifyByMouseOver.png" style="width: 1.5em;" /></a> <sup>Identify Features on Mouse over</sup>:
-move over the map canvas and hovered items in the target layers get highlighted
-and returned in the results panel.</p></li>
-<li><p><a class="reference internal" href="../../../_images/mActionIdentifyByPolygon.png"><img alt="identifyByPolygon" src="../../../_images/mActionIdentifyByPolygon.png" style="width: 1.5em;" /></a> <sup>Identify Features by Polygon</sup>:
-returns items overlapping a drawn or selected polygon.</p>
+<li><p><a class="reference internal" href="../../../_images/mActionIdentifyByMouseOver.png"><img alt="identifyByMouseOver" src="../../../_images/mActionIdentifyByMouseOver.png" style="width: 1.5em;" /></a> <sup>マウスオーバーで地物情報表示</sup> では、マップキャンバス上をマウスで移動すると、変換先レイヤー内のホバーされたアイテムがハイライト表示され、結果パネルに返されます。</p></li>
+<li><p><a class="reference internal" href="../../../_images/mActionIdentifyByPolygon.png"><img alt="identifyByPolygon" src="../../../_images/mActionIdentifyByPolygon.png" style="width: 1.5em;" /></a> <sup>ポリゴンで地物情報表示</sup> は、描画または選択されたポリゴンと重なるアイテムを返します。</p>
 <ul>
-<li><p>Draw a polygon (left click to add point, right click to close the polygon)
-and all the overlaying features from target layers are highlighted
-and returned in the results panel.</p></li>
-<li><p>Right-click and you get the list of all visible polygon features
-in the project under the click.
-Pick an entry and QGIS will return all the features from the target layers
-that overlap the selected polygon.</p></li>
+<li><p>ポリゴンを描画（左クリックでポイントを追加、右クリックでポリゴンを閉じる）すると、変換先レイヤーから重なり合うすべての地物がハイライト表示され、結果パネルに返されます。</p></li>
+<li><p>右クリックすると、クリックした箇所の下にあるプロジェクト内のすべての可視ポリゴン地物のリストが表示されます。リストから項目を選ぶと、QGIS は選択したポリゴンと重なる変換先レイヤーのすべての地物を返します。</p></li>
 </ul>
 </li>
 <li><p><a class="reference internal" href="../../../_images/mActionIdentifyByFreehand.png"><img alt="identifyByFreehand" src="../../../_images/mActionIdentifyByFreehand.png" style="width: 1.5em;" /></a> <sup>Identify Features by Freehand</sup>:
@@ -1579,13 +1565,7 @@ Draw a polygon (left-click to start, move the pointer to shape the area
 and right-click to close the polygon).
 All the overlaying features from target layers are highlighted
 and returned in the results panel.</p></li>
-<li><p><a class="reference internal" href="../../../_images/mActionIdentifyByRadius.png"><img alt="identifyByRadius" src="../../../_images/mActionIdentifyByRadius.png" style="width: 1.5em;" /></a> <sup>Identify Features by Radius</sup>
-returns items overlapping a drawn circle.
-Draw a cercle (left-click to indicate the center point,
-move the pointer to shape the area or enter the radius in the pop-up text box
-and left-click or press <kbd class="kbd docutils literal notranslate">Enter</kbd> to validate the circle).
-All the overlaying features from target layers are highlighted
-and returned in the results panel.</p></li>
+<li><p><a class="reference internal" href="../../../_images/mActionIdentifyByRadius.png"><img alt="identifyByRadius" src="../../../_images/mActionIdentifyByRadius.png" style="width: 1.5em;" /></a> <sup>半径で地物情報表示</sup> は、描画された円と重なるアイテムを返します。円を描画（中心点を指定するために左クリックし、ポインターを動かしてエリアを形成するか、ポップアップテキストボックスに半径を入力して左クリックまたは :kbd:Enter を押して円を確定する）すると、変換先レイヤーから重なり合うすべての地物がハイライト表示され、結果パネルに返されます。</p></li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -1619,8 +1599,7 @@ This is a handy way to return features from only layers that are of interest to 
 <li><p>クリックされた点に最も近い頂点の番号</p></li>
 <li><p>最も近い頂点の <code class="docutils literal notranslate"><span class="pre">X</span></code> 、 <code class="docutils literal notranslate"><span class="pre">Y</span></code> 座標値（利用可能ならば <code class="docutils literal notranslate"><span class="pre">Z</span></code> / <code class="docutils literal notranslate"><span class="pre">M</span></code> も）</p></li>
 <li><p>曲線セグメントをクリックした場合には、その部分の曲率半径も表示されます。</p></li>
-<li><p>if both the vector layer and the project have vertical datums set and they differ,
-the <code class="docutils literal notranslate"><span class="pre">Z</span></code> value will be displayed for both datums.</p></li>
+<li><p>ベクターレイヤーとプロジェクトの両方に鉛直データムが設定されており、それらが異なる場合、 <code class="docutils literal notranslate"><span class="pre">Z値</span></code> は両方のデータムで表示されます。</p></li>
 </ul>
 </li>
 </ul>
@@ -1641,7 +1620,7 @@ the <code class="docutils literal notranslate"><span class="pre">Z</span></code>
 </div>
 </section>
 <section id="results-contextual-menu">
-<h4><span class="section-number">8.4.2.4. </span>Results contextual menu<a class="headerlink" href="#results-contextual-menu" title="Link to this heading"></a></h4>
+<h4><span class="section-number">8.4.2.4. </span>結果のコンテキストメニュー<a class="headerlink" href="#results-contextual-menu" title="Link to this heading"></a></h4>
 <p>その他の機能は、識別されたアイテムのコンテキストメニューにあります。たとえば、コンテキストメニューから次のことができます：</p>
 <ul class="simple">
 <li><p>地物フォームを表示</p></li>
@@ -1669,89 +1648,87 @@ the <code class="docutils literal notranslate"><span class="pre">Z</span></code>
 <span id="manage-custom-style"></span><h3><a class="toc-backref" href="#id63" role="doc-backlink"><span class="section-number">8.5.1. </span>カスタムスタイルを管理する</a><a class="headerlink" href="#managing-custom-styles" title="Link to this heading"></a></h3>
 <p>ベクタレイヤがマップキャンバスに追加されると、QGISはデフォルトでランダムなシンボル/色を使用して地物をレンダリングします。ただし、 <span class="menuselection">プロジェクト ►プロパティ... ► 既定スタイル</span> でデフォルトのシンボルを設定することができ、新しく追加された各レイヤには、ジオメトリタイプに応じてこれが適用されます。</p>
 <p>しかし、ほとんどの場合、レイヤに自動的にまたは手動で（より少ない労力で）適用できる、カスタマイズされたより複雑なスタイルが欲しいと思うでしょう。これはレイヤのプロパティダイアログの下部にある <span class="menuselection">スタイル</span> メニューを使えば実現できます。 このメニューには、スタイルを作成、読み込み、管理するための機能があります。</p>
-<p>A style stores various information set in the layer or project properties dialog to render or interact with the layer.
-This includes:</p>
+<p>スタイルは、レイヤーやプロジェクトのプロパティダイアログで設定された、レイヤーのレンダリングや操作に関する様々な情報を保存します。これには以下が含まれます。</p>
 <table class="docutils align-default" id="id29">
-<caption><span class="caption-number">表 8.4 </span><span class="caption-text">Components of stored style and their references</span><a class="headerlink" href="#id29" title="Link to this table"></a></caption>
+<caption><span class="caption-number">表 8.4 </span><span class="caption-text">保存されたスタイルの構成要素とそれらの参照</span><a class="headerlink" href="#id29" title="Link to this table"></a></caption>
 <thead>
-<tr class="row-odd"><th class="head"><p>Category</p></th>
+<tr class="row-odd"><th class="head"><p>カテゴリ</p></th>
 <th class="head"><p>Vector</p></th>
 <th class="head"><p>Raster</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td rowspan="2"><p><a class="reference internal" href="../../../_images/layerconfiguration.png"><img alt="layerConfiguration" src="../../../_images/layerconfiguration.png" style="width: 1.5em;" /></a> <sup>Layer Configuration</sup></p></td>
-<td colspan="2"><p><a class="reference internal" href="qgis_configuration.html#project-layer-capabilities"><span class="std std-ref">Layers capabilities</span></a></p></td>
+<tr class="row-even"><td rowspan="2"><p><a class="reference internal" href="../../../_images/layerconfiguration.png"><img alt="layerConfiguration" src="../../../_images/layerconfiguration.png" style="width: 1.5em;" /></a> <sup>レイヤー設定</sup></p></td>
+<td colspan="2"><p><a class="reference internal" href="qgis_configuration.html#project-layer-capabilities"><span class="std std-ref">レイヤ性能</span></a></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="../working_with_vector/vector_properties.html#maptips"><span class="std std-ref">表示名プロパティ</span></a></p></td>
 <td><p><a class="reference internal" href="../working_with_raster/raster_properties.html#raster-display"><span class="std std-ref">表示名プロパティ</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../../_images/symbology.png"><img alt="symbology" src="../../../_images/symbology.png" style="width: 2em;" /></a> <sup>Symbology</sup></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../_images/symbology.png"><img alt="symbology" src="../../../_images/symbology.png" style="width: 2em;" /></a> <sup>シンボロジー</sup></p></td>
 <td><p><a class="reference internal" href="../working_with_vector/vector_properties.html#vector-style-menu"><span class="std std-ref">シンボロジプロパティ</span></a></p></td>
 <td><p><a class="reference internal" href="../working_with_raster/raster_properties.html#raster-symbology"><span class="std std-ref">シンボロジプロパティ</span></a> <sup>[1]</sup></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../../_images/3d.png"><img alt="3d" src="../../../_images/3d.png" style="width: 1.5em;" /></a> <sup>3D Symbology</sup></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../_images/3d.png"><img alt="3d" src="../../../_images/3d.png" style="width: 1.5em;" /></a> <sup>3D シンボロジー</sup></p></td>
 <td><p><a class="reference internal" href="../working_with_vector/vector_properties.html#sec-3-d-view"><span class="std std-ref">3Dビュープロパティ</span></a></p></td>
-<td><p>N/A</p></td>
+<td><p>該当なし</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../../_images/labelingSingle.png"><img alt="labelingSingle" src="../../../_images/labelingSingle.png" style="width: 1.5em;" /></a> <sup>Labels</sup></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../_images/labelingSingle.png"><img alt="labelingSingle" src="../../../_images/labelingSingle.png" style="width: 1.5em;" /></a> <sup>ラベル</sup></p></td>
 <td><p><a class="reference internal" href="../working_with_vector/vector_properties.html#vector-labels-tab"><span class="std std-ref">ラベルプロパティ</span></a></p></td>
-<td><p>N/A</p></td>
+<td><p>該当なし</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../../_images/sourcefieldsandforms.png"><img alt="sourceFieldsForms" src="../../../_images/sourcefieldsandforms.png" style="width: 1.5em;" /></a> <sup>Fields</sup></p></td>
-<td><p><a class="reference internal" href="../working_with_vector/vector_properties.html#vector-fields-menu"><span class="std std-ref">フィールドプロパティ</span></a>
-and <a class="reference internal" href="../working_with_vector/vector_properties.html#constraints"><span class="std std-ref">制約</span></a></p></td>
-<td><p>N/A</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../_images/sourcefieldsandforms.png"><img alt="sourceFieldsForms" src="../../../_images/sourcefieldsandforms.png" style="width: 1.5em;" /></a> <sup>属性</sup></p></td>
+<td><p><span class="xref std std-ref">ベクターフィールドメニュー</span> および <span class="xref std std-ref">制約</span></p></td>
+<td><p>該当なし</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../../_images/mActionFormView.png"><img alt="formView" src="../../../_images/mActionFormView.png" style="width: 1.2em;" /></a> <sup>Attributes Form</sup></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../_images/mActionFormView.png"><img alt="formView" src="../../../_images/mActionFormView.png" style="width: 1.2em;" /></a> <sup>属性フォーム</sup></p></td>
 <td><p><a class="reference internal" href="../working_with_vector/vector_properties.html#vector-attributes-menu"><span class="std std-ref">属性フォームプロパティ</span></a></p></td>
-<td><p>N/A</p></td>
+<td><p>該当なし</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../../_images/action.png"><img alt="action" src="../../../_images/action.png" style="width: 2em;" /></a> <sup>Actions</sup></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../_images/action.png"><img alt="action" src="../../../_images/action.png" style="width: 2em;" /></a> <sup>アクション</sup></p></td>
 <td><p><a class="reference internal" href="../working_with_vector/vector_properties.html#actions-menu"><span class="std std-ref">アクションプロパティ</span></a></p></td>
-<td><p>N/A</p></td>
+<td><p>該当なし</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../../_images/mActionMapTips.png"><img alt="mapTips" src="../../../_images/mActionMapTips.png" style="width: 1.5em;" /></a> <sup>Map Tips</sup></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../_images/mActionMapTips.png"><img alt="mapTips" src="../../../_images/mActionMapTips.png" style="width: 1.5em;" /></a> <sup>地図のTips</sup></p></td>
 <td><p><a class="reference internal" href="../working_with_vector/vector_properties.html#maptips"><span class="std std-ref">表示名プロパティ</span></a></p></td>
 <td><p><a class="reference internal" href="../working_with_raster/raster_properties.html#raster-display"><span class="std std-ref">表示名プロパティ</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../../_images/diagram.png"><img alt="diagram" src="../../../_images/diagram.png" style="width: 2em;" /></a> <sup>Diagrams</sup></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../_images/diagram.png"><img alt="diagram" src="../../../_images/diagram.png" style="width: 2em;" /></a> <sup>ダイアグラム</sup></p></td>
 <td><p><a class="reference internal" href="../working_with_vector/vector_properties.html#sec-diagram"><span class="std std-ref">ダイアグラムプロパティ</span></a></p></td>
-<td><p>N/A</p></td>
+<td><p>該当なし</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../../_images/mActionOpenTable.png"><img alt="openTable" src="../../../_images/mActionOpenTable.png" style="width: 1.5em;" /></a> <sup>Attribute Table Configuration</sup></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../_images/mActionOpenTable.png"><img alt="openTable" src="../../../_images/mActionOpenTable.png" style="width: 1.5em;" /></a> <sup>属性テーブルの設定</sup></p></td>
 <td><p><a class="reference internal" href="../working_with_vector/attribute_table.html#sec-attribute-table"><span class="std std-ref">属性テーブルの操作</span></a></p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../../_images/rendering.png"><img alt="rendering" src="../../../_images/rendering.png" style="width: 1.5em;" /></a> <sup>Rendering</sup></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../_images/rendering.png"><img alt="rendering" src="../../../_images/rendering.png" style="width: 1.5em;" /></a> <sup>レンダリング</sup></p></td>
 <td><p><a class="reference internal" href="../working_with_vector/vector_properties.html#vectorrenderingmenu"><span class="std std-ref">レンダリングプロパティ</span></a></p></td>
 <td><p><a class="reference internal" href="../working_with_raster/raster_properties.html#raster-rendering"><span class="std std-ref">レンダリングプロパティ</span></a> <sup>[1]</sup></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../../_images/mActionOptions.png"><img alt="options" src="../../../_images/mActionOptions.png" style="width: 1em;" /></a> <sup>Custom Properties</sup></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../_images/mActionOptions.png"><img alt="options" src="../../../_images/mActionOptions.png" style="width: 1em;" /></a> <sup>カスタムプロパティ</sup></p></td>
 <td><p><a class="reference internal" href="../working_with_vector/vector_properties.html#vectorinformationmenu"><span class="std std-ref">情報プロパティ</span></a></p></td>
 <td><p><a class="reference internal" href="../working_with_raster/raster_properties.html#raster-information"><span class="std std-ref">情報プロパティ</span></a></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../../_images/digitizing.png"><img alt="digitizing" src="../../../_images/digitizing.png" style="width: 1.5em;" /></a> <sup>Geometry Options</sup></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../_images/digitizing.png"><img alt="digitizing" src="../../../_images/digitizing.png" style="width: 1.5em;" /></a> <sup>ジオメトリオプション</sup></p></td>
 <td><p><a class="reference internal" href="../working_with_vector/vector_properties.html#digitizingmenu"><span class="std std-ref">デジタイズプロパティ</span></a></p></td>
-<td><p>N/A</p></td>
+<td><p>該当なし</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../../_images/relations.png"><img alt="関係" src="../../../_images/relations.png" style="width: 1.5em;" /></a> <sup>Relations</sup></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../_images/relations.png"><img alt="関係" src="../../../_images/relations.png" style="width: 1.5em;" /></a> <sup>リレーション</sup></p></td>
 <td><p><a class="reference internal" href="../working_with_vector/joins_relations.html#vector-relations"><span class="std std-ref">複数のレイヤ間のリレーションを設定する</span></a></p></td>
-<td><p>N/A</p></td>
+<td><p>該当なし</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../../_images/temporal.png"><img alt="temporal" src="../../../_images/temporal.png" style="width: 1.5em;" /></a> <sup>Temporal Properties</sup></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../_images/temporal.png"><img alt="temporal" src="../../../_images/temporal.png" style="width: 1.5em;" /></a> <sup>時系列プロパティ</sup></p></td>
 <td><p><a class="reference internal" href="../working_with_vector/vector_properties.html#vectortemporalmenu"><span class="std std-ref">時系列プロパティ</span></a></p></td>
 <td><p><a class="reference internal" href="../working_with_raster/raster_properties.html#raster-temporal"><span class="std std-ref">時系列プロパティ</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../../_images/legend.png"><img alt="legend" src="../../../_images/legend.png" style="width: 1.2em;" /></a> <sup>Legend Settings</sup></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../_images/legend.png"><img alt="legend" src="../../../_images/legend.png" style="width: 1.2em;" /></a> <sup>凡例設定</sup></p></td>
 <td><p><a class="reference internal" href="../working_with_vector/vector_properties.html#vectorlegendmenu"><span class="std std-ref">凡例プロパティ</span></a></p></td>
-<td><p>N/A</p></td>
+<td><p>該当なし</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="../../../_images/elevationscale.png"><img alt="elevationscale" src="../../../_images/elevationscale.png" style="width: 1.5em;" /></a> <sup>Elevation Properties</sup></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../_images/elevationscale.png"><img alt="elevationscale" src="../../../_images/elevationscale.png" style="width: 1.5em;" /></a> <sup>標高プロパティ</sup></p></td>
 <td><p><a class="reference internal" href="../working_with_vector/vector_properties.html#vectorelevationmenu"><span class="std std-ref">標高プロパティ</span></a></p></td>
 <td><p><a class="reference internal" href="../working_with_raster/raster_properties.html#raster-elevation"><span class="std std-ref">標高プロパティ</span></a></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="../../../_images/mIndicatorNotes.png"><img alt="indicatorNotes" src="../../../_images/mIndicatorNotes.png" style="width: 1.5em;" /></a> <sup>Notes</sup></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../_images/mIndicatorNotes.png"><img alt="indicatorNotes" src="../../../_images/mIndicatorNotes.png" style="width: 1.5em;" /></a> <sup>ノート</sup></p></td>
 <td colspan="2"><p><a class="reference internal" href="#layer-notes"><span class="std std-ref">レイヤノート</span></a></p></td>
 </tr>
 </tbody>
@@ -2357,7 +2334,7 @@ override</sup> widget with the middle mouse button.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 08, 04:20 +0900
+      <span class="lastupdated">最終更新: 2025 7月 09, 06:38 +0900
       </span></p>
   </div>
 
