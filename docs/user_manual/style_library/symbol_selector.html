@@ -199,7 +199,7 @@
   <blockquote>
 <div><div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 89.26% 翻訳されています。</p>
+<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 97.11% 翻訳されています。</p>
 </div>
 </div></blockquote>
 <section id="the-symbol-selector">
@@ -219,7 +219,7 @@
 <li><p><a class="reference internal" href="#parametrizable-svg" id="id26">パラメータ付きSVG</a></p></li>
 <li><p><a class="reference internal" href="#the-geometry-generator" id="id27">ジオメトリジェネレータ</a></p></li>
 <li><p><a class="reference internal" href="#the-vector-field-marker" id="id28">ベクタフィールドマーカー</a></p></li>
-<li><p><a class="reference internal" href="#animated-marker" id="id29">Animated marker</a></p></li>
+<li><p><a class="reference internal" href="#animated-marker" id="id29">アニメーションマーカー</a></p></li>
 </ul>
 </li>
 </ul>
@@ -344,7 +344,7 @@
 <li><p><span class="guilabel">アンカーポイント</span> ：シンボル上で象限点を定義し、配置の原点とします。これは、 <span class="guilabel">オフセット</span> が適用されるポイントです。</p></li>
 </ul>
 </li>
-<li><p><a href="#id1"><span class="problematic" id="id2">**</span></a>アニメーションマーカー**(参照 <a class="reference internal" href="#animated-marker"><span class="std std-ref">Animated marker</span></a>)</p></li>
+<li><p><a href="#id1"><span class="problematic" id="id2">**</span></a>アニメーションマーカー**(参照 <a class="reference internal" href="#animated-marker"><span class="std std-ref">アニメーションマーカー</span></a>)</p></li>
 <li><p><strong>楕円マーカー</strong> ：シンプルなマーカーシンボルのレイヤで、シンボル幅と高さがカスタマイズ可能です</p></li>
 <li><p><strong>塗りつぶしマーカー</strong> ： <a class="reference internal" href="#vector-fill-symbols"><span class="std std-ref">塗りつぶしのサブシンボル</span></a> をマーカーのレンダリングに使用する点を除けば、シンプルマーカーのシンボルレイヤと似ています。塗りつぶしのサブシンボルは、マーカーのレンダリングに既存のQGISの塗りつぶし（とストローク）スタイル、例えばグラデーションやShapeburst塗りつぶしを使用することができます。</p></li>
 <li><p><strong>フォントマーカー</strong> ：シンプルマーカーのシンボルレイヤと似ていますが、インストールされたフォントをマーカーとして使用してレンダリングする点が異なります。追加プロパティには以下のものがあります：</p>
@@ -480,24 +480,16 @@
 <li><p><strong>線形リファレンシング</strong> 線上の一定間隔の位置や既存の頂点に対応する位置にテキストラベルを配置できる機能です。位置はデカルト距離を用いて計算することも、z/m 値から補間することも可能です。パラメータには以下が含まれます。</p>
 <ul class="simple">
 <li><p><span class="guilabel">測定配置</span>: ラベルを、デカルト2D距離で一定間隔ごと、ジオメトリ内の Z または M 値を用いて計算された線形補間間隔ごと、または既存の頂点上に配置できます。固定値またはデータ定義による <span class="guilabel">間隔</span> を指定します。</p></li>
-<li><p><span class="guilabel">Quantity</span>: Label displayed at each position represent the running distance along the line,
-or the linearly interpolated Z or M value.
-Labels are rendered using the full range of <a class="reference internal" href="label_settings.html#text-format"><span class="std std-ref">text</span></a>
-and <a class="reference internal" href="../introduction/general_tools.html#number-formatting"><span class="std std-ref">number</span></a> formatting functionalities available in QGIS.</p></li>
+<li><p>:guilabel:'Quantity' 各位置に表示されるラベルは、ラインに沿った累積距離、または線形補間された Z 値や M 値を表します。ラベルは、QGIS で利用可能な :ref:<a href="#id1"><span class="problematic" id="id2">`</span></a>text' &lt;text_format&gt;および :ref:'number'&lt;number_formatting&gt; の書式設定機能をすべて使ってレンダリングされます。</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
 <p>距離ベースのラベル配置を使用する場合、距離の計算は2Dのみで行われます。直交座標での計算は、元のレイヤのCRS基づいて行われます。</p>
 </div>
 <ul class="simple">
-<li><p><span class="guilabel">Skip multiples of</span>: If set, labels which are a multiple of this value will be skipped over.
-This allows construction of complex referencing labels, e.g. where a symbol has two linear referencing symbol layers,
-one set to label every 100m in a small font, skipping multiples of 1000,
-and a second set to label every 1000m in a big bold font.</p></li>
-<li><p><span class="guilabel">Average angle over</span>: Labels are rendered using an angle calculated by averaging the linestring,
-so sharp tiny jaggies don't result in unslightly label rotation.</p></li>
-<li><p><span class="guilabel">Show marker symbols</span>, at referenced points in the line feature, using a full QGIS marker symbol.
-This allows e.g. showing a cross-hatch at the labeled point, for a &quot;ruler&quot; style line.</p></li>
+<li><p>:guilabel:'Skip multiples of' この値の倍数にあたるラベルをスキップします。これにより複雑なリファレンスラベルを構築できます。例えば、シンボルに 2 つの線形リファレンスのシンボルレイヤを持たせ、小さいフォントで 100m ごとにラベルを付けつつ 1000 の倍数はスキップし、もう一方は大きく太字のフォントで 1000m ごとにラベルを付ける、といった設定が可能です。</p></li>
+<li><p>:guilabel:'Average angle over' ラベルの回転角度を、ラインストリングの平均角度から計算して適用します。これにより、小さな鋭いギザギザによってラベルが不自然に回転するのを防ぎます。</p></li>
+<li><p>:guilabel:'Show marker symbols` ラインフィーチャ内の参照ポイントに、QGIS のフル機能のマーカーシンボルを使用してマーカーを表示します。これにより、ラベル位置にクロスハッチを表示して &quot;定規&quot; スタイルのラインを表現することなどが可能です。</p></li>
 </ul>
 <figure class="align-center" id="id9">
 <span id="figure-linear-referencing-symbol"></span><a class="reference internal image-reference" href="../../../_images/linearReferencingSymbol.png"><img alt="../../../_images/linearReferencingSymbol.png" src="../../../_images/linearReferencingSymbol.png" style="width: 100%;" /></a>
@@ -518,10 +510,7 @@ This allows e.g. showing a cross-hatch at the labeled point, for a &quot;ruler&q
 </li>
 </ul>
 <ul id="filled-line-symbol">
-<li><p><strong>Filled line</strong>: renders the interior of the lines using a fill symbol
-allowing for lines filled with gradients, line hatches, etc.
-The <span class="guilabel">Stroke width</span>, <span class="guilabel">Offset</span>,
-<span class="guilabel">Join style</span>, <span class="guilabel">Cap style</span> can be adjusted.</p>
+<li><p>塗りつぶしライン：塗りつぶしシンボルを使ってラインの内部を描画します。グラデーションやラインハッチなどで塗りつぶされたラインを表現できます。<span class="guilabel">線幅</span>、<span class="guilabel">オフセット</span>、<span class="guilabel">結合スタイル</span>、:guilabel:<a href="#id1"><span class="problematic" id="id2">`</span></a>線端スタイル の調整`が可能です。</p>
 <figure class="align-center" id="id11">
 <span id="figure-filled-line-symbol"></span><a class="reference internal image-reference" href="../../../_images/filledLineSymbol.png"><img alt="../../../_images/filledLineSymbol.png" src="../../../_images/filledLineSymbol.png" style="width: 100%;" /></a>
 <figcaption>
@@ -694,7 +683,7 @@ several differently modified symbol layers on top of each other.</p>
 <p><span class="guilabel">単位</span> プロパティを設定できます。ジオメトリジェネレータシンボルがレイヤに適用されるのではない場合（例えばレイアウトアイテムで使用する場合）、このプロパティによって、生成される出力結果をより制御しやすくなります。</p>
 <p>いくつかの例：</p>
 <ul>
-<li><p>Render symbol as the centroid of a feature</p>
+<li><p>地物の重心位置にシンボルを配置する</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>centroid( $geometry )
 </pre></div>
 </div>
@@ -759,7 +748,7 @@ The number of points varies based on a field.</p>
 </tbody>
 </table>
 </li>
-<li><p>Create a curved arrow line connecting features of two layers based on their <a class="reference internal" href="../introduction/qgis_configuration.html#project-relations"><span class="std std-ref">relation</span></a></p>
+<li><p>2 つのレイヤの :ref:'relation' に基づいて、地物同士を接続する曲線矢印ラインを作成する</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 15.0%" />
@@ -814,43 +803,32 @@ The number of points varies based on a field.</p>
 <p>フィールドの大きさは、フィールドを見るのに適したサイズに拡大・縮小することができます。</p>
 </section>
 <section id="animated-marker">
-<span id="index-0"></span><span id="id2"></span><h4><a class="toc-backref" href="#id29" role="doc-backlink">Animated marker</a><a class="headerlink" href="#animated-marker" title="Link to this heading"></a></h4>
-<p>Animated marker symbol type allows you to use a <code class="file docutils literal notranslate"><span class="pre">.GIF</span></code>, <code class="file docutils literal notranslate"><span class="pre">.WebP</span></code>,
-<code class="file docutils literal notranslate"><span class="pre">.MNG</span></code>, etc. animation file to represent points on your map.
-You can specify:</p>
+<span id="index-0"></span><span id="id2"></span><h4><a class="toc-backref" href="#id29" role="doc-backlink">アニメーションマーカー</a><a class="headerlink" href="#animated-marker" title="Link to this heading"></a></h4>
+<p>アニメーションマーカーシンボルタイプを使用すと、:file:.`GIF`、:file:.`WebP`、:file:.`MNG` などのアニメーションファイルを地図上のポイントの表示に利用できます。指定できる項目は以下のとおりです。</p>
 <ul class="simple">
 <li><p><span class="guilabel">ファイル</span> パス,</p></li>
-<li><p><span class="guilabel">Frame rate</span>: number of steps that are shown per second,
-indicating how fast the animation is played,</p></li>
-<li><p><span class="guilabel">Size</span> in any <a class="reference internal" href="../introduction/general_tools.html#unit-selector"><span class="std std-ref">supported unit</span></a>,</p></li>
+<li><p><span class="guilabel">フレームレート</span> : 1 秒あたりに表示されるステップ数で、アニメーションの再生速度を示します。</p></li>
+<li><p><span class="guilabel">サイズ</span> 任意の :ref:<a href="#id1"><span class="problematic" id="id2">`</span></a>supported unitで&lt;unit_selector&gt;' ,指定します。</p></li>
 <li><p><span class="guilabel">不透明度</span>,</p></li>
-<li><p><span class="guilabel">Rotation</span>,</p></li>
-<li><p><span class="guilabel">Offset</span> in <span class="guilabel">x</span> and <span class="guilabel">y</span> directions
-from the marker position,</p></li>
-<li><p><span class="guilabel">Anchor point</span></p></li>
+<li><p><span class="guilabel">回転</span>,</p></li>
+<li><p><span class="guilabel">オフセット</span> マーカー位置からの :guilabel:'x' および :guilabel:'y' 方向のずれ</p></li>
+<li><p>:guilabel:'アンカーポイント`</p></li>
 </ul>
-<p>There are two ways to handle animated symbols:</p>
+<p>アニメーションシンボルの取り扱い方法は2通りあります。</p>
 <ul>
-<li><p><strong>When your map is not configured as an animation</strong> (i.e. it's a standard QGIS
-project without animations), the frame for the animated markers will be
-determined solely by the current timestamp.</p>
+<li><p><a href="#id1"><span class="problematic" id="id2">**</span></a>マップがアニメーションとして設定されていない場合**（つまり、アニメーション機能を使っていない通常のQGISプロジェクトの場合）、アニメーションマーカーのフレームは現在のタイムスタンプのみによって決まります。</p>
 <figure class="align-center" id="id16">
 <a class="reference internal image-reference" href="../../../_images/animated_marker_map.gif"><img alt="../../../_images/animated_marker_map.gif" src="../../../_images/animated_marker_map.gif" style="width: 100%;" /></a>
 <figcaption>
-<p><span class="caption-number">図 10.23 </span><span class="caption-text">Animated marker when map is not configured as animation</span><a class="headerlink" href="#id16" title="Link to this image"></a></p>
+<p><span class="caption-number">図 10.23 </span><span class="caption-text">マップがアニメーションとして設定されていない場合のアニメーションマーカー</span><a class="headerlink" href="#id16" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </li>
-<li><p><strong>When your map is</strong> <a class="reference internal" href="../map_views/map_view.html#maptimecontrol"><span class="std std-ref">configured as an animation</span></a>,
-the animated markers will sync with the animation's timeline.
-This means that animated markers will pause when the animation is paused,
-progress with the animation, and so forth. The map will also be redrawn
-according to the frame rate established for temporal animation. This mode
-is also applied when exporting an animation using the temporal controller.</p>
+<li><p>マップが :ref:'configured as an animation'&lt;maptimecontrol&gt;`,アニメーションマーカーはアニメーションのタイムラインと同期します。つまり、アニメーションが一時停止するとマーカーも停止し、アニメーションとともに進行します。また、マップは時間アニメーションで設定されたフレームレートに従って再描画されます。このモードは、時間コントローラーを使ってアニメーションをエクスポートする際にも適用されます。</p>
 <figure class="align-center" id="id17">
 <a class="reference internal image-reference" href="../../../_images/animated_marker_animation.gif"><img alt="../../../_images/animated_marker_animation.gif" src="../../../_images/animated_marker_animation.gif" style="width: 100%;" /></a>
 <figcaption>
-<p><span class="caption-number">図 10.24 </span><span class="caption-text">Animated marker when map is configured as animation</span><a class="headerlink" href="#id17" title="Link to this image"></a></p>
+<p><span class="caption-number">図 10.24 </span><span class="caption-text">マップがアニメーションとして設定されている場合のアニメーションマーカー</span><a class="headerlink" href="#id17" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </li>
@@ -872,7 +850,7 @@ is also applied when exporting an animation using the temporal controller.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 08, 16:51 +0900
+      <span class="lastupdated">最終更新: 2025 7月 08, 18:41 +0900
       </span></p>
   </div>
 
