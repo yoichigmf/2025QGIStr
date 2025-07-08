@@ -311,7 +311,7 @@
 <p>これらすべてのシナリオでは、一度に1つまたは複数のレイヤーを開くことができます。新しいレイヤーは <span class="guilabel">レイヤー</span> パネルに追加されます。</p>
 <ol class="arabic simple">
 <li><p><span class="guilabel">レイヤ</span> パネルの上にドロップすると、それらのデータが正確な位置に展開されます</p></li>
-<li><p>他の場合では、新しいレイヤーを追加する際のグローバル設定 :ref:<a href="#id1"><span class="problematic" id="id2">`</span></a>新しいレイヤーの追加時の動作 &lt;layer_tree_insertion_methods&gt;に従う場所に配置されます。</p></li>
+<li><p>他の場合では、新しいレイヤーを追加する際のグローバル設定 <a class="reference internal" href="qgis_configuration.html#layer-tree-insertion-methods"><span class="std std-ref">新しいレイヤーの追加時の動作</span></a> に従う場所に配置されます。</p></li>
 <li><p>複数のレイヤーがある場合、それらは次のロジック（top to bottom）を使用して、論理的な積み重ねがなされ、機能ができるだけ多く見えるような方法で並べます:</p>
 <ul class="simple">
 <li><p>ベクタポイントレイヤ</p></li>
@@ -930,7 +930,7 @@
 </figcaption>
 </figure>
 </li>
-<li><p><span class="guilabel">混合モード</span>: 不透明度と同じように、グループ全体に :ref:<a href="#id1"><span class="problematic" id="id2">`</span></a>混合モード &lt;blend-modes&gt;`（乗算、オーバーレイ...）を設定すると、まず子レイヤの地物がフラット化され、上のレイヤが下のレイヤを覆い隠します。レンダリングは、フラットなグループとその下にあるレイヤをブレンドすることで得られます。</p>
+<li><p><span class="guilabel">混合モード</span> : 不透明度と同じように、グループ全体に <a class="reference internal" href="#blend-modes"><span class="std std-ref">混合モード</span></a> (乗算、オーバーレイ...)を設定すると、まず子レイヤの地物がフラット化され、上のレイヤが下のレイヤを覆い隠します。レンダリングは、フラットなグループとその下にあるレイヤをブレンドすることで得られます。</p>
 <ul class="simple">
 <li><p>子レイヤに混合モードが割り当てられている場合、フラット化の前に適用されますが、その範囲はそのグループの他の子レイヤにのみ影響し、グループ全体の下にある他のレイヤには影響しないように制限されます。</p></li>
 <li><p>さらに <a class="reference internal" href="#blending-clipping"><span class="std std-ref">混合モード</span></a> のオプションがグループ内の子レイヤに用意されており、 <span class="guilabel">シンボロジ</span> タブでレンダリング中に他の子レイヤに対して「クリッピング」スタイルの操作を行うことができます。例えば、あるレイヤのレンダリング内容を、2つ目の「マスク」レイヤの内容でクリップすることができます。</p></li>
@@ -950,7 +950,7 @@
 <li><p>現在のスタイルの一部または全部をコピーします。また、適用可能な場合には、別のレイヤからコピーしたスタイルを貼り付けます</p></li>
 <li><p><span class="guilabel">現在のスタイル名を変更...</span></p></li>
 <li><p>新しいスタイルを <span class="guilabel">追加</span> （実際には現在のものをコピー）</p></li>
-<li><p>または :guilabel:<a href="#id1"><span class="problematic" id="id2">`</span></a>現在のスタイルを削除`（複数のスタイルが利用可能な場合のみ）。</p>
+<li><p>または <span class="guilabel">現在のスタイルを削除</span> (複数のスタイルが利用可能な場合のみ)。</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p><strong>レイヤスタイルを素早く共有</strong></p>
@@ -1849,7 +1849,7 @@ data source and on its configuration:</p>
 <li><p>PostgreSQL データソースの場合、設定オプション <span class="guilabel">QGISレイヤメタデータをデータベースに保存/読み込みを許可する</span> がチェックされていると、メタデータはデータベース内の専用テーブル内に保存されます。</p></li>
 <li><p>For GeoPackage data sources <span class="guilabel">Save to Default Location</span> always saves
 the metadata in the internal metadata tables of the GeoPackage.</p>
-<p>メタデータがPostgreSQLやGeoPackageの内部テーブルに保存されると、ブラウザや :ref:<a href="#id1"><span class="problematic" id="id2">`</span></a>レイヤ&lt;layer_metadata_search_panel&gt;メタデータ検索パネル ` で検索やフィルタリングが可能になります。</p>
+<p>パネルメタデータがPostgreSQLやGeoPackageの内部テーブルに保存されると、ブラウザや :ref:<a href="#id1"><span class="problematic" id="id2">`</span></a>layer metadata search panel&lt;layer_metadata_search_panel&gt; `  で検索やフィルタリングが可能になります。</p>
 </li>
 <li><p>For all other file based data sources <span class="guilabel">Save to Default Location</span>
 saves the metadata in a <code class="file docutils literal notranslate"><span class="pre">.qmd</span></code> file alongside the file.</p></li>
@@ -1905,7 +1905,7 @@ in a local <code class="file docutils literal notranslate"><span class="pre">.sq
 <li><p><strong>グローバル変数</strong> <span class="menuselection">設定 ► オプション</span> メニューから</p></li>
 <li><p><strong>プロジェクト変数</strong> <span class="guilabel">プロジェクトのプロパティ</span> ダイアログ（ <a class="reference internal" href="qgis_configuration.html#project-properties"><span class="std std-ref">プロジェクトのプロパティ</span></a> 参照）から</p></li>
 <li><p><strong>ベクタレイヤ変数</strong> <span class="guilabel">レイヤプロパティ</span> ダイアログ（ <a class="reference internal" href="../working_with_vector/vector_properties.html#vector-properties-dialog"><span class="std std-ref">ベクタプロパティダイアログ</span></a> 参照）から</p></li>
-<li><p><strong>モデル変数</strong> <span class="guilabel">モデルデザイナー</span> ダイアログから（:ref:<a href="#id1"><span class="problematic" id="id2">`</span></a>processing.modeler`を参照）；</p></li>
+<li><p><strong>モデル変数</strong>  <span class="guilabel">モデルデザイナー</span> ダイアログから ( <a class="reference internal" href="../processing/modeler.html#processing-modeler"><span class="std std-ref">モデルデザイナー</span></a> を参照)；</p></li>
 <li><p><strong>レイアウト変数</strong> 印刷レイアウトの <span class="guilabel">レイアウト</span> パネル（ <a class="reference internal" href="../print_composer/overview_composer.html#layout-panel"><span class="std std-ref">レイアウトパネル</span></a> 参照）から</p></li>
 <li><p><strong>レイアウトアイテム変数</strong> 印刷レイアウトの <span class="guilabel">アイテムプロパティ</span> パネル（ <a class="reference internal" href="../print_composer/composer_items/composer_items_options.html#layout-item-options"><span class="std std-ref">レイアウトアイテムの共通オプション</span></a> 参照）から</p></li>
 </ul>
@@ -2334,7 +2334,7 @@ override</sup> widget with the middle mouse button.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 09, 06:38 +0900
+      <span class="lastupdated">最終更新: 2025 7月 09, 07:04 +0900
       </span></p>
   </div>
 
