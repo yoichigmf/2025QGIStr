@@ -206,7 +206,7 @@
   <blockquote>
 <div><div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 92.22% 翻訳されています。</p>
+<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 94.31% 翻訳されています。</p>
 </div>
 </div></blockquote>
 <section id="d-map-view">
@@ -814,11 +814,7 @@
 </div>
 <section id="feature-annotations">
 <span id="annotation-layer"></span><h3><a class="toc-backref" href="#id50" role="doc-backlink"><span class="section-number">7.1.7.1. </span>地物注記</a><a class="headerlink" href="#feature-annotations" title="Link to this heading"></a></h3>
-<p>Feature annotations are stored in <strong>annotation layers</strong>. Unlike conventional
-layers, an annotation layer is available only in the current project and can
-contain features of different types (text, marker, line, polygon, picture).
-The layer has no attributes and no symbology associated, but instead each feature
-can be symbolized on an item-by-item basis, through <span class="guilabel">Layer Styling</span> panel.</p>
+<p>地物注記は <a href="#id1"><span class="problematic" id="id2">**</span></a>注記レイヤ**に保存されます。従来のレイヤと異なり、注記レイヤは現在のプロジェクトでのみ利用可能で、さまざまなタイプの地物（テキスト、マーカー、ライン、ポリゴン、画像）を含むことができます。このレイヤは属性やシンボルを持ちませんが、 <span class="guilabel">レイヤスタイル</span> パネルを使って、各フィーチャーを項目ごとにシンボル化することができます。</p>
 <p>QGISには2種類の注記レイヤがあります:</p>
 <ul class="simple">
 <li><p>通常の <span class="guilabel">注記レイヤ</span>: これは <a class="reference internal" href="../../../_images/mActionCreateAnnotationLayer.png"><img alt="createAnnotationLayer" src="../../../_images/mActionCreateAnnotationLayer.png" style="width: 1.5em;" /></a> <sup>新規注記レイヤ</sup> ツールを使用して作成できます。このレイヤは <span class="guilabel">レイヤ</span> パネルに表示され、一般的なレイヤと同様に、地物の可視性を制御したり、マップ内の特定のレイヤの上または下に表示するように移動させたりすることができます。レイヤをダブルクリックすると、プロパティにアクセスできます。</p></li>
@@ -840,10 +836,7 @@ can be symbolized on an item-by-item basis, through <span class="guilabel">Layer
 <li><p><span class="guilabel">レンダリング</span>:</p>
 <ul class="simple">
 <li><p><span class="guilabel">最大縮尺（含む）</span> と <span class="guilabel">最小縮尺（含まない）</span> を設定して、地物が表示される縮尺の範囲を定義できます。この範囲の外では地物は非表示になります。 <a class="reference internal" href="../../../_images/mActionMapIdentification.png"><img alt="mapIdentification" src="../../../_images/mActionMapIdentification.png" style="width: 1.5em;" /></a> <sup>現在のキャンバスの縮尺に設定</sup> ボタンを使用すると、可視性の範囲の境界として現在のマップキャンバスの縮尺を使用できます。詳細については <a class="reference internal" href="../introduction/general_tools.html#label-scaledepend"><span class="std std-ref">表示縮尺セレクタ</span></a> 参照してください。</p></li>
-<li><p><span class="guilabel">Linked layer</span>: allows you to optionally set a linked visibility
-layer for the annotation layer.
-If set, then the annotations will only be drawn when the linked layer is visible
-in the map.</p></li>
+<li><p><span class="guilabel">リンクレイヤ</span>: オプションで注記レイヤにリンクされた可視レイヤを設定できます。設定した場合、注記はリンクレイヤがマップに表示されているときにのみ描写されます。</p></li>
 <li><p><span class="guilabel">不透明度</span> ：このツールを使用すると、マップキャンバスで背面にあるレイヤを見えるようにできます。スライダーを使用して、レイヤの見え方を必要に応じて変化させてください。スライダーの横にあるメニューで不透明度の割合を正確に定義することもできます。</p></li>
 <li><p><span class="guilabel">レイヤ</span> レベルの <span class="guilabel">混合モード</span>  ：このツールを使用すると、これまではグラフィックソフトでしか使えなかったような、特別なレンダリング効果が得られます。上下のレイヤのピクセルは、 <a class="reference internal" href="../introduction/general_tools.html#blend-modes"><span class="std std-ref">混合モード</span></a> で説明されている設定で混合されます。</p></li>
 <li><p><span class="guilabel">描画エフェクト</span> ボタンを使用して、レイヤの地物すべてに <a class="reference internal" href="../working_with_vector/vector_properties.html#draw-effects"><span class="std std-ref">描画効果</span></a> を適用します。</p></li>
@@ -854,35 +847,30 @@ in the map.</p></li>
 </section>
 <section id="interacting-with-features">
 <h4><a class="toc-backref" href="#id52" role="doc-backlink">地物とのやりとり</a><a class="headerlink" href="#interacting-with-features" title="Link to this heading"></a></h4>
-<p>The Feature annotations have dedicated tools for creation depending on their type.</p>
+<p>地物注記はそのタイプに応じて作成ツールが用意されています。</p>
 <table class="docutils align-default" id="id20">
-<caption><span class="caption-number">表 7.4 </span><span class="caption-text">Creating feature annotation</span><a class="headerlink" href="#id20" title="Link to this table"></a></caption>
+<caption><span class="caption-number">表 7.4 </span><span class="caption-text">地物注記の作成</span><a class="headerlink" href="#id20" title="Link to this table"></a></caption>
 <thead>
-<tr class="row-odd"><th class="head"><p>Family /
-based on</p></th>
-<th class="head"><p>Annotation tool</p></th>
+<tr class="row-odd"><th class="head"><p>ファミリー／ベース</p></th>
+<th class="head"><p>注記ツール</p></th>
 <th class="head"><p>手順</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td rowspan="3"><p>Geometry</p></td>
+<tr class="row-even"><td rowspan="3"><p>ジオメトリ</p></td>
 <td><p><a class="reference internal" href="../../../_images/mActionAddPolygon.png"><img alt="addPolygon" src="../../../_images/mActionAddPolygon.png" style="width: 1.5em;" /></a> <sup>ポリゴン注記を作成</sup></p></td>
-<td rowspan="3"><p>This is like digitizing a point, line or polygon vector feature.</p>
-<p>All the usual shortcuts for creating features apply when creating annotation items.
-A line or polygon annotation is drawn by left-clicking once for each vertex,
-with a final right mouse click to complete the shape. Snapping can be enabled
-while you draw, you can use the <span class="guilabel">Advanced Digitizing Tools</span> to precisely
-place vertices, and even switch the <a class="reference internal" href="../working_with_vector/editing_geometry_attributes.html#drawing-methods"><span class="std std-ref">drawing tools</span></a>
-to for example the streaming mode for completely free-form shapes.</p>
+<td rowspan="3"><p>これは点、線またはポリゴンのベクタ地物をデジタル化するようなものです。</p>
+<p>注記アイテムを作成するとき、地物作成をするために通常のショートカットが全て適用されます。線またはポリゴン注記は各頂点で一度左クリックし、形状を完成するために最後にマウスの右クリックで描写されます。描写中にスナップを有効にしたり、 <span class="guilabel">高度なデジタル化ツール</span> を使って頂点を正確に配置したり、 <a class="reference internal" href="../working_with_vector/editing_geometry_attributes.html#drawing-methods"><span class="std std-ref">描写ツール</span></a>
+をストリーミングモードなどに切り替えて完全に自由な形にすることもできます。</p>
 </td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="../../../_images/mActionAddPolyline.png"><img alt="addPolyline" src="../../../_images/mActionAddPolyline.png" style="width: 1.5em;" /></a> <sup>ライン注記を作成</sup></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="../../../_images/mActionAddMarker.png"><img alt="addMarker" src="../../../_images/mActionAddMarker.png" style="width: 1.5em;" /></a> <sup>マーカー注記を作成</sup></p></td>
 </tr>
-<tr class="row-odd"><td rowspan="3"><p>Text</p></td>
+<tr class="row-odd"><td rowspan="3"><p>テキスト</p></td>
 <td><p><a class="reference internal" href="../../../_images/mActionText.png"><img alt="actionText" src="../../../_images/mActionText.png" style="width: 1.5em;" /></a> <sup>点上の注記を作成</sup></p></td>
-<td><p>Left-click on the map canvas.</p></td>
+<td><p>マップキャンバスで左クリック</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="../../../_images/mActionTextAlongLine.png"><img alt="textAlongLine" src="../../../_images/mActionTextAlongLine.png" style="width: 1.5em;" /></a> <sup>線に沿った注記を作成</sup></p></td>
 <td><p>Left-click to add vertices to the text basement line geometry,
@@ -1213,7 +1201,7 @@ or preferably exported as <a class="reference internal" href="../working_with_ve
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 09, 20:19 +0900
+      <span class="lastupdated">最終更新: 2025 7月 09, 20:58 +0900
       </span></p>
   </div>
 
