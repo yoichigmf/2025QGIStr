@@ -109,7 +109,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#exploring-the-map-view">7.1.1. マップビューについて詳しくみる</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#controlling-map-rendering">7.1.2. 地図のレンダリングの制御</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#time-based-control-on-the-map-canvas">7.1.3. マップキャンバスの時間制御</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#the-elevation-controller-panel">7.1.4. The Elevation Controller panel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#the-elevation-controller-panel">7.1.4. 標高コントローラーパネル</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#bookmarking-extents-on-the-map">7.1.5. 地図上の範囲のブックマーク</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#decorating-the-map">7.1.6. 地図の整飾</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#annotation-tools">7.1.7. 注記ツール</a></li>
@@ -206,7 +206,7 @@
   <blockquote>
 <div><div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 88.99% 翻訳されています。</p>
+<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 90.32% 翻訳されています。</p>
 </div>
 </div></blockquote>
 <section id="d-map-view">
@@ -221,7 +221,7 @@
 <li><p><a class="reference internal" href="#animating-a-temporal-navigation" id="id36">時系列ナビのアニメーション</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#the-elevation-controller-panel" id="id37">The Elevation Controller panel</a></p></li>
+<li><p><a class="reference internal" href="#the-elevation-controller-panel" id="id37">標高コントローラーパネル</a></p></li>
 <li><p><a class="reference internal" href="#bookmarking-extents-on-the-map" id="id38">地図上の範囲のブックマーク</a></p>
 <ul>
 <li><p><a class="reference internal" href="#creating-a-bookmark" id="id39">ブックマークを作成する</a></p></li>
@@ -398,8 +398,7 @@
 <ul class="simple">
 <li><p><span class="guilabel">ナビゲーション</span> ツールバー内にある <a class="reference internal" href="../../../_images/temporal.png"><img alt="temporal" src="../../../_images/temporal.png" style="width: 1.5em;" /></a> <sup>時系列コントローラパネル</sup> アイコンを使用する</p></li>
 <li><p><span class="menuselection">ビュー ► パネル ► 時系列コントローラパネル</span> メニューを選択する</p></li>
-<li><p>or from the <span class="menuselection">View ► Data Filtering ► Temporal controller panel</span>
-menu</p></li>
+<li><p><span class="menuselection">ビュー ► データフィルタリング ► 時系列コントローラパネル</span> メニューを選択する</p></li>
 </ul>
 </li>
 </ol>
@@ -416,10 +415,7 @@ menu</p></li>
 <li><p><a class="reference internal" href="../../../_images/mTemporalNavigationOff.png"><img alt="temporalNavigationOff" src="../../../_images/mTemporalNavigationOff.png" style="width: 1.5em;" /></a> <sup>時系列ナビを無効化</sup> ：全ての時系列設定を無効化し、表示状態のレイヤは通常どおりにレンダリングされます</p></li>
 <li><p><a class="reference internal" href="../../../_images/mTemporalNavigationFixedRange.png"><img alt="temporalNavigationFixedRange" src="../../../_images/mTemporalNavigationFixedRange.png" style="width: 1.5em;" /></a> <sup>固定範囲の時系列ナビ</sup> ：時間範囲を設定し、レイヤ（または地物）の時間範囲がこの範囲内に重なるもののみがマップ上に表示されます</p></li>
 <li><p><a class="reference internal" href="../../../_images/mTemporalNavigationAnimated.png"><img alt="temporalNavigationAnimated" src="../../../_images/mTemporalNavigationAnimated.png" style="width: 1.5em;" /></a> <sup>アニメーション時系列ナビ</sup> ：時間範囲を設定し、ステップに分割して、各フレームとレイヤ（または地物）の時間範囲が重なるもののみがマップ上に表示されます</p></li>
-<li><p><a class="reference internal" href="../../../_images/mTemporalNavigationMovie.png"><img alt="temporalNavigationMovie" src="../../../_images/mTemporalNavigationMovie.png" style="width: 1.5em;" /></a> <sup>Animated movie</sup>:
-a total number of frames is set for the animation, with the map settings
-advancing at each step, displaying the progression frame by frame without
-any time-based filtering of data.</p></li>
+<li><p><a class="reference internal" href="../../../_images/mTemporalNavigationMovie.png"><img alt="temporalNavigationMovie" src="../../../_images/mTemporalNavigationMovie.png" style="width: 1.5em;" /></a><sup>アニメーションムービー</sup>: アニメーションの総フレーム数が設定され、各ステップでマップ設定が進み、データの時間ベースのフィルタリングなしでフレームごとに進行を表示します。</p></li>
 <li><p><a class="reference internal" href="../../../_images/settings.png"><img alt="settings" src="../../../_images/settings.png" style="width: 1.5em;" /></a> <sup>時系列設定</sup> は、アニメーション全般の制御に関する設定です</p>
 <ul>
 <li><p><span class="guilabel">フレーム数/秒</span> ：1秒あたりに表示されるステップ数</p></li>
@@ -480,21 +476,12 @@ any time-based filtering of data.</p></li>
 </section>
 </section>
 <section id="the-elevation-controller-panel">
-<span id="elevation-controller"></span><h2><a class="toc-backref" href="#id37" role="doc-backlink"><span class="section-number">7.1.4. </span>The Elevation Controller panel</a><a class="headerlink" href="#the-elevation-controller-panel" title="Link to this heading"></a></h2>
-<p><a class="reference internal" href="../../../_images/Elevation.png"><img alt="elevation" src="../../../_images/Elevation.png" style="width: 1.5em;" /></a> <span class="guilabel">Elevation Controller</span> allows you to handle elevation z-range data in 2D maps.
-This option currently supports point cloud layers and raster DEMs.
-Use the panel to visualize and interact with elevation data in the map canvas.</p>
-<p>Activate the <a class="reference internal" href="../../../_images/Elevation.png"><img alt="elevation" src="../../../_images/Elevation.png" style="width: 1.5em;" /></a> <span class="guilabel">Elevation Controller</span> panel in the map canvas by
-clicking on the <span class="guilabel">Data Filtering</span> in the <span class="guilabel">View</span> menu. The
-<a class="reference internal" href="../../../_images/Elevation.png"><img alt="elevation" src="../../../_images/Elevation.png" style="width: 1.5em;" /></a> <span class="guilabel">Elevation Controller</span> appears as a range slider on the left
-side of the map canvas. At the top of the slider, there is a <a class="reference internal" href="../../../_images/settings.png"><img alt="settings" src="../../../_images/settings.png" style="width: 1.5em;" /></a> <sup>Settings</sup> menu
-where you can:</p>
+<span id="elevation-controller"></span><h2><a class="toc-backref" href="#id37" role="doc-backlink"><span class="section-number">7.1.4. </span>標高コントローラーパネル</a><a class="headerlink" href="#the-elevation-controller-panel" title="Link to this heading"></a></h2>
+<p><a class="reference internal" href="../../../_images/Elevation.png"><img alt="elevation" src="../../../_images/Elevation.png" style="width: 1.5em;" /></a> <span class="guilabel">標高コントローラー</span> を使うと、2D地図で標高のZレンジデータを扱うことができます。このオプションは現在点群データとラスタDEMsをサポートしています。マップキャンバスで標高データを視覚化し操作するためにそのパネルを使用します。</p>
+<p>マップキャンバスの <span class="guilabel">表示</span> メニューの <span class="guilabel">データフィルタリング</span> をクリックして、 <a class="reference internal" href="../../../_images/Elevation.png"><img alt="elevation" src="../../../_images/Elevation.png" style="width: 1.5em;" /></a> <span class="guilabel">標高コントローラー</span> パネルをアクティブにします。 <a class="reference internal" href="../../../_images/Elevation.png"><img alt="elevation" src="../../../_images/Elevation.png" style="width: 1.5em;" /></a> <span class="guilabel">標高コントローラー</span> はマップキャンバスの左側に範囲スライダーとして表示されます。スライダーの上部には <a class="reference internal" href="../../../_images/settings.png"><img alt="settings" src="../../../_images/settings.png" style="width: 1.5em;" /></a> <sup>Settings</sup> メニューがあります：</p>
 <ul class="simple">
-<li><p>Set the <span class="guilabel">Fixed Range Size</span> value to lock the elevation range to a specific size.
-This setting is saved within the project and retained across sessions, ensuring consistency
-for your elevation filter. Use the <a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">Invert Direction</span> option to reverse
-the elevation filter slider, so that it moves from high values at the bottom to low values at the top.</p></li>
-<li><p><span class="guilabel">Set Elevation Range</span> to open the project elevation tab, where you can set dedicated lower and upper bounds for the elevation range</p></li>
+<li><p>guilabel:<cite>固定範囲サイズ</cite> 値を設定すると、標高範囲を特定のサイズに固定することができます。この設定はプロジェクト内に保存され、セッションをまたいでも保持されるため、標高フィルターの一貫性が保たれます。<a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">反対方向</span>  オプションを使用すると、標高フィルターのスライダーを反転させ、下部の高い値から上部の低い値へと移動させることができます。</p></li>
+<li><p><span class="guilabel">標高範囲の設定</span> で標高タブのプロジェクトを開き、専用の上限と下限を設定することができます。</p></li>
 <li><p><span class="guilabel">Disable Elevation Filter</span> to remove the elevation filter from the map canvas</p></li>
 </ul>
 </section>
@@ -1232,7 +1219,7 @@ or preferably exported as <a class="reference internal" href="../working_with_ve
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 08, 04:20 +0900
+      <span class="lastupdated">最終更新: 2025 7月 09, 19:01 +0900
       </span></p>
   </div>
 
