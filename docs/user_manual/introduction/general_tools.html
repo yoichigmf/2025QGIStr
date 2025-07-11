@@ -234,7 +234,7 @@
   <blockquote>
 <div><div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 97.63% 翻訳されています。</p>
+<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 97.97% 翻訳されています。</p>
 </div>
 </div></blockquote>
 <section id="general-tools">
@@ -1242,7 +1242,7 @@
 <section id="profiler">
 <h4><span class="section-number">8.2.8.3. </span>プロファイラー<a class="headerlink" href="#profiler" title="Link to this heading"></a></h4>
 <p><a class="reference internal" href="../../../_images/mIconStopwatch.png"><img alt="stopwatch" src="../../../_images/mIconStopwatch.png" style="width: 1.5em;" /></a> <span class="guilabel">プロファイル</span> タブを使用すると、ユーザーによって要求されたアクションに関わるあらゆる操作の読み込み時間を取得することができます。コンテキストによって、これらの操作は設定の読み込み、メニュー、マップキャンバスや3Dビューの作成、マップレイヤの参照解決、ブックマークやレイアウトの読み込みなどがあります。これは、読み込み時間が遅い原因を特定するのに役立ちます。</p>
-<p><span class="guilabel">カテゴリ</span> ドロップダウンメニュー: から、デフォルトでサポートされているアクションを選択できます。</p>
+<p><span class="guilabel">カテゴリ値の出力</span> ドロップダウンメニュー: から、デフォルトでサポートされているアクションを選択できます。</p>
 <ul class="simple">
 <li><p><span class="guilabel">Startup</span> 時々発生する QGIS の起動時間が長くなるのを診断 (および修正) するのに役立ちます。</p></li>
 <li><p><span class="guilabel">Project Load</span> を使用すると、プロジェクトの読み込み時間が遅い原因を特定するために、プロジェクト読み込みのさまざまな段階の内訳を取得できます。</p></li>
@@ -1321,9 +1321,9 @@
 <p>他のツールについては、以下のキーを押しながら選択した際の動作が異なります：</p>
 <ul class="simple">
 <li><p><kbd class="kbd docutils literal notranslate">Shift</kbd> ：地物を現在の選択に追加します</p></li>
-<li><p><kbd class="kbd docutils literal notranslate">Ctrl</kbd>/<kbd class="kbd docutils literal notranslate">Cmd</kbd>: 現在の選択範囲から地物を減らします。</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Ctrl</kbd>/<kbd class="kbd docutils literal notranslate">Cmd</kbd>: 現在の選択群から地物を減らします。</p></li>
 <li><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Shift</kbd></kbd>/<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Cmd</kbd>+<kbd class="kbd docutils literal notranslate">Shift</kbd></kbd>: 現在の選択範囲と交差させます。つまり、現在の選択範囲から重なっている地物のみを保持します。</p></li>
-<li><p><kbd class="kbd docutils literal notranslate">Alt</kbd>: 選択範囲の形状内に完全に収まっている地物を選択します。 <kbd class="kbd docutils literal notranslate">Shift</kbd> または  <kbd class="kbd docutils literal notranslate">Ctrl</kbd>/<kbd class="kbd docutils literal notranslate">Cmd</kbd> キーと組み合わせると、現在の選択範囲に地物を追加したり、現在の選択範囲から地物を削除したりできます。</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Alt</kbd>: 選択群の形状内に完全に収まっている地物を選択します。 <kbd class="kbd docutils literal notranslate">Shift</kbd> または  <kbd class="kbd docutils literal notranslate">Ctrl</kbd>/<kbd class="kbd docutils literal notranslate">Cmd</kbd> キーと組み合わせると、現在の選択群に地物を追加したり、現在の選択群から地物を削除したりできます。</p></li>
 </ul>
 </section>
 <section id="automatic-selection">
@@ -1337,9 +1337,7 @@
 <li><p><a class="reference internal" href="../../../_images/mActionSelectAll.png"><img alt="selectAll" src="../../../_images/mActionSelectAll.png" style="width: 1.5em;" /></a> <sup>すべての地物を選択</sup> または <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">A</kbd></kbd> でも現在のレイヤの地物全てを選択します</p></li>
 <li><p><a class="reference internal" href="../../../_images/mActionInvertSelection.png"><img alt="invertSelection" src="../../../_images/mActionInvertSelection.png" style="width: 1.5em;" /></a> <sup>地物選択を反転</sup> 現在のレイヤ内の地物の選択状態を反転させます</p></li>
 <li><p><a class="reference internal" href="../../../_images/mAlgorithmSelectLocation.png"><img alt="selectLocation" src="../../../_images/mAlgorithmSelectLocation.png" style="width: 1.5em;" /></a> <sup>場所による選択</sup> は、他の地物（同じレイヤもしくは他のレイヤ -  <a class="reference internal" href="../processing_algs/qgis/vectorselection.html#qgisselectbylocation"><span class="std std-ref">場所による選択</span></a> 参照）との空間的な関係に基づいて地物を選択します</p></li>
-<li><p><a class="reference internal" href="../../../_images/mAlgorithmSelectDistance.png"><img alt="selectDistance" src="../../../_images/mAlgorithmSelectDistance.png" style="width: 1.5em;" /></a> <sup>Select within distance</sup> to select features
-wherever they are within the specified maximum distance from referenced features -
-see <a class="reference internal" href="../processing_algs/qgis/vectorselection.html#qgisselectwithindistance"><span class="std std-ref">一定距離以内の地物を選択</span></a>)</p></li>
+<li><p><a class="reference internal" href="../../../_images/mAlgorithmSelectDistance.png"><img alt="selectDistance" src="../../../_images/mAlgorithmSelectDistance.png" style="width: 1.5em;" /></a> <sup>指定距離内で選択</sup> を使うと、参照されている地物から指定された最大距離内にある地物を選択できます。詳細は :ref: <cite>QGIS での指定距離内選択</cite> を参照してください。</p></li>
 </ul>
 <p>例えば、QGISサンプルデータの <code class="file docutils literal notranslate"><span class="pre">regions.shp</span></code> からBorough（市）の地域を探したい場合には、次のようにします：</p>
 <ol class="arabic">
@@ -1538,16 +1536,16 @@ Available modes are:</p>
 <span id="identify-selection"></span><h4><span class="section-number">8.4.2.2. </span>地物情報表示ツールを使用する<a class="headerlink" href="#using-the-identify-features-tool" title="Link to this heading"></a></h4>
 <p>デフォルト表示 (<span class="guilabel">ツリー表示</span>) では、<span class="guilabel">Identify Results</span> パネルには、レイヤーに対してクエリを実行するためのいくつかのツールが提供されています。これらのツールと <a class="reference internal" href="#identify-mode"><span class="std std-ref">ターゲットレイヤーセレクタ</span></a> の賢い組み合わせにより、識別操作が大幅に向上する可能性があります。</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../../../_images/mActionIdentifyByRectangle.png"><img alt="identifyByRectangle" src="../../../_images/mActionIdentifyByRectangle.png" style="width: 1.5em;" /></a> <sup>地物情報表示</sup> は、シングルクリックまたはクリック＆ドラッグで利用できます。</p>
+<li><p><a class="reference internal" href="../../../_images/mActionIdentifyByRectangle.png"><img alt="identifyByRectangle" src="../../../_images/mActionIdentifyByRectangle.png" style="width: 1.5em;" /></a> <sup>地物情報を表示</sup> は、シングルクリックまたはクリック＆ドラッグで利用できます。</p>
 <ul>
-<li><p>シングルクリックまたはクリック＆ドラッグで、変換先レイヤーの重なり合う地物が返されます。</p></li>
+<li><p>シングルクリックまたはクリック＆ドラッグで: 変換先レイヤーの重なり合う地物が返されます。</p></li>
 <li><p>right-click: overlaying features from target layers are listed in the contextual menu,
 grouped by layers. You can then choose to:</p>
 <ul>
-<li><p>特定の地物の結果を表示する</p></li>
-<li><p>display the result for all the features of a specific layer,</p></li>
+<li><p>特定された地物の結果を表示する</p></li>
+<li><p>特定されたレイヤーの全地物の結果を表示する</p></li>
 <li><p>ベクタレイヤの場合、返された地物でフィルタリングされた属性テーブルを開くことも可能です。</p></li>
-<li><p>or show all of the returned features.</p></li>
+<li><p>または、返されたすべての地物を表示します。</p></li>
 </ul>
 </li>
 </ul>
@@ -1565,15 +1563,12 @@ Draw a polygon (left-click to start, move the pointer to shape the area
 and right-click to close the polygon).
 All the overlaying features from target layers are highlighted
 and returned in the results panel.</p></li>
-<li><p><a class="reference internal" href="../../../_images/mActionIdentifyByRadius.png"><img alt="identifyByRadius" src="../../../_images/mActionIdentifyByRadius.png" style="width: 1.5em;" /></a> <sup>半径で地物情報表示</sup> は、描画された円と重なるアイテムを返します。円を描画（中心点を指定するために左クリックし、ポインターを動かしてエリアを形成するか、ポップアップテキストボックスに半径を入力して左クリックまたは :kbd:Enter を押して円を確定する）すると、変換先レイヤーから重なり合うすべての地物がハイライト表示され、結果パネルに返されます。</p></li>
+<li><p><a class="reference internal" href="../../../_images/mActionIdentifyByRadius.png"><img alt="identifyByRadius" src="../../../_images/mActionIdentifyByRadius.png" style="width: 1.5em;" /></a> <sup>半径で地物情報表示</sup> は、描画された円と重なるアイテムを返します。円を描画（中心点を指定するために左クリックし、ポインターを動かしてエリアを形成するか、ポップアップテキストボックスに半径を入力して左クリックまたは <kbd class="kbd docutils literal notranslate">Enter</kbd> を押して円を確定する）すると、変換先レイヤーから重なり合うすべての地物がハイライト表示され、結果パネルに返されます。</p></li>
 </ul>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p><strong>地物情報表示ツールでクエリするレイヤをフィルタリングする</strong></p>
-<p>Under <span class="menuselection">Project ► Properties... ► Data Sources ► Layer Capabilities</span>,
-uncheck the <span class="guilabel">Identifiable</span> column next to a layer
-to avoid it being queried when using the <a class="reference internal" href="../../../_images/mActionIdentify.png"><img alt="identify" src="../../../_images/mActionIdentify.png" style="width: 1.5em;" /></a> <sup>Identify Features</sup> tool.
-This is a handy way to return features from only layers that are of interest to you.</p>
+<p><span class="menuselection">プロジェクト ► プロパティ... ► データソース ► レイヤー機能</span> で、レイヤーの横にある識別可能のチェックを外すと、<a class="reference internal" href="../../../_images/mActionIdentify.png"><img alt="identify" src="../../../_images/mActionIdentify.png" style="width: 1.5em;" /></a> <sup>地物情報表示</sup> ツールを使用する際にそのレイヤーがクエリされないようにできます。これは、関心のあるレイヤーからの地物のみを返すのに便利な方法です。</p>
 </div>
 </section>
 <section id="feature-information">
@@ -1677,7 +1672,7 @@ This is a handy way to return features from only layers that are of interest to 
 <td><p>該当なし</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="../../../_images/sourcefieldsandforms.png"><img alt="sourceFieldsForms" src="../../../_images/sourcefieldsandforms.png" style="width: 1.5em;" /></a> <sup>属性</sup></p></td>
-<td><p><span class="xref std std-ref">ベクターフィールドメニュー</span> および <span class="xref std std-ref">制約</span></p></td>
+<td><p><a class="reference internal" href="../working_with_vector/vector_properties.html#vector-fields-menu"><span class="std std-ref">フィールドプロパティ</span></a> および <a class="reference internal" href="../working_with_vector/vector_properties.html#constraints"><span class="std std-ref">制約</span></a></p></td>
 <td><p>該当なし</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="../../../_images/mActionFormView.png"><img alt="formView" src="../../../_images/mActionFormView.png" style="width: 1.2em;" /></a> <sup>属性フォーム</sup></p></td>
@@ -2334,7 +2329,7 @@ override</sup> widget with the middle mouse button.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 09, 07:10 +0900
+      <span class="lastupdated">最終更新: 2025 7月 11, 16:21 +0900
       </span></p>
   </div>
 

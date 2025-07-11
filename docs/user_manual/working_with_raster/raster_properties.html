@@ -209,7 +209,7 @@
   <blockquote>
 <div><div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 90.97% 翻訳されています。</p>
+<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 96.26% 翻訳されています。</p>
 </div>
 </div></blockquote>
 <section id="raster-properties-dialog">
@@ -226,7 +226,7 @@
 <li><p><a class="reference internal" href="#paletted-unique-values" id="id37">カテゴリ値パレット</a></p></li>
 <li><p><a class="reference internal" href="#singleband-gray" id="id38">単バンドグレー</a></p></li>
 <li><p><a class="reference internal" href="#singleband-pseudocolor" id="id39">単バンド疑似カラー</a></p></li>
-<li><p><a class="reference internal" href="#single-color" id="id40">Single color</a></p></li>
+<li><p><a class="reference internal" href="#single-color" id="id40">単色</a></p></li>
 <li><p><a class="reference internal" href="#hillshade" id="id41">陰影図（hillshade）</a></p></li>
 <li><p><a class="reference internal" href="#contours" id="id42">等高線（Contours）</a></p></li>
 <li><p><a class="reference internal" href="#setting-the-min-and-max-values" id="id43">最小 / 最大値設定</a></p></li>
@@ -300,11 +300,7 @@
 <p><a class="reference internal" href="../../../_images/metadata.png"><img alt="metadata" src="../../../_images/metadata.png" style="width: 1.5em;" /></a> <span class="guilabel">情報</span> タブは読み取り専用で、現在のレイヤの要約された情報やメタデータをさっと掴むことができる興味深い場所です。提供される情報には、以下のものがあります：</p>
 <ul class="simple">
 <li><p>一般情報：プロジェクト内での名前、ソースへのパス、付随的なファイルのリスト、最終更新時刻、ファイルの大きさ、使用しているプロバイダ</p></li>
-<li><p>custom properties, used to store in the active project additional information about the layer.
-Default custom properties include <span class="guilabel">Identify/format</span>, which influences how the results from using
-the <a class="reference internal" href="../../../_images/mActionIdentify.png"><img alt="identify" src="../../../_images/mActionIdentify.png" style="width: 1.5em;" /></a> <a class="reference internal" href="#raster-identify"><span class="std std-ref">Identify features</span></a> tool over a raster layer are formatted.
-More properties can be created and managed using PyQGIS, specifically through
-the <a class="extlink-pyqgis reference external" href="https://qgis.org/pyqgis/3.40/qgis.core.QgsMapLayer.setCustomProperty">setCustomProperty()</a> method.</p></li>
+<li><p>カスタムプロパティ、アクティブなプロジェクト内で、そのレイヤに関する追加情報を保存するために使用されます。デフォルトのカスタムプロパティには、ラスターレイヤで <a class="reference internal" href="../../../_images/mActionIdentify.png"><img alt="identify" src="../../../_images/mActionIdentify.png" style="width: 1.5em;" /></a> <span class="xref std std-ref">Identify features&lt;raster_identify&gt;`を使用した際の結果の表示形式に影響を与える :guilabel:`識別/形式</span> があります。さらにプロパティを作成・管理する場合は、PyQGIS を使用し、具体的には <a class="extlink-pyqgis reference external" href="https://qgis.org/pyqgis/3.40/qgis.core.QgsMapLayer.setCustomProperty">setCustomProperty()</a> メソッドを通じて設定することが可能です。</p></li>
 <li><p>レイヤのプロバイダからの情報：領域、幅、高さ、データタイプ、GDALドライバ、バンドの統計情報</p></li>
 <li><p>空間参照システム（CRS）：CRSの名前、単位、投影法、精度、参照（静的か動的か）</p></li>
 <li><p>レイヤのプロパティから読み取った情報：データタイプ、領域、幅/高さ、圧縮、ピクセルの大きさ、バンドの統計量、バンド数、行・列の数、ラスタのNo-Data値...</p></li>
@@ -341,8 +337,7 @@ the <a class="extlink-pyqgis reference external" href="https://qgis.org/pyqgis/3
 <li><p><a class="reference internal" href="#paletted"><span class="std std-ref">カテゴリ値パレット</span></a> - インデックス付けされたパレットを持つ単バンドのファイル（例：デジタル地形図）や、ラスタレイヤをレンダリングするためのパレットの一般用途</p></li>
 <li><p><a class="reference internal" href="#singleband-gray"><span class="std std-ref">単バンドグレー</span></a> - 画像（の1バンド）をグレースケールでレンダリングします。ファイルがマルチバンドではなく、パレットも持たない場合には、QGISはこのレンダラを選択します（例：陰影起伏図など）</p></li>
 <li><p><a class="reference internal" href="#label-colormaptab"><span class="std std-ref">単バンド疑似カラー</span></a> - このレンダラーは連続値パレットやカラーマップのファイルに使用します（例：標高地図など）</p></li>
-<li><p><a class="reference internal" href="#singlecolor"><span class="std std-ref">Single color</span></a> - the raster layer will be rendered
-with a single color.</p></li>
+<li><p><a class="reference internal" href="#singlecolor"><span class="std std-ref">Single color</span></a> - ラスターレイヤを単色で描画します。</p></li>
 <li><p><a class="reference internal" href="#hillshade-renderer"><span class="std std-ref">陰影図（hillshade）</span></a> - バンドの一つから陰影図を作成します。</p></li>
 <li><p><a class="reference internal" href="#raster-contours"><span class="std std-ref">等高線（Contours）</span></a> - ソースラスタバンドに対してオンザフライで等高線を生成します。</p></li>
 </ol>
@@ -412,17 +407,13 @@ with a single color.</p></li>
 <p>ピクセルには選択されたカラーランプに基づいた色が割り当てられ、レイヤの凡例（ <span class="guilabel">レイヤ</span> パネルと印刷レイアウトの <a class="reference internal" href="../print_composer/composer_items/composer_legend.html#layout-legend-item"><span class="std std-ref">凡例アイテム</span></a> ）は連続カラーランプを使用して表示されます。凡例の設定を調整したり、代わりに個別クラス（と色）を使用した凡例を使いたい場合には、 <span class="guilabel">凡例の設定...</span> ボタンを押してください。詳細は <a class="reference internal" href="#raster-legend-settings"><span class="std std-ref">ラスタの凡例のカスタマイズ</span></a> を参照してください。</p>
 </section>
 <section id="single-color">
-<span id="singlecolor"></span><h4><a class="toc-backref" href="#id40" role="doc-backlink">Single color</a><a class="headerlink" href="#single-color" title="Link to this heading"></a></h4>
-<p>This renderer allows you to render a raster layer using <span class="guilabel">Single color</span>.
-This type of renderer is useful when you want to display a raster layer
-uniformly, without any variation in color based on pixel values.</p>
-<p>The single color renderer can be used with both single-band and multiband raster layers.
-When used with multiband rasters, you can select which band to apply the single color to,
-effectively displaying that specific band uniformly across the entire layer.</p>
+<span id="singlecolor"></span><h4><a class="toc-backref" href="#id40" role="doc-backlink">単色</a><a class="headerlink" href="#single-color" title="Link to this heading"></a></h4>
+<p>このレンダラーを使用すると、ラスターレイヤを <span class="guilabel">Single color</span> で描画できます。このレンダラーは、画素値による色の変化をつけずにラスターレイヤを一様に表示したい場合に便利です。</p>
+<p>単色レンダラーは、シングルバンドおよびマルチバンドのラスターレイヤの両方で使用できます。マルチバンドラスタで使用する場合は、どのバンドに単色を適用するかを選択でき、その特定のバンドをレイヤ全体で一様に表示することが可能です。</p>
 <figure class="align-center" id="id10">
 <span id="figure-raster-singlecolor"></span><img alt="../../../_images/rasterSingleColor.png" src="../../../_images/rasterSingleColor.png" />
 <figcaption>
-<p><span class="caption-number">図 13.6 </span><span class="caption-text">Raster Symbology - Single color rendering</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
+<p><span class="caption-number">図 13.6 </span><span class="caption-text">ラスタシンボロジー - 単色レンダリング</span><a class="headerlink" href="#id10" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>
@@ -609,13 +600,8 @@ effectively displaying that specific band uniformly across the entire layer.</p>
 <li><p>透過させるピクセルのリストを対応する透過率とともに指定します。</p>
 <ol class="arabic simple">
 <li><p><a class="reference internal" href="../../../_images/symbologyAdd.png"><img alt="symbologyAdd" src="../../../_images/symbologyAdd.png" style="width: 1.5em;" /></a> <sup>手動で値を追加</sup> ボタンをクリックします。新しい行がピクセルリストに表示されます。</p></li>
-<li><p>For single-band based symbology (e.g. DEMs), enter the <strong>From</strong> and <strong>To</strong> values and
-adjust the <strong>Percent Transparent</strong> to apply.</p></li>
-<li><p>For multiband based symbology (e.g. RGB images) enter the <strong>Red</strong>, <strong>Green</strong> and <strong>Blue</strong> values of the pixel and
-adjust the <strong>Percent Transparent</strong> to apply.
-QGIS supports <strong>Tolerance</strong> for pixel values, when defining transparency.
-This means that pixels with color close to the specified RGB values can also
-be made transparent. Note that this feature applies only to multiband rasters.</p></li>
+<li><p>シングルバンドを用いたシンボロジー (e.g. DEMs) では、<strong>From</strong> と <strong>To</strong> の値を入力し、適用する 透過率 <strong>Percent Transparen</strong> を調整します。</p></li>
+<li><p>マルチバンドを用いたシンボロジー (e.g. RGB画像) では、ピクセルの <strong>赤</strong>、<strong>緑</strong>、<strong>青</strong> の値を入力し、<strong>適用する 透過率</strong> を調整します。QGIS では透過設定時にピクセル値の <strong>許容値</strong> をサポートしています。これにより、指定したRGB値に近い色のピクセルも透過させることが可能です。この機能はマルチバンドラスタにのみ適用される点に注意してください。</p></li>
 <li><p>この代わりに、 <a class="reference internal" href="../../../_images/mActionContextHelp.png"><img alt="contextHelp" src="../../../_images/mActionContextHelp.png" style="width: 1.5em;" /></a> <sup>画面から値を追加</sup> ボタンを使用して、ラスタから直接ピクセル値を取得することもできます。透過率の値は入力してください。</p></li>
 <li><p>この手順を繰り返し、さらに多くの値のカスタム透過率を調整します。</p></li>
 <li><p><span class="guilabel">適用</span> ボタンを押して、地図を確認してみましょう。</p></li>
@@ -624,7 +610,7 @@ be made transparent. Note that this feature applies only to multiband rasters.</
 <figure class="align-center" id="id18">
 <a class="reference internal image-reference" href="../../../_images/tolerances_for_pixel_values.gif"><img alt="../../../_images/tolerances_for_pixel_values.gif" src="../../../_images/tolerances_for_pixel_values.gif" style="width: 100%;" /></a>
 <figcaption>
-<p><span class="caption-number">図 13.14 </span><span class="caption-text">Using tolerances for multiband rasters</span><a class="headerlink" href="#id18" title="Link to this image"></a></p>
+<p><span class="caption-number">図 13.14 </span><span class="caption-text">マルチバンドラスタでの許容値の使用</span><a class="headerlink" href="#id18" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </li>
@@ -686,33 +672,24 @@ be made transparent. Note that this feature applies only to multiband rasters.</
 <li><p><span class="guilabel">自動</span> ：元のデータプロバイダが時系列データの処理をサポートしている場合、レンダリングは元のデータプロバイダによって制御されます。この設定は例えば、WMS-Tレイヤや、PostGISラスタレイヤ等で利用できます。</p>
 </li>
 <li><p><span class="guilabel">固定時間範囲</span> ：アニメーション時刻が <span class="guilabel">開始時刻</span> と <span class="guilabel">終了時刻</span> の範囲内にある場合にのみ、このラスタレイヤを表示します。</p></li>
-<li><p><span class="guilabel">Fixed Time Range Per Band</span>: only shows a band when the current animation time
-is between its <span class="guilabel">Begin</span> and <span class="guilabel">End</span> date range. This option allows
-you to either manually set these time ranges for each band or use the <a class="reference internal" href="../../../_images/mIconExpression.png"><img alt="expression" src="../../../_images/mIconExpression.png" style="width: 1.5em;" /></a> button
-to automatically generate datetime values, enabling detailed temporal analysis and visualization.
-This mode is particularly useful for working with raster layers where each band corresponds to a specific time
-period, such as NetCDF files.</p>
+<li><p><span class="guilabel">バンドごとの固定時間範囲</span>: 現在のアニメーション時間が、そのバンドの <span class="guilabel">開始</span> と <span class="guilabel">終了</span> の日付範囲内にあるときのみ、そのバンドを表示します。このオプションでは、各バンドの時間範囲を手動で設定することも、<a class="reference internal" href="../../../_images/mIconExpression.png"><img alt="expression" src="../../../_images/mIconExpression.png" style="width: 1.5em;" /></a> ボタンを使用して日時値を自動生成することもでき、詳細な時系列解析や可視化を可能にします。このモードは、各バンドが特定の期間に対応しているNetCDFファイルなどのラスターレイヤを扱う際に特に有用です。</p>
 <figure class="align-center" id="id22">
 <a class="reference internal image-reference" href="../../../_images/temporal_time_range_per_band.gif"><img alt="../../../_images/temporal_time_range_per_band.gif" src="../../../_images/temporal_time_range_per_band.gif" style="width: 100%;" /></a>
 <figcaption>
-<p><span class="caption-number">図 13.18 </span><span class="caption-text">Example of using the Fixed Time Range Per Band mode</span><a class="headerlink" href="#id22" title="Link to this image"></a></p>
+<p><span class="caption-number">図 13.18 </span><span class="caption-text">バンドごとの固定時間範囲モードの使用例</span><a class="headerlink" href="#id22" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </li>
-<li><p><span class="guilabel">Represents Temporal Values</span>: interprets each pixel in the raster layer as a datetime value.
-When this temporal mode is active, pixels that do not fall within the temporal range specified in the
-render context will be hidden, ensuring that only temporally relevant data is displayed.
-This mode is effective for:</p>
+<li><p><span class="guilabel">時系列値を表す</span>: ラスターレイヤの各ピクセルを日時値として解釈します。この時系列モードが有効な場合、レンダーコンテキストで指定された時系列範囲に該当しないピクセルは非表示となり、時系列的に関連するデータのみが表示されます。このモードは以下の用途に有効です:</p>
 <ul class="simple">
-<li><p>Analyzing land use changes, like observing deforestation patterns.</p></li>
-<li><p>Studying flooding by comparing water coverage across different times.</p></li>
-<li><p>Evaluating movement costs in terrain analysis, for example,
-using GRASS GIS's r.walk tool to calculate travel costs across a landscape.</p></li>
+<li><p>森林伐採のパターンを観察するなど、土地利用の変化を分析すること。</p></li>
+<li><p>異なる時点の水域範囲を比較して洪水を調査すること。</p></li>
+<li><p>地形解析における移動コストの評価、例えば GRASS GIS の r.walk ツールを使ってランドスケープ全体の移動コストを計算すること。</p></li>
 </ul>
 <figure class="align-center" id="id23">
 <a class="reference internal image-reference" href="../../../_images/temporal_pixel_value.gif"><img alt="../../../_images/temporal_pixel_value.gif" src="../../../_images/temporal_pixel_value.gif" style="width: 100%;" /></a>
 <figcaption>
-<p><span class="caption-number">図 13.19 </span><span class="caption-text">Application of the Represents Temporal Values mode - analyzing GLAD deforestation alerts</span><a class="headerlink" href="#id23" title="Link to this image"></a></p>
+<p><span class="caption-number">図 13.19 </span><span class="caption-text">時系列値を表すモードの適用例 ‐ GLAD 森林伐採アラートの分析</span><a class="headerlink" href="#id23" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </li>
@@ -751,11 +728,7 @@ using GRASS GIS's r.walk tool to calculate travel costs across a landscape.</p><
 </section>
 <section id="elevation-properties">
 <span id="raster-elevation"></span><span id="index-10"></span><h2><a class="toc-backref" href="#id53" role="doc-backlink"><span class="section-number">13.1.9. </span>標高プロパティ</a><a class="headerlink" href="#elevation-properties" title="Link to this heading"></a></h2>
-<p>The <a class="reference internal" href="../../../_images/elevationscale.png"><img alt="elevationscale" src="../../../_images/elevationscale.png" style="width: 1.5em;" /></a> <span class="guilabel">Elevation</span> tab provides options to control
-the layer elevation properties within a <a class="reference internal" href="../map_views/3d_map_view.html#label-3dmapview"><span class="std std-ref">3D map view</span></a>
-and its appearance in the <a class="reference internal" href="../map_views/elevation_profile.html#label-elevation-profile-view"><span class="std std-ref">profile tool charts</span></a>.
-Specifically, you can choose to <span class="guilabel">Disable</span> this configuration if the layer
-does not contain elevation data or you can set:</p>
+<p><a class="reference internal" href="../../../_images/elevationscale.png"><img alt="elevationscale" src="../../../_images/elevationscale.png" style="width: 1.5em;" /></a> の <span class="guilabel">標高</span> タブでは、<a class="reference internal" href="../map_views/3d_map_view.html#label-3dmapview"><span class="std std-ref">3D map view</span></a> 内でのレイヤの標高プロパティおよび <a class="reference internal" href="../map_views/elevation_profile.html#label-elevation-profile-view"><span class="std std-ref">profile tool charts</span></a> における表示を制御するオプションを提供します。具体的には、レイヤに標高データが含まれていない場合はこの設定を <span class="guilabel">無効化</span> することができ、または以下の項目を設定できます:</p>
 <figure class="align-center" id="id25">
 <span id="figure-raster-elevation"></span><img alt="../../../_images/rasterElevation.png" src="../../../_images/rasterElevation.png" />
 <figcaption>
@@ -923,7 +896,7 @@ or <span class="guilabel">Text</span>.</p></li>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 08, 04:20 +0900
+      <span class="lastupdated">最終更新: 2025 7月 11, 16:21 +0900
       </span></p>
   </div>
 

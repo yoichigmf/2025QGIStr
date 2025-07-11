@@ -205,7 +205,7 @@
   <blockquote>
 <div><div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 95.55% 翻訳されています。</p>
+<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 97.17% 翻訳されています。</p>
 </div>
 </div></blockquote>
 <section id="editing">
@@ -629,12 +629,8 @@
 <p>編集可能なベクタレイヤに対して、頂点ツールは地物の頂点を操作するCADプログラムと似たような機能を提供します。一度に複数の頂点を選択し、移動、追加、削除を行うことができます。また、頂点ツールはトポロジ編集機能をサポートしています。これらのツールは選択状態を維持し続けるため、何らかの操作を行った場合でも、その地物とツールの選択状態が維持されます。</p>
 <div class="admonition tip" id="tip-tracing-support">
 <p class="admonition-title">Tip</p>
-<p><strong>Drawing a series of new vertices</strong></p>
-<p>The vertex tool does not support <a class="reference internal" href="#tracing"><span class="std std-ref">automatic tracing</span></a> and is optimized for
-editing individual vertices and moving or deleting an arbitrary selection
-of multiple vertices.  Try using the <a class="reference internal" href="../../../_images/mActionReshape.png"><img alt="reshape" src="../../../_images/mActionReshape.png" style="width: 1.5em;" /></a><sup>Reshape Features</sup>
-tool when you need to replace or insert a series of new vertices,
-especially if you want to trace other features.</p>
+<p><strong>一連の新しい頂点を描く</strong></p>
+<p>頂点ツールは <a class="reference internal" href="#tracing"><span class="std std-ref">自動トレース</span></a> をサポートしておらず、個々の頂点の編集や、複数の頂点を任意に選択して移動・削除する操作に最適化されています。他の地物をトレースしたい場合や、一連の新しい頂点を置き換えたり挿入したりする必要がある場合は、 <a class="reference internal" href="../../../_images/mActionReshape.png"><img alt="reshape" src="../../../_images/mActionReshape.png" style="width: 1.5em;" /></a><sup>地物の変形</sup> ツールをお勧めします。</p>
 </div>
 <p><span class="menuselection">設定 ►</span> <a class="reference internal" href="../../../_images/mActionOptions.png"><img alt="options" src="../../../_images/mActionOptions.png" style="width: 1em;" /></a> <span class="menuselection">オプション ► デジタイズ ►</span> <span class="guilabel">頂点編集用検索半径:</span> <a class="reference internal" href="../../../_images/selectnumber.png"><img alt="selectNumber" src="../../../_images/selectnumber.png" style="width: 2.8em;" /></a> プロパティをゼロより大きい値に設定することが重要です。 そうでない場合、QGISはどの頂点が編集されているか伝えることができなくなり、警告が表示されます。</p>
 <div class="admonition tip" id="tip-vertex-markers">
@@ -947,14 +943,9 @@ especially if you want to trace other features.</p>
 <p><a class="reference internal" href="../../../_images/mActionAddPart.png"><img alt="addPart" src="../../../_images/mActionAddPart.png" style="width: 1.5em;" /></a> <sup>部分を追加</sup> は、ジオメトリのない地物にジオメトリを追加するためにも使用できます。まず、属性テーブルで地物を選択し、 <a class="reference internal" href="../../../_images/mActionAddPart.png"><img alt="addPart" src="../../../_images/mActionAddPart.png" style="width: 1.5em;" /></a> <sup>部分を追加</sup> ツールで新しいジオメトリをデジタイズします。</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p><strong>Order of vertices in polygon parts</strong></p>
-<p>Unlike the OGC standards, QGIS doesn't constrain vertices
-of the exterior boundary of a polygon feature to be ordered counterclockwise.
-Thus, you can find both directions in a layer.
-However, every parts of the same multipolygon feature
-will have their outer vertices ordered following the same direction.</p>
-<p>You can however use the <a class="reference internal" href="../processing_algs/qgis/vectorgeometry.html#qgisforcerhr"><span class="std std-ref">右手ルールを強制</span></a> algorithm to constrain features of a layer
-to have vertices of their outer boundaries ordered in the clockwise direction.</p>
+<p><strong>ポリゴンパーツにおける頂点の順序</strong></p>
+<p>OGC標準とは異なり、QGISではポリゴン地物の外部境界の頂点が反時計回りに並ぶように制限されていません。そのため、1つのレイヤ内で両方向の頂点順序が存在する可能性があります。ただし、同一のマルチポリゴン地物内のすべての部分については、その外部頂点は同じ方向に沿って並べられます。</p>
+<p>しかし、 <span class="xref std std-ref">右手ルールを強制</span> アルゴリズムを使用することで、レイヤ内の地物の外部境界の頂点を時計回りに並ぶよう制約することが可能です。</p>
 </div>
 </section>
 <section id="delete-part">
@@ -964,27 +955,18 @@ to have vertices of their outer boundaries ordered in the clockwise direction.</
 <section id="add-ring">
 <span id="index-27"></span><span id="id8"></span><h3><a class="toc-backref" href="#id76" role="doc-backlink"><span class="section-number">12.3.5.7. </span>リングを追加</a><a class="headerlink" href="#add-ring" title="Link to this heading"></a></h3>
 <p>ツールバーの <a class="reference internal" href="../../../_images/mActionAddRing.png"><img alt="addRing" src="../../../_images/mActionAddRing.png" style="width: 2em;" /></a> <sup>リングを追加</sup> アイコンを使用して、リングポリゴンを作成できます。これは、既存のポリゴン領域の内部にさらにポリゴンをデジタイズできて、それが「穴」となり、外側と内側のポリゴンの境界の間の領域のみがリングポリゴンとして残ります。</p>
-<p>To add a ring:</p>
+<p>リングを追加:</p>
 <ol class="arabic simple">
-<li><p>Select the feature(s) to modify</p></li>
+<li><p>変更する地物（複数可）を選択</p></li>
 <li><p>Activate the <a class="reference internal" href="../../../_images/mActionAddRing.png"><img alt="addRing" src="../../../_images/mActionAddRing.png" style="width: 2em;" /></a> <sup>Add Ring</sup> tool</p></li>
-<li><p>Draw a polygon within the selected geometries,
-using the aforementioned <a class="reference internal" href="#drawing-methods"><span class="std std-ref">techniques</span></a>.
-A hole appears in the selected geometries.</p></li>
-<li><p>If no geometry is selected when the ring is drawn,
-then a hole is added to each of the polygons the ring is drawn over.</p></li>
+<li><p>前述の、 <a class="reference internal" href="#drawing-methods"><span class="std std-ref">テクニック</span></a> を用いて、選択したジオメトリの内側にポリゴンを描画します。すると、選択されたジオメトリに穴が作成されます。</p></li>
+<li><p>リングを描画する際にジオメトリが選択されていない場合、そのリングが重なったすべてのポリゴンに穴が追加されます。</p></li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p><strong>Order of vertices in polygon rings</strong></p>
-<p>Unlike the OGC standards, QGIS doesn't constrain vertices
-of the exterior boundary of a polygon feature to be ordered counterclockwise.
-Thus, you can find both directions in a layer.
-However, every rings of the same (multi)polygon feature
-will have their vertices ordered in the opposite direction to the outer boundary's.</p>
-<p>You can however use the <a class="reference internal" href="../processing_algs/qgis/vectorgeometry.html#qgisforcerhr"><span class="std std-ref">右手ルールを強制</span></a> algorithm to constrain features of a layer
-to have vertices of their outer boundaries ordered in the clockwise direction,
-and vertices of their interior rings ordered in the counter-clockwise direction.</p>
+<p><strong>ポリゴンリングにおける頂点の順序</strong></p>
+<p>OGC標準とは異なり、QGISではポリゴン地物の外部境界の頂点が反時計回りに並ぶように制約されていません。そのため、1つのレイヤ内で両方向の頂点順序が存在する可能性があります。ただし、同一の（複数）ポリゴン地物内の各リングについては、外部境界とは逆方向に頂点が並べられます。</p>
+<p>しかし、 <span class="xref std std-ref">右手ルールを強制</span> アルゴリズムを使用することで、レイヤ内の地物の外部境界の頂点を時計回りに、内部リングの頂点を反時計回りに並ぶように制約することができます。</p>
 </div>
 </section>
 <section id="fill-ring">
@@ -1584,7 +1566,7 @@ allowing you to start new construction steps from any point along the existing g
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 08, 04:20 +0900
+      <span class="lastupdated">最終更新: 2025 7月 11, 16:21 +0900
       </span></p>
   </div>
 
