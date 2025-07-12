@@ -205,7 +205,7 @@
   <blockquote>
 <div><div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 97.17% 翻訳されています。</p>
+<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 98.52% 翻訳されています。</p>
 </div>
 </div></blockquote>
 <section id="editing">
@@ -291,7 +291,7 @@
 <li><p><a class="reference internal" href="#continuous-lock" id="id100">継続的な固定</a></p></li>
 <li><p><a class="reference internal" href="#construction-mode" id="id101">作図モード</a></p></li>
 <li><p><a class="reference internal" href="#parallel-and-perpendicular-lines" id="id102">平行線と垂直線</a></p></li>
-<li><p><a class="reference internal" href="#circle-point-intersection" id="id103">2-circle point intersection</a></p></li>
+<li><p><a class="reference internal" href="#circle-point-intersection" id="id103">2円の交点</a></p></li>
 </ul>
 </li>
 <li><p><a class="reference internal" href="#the-processing-in-place-layer-modifier" id="id104">プロセシングによるレイヤのインプレース修正</a></p></li>
@@ -1013,28 +1013,10 @@
 </section>
 <section id="offset-curves">
 <span id="offset-curve"></span><span id="index-31"></span><h3><a class="toc-backref" href="#id80" role="doc-backlink"><span class="section-number">12.3.5.11. </span>曲線のオフセット</a><a class="headerlink" href="#offset-curves" title="Link to this heading"></a></h3>
-<p>The <a class="reference internal" href="../../../_images/mActionOffsetCurve.png"><img alt="offsetCurve" src="../../../_images/mActionOffsetCurve.png" style="width: 1.5em;" /></a> <sup>Offset Curve</sup> tool creates parallel shifts of
-line layers.
-The tool can be applied to the edited layer (the geometries are modified)
-or also to background layers (in which case it creates copies of the lines /
-rings and adds them to the edited layer).
-It is thus ideally suited for the creation of distance line layers.
-The <span class="guilabel">User Input</span> dialog pops-up, showing the displacement distance
-and other settings.</p>
-<p>To create a shift of a line or polygon layer, you must first go into editing mode
-and activate the <a class="reference internal" href="../../../_images/mActionOffsetCurve.png"><img alt="offsetCurve" src="../../../_images/mActionOffsetCurve.png" style="width: 1.5em;" /></a> <sup>Offset Curve</sup> tool.
-Then click on a feature to shift it.
-Move the mouse and click where wanted or enter the desired distance in
-the user input widget. Holding <kbd class="kbd docutils literal notranslate">Ctrl</kbd> during the 2nd click will make an offset copy.
-Your changes may then be saved with the <a class="reference internal" href="../../../_images/mActionSaveEdits.png"><img alt="saveEdits" src="../../../_images/mActionSaveEdits.png" style="width: 1.5em;" /></a>
-<sup>Save Layer Edits</sup> tool.</p>
-<p>For geometries on background layers make sure that snapping is on and hold <kbd class="kbd docutils literal notranslate">Ctrl</kbd>
-to select the geometry from the background. Also hold <kbd class="kbd docutils literal notranslate">Ctrl</kbd> when doing the second click.
-Geometries will be converted to the target layer geometry type.</p>
-<p>QGIS options dialog (Digitizing tab then <strong>Curve offset tools</strong> section) or
-the <a class="reference internal" href="../../../_images/settings.png"><img alt="settings" src="../../../_images/settings.png" style="width: 1.5em;" /></a> icon in the <span class="guilabel">User Input</span> dialog allows
-you to configure <a class="reference internal" href="../introduction/qgis_configuration.html#curve-offset-tool"><span class="std std-ref">some parameters</span></a> like <strong>Join style</strong>,
-<strong>Quadrant segments</strong>, <strong>Miter limit</strong> and <strong>End cap style</strong>.</p>
+<p><a class="reference internal" href="../../../_images/mActionOffsetCurve.png"><img alt="offsetCurve" src="../../../_images/mActionOffsetCurve.png" style="width: 1.5em;" /></a> :sup: <cite>Offset Curve</cite> ツールは、ラインレイヤの平行シフトを作成するツールです。このツールは、編集中のレイヤーに適用してジオメトリを変更することも、背景レイヤーに対して適用してラインやリングのコピーを作成し、それらを編集中のレイヤーに追加することもできます。そのため、距離を持つラインレイヤの作成に理想的です。ツールの実行時には :guilabel: <cite>ユーザー入力</cite> ダイアログが表示され、オフセット距離やその他の設定を入力できます。</p>
+<p>ラインまたはポリゴンレイヤをシフトするには、まず編集モードに入り、　<a class="reference internal" href="../../../_images/mActionOffsetCurve.png"><img alt="offsetCurve" src="../../../_images/mActionOffsetCurve.png" style="width: 1.5em;" /></a> <sup>Offset Curve</sup> ツールを有効にします。次に、シフトする地物をクリックします。マウスを動かして、シフトさせたい位置を再度クリックするか、ユーザー入力ウィジェットから任意の値を入力して位置を定めます。2度目のクリックの際に <kbd class="kbd docutils literal notranslate">Ctrl</kbd> キーを押したままにすると、オフセットのコピーが作成されます。変更内容は <a class="reference internal" href="../../../_images/mActionSaveEdits.png"><img alt="saveEdits" src="../../../_images/mActionSaveEdits.png" style="width: 1.5em;" /></a> <sup>レイヤ変更内容を保存</sup> ツールで保存可能です。</p>
+<p>背景レイヤのジオメトリを操作する場合は、スナップ機能を有効にし、 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> キーを押しながらクリックして背景レイヤのジオメトリを選択してください。また、2回目のクリックの際にも <kbd class="kbd docutils literal notranslate">Ctrl</kbd> キーを押したままにしてください。ジオメトリは変換先レイヤのジオメトリタイプに変換されます。</p>
+<p>QGISの設定ダイアログ（デジタイジングタブ内の <strong>Curve offset ツール</strong> セクション）や、<span class="guilabel">ユーザー入力</span> ダイアログの <a class="reference internal" href="../../../_images/settings.png"><img alt="settings" src="../../../_images/settings.png" style="width: 1.5em;" /></a> アイコンから、 <strong>統合スタイル</strong>, <strong>象限セグメント</strong>, <strong>Miter l制限</strong> そして <strong>先端スタイル</strong> などの <a class="reference internal" href="../introduction/qgis_configuration.html#curve-offset-tool"><span class="std std-ref">いくつかのパラメータ</span></a> を設定可能です。</p>
 </section>
 <section id="reverse-line">
 <span id="index-32"></span><span id="id11"></span><h3><a class="toc-backref" href="#id81" role="doc-backlink"><span class="section-number">12.3.5.12. </span>線の向きの反転</a><a class="headerlink" href="#reverse-line" title="Link to this heading"></a></h3>
@@ -1051,12 +1033,7 @@ you to configure <a class="reference internal" href="../introduction/qgis_config
 <p>ライン地物またはポリゴン地物を分割するには：</p>
 <ol class="arabic simple">
 <li><p><a class="reference internal" href="../../../_images/mActionSplitFeatures.png"><img alt="splitFeatures" src="../../../_images/mActionSplitFeatures.png" style="width: 1.5em;" /></a> <sup>地物を分割</sup> ツールを選択します。</p></li>
-<li><p>Draw a line across the feature(s) you want to split.
-If a selection is active, only selected features are split.
-The original feature is then assigned the biggest geometry resulting from the splitting,
-and new features are created for the remaining parts.
-Fields of the features are filled/updated according to the datasource provider rules
-or their <a class="reference internal" href="vector_properties.html#policies"><span class="std std-ref">splitting policy</span></a>.</p></li>
+<li><p>分割したい地物に割したい地物（複数可）に線を描いてください。選択がアクティブであれば、選択されている地物の身が分割されます。分割後、元の地物には最大のジオメトリが割り当てられ、残りの部分については新しい地物が作成されます。地物の属性はデータソースプロバイダーのルールまたは、 <a class="reference internal" href="vector_properties.html#policies"><span class="std std-ref">ポリシー</span></a> に則って入力/更新されます。</p></li>
 <li><p>その後はいつも通りに、出来上がった地物の属性を変更することができます。</p></li>
 </ol>
 <div class="admonition tip">
@@ -1274,9 +1251,7 @@ or their <a class="reference internal" href="vector_properties.html#policies"><s
 <li><p><a class="reference internal" href="../../../_images/unchecked.png"><img alt="unchecked" src="../../../_images/unchecked.png" style="width: 1.3em;" /></a> <span class="guilabel">X/Y点</span>: 頂点にカーソルを合わせると、そのXまたはY座標に沿って、マップキャンバス上に紫色の点線が表示されます。この仮想線上の任意の場所に頂点をスナップすることができます。2つの異なる頂点にカーソルを合わせると、両方の仮想座標線が生成され、その交点にスナップすることも可能です。</p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="../../../_images/circlesintersection.png"><img alt="circlesIntersection" src="../../../_images/circlesintersection.png" style="width: 1.5em;" /></a> <sup>2-circle Point Intersection</sup>: allows you to
-digitize a point or vertex at the intersection of two circles.
-(more at <a class="reference internal" href="#circle-intersection"><span class="std std-ref">2-circle point intersection</span></a>).</p></li>
+<li><p><a class="reference internal" href="../../../_images/circlesintersection.png"><img alt="circlesIntersection" src="../../../_images/circlesintersection.png" style="width: 1.5em;" /></a> <sup>2-circle Point Intersection</sup>: 2つの円の交差点にポイントや頂点をデジタイズすることができます。（詳しくは <span class="xref std std-ref">2円の交差</span> をご覧ください。）</p></li>
 <li><p><a class="reference internal" href="../../../_images/settings.png"><img alt="settings" src="../../../_images/settings.png" style="width: 1.5em;" /></a> <sup>共通角にスナップ</sup>: カーソルを動かすと、次の頂点を追加するためにスナップできる仮想線を表示します。スナップする線は、最後に追加した頂点と、事前設定リスト（0.1°、0.5°、1°、5°、10°、15°、18°、22.5°、30°、45°、90°のステップ）にある（絶対または直前のセグメントへの相対）角度で定義されます。この機能を無効にするには <span class="guilabel">共通角にスナップしない</span> を選択します。</p>
 <p><a class="reference internal" href="#snapping-options"><span class="std std-ref">Snapping to features</span></a> は、正確なデジタイジングのために、共通角にスナップとともに使用することができます。スナップするターゲット要素をどのように保持するかを細かくコントロールするために、 <span class="guilabel">スナップの優先順位</span> の項目で、共通角よりも地物へのスナップを優先するか、またはその逆を優先するかを指定することができます。デジタイジング中にどちらかの方法に切り替えることができ、その間にスナップオプションが無効になるのを防ぐことができます。デジタイジング中に <kbd class="kbd docutils literal notranslate">N</kbd> （または <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>+<kbd class="kbd docutils literal notranslate">N</kbd></kbd>）を押すと、角度リストが循環します。</p>
 </li>
@@ -1434,15 +1409,9 @@ digitize a point or vertex at the intersection of two circles.
 <p>In the <a class="reference internal" href="../../../_images/cad_construction.png"><img alt="cadConstruction" src="../../../_images/cad_construction.png" style="width: 1.5em;" /></a> <sup>Construction mode</sup> you will find a drop-down menu
 where you can choose to:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">Record Construction Guides</span>: All construction steps are
-rendered as dashed lines. Each step that you perform is visually represented,
-allowing you to trace the construction process. The guides are displayed as
-long as <span class="guilabel">Advanced Digitizing</span> remains active.</p></li>
-<li><p><a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">Show Construction Guides</span>: Allows you to make construction
-guides visible or hidden on the canvas. When enabled, all active guides are displayed,
-offering better spatial orientation and precision during the digitizing process.</p></li>
-<li><p><a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">Snap to Visible Construction Guides</span>: The guides are snap-able,
-allowing you to start new construction steps from any point along the existing guides.</p></li>
+<li><p><a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">Record Construction Guides</span>: すべての作図ステップが破線として描画されます。各ステップが視覚的に表示されるため、作図プロセスをたどることができます。ガイドは、 <span class="guilabel">高度なデジタイズ</span> が有効である限り表示されます。</p></li>
+<li><p><a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">Show Construction Guides</span>: キャンバス上に作図ガイドを表示／非表示に切り替えることができます。有効にすると、すべてのアクティブなガイドが表示され、デジタイジング作業中の空間的な把握と精度の向上に役立ちます。</p></li>
+<li><p><a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">Snap to Visible Construction Guides</span>: 表示されている作図ガイドにスナップできるようになり、既存のガイド上の任意の点から新たな作図ステップを開始することが可能になります。</p></li>
 <li><p>Choose <span class="guilabel">Clear Construction Guides</span> to remove all the guides from the canvas.</p></li>
 </ul>
 <p>例えば、作図モードを使用すれば、既存の点から正確にとある距離に位置する点を描画できます。</p>
@@ -1497,7 +1466,7 @@ allowing you to start new construction steps from any point along the existing g
 <p>これらの2つのツールは単に、垂直や平行となるちょうどの角度を見つけて、編集中に角度パラメータをロックするだけです。角度パラメータのロックを解除すると、デジタイズ中のこれらの2つのツールの使用をキャンセルします。</p>
 </section>
 <section id="circle-point-intersection">
-<span id="circle-intersection"></span><h3><a class="toc-backref" href="#id103" role="doc-backlink"><span class="section-number">12.3.7.8. </span>2-circle point intersection</a><a class="headerlink" href="#circle-point-intersection" title="Link to this heading"></a></h3>
+<span id="circle-intersection"></span><h3><a class="toc-backref" href="#id103" role="doc-backlink"><span class="section-number">12.3.7.8. </span>2円の交点</a><a class="headerlink" href="#circle-point-intersection" title="Link to this heading"></a></h3>
 <p>To add a vertex at the intersection of two circles, follow these steps:</p>
 <ol class="arabic">
 <li><p>Click the <a class="reference internal" href="../../../_images/circlesintersection.png"><img alt="circlesIntersection" src="../../../_images/circlesintersection.png" style="width: 1.5em;" /></a> <sup>2-circle Point Intersection</sup> icon.</p></li>
@@ -1566,7 +1535,7 @@ allowing you to start new construction steps from any point along the existing g
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 11, 16:21 +0900
+      <span class="lastupdated">最終更新: 2025 7月 12, 23:59 +0900
       </span></p>
   </div>
 
