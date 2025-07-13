@@ -199,7 +199,7 @@
   <blockquote>
 <div><div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 99.72% 翻訳されています。</p>
+<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 97.78% 翻訳されています。</p>
 </div>
 </div></blockquote>
 <section id="setting-a-label">
@@ -210,7 +210,7 @@
 <ul>
 <li><p><a class="reference internal" href="#text-tab" id="id17">テキスト</a></p>
 <ul>
-<li><p><a class="reference internal" href="#allow-html-formatting" id="id18">Allow HTML Formatting</a></p></li>
+<li><p><a class="reference internal" href="#allow-html-formatting" id="id18">HTMLフォーマットを使用する</a></p></li>
 </ul>
 </li>
 <li><p><a class="reference internal" href="#formatting-tab" id="id19">フォーマットタブ</a></p></li>
@@ -248,7 +248,7 @@
 </li>
 </ul>
 </nav>
-<p>ラベルはベクトル地物やメッシュ レイヤー、あるいは地図上に表示できるテキスト情報です。シンボルだけでは表現できない詳細を追加できますQGIS では、以下の 2 種類のテキスト関連アイテムが利用可能です:</p>
+<p>ラベルはベクトル地物やメッシュ レイヤー、あるいは地図上に表示できるテキスト情報です。シンボルだけでは表現できない詳細を追加できます。QGIS では、以下の 2 種類のテキスト関連アイテムが利用可能です:</p>
 <ul>
 <li><p><span class="guilabel">テキスト形式</span> ： <a class="reference internal" href="#labels-text"><span class="std std-ref">フォント、大きさ、色</span></a> 、 <a class="reference internal" href="#labels-shadow"><span class="std std-ref">影</span></a> 、 <a class="reference internal" href="#labels-background"><span class="std std-ref">背景</span></a> 、 <a class="reference internal" href="#labels-buffer"><span class="std std-ref">バッファ</span></a> などのテキストの見た目を定義します。</p>
 <p>これらはマップ上のテキスト（レイアウト/マップタイトル、地図整飾、スケールバー、...）をレンダリングするのに使用され、通常は <a class="reference internal" href="../introduction/general_tools.html#font-selector"><span class="std std-ref">フォント</span></a> ウィジェットを通して設定できます。</p>
@@ -267,7 +267,7 @@
 </ol>
 </li>
 <li><p><span class="guilabel">ラベルの設定</span> ：テキストの位置や、他のテキストや地物との相互関係に関連したプロパティでテキスト形式の設定を拡張します（ <a class="reference internal" href="#labels-callouts"><span class="std std-ref">引出し線付きラベル</span></a> 、 <a class="reference internal" href="#labels-placement"><span class="std std-ref">配置</span></a> 、 <a class="reference internal" href="#labels-rendering"><span class="std std-ref">重なり、縮尺に応じた表示</span></a> 、マスクグリッド ...）</p>
-<p>これらは、ベクトルまたはメッシュ レイヤーの 「レイヤー プロパティ」ダイアログの 「ラベル」タブ、または 「レイヤー スタイリング」パネルからスマートラベリングを設定する際に使用するか、「ラベル」ツールバーの 「レイヤー ラベリング オプション」 ボタンを使って呼び出します。</p>
+<p>これらは、ベクトルまたはメッシュ レイヤーの :guilabel:(レイヤー プロパティ)ダイアログの :guilabel:(ラベル)タブ、または :guilabel:(レイヤー スタイリング)パネルからスマートラベリングを設定する際に使用するか、:ref:(ラベル)ツールバーの :sup:(レイヤー ラベリング オプション)ボタンを使って呼び出します。</p>
 <p><span class="guilabel">ラベルの設定</span> アイテムを作成するには、</p>
 <ol class="arabic">
 <li><p><a class="reference internal" href="../../../_images/mActionStyleManager.png"><img alt="styleManager" src="../../../_images/mActionStyleManager.png" style="width: 1.5em;" /></a> <span class="guilabel">スタイルマネージャ</span> ダイアログを開きます。</p></li>
@@ -348,7 +348,7 @@
 <li><p><span class="guilabel">サイズ</span> は <a class="reference internal" href="../introduction/general_tools.html#unit-selector"><span class="std std-ref">サポートされている単位</span></a> のいずれかで設定します</p></li>
 <li><p><span class="guilabel">色</span></p></li>
 <li><p><span class="guilabel">不透明度</span></p></li>
-<li><p><cite>Allow HTML Formatting</cite>:HTML タグとCSSルールのサブセットを利用してラベルをカスタマイズできます</p></li>
+<li><p><span class="guilabel">Allow HTML Formatting</span>:HTML タグとCSSルールのサブセットを利用してラベルをカスタマイズできます</p></li>
 </ul>
 <p>タブの下部にあるウィジェットには <a class="reference internal" href="style_manager.html#vector-style-manager"><span class="std std-ref">スタイルマネージャデータベース</span></a> 内に保存されているアイテムのリストが表示され、このリストはフィルタリング可能です。 これにより、既存のものをベースに現在のテキスト形式やラベルの設定を簡単に設定したり、新しいアイテムをスタイルデータベースに保存したりできます。保存には、 <span class="guilabel">形式を保存...</span> または <span class="guilabel">設定を保存...</span> ボタンを押して、名前とタグを指定します。</p>
 <div class="admonition note">
@@ -356,16 +356,16 @@
 <p><span class="guilabel">ラベルの設定</span> アイテムを設定する場合、このウィジェットではテキスト形式アイテムも設定可能です。これを選択すると、現在のラベルの <a class="reference internal" href="#text-format"><span class="std std-ref">テキストのプロパティ</span></a> を素早く上書きすることができます。同様に、そこからテキスト形式を作成/上書きすることもできます。</p>
 </div>
 <section id="allow-html-formatting">
-<span id="labels-text-html"></span><h4><a class="toc-backref" href="#id18" role="doc-backlink">Allow HTML Formatting</a><a class="headerlink" href="#allow-html-formatting" title="Link to this heading"></a></h4>
-<p>Allow HTML Formattingを有効にすると、「値」フィールドにHTMLコードを入力できます。インデントにはタブではなくスペースを使用してください。式は解析され、サポートされている HTML タグはラベル プロパティの対応設定を上書きします。QGIS が現在サポートしているすべての HTMLタグやCSSプロパティを網羅的にリスト化・詳細化することは困難なため、基盤となる Qt ライブラリでサポートされているものを実際のラベルで試用・検証することをおすすめします。&lt;<a class="reference external" href="https://doc.qt.io/qt-5/richtext-html-subset.html">https://doc.qt.io/qt-5/richtext-html-subset.html</a>&gt;_ by the underlying Qt library.</p>
-<p>サポートされているHTMLタグの例</p>
+<span id="labels-text-html"></span><h4><a class="toc-backref" href="#id18" role="doc-backlink">HTMLフォーマットを使用する</a><a class="headerlink" href="#allow-html-formatting" title="Link to this heading"></a></h4>
+<p>:guilabel:HTMLフォーマットを使用するを有効にすると、「値」フィールドにHTMLコードを入力できます。インデントにはタブではなくスペースを使用してください。式は解析され、サポートされている HTML タグはラベル プロパティの対応設定を上書きします。QGIS が現在サポートしているすべての HTMLタグやCSSプロパティを網羅的にリスト化・詳細化することは困難なため、基盤となる Qt ライブラリでサポートされているものを実際のラベルで試用・検証することをおすすめします。&lt;<a class="reference external" href="https://doc.qt.io/qt-5/richtext-html-subset.html">https://doc.qt.io/qt-5/richtext-html-subset.html</a>&gt;_ by the underlying Qt library.</p>
+<p><strong>サポートされているHTMLタグの例</strong></p>
 <ul>
-<li><p>斜体や太字などのテキスト書式設定：</p>
+<li><p>斜体や太字などのテキスト書式設定、例：</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">i</span><span class="p">&gt;</span>QGIS<span class="p">&lt;/</span><span class="nt">i</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">b</span><span class="p">&gt;</span>rocks!<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 </li>
-<li><p>上付き文字・下付き文字：テキストを縦方向に&lt;sup&gt;sup&lt;/sup&gt;または&lt;sub&gt;sub&lt;/sub&gt;に位置合わせし、親フォントサイズの2/3に自動調整します。CSS ルールで固定フォントサイズを指定することも可能です。例:</p>
+<li><p>上付き文字・下付き文字：テキストを縦方向に:sup:<a href="#id1"><span class="problematic" id="id2">`</span></a>super`または:sub:<a href="#id3"><span class="problematic" id="id4">`</span></a>sub`に位置合わせし、親フォントサイズの2/3に自動調整します。CSS ルールで固定フォントサイズを指定することも可能です。例:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">sup</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;font-size:33pt&quot;</span><span class="p">&gt;</span>my superscript text<span class="p">&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span>
 </pre></div>
 </div>
@@ -385,19 +385,19 @@ For HTML5 compatibility, prefer using the CSS property <code class="docutils lit
 </pre></div>
 </div>
 </li>
-<li><p>画像挿入:QGISが読み込める任意の画像形式をHTMLラベルに使用できます。ローカルファイルパス、HTTPリンク、base64埋め込みなどを``src=&quot;xxx&quot;<a href="#id1"><span class="problematic" id="id2">``</span></a>属性で指定し、<a href="#id3"><span class="problematic" id="id4">``</span></a>width=&quot;##&quot;<a href="#id5"><span class="problematic" id="id6">``</span></a>と``height=&quot;##&quot;<a href="#id7"><span class="problematic" id="id8">``</span></a>でサイズ``point``単位を指定します。未指定時は元画像サイズから自動計算されます。画像はインライン配置のみ対応し、曲線ラベルでは使用できません。</p>
+<li><p>画像挿入:QGISが読み込める任意の画像形式をHTMLラベルに使用できます。ローカルファイルパス、HTTPリンク、base64埋め込みなどを`` src=&quot;xxx&quot; <code class="docutils literal notranslate"><span class="pre">属性で指定し、</span></code> width=&quot;##&quot; <code class="docutils literal notranslate"><span class="pre">と</span></code> height=&quot;##&quot; <code class="docutils literal notranslate"><span class="pre">でサイズ</span></code> point <a href="#id1"><span class="problematic" id="id2">``</span></a>単位を指定します。未指定時は元画像サイズから自動計算されます。画像はインライン配置のみ対応し、曲線ラベルでは使用できません。</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;qgis.png&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">40</span> <span class="na">height</span><span class="o">=</span><span class="s">60</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 </li>
 </ul>
-<p>サポートされているCSSプロパティの例</p>
+<p><strong>サポートされているCSSプロパティの例</strong></p>
 <ul class="simple">
-<li><p>フォントプロパティ(<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">font-family</span></code>, <code class="docutils literal notranslate"><span class="pre">font-size</span></code>, <code class="docutils literal notranslate"><span class="pre">font-weight</span></code>, <code class="docutils literal notranslate"><span class="pre">font-style</span></code>, <code class="docutils literal notranslate"><span class="pre">word-spacing</span></code>)。<a href="#id1"><span class="problematic" id="id2">``</span></a>word-spacing``は常にポイント単位です。</p></li>
-<li><p>テキスト装飾(underline, overline, line-through を指定する``text-decoration``)</p></li>
-<li><p>テキスト配置(<code class="docutils literal notranslate"><span class="pre">vertical-align</span></code>, <code class="docutils literal notranslate"><span class="pre">text-align</span></code>)曲線ラベルでは水平方向配置は使用不可</p></li>
+<li><p>フォントプロパティ(<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">font-family</span></code>, <code class="docutils literal notranslate"><span class="pre">font-size</span></code>, <code class="docutils literal notranslate"><span class="pre">font-weight</span></code>, <code class="docutils literal notranslate"><span class="pre">font-style</span></code>, `` word-spacing `` )。`` word-spacing <a href="#id1"><span class="problematic" id="id2">``</span></a>は常にポイント単位です。</p></li>
+<li><p>テキスト装飾(underline、overline、line-through、`` text-decoration `` ) 。</p></li>
+<li><p>テキスト配置(<code class="docutils literal notranslate"><span class="pre">vertical-align</span></code>, <code class="docutils literal notranslate"><span class="pre">text-align</span></code>)。曲線ラベルでは水平方向配置は使用不可。</p></li>
 </ul>
-<p>CSSプロパティはHTMLタグの``style``属性で設定します。<code class="docutils literal notranslate"><span class="pre">span``タグは書式を持たず、CSSスタイリングのみを適用するのに適しています。プロパティ名と値はコロン(</span></code>:<code class="docutils literal notranslate"><span class="pre">)、複数はセミコロン(</span></code>;``)で区切ります。例:</p>
+<p>CSSプロパティはHTMLタグの`` style <code class="docutils literal notranslate"><span class="pre">属性で設定します。</span></code> span <code class="docutils literal notranslate"><span class="pre">タグは書式を持たず、CSSスタイリングのみを適用するのに適しています。CSSプロパティ名とその値はコロン(</span> <span class="pre">``:</span></code>)で区切られます。複数CSSプロパティはセミコロン(<code class="docutils literal notranslate"><span class="pre">;</span></code>) で区切られます、例:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;text-decoration:underline;text-align:center;color:blue;word-spacing:20&quot;</span><span class="p">&gt;</span>I will be displayed as blue underlined and centered text with increased space between words<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 </pre></div>
 </div>
@@ -437,7 +437,7 @@ For HTML5 compatibility, prefer using the CSS property <code class="docutils lit
 </ul>
 </li>
 <li><p><span class="guilabel">間隔</span> は、単語間および個々の文字間のスペースを変更します。</p></li>
-<li><p>:guilabel:<a href="#id1"><span class="problematic" id="id2">`</span></a>Tab distance`を使用すると、ラベル内の:kbd:<a href="#id3"><span class="problematic" id="id4">`</span></a>Tab`文字を置き換えるスペース間隔をサポートされている任意の単位で調整できます。これにより、レイアウト凡例テキストの要素を適切に区切ったり、縦方向に揃えたりすることが可能になります。</p></li>
+<li><p><span class="guilabel">タブ距離`を使用すると、ラベル内の:kbd:</span> Tab <a href="#id1"><span class="problematic" id="id2">`</span></a>文字を置き換えるスペース間隔をサポートされている任意の単位で調整できます。これにより、レイアウト凡例テキストの要素を適切に区切ったり、縦方向に揃えたりすることが可能になります。</p></li>
 <li><p><span class="guilabel">Stretch</span> 率: テキストの水平方向の伸縮率を指定します。ラベルに余分なテキストを入れるためにフォントの幅を調整するのに便利です。</p></li>
 <li><p>テキストフォントの <a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">カーニングを有効にする</span></p></li>
 <li><p><span class="guilabel">テキストの向き</span> は <span class="guilabel">水平</span> または <span class="guilabel">垂直</span> を設定できます。ラベルの設定時には、 <span class="guilabel">回転（Rotation-based）</span> を設定することもできます（例： <a class="reference internal" href="#labels-line-placement"><span class="std std-ref">線に平行</span></a> に配置するモードでライン地物に適切にラベル付けできます）。</p></li>
@@ -523,7 +523,7 @@ For HTML5 compatibility, prefer using the CSS property <code class="docutils lit
 <p>テキストに影を追加するには、 <a class="reference internal" href="../../../_images/labelshadow.png"><img alt="labelshadow" src="../../../_images/labelshadow.png" style="width: 1.5em;" /></a> <span class="guilabel">影</span> タブを有効にして <a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">影を描画</span> のチェックボックスをオンにします。その後、次の設定ができます。</p>
 <ul>
 <li><p><span class="guilabel">影の対象</span> で、影を生成するために使用するアイテムを指定します。これには、 <span class="guilabel">最下位ラベルコンポーネント</span> 、あるいは <span class="guilabel">テキスト</span> 自体、 <span class="guilabel">バッファ</span> 、 <span class="guilabel">背景</span> 等の特定のコンポーネントを指定できます。</p></li>
-<li><p>影を付与する要素からの:guilabel:<a href="#id1"><span class="problematic" id="id2">`</span></a>Offset`を設定します。すなわち:</p>
+<li><p>影を付与する要素からの:guilabel: <cite>Offset</cite> を設定します。すなわち:</p>
 <ul class="simple">
 <li><p>角度： 時計回りの角度を指定します。角度は元のアイテムの方向に依存します。</p></li>
 <li><p>影を付与する要素からのオフセットの距離</p></li>
@@ -597,8 +597,8 @@ For HTML5 compatibility, prefer using the CSS property <code class="docutils lit
 </thead>
 <tbody>
 <tr class="row-even"><td><p><span class="guilabel">Fill style</span></p></td>
-<td rowspan="4"><p>Balloons</p></td>
-<td><p>バルーン コールアウトの終点の下にマーカーを描画するための、レイヤー効果やデータ定義設定を含む完全な表示能力を持つマーカー シンボルです。</p></td>
+<td rowspan="4"><p>バルーン</p></td>
+<td><p>バルーン コールアウトの終点の下にマーカーを描画するための、レイヤー効果やデータ定義設定を含む完全な表示能力を持つマーカー :ref:<a href="#id1"><span class="problematic" id="id2">`</span></a>fill symbol`です。</p></td>
 </tr>
 <tr class="row-odd"><td><p><span class="guilabel">Corner radius</span></p></td>
 <td><p>吹き出しの角丸半径を指定します。</p></td>
@@ -618,7 +618,7 @@ For HTML5 compatibility, prefer using the CSS property <code class="docutils lit
 <td><p>コネクタ線の湾曲率をパーセンテージで指定します。</p></td>
 </tr>
 <tr class="row-even"><td><p><span class="guilabel">Orientation</span></p></td>
-<td><p>ラベルから地物に向かうコネクタ線の方向を指定します。:guilabel:<a href="#id1"><span class="problematic" id="id2">`</span></a>Clockwise`（時計回り）、:guilabel:<a href="#id3"><span class="problematic" id="id4">`</span></a>Counter-clockwise`（反時計回り）、:guilabel:<a href="#id5"><span class="problematic" id="id6">`</span></a>Automatic`（最適方向を自動判定）のいずれかを選択できます。</p></td>
+<td><p>ラベルから地物に向かうコネクタ線の方向を指定します。:guilabel: <a href="#id1"><span class="problematic" id="id2">`</span></a>Clockwise`（時計回り）、:guilabel:<a href="#id3"><span class="problematic" id="id4">`</span></a>Counter-clockwise`（反時計回り）、:guilabel:<a href="#id5"><span class="problematic" id="id6">`</span></a>Automatic`（最適方向を自動判定）のいずれかを選択できます。</p></td>
 </tr>
 <tr class="row-odd"><td><p><span class="guilabel">Minimum length</span></p></td>
 <td rowspan="4"><p>バルーン以外</p></td>
@@ -654,12 +654,12 @@ For HTML5 compatibility, prefer using the CSS property <code class="docutils lit
 </td>
 </tr>
 <tr class="row-odd"><td><p><span class="guilabel">End point marker</span></p></td>
-<td><p>Balloons</p></td>
-<td><p>レイヤー効果やデータ定義設定を含む完全表示機能付きの`marker symbol`で、バルーンコールアウトの終点下にマーカーをレンダリングします。</p></td>
+<td><p>バルーン</p></td>
+<td><p>レイヤー効果やデータ定義設定を含む完全表示機能付きの:ref:<a href="#id1"><span class="problematic" id="id2">`</span></a>marker symbol`で、バルーンコールアウトの終点下にマーカーをレンダリングします。</p></td>
 </tr>
 <tr class="row-even"><td><p><span class="guilabel">Blend mode</span></p></td>
 <td><p>All</p></td>
-<td><p>コールアウト全体の`blending`を制御します。</p></td>
+<td><p>コールアウト全体の:ref:<a href="#id1"><span class="problematic" id="id2">`</span></a>blending`を制御します。</p></td>
 </tr>
 </tbody>
 </table>
@@ -684,7 +684,7 @@ For HTML5 compatibility, prefer using the CSS property <code class="docutils lit
 <li><p><span class="guilabel">Prefer position ordering</span>: ラベルは特定の位置（例：左上、右上など）を優先し、たとえ地物から多少離れていてもその位置に配置されるよう試みます。指定位置内にスペースがない場合のみ、別の位置に移動します。</p></li>
 </ul>
 </li>
-<li><p>:guilabel:<a href="#id1"><span class="problematic" id="id2">`</span></a>Position priority`に従い、ポイント地物の周囲および（地物中央の上部へ）ラベルをアンカー配置する候補位置と、それらをテストする順序を定義します。デフォルトの順序は`guidelines from Krygier and Wood (2011) &lt;<a class="reference external" href="https://www.researchgate.net/publication/44463780_Making_maps_a_visual_guide_to_map_design_for_GIS_John_Krygier_Denis_Wood">https://www.researchgate.net/publication/44463780_Making_maps_a_visual_guide_to_map_design_for_GIS_John_Krygier_Denis_Wood</a>&gt;`_およびその他の地図作成文献に基づき、以下のとおりです：</p>
+<li><p>:guilabel:<a href="#id1"><span class="problematic" id="id2">`</span></a>Position priority`に従い、ポイント地物の周囲および(地物中央の上部へ)ラベルをアンカー配置する候補位置と、それらをテストする順序を定義します。デフォルトの順序は`guidelines from Krygier and Wood (2011) &lt;<a class="reference external" href="https://www.researchgate.net/publication/44463780_Making_maps_a_visual_guide_to_map_design_for_GIS_John_Krygier_Denis_Wood">https://www.researchgate.net/publication/44463780_Making_maps_a_visual_guide_to_map_design_for_GIS_John_Krygier_Denis_Wood</a>&gt;`_およびその他の地図作成文献に基づき、以下のとおりです：</p>
 <ol class="arabic simple">
 <li><p>右上</p></li>
 <li><p>左上</p></li>
@@ -826,7 +826,7 @@ For HTML5 compatibility, prefer using the CSS property <code class="docutils lit
 <li><p><span class="guilabel">垂直方向</span> ： <strong>Bottom</strong> 、 <strong>Base</strong> 、 <strong>Half</strong> 、 <strong>Cap</strong> 、 <strong>Top</strong> のいずれかの値をとります</p></li>
 </ul>
 </li>
-<li><p>the text <span class="guilabel">Rotation</span>.ラベルの回転（Rotation）は、水平テキスト（<code class="docutils literal notranslate"><span class="pre">Horizontal</span></code> oriented text）では 0° が東方向を、垂直テキスト（<code class="docutils literal notranslate"><span class="pre">Vertical</span></code> oriented text）では 0° が北方向を指す時計回りの角度で定義されます。回転角の単位には``degrees``、<code class="docutils literal notranslate"><span class="pre">minutes</span> <span class="pre">of</span> <span class="pre">arc</span></code>、<a href="#id1"><span class="problematic" id="id2">``</span></a>turns``などを使用できます。QGIS はデフォルトで画面表示の可読性を優先し、“上下逆” の回転角はレンダリング（rendering）時に自動的に補正されます。この動作を変更し、データ定義された回転角を正確に適用するには、<a class="reference internal" href="../../../_images/render.png"><img alt="render" src="../../../_images/render.png" style="width: 1.5em;" /></a> タブの :guilabel:<a href="#id3"><span class="problematic" id="id4">`</span></a>Rendering`（レンダリング）オプション内にある :guilabel:<a href="#id5"><span class="problematic" id="id6">`</span></a>Show upside-down labels`を有効にしてください。さらに :guilabel:<a href="#id7"><span class="problematic" id="id8">`</span></a>Preserve data rotation values`を有効にすると、ピン留め状態に関わらず属性フィールドの値を保持してラベルに適用します。無効にすると、ピン留めを解除した際に回転角がリセットされ、属性テーブルの値もクリアされます。</p>
+<li><p>the text <span class="guilabel">Rotation</span>.ラベルの回転（Rotation）は、水平テキスト(<code class="docutils literal notranslate"><span class="pre">Horizontal</span></code> oriented text)では 0° が東方向を、垂直テキスト(<code class="docutils literal notranslate"><span class="pre">Vertical</span></code> oriented text)では 0° が北方向を指す時計回りの角度で定義されます。回転角の単位には(例``degrees``、<code class="docutils literal notranslate"><span class="pre">minutes</span> <span class="pre">of</span> <span class="pre">arc</span></code>、<code class="docutils literal notranslate"><span class="pre">turns</span></code>)などを使用できます。QGIS はデフォルトで画面表示の可読性を優先し、“上下逆” の回転角はレンダリング（rendering）時に自動的に補正されます。この動作を変更し、データ定義された回転角を正確に適用するには、<a class="reference internal" href="../../../_images/render.png"><img alt="render" src="../../../_images/render.png" style="width: 1.5em;" /></a> タブの :guilabel:<a href="#id1"><span class="problematic" id="id2">`</span></a>Rendering`（レンダリング）オプション内にある :guilabel:<a href="#id3"><span class="problematic" id="id4">`</span></a>Show upside-down labels`を有効にしてください。さらに :guilabel:<a href="#id5"><span class="problematic" id="id6">`</span></a>Preserve data rotation values`を有効にすると、ピン留め状態に関わらず属性フィールドの値を保持してラベルに適用します。無効にすると、ピン留めを解除した際に回転角がリセットされ、属性テーブルの値もクリアされます。</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
 <p>ポリゴン地物に対するデータ定義の回転は現在のところ、 <span class="guilabel">重心の周り</span> 配置モードでのみサポートしています。</p>
@@ -892,7 +892,7 @@ For HTML5 compatibility, prefer using the CSS property <code class="docutils lit
 <li><p>:guilabel:<a href="#id1"><span class="problematic" id="id2">`</span></a>Show upside-down labels`の設定では、以下のいずれかを選択できます:<strong>never</strong>、<strong>when rotation defined</strong>、<strong>always</strong>。</p>
 <ul class="simple">
 <li><p><strong>never</strong> – デフォルト設定では画面の可読性を優先します。</p></li>
-<li><p><strong>when rotation defined</strong>–ラベルの回転は、<a class="reference internal" href="../../../_images/labelplacement.png"><img alt="labelplacement" src="../../../_images/labelplacement.png" style="width: 1.5em;" /></a> の :guilabel:<a href="#id1"><span class="problematic" id="id2">`</span></a>Placement`タブ内の :guilabel:<a href="#id3"><span class="problematic" id="id4">`</span></a>Data Defined`グループで定義されている必要があります。</p></li>
+<li><p><strong>when rotation defined</strong>–ラベルの回転は、<a class="reference internal" href="../../../_images/labelplacement.png"><img alt="labelplacement" src="../../../_images/labelplacement.png" style="width: 1.5em;" /></a> の :guilabel: <a href="#id1"><span class="problematic" id="id2">`</span></a>Placement`タブ内の :guilabel: <a href="#id3"><span class="problematic" id="id4">`</span></a>Data Defined`グループで定義されている必要があります。</p></li>
 <li><p><strong>always</strong>–ラベルの上下逆を常に許可します。</p></li>
 </ul>
 </li>
@@ -900,7 +900,7 @@ For HTML5 compatibility, prefer using the CSS property <code class="docutils lit
 <figure class="align-center" id="id15">
 <span id="figure-show-upside-down-labels"></span><img alt="../../../_images/show_upside-down_labels.png" src="../../../_images/show_upside-down_labels.png" />
 <figcaption>
-<p><span class="caption-number">図 10.37 </span><span class="caption-text">データ定義によるラベル回転を、Show upside-down labels オプションを&quot;never&quot;（左図）、”when rotation defined”（右図）に設定した場合の表示例です。</span><a class="headerlink" href="#id15" title="Link to this image"></a></p>
+<p><span class="caption-number">図 10.37 </span><span class="caption-text">データ定義によるラベル回転を、Show upside-down labels オプションを&quot;never&quot;(左図)、”when rotation defined”(右図)に設定した場合の表示例です。</span><a class="headerlink" href="#id15" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <ul>
@@ -940,7 +940,7 @@ For HTML5 compatibility, prefer using the CSS property <code class="docutils lit
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 11, 16:21 +0900
+      <span class="lastupdated">最終更新: 2025 7月 14, 08:22 +0900
       </span></p>
   </div>
 
