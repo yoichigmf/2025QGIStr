@@ -209,7 +209,7 @@
   <blockquote>
 <div><div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 96.26% 翻訳されています。</p>
+<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 98.75% 翻訳されています。</p>
 </div>
 </div></blockquote>
 <section id="raster-properties-dialog">
@@ -805,15 +805,11 @@ For example, extracting the depth value from a band name like &quot;Band 001: de
 mixing QGIS expressions and html styles and tags (multiline, fonts, images, hyperlink, tables, ...).
 You can check the result of your code sample in the <span class="guilabel">Preview</span> frame. You can also select and
 edit existing expressions using the <span class="guilabel">Insert/Edit Expression</span> button.</p>
-<p>You might look for expressions located in <span class="guilabel">Rasters</span> group or
-the <code class="docutils literal notranslate"><span class="pre">&#64;layer_cursor_point</span></code> variable in the <span class="guilabel">Expressions</span> dialog.</p>
+<p><span class="guilabel">Expressions</span> ダイアログ内で、<span class="guilabel">Rasters</span> グループ内にある式や <code class="docutils literal notranslate"><span class="pre">&#64;layer_cursor_point</span></code> 変数を探すことができます。</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p><strong>Understanding the</strong> <span class="guilabel">Insert/Edit Expression</span> <strong>button behavior</strong></p>
-<p>If you select some text within an expression (between &quot;[%&quot; and &quot;%]&quot;),
-or if no text is selected but the cursor is inside an expression,
-the whole expression will be automatically selected for editing.
-If the cursor or a selected text is outside an expression, the dialog opens with the selection.</p>
+<p><span class="guilabel">Insert/Edit Expression</span> <strong>ボタンの動作</strong> を <em>理解する*</em></p>
+<p>式 (&quot;[%&quot; と &quot;%]&quot; で囲まれた部分) の中でテキストを選択した場合、またはテキストを選択していなくてもカーソルが式の中にある場合は、その式全体が自動的に選択されて編集できるようになります。カーソルや選択したテキストが式の外にある場合は、ダイアログはその選択範囲で開きます。</p>
 </div>
 </li>
 </ul>
@@ -860,18 +856,12 @@ If the cursor or a selected text is outside an expression, the dialog opens with
 <li><p>ツールバーの <span class="guilabel">地物情報表示</span> ツールをクリックするか、 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Shift</kbd>+<kbd class="kbd docutils literal notranslate">I</kbd></kbd> を押します。</p></li>
 <li><p>識別したいラスタレイヤの点の上でクリックします。</p></li>
 </ol>
-<p>The Identify Results panel will open in its default <code class="docutils literal notranslate"><span class="pre">Tree</span></code> view
-and display information about the clicked point.
-Formatting of the results vary depending on the provider of the layer. For example:</p>
+<p>クリックしたポイントの情報が表示されると、Identify Results パネルがデフォルトの``Tree`` ビューで開きます。結果の表示形式はレイヤのプロバイダによって異なります。例えば:</p>
 <ul class="simple">
-<li><p>For a local raster layer: below the name of the layer,
-you have on the left the band(s) of the clicked pixel,
-and on the right their respective value.</p></li>
-<li><p>For a remote layer such as WMS, a <span class="guilabel">Format</span> menu allows you to select
-whether the information should be displayed as <span class="guilabel">HTML</span>, <span class="guilabel">Feature</span>
-or <span class="guilabel">Text</span>.</p></li>
+<li><p>ローカルのラスタレイヤの場合: レイヤ名の下に、左側にはクリックしたピクセルのバンド (複数ある場合はバンド一覧) 右側にはそれぞれの値が表示されます。</p></li>
+<li><p>WMS などのリモートレイヤの場合、:guilabel:` Format` メニューで情報の表示形式として <span class="guilabel">HTML</span>、<span class="guilabel">Feature</span> または <span class="guilabel">Text</span> を選択できます。</p></li>
 </ul>
-<p>These values can also be rendered (from the <span class="guilabel">View</span> menu located at the bottom of the panel) in:</p>
+<p>これらの値は、(パネル下部にある <span class="guilabel">View</span> メニューから) 表示させることもできます:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">テーブル</span></code> ビュー - 識別された地物とその値に関する情報をテーブルで整理します。</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">グラフ</span></code> ビュー - 識別された地物とその値に関する情報をグラフで整理します。</p></li>
@@ -879,7 +869,7 @@ or <span class="guilabel">Text</span>.</p></li>
 <p>ピクセル属性の下には、以下のような <span class="guilabel">派生</span> 情報があります:</p>
 <ul class="simple">
 <li><p>クリックされた点の <code class="docutils literal notranslate"><span class="pre">X</span></code> 、 <code class="docutils literal notranslate"><span class="pre">Y</span></code> 座標値</p></li>
-<li><p>Column and row of the point clicked (pixel) when compatible</p></li>
+<li><p>互換性がある場合、クリックしたポイントの列および行 (ピクセル) が表示されます</p></li>
 </ul>
 </section>
 </section>
@@ -896,7 +886,7 @@ or <span class="guilabel">Text</span>.</p></li>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 11, 16:21 +0900
+      <span class="lastupdated">最終更新: 2025 7月 17, 01:00 +0900
       </span></p>
   </div>
 
