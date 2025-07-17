@@ -5,7 +5,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>13.1. ラスタプロパティダイアログ &mdash; QGIS Documentation  ドキュメント</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/qgis_docs.css?v=01847ad1" />
       <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
       <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
@@ -20,7 +20,7 @@
         <script src="../../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../../../_static/documentation_options.js?v=c033477b"></script>
-        <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
         <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
         <script src="../../../_static/copybutton.js?v=f281be69"></script>
@@ -28,7 +28,7 @@
         <script>let toggleHintHide = 'Click to hide';</script>
         <script>let toggleOpenOnPrint = 'true';</script>
         <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
-        <script src="../../../_static/translations.js?v=91613774"></script>
+        <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/js/theme.js"></script>
@@ -209,7 +209,7 @@
   <blockquote>
 <div><div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 98.75% 翻訳されています。</p>
+<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 100.00% 翻訳されています。</p>
 </div>
 </div></blockquote>
 <section id="raster-properties-dialog">
@@ -300,7 +300,7 @@
 <p><a class="reference internal" href="../../../_images/metadata.png"><img alt="metadata" src="../../../_images/metadata.png" style="width: 1.5em;" /></a> <span class="guilabel">情報</span> タブは読み取り専用で、現在のレイヤの要約された情報やメタデータをさっと掴むことができる興味深い場所です。提供される情報には、以下のものがあります：</p>
 <ul class="simple">
 <li><p>一般情報：プロジェクト内での名前、ソースへのパス、付随的なファイルのリスト、最終更新時刻、ファイルの大きさ、使用しているプロバイダ</p></li>
-<li><p>カスタムプロパティ、アクティブなプロジェクト内で、そのレイヤに関する追加情報を保存するために使用されます。デフォルトのカスタムプロパティには、ラスターレイヤで <a class="reference internal" href="../../../_images/mActionIdentify.png"><img alt="identify" src="../../../_images/mActionIdentify.png" style="width: 1.5em;" /></a> <span class="xref std std-ref">Identify features&lt;raster_identify&gt;`を使用した際の結果の表示形式に影響を与える :guilabel:`識別/形式</span> があります。さらにプロパティを作成・管理する場合は、PyQGIS を使用し、具体的には <a class="extlink-pyqgis reference external" href="https://qgis.org/pyqgis/3.40/qgis.core.QgsMapLayer.setCustomProperty">setCustomProperty()</a> メソッドを通じて設定することが可能です。</p></li>
+<li><p>カスタムプロパティ、アクティブなプロジェクト内で、そのレイヤに関する追加情報を保存するために使用されます。デフォルトのカスタムプロパティには、ラスターレイヤで <a class="reference internal" href="../../../_images/mActionIdentify.png"><img alt="identify" src="../../../_images/mActionIdentify.png" style="width: 1.5em;" /></a> <span class="xref std std-ref">Identify features&lt;raster_identify&gt;`を使用した際の結果の表示形式に影響を与える :guilabel:`識別/形式</span> があります。さらにプロパティを作成・管理する場合は、PyQGIS を使用し、具体的には <a class="reference external" href="https://qgis.org/pyqgis/3.40/qgis.core.QgsMapLayer.setCustomProperty">setCustomProperty()</a> メソッドを通じて設定することが可能です。</p></li>
 <li><p>レイヤのプロバイダからの情報：領域、幅、高さ、データタイプ、GDALドライバ、バンドの統計情報</p></li>
 <li><p>空間参照システム（CRS）：CRSの名前、単位、投影法、精度、参照（静的か動的か）</p></li>
 <li><p>レイヤのプロパティから読み取った情報：データタイプ、領域、幅/高さ、圧縮、ピクセルの大きさ、バンドの統計量、バンド数、行・列の数、ラスタのNo-Data値...</p></li>
@@ -736,27 +736,9 @@
 </figcaption>
 </figure>
 <ul class="simple">
-<li><p><span class="guilabel">Represents Elevation Surface</span>:
-whether the raster layer represents a height surface (e.g DEM) and the pixel
-values should be interpreted as elevations.
-Choose this option if you want to display a raster in an <a class="reference internal" href="../map_views/elevation_profile.html#label-elevation-profile-view"><span class="std std-ref">elevation profile view</span></a>.
-You will also need to fill in the <span class="guilabel">Band</span> to pick values from
-and can apply a <span class="guilabel">Scale</span> factor and an <span class="guilabel">Offset</span>.</p></li>
-<li><p><span class="guilabel">Fixed Elevation Range</span>: The raster layer (or selected raster band)
-is associated with a fixed elevation range.
-This mode can be used when a layer has a single fixed elevation or a range (slice) of elevation values.
-If a range is specified, pixels will be extruded over this range.
-You can set the <span class="guilabel">Lower</span> and <span class="guilabel">Upper</span>
-elevation range values for the layer, and specify whether the lower or upper <span class="guilabel">Limits</span> are inclusive or exclusive.</p></li>
-<li><p><span class="guilabel">Fixed Elevation Range Per Band</span>: Each band in the raster can have a fixed elevation range
-associated with it. This is designed for data sources that expose elevation-related data in bands, such as NetCDF files.
-For example, a raster with temperature data at different ocean depths.
-When rendering, the uppermost matching band will be selected and used for the layer's data.
-This feature is exposed as a user-editable table for raster bands with lower and upper values.
-Users can either populate the lower and upper values manually
-or use an <a class="reference internal" href="../../../_images/mIconExpression.png"><img alt="expression" src="../../../_images/mIconExpression.png" style="width: 1.5em;" /></a> <span class="guilabel">Expression</span> to auto-fill all band values based on expression.
-The expression-based fill allows you to design expressions that extract useful information from band names.
-For example, extracting the depth value from a band name like &quot;Band 001: depth=-5500 (meters)&quot;.</p></li>
+<li><p><span class="guilabel">Represents Elevation Surface</span>: ラスタレイヤが高さの表面 (例 DEM) を表し、ピクセル値を標高として解釈するかどうかを指定します。ラスタを <a class="reference internal" href="../map_views/elevation_profile.html#label-elevation-profile-view"><span class="std std-ref">elevation profile view</span></a>. に表示したい場合はこのオプションを選択してください。また、値を取得する <span class="guilabel">Band</span> の指定が必要で、<span class="guilabel">Scale</span> および :guilabel:<a href="#id1"><span class="problematic" id="id2">`</span></a>Offst`を適用することも可能です。</p></li>
+<li><p><span class="guilabel">Fixed Elevation Range</span>: ラスタレイヤ (または選択したラスタバンド) に固定の標高範囲を関連付けることができます。このモードは、レイヤに単一の固定標高、または標高値の範囲 (スライス) がある場合に使用できます。範囲が指定されている場合、ピクセルはこの範囲に沿って押し出されて表示されます。レイヤに対して <span class="guilabel">Lower</span> および <span class="guilabel">Upper</span> の標高範囲の値を設定でき、さらに下限・上限の <span class="guilabel">Limits</span> を含むか含まないか (inclusive または exclusive) を指定することが可能です。</p></li>
+<li><p><span class="guilabel">Fixed Elevation Range Per Band</span>: ラスタ内の各バンドに固定の標高範囲を関連付けることができます。これは、NetCDF ファイルのように標高関連データをバンド内に持つデータソース向けに設計されています。例えば、異なる海洋深度での温度データを持つラスタの場合などです。レンダリング時には、一致する最上位のバンドが選択され、そのレイヤのデータとして使用されます。この機能は、ラスタバンドごとの下限値・上限値を持つユーザー編集可能なテーブルとして提供されます。ユーザーは下限値・上限値を手動で入力することも、<a class="reference internal" href="../../../_images/mIconExpression.png"><img alt="expression" src="../../../_images/mIconExpression.png" style="width: 1.5em;" /></a> <span class="guilabel">Expression</span> を使用してすべてのバンド値を式に基づいて自動入力することも可能です。式による自動入力では、バンド名から有用な情報を抽出する式を設計することができます。例えば、&quot;Band 001: depth=-5500 (meters)&quot; のようなバンド名から深度の値を抽出することが可能です。</p></li>
 <li><p><span class="guilabel">断面図の外観</span>: 断面図にあるメッシュ要素の標高のレンダリングを制御します。断面図の <span class="guilabel">スタイル</span> は次のように設定できます:</p>
 <ul>
 <li><p>特定の <a class="reference internal" href="../style_library/symbol_selector.html#vector-line-symbols"><span class="std std-ref">線のスタイル</span></a> を持った <span class="guilabel">線</span></p></li>
@@ -801,10 +783,7 @@ For example, extracting the depth value from a band name like &quot;Band 001: de
 <p><a class="reference internal" href="../../../_images/display.png"><img alt="display" src="../../../_images/display.png" style="width: 1.5em;" /></a> <span class="guilabel">表示</span> タブでは、ピクセルの識別に使用するHTML地図Tipの設定ができます:</p>
 <ul>
 <li><p><a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">Tipsを有効化</span> は、レイヤの地図のTipsを表示するかどうかを制御します。</p></li>
-<li><p>The <span class="guilabel">HTML Map Tip</span> provides a complex and full HTML text editor for map tips,
-mixing QGIS expressions and html styles and tags (multiline, fonts, images, hyperlink, tables, ...).
-You can check the result of your code sample in the <span class="guilabel">Preview</span> frame. You can also select and
-edit existing expressions using the <span class="guilabel">Insert/Edit Expression</span> button.</p>
+<li><p><span class="guilabel">HTML Map Tip</span>  は、QGIS の式と HTML のスタイル・タグ (複数行、フォント、画像、ハイパーリンク、表など) を組み合わせてマップチップを作成できる、高機能な HTML テキストエディタを提供します。コードサンプルの結果は <span class="guilabel">Preview</span> フレームで確認できます。また、<span class="guilabel">Insert/Edit Expression</span> ボタンを使用して、既存の式を選択・編集することも可能です。</p>
 <p><span class="guilabel">Expressions</span> ダイアログ内で、<span class="guilabel">Rasters</span> グループ内にある式や <code class="docutils literal notranslate"><span class="pre">&#64;layer_cursor_point</span></code> 変数を探すことができます。</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
@@ -886,7 +865,7 @@ edit existing expressions using the <span class="guilabel">Insert/Edit Expressio
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 17, 01:00 +0900
+      <span class="lastupdated">最終更新: 2025 7月 17, 09:46 +0900
       </span></p>
   </div>
 

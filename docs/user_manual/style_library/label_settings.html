@@ -5,7 +5,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>10.3. ラベルの設定 &mdash; QGIS Documentation  ドキュメント</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/qgis_docs.css?v=01847ad1" />
       <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
       <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
@@ -20,7 +20,7 @@
         <script src="../../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../../../_static/documentation_options.js?v=c033477b"></script>
-        <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
         <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
         <script src="../../../_static/copybutton.js?v=f281be69"></script>
@@ -28,7 +28,7 @@
         <script>let toggleHintHide = 'Click to hide';</script>
         <script>let toggleOpenOnPrint = 'true';</script>
         <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
-        <script src="../../../_static/translations.js?v=91613774"></script>
+        <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/js/theme.js"></script>
@@ -199,7 +199,7 @@
   <blockquote>
 <div><div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 96.12% 翻訳されています。</p>
+<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 98.06% 翻訳されています。</p>
 </div>
 </div></blockquote>
 <section id="setting-a-label">
@@ -393,11 +393,11 @@ For HTML5 compatibility, prefer using the CSS property <code class="docutils lit
 </ul>
 <p><strong>サポートされているCSSプロパティの例</strong></p>
 <ul class="simple">
-<li><p>フォントプロパティ(<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">font-family</span></code>, <code class="docutils literal notranslate"><span class="pre">font-size</span></code>, <code class="docutils literal notranslate"><span class="pre">font-weight</span></code>, <code class="docutils literal notranslate"><span class="pre">font-style</span></code>, `` word-spacing `` )。`` word-spacing <a href="#id1"><span class="problematic" id="id2">``</span></a>は常にポイント単位です。</p></li>
-<li><p>テキスト装飾(underline、overline、line-through、`` text-decoration `` ) 。</p></li>
+<li><p>フォントプロパティ(<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">font-family</span></code>, <code class="docutils literal notranslate"><span class="pre">font-size</span></code>, <code class="docutils literal notranslate"><span class="pre">font-weight</span></code>, <code class="docutils literal notranslate"><span class="pre">font-style</span></code>, <code class="docutils literal notranslate"><span class="pre">word-spacing</span></code> )。<a href="#id1"><span class="problematic" id="id2">``</span></a>word-spacing``は常にポイント単位です。</p></li>
+<li><p>テキスト装飾(underline、overline、line-through、<code class="docutils literal notranslate"><span class="pre">text-decoration</span></code> )。</p></li>
 <li><p>テキスト配置(<code class="docutils literal notranslate"><span class="pre">vertical-align</span></code>, <code class="docutils literal notranslate"><span class="pre">text-align</span></code>)。曲線ラベルでは水平方向配置は使用不可。</p></li>
 </ul>
-<p>CSSプロパティはHTMLタグの`` style <code class="docutils literal notranslate"><span class="pre">属性で設定します。</span></code> span <code class="docutils literal notranslate"><span class="pre">タグは書式を持たず、CSSスタイリングのみを適用するのに適しています。CSSプロパティ名とその値はコロン(</span> <span class="pre">``:</span></code>)で区切られます。複数CSSプロパティはセミコロン(<code class="docutils literal notranslate"><span class="pre">;</span></code>) で区切られます、例:</p>
+<p>CSSプロパティはHTMLタグの <code class="docutils literal notranslate"><span class="pre">style</span></code> 属性で設定します。<code class="docutils literal notranslate"><span class="pre">span</span></code> タグは書式を持たず、CSSスタイリングのみを適用するのに適しています。CSSプロパティ名とその値はコロン( <code class="docutils literal notranslate"><span class="pre">:</span></code>)で区切られます。複数CSSプロパティはセミコロン(<code class="docutils literal notranslate"><span class="pre">;</span></code>) で区切られます、例:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">span</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;text-decoration:underline;text-align:center;color:blue;word-spacing:20&quot;</span><span class="p">&gt;</span>I will be displayed as blue underlined and centered text with increased space between words<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
 </pre></div>
 </div>
@@ -437,7 +437,7 @@ For HTML5 compatibility, prefer using the CSS property <code class="docutils lit
 </ul>
 </li>
 <li><p><span class="guilabel">間隔</span> は、単語間および個々の文字間のスペースを変更します。</p></li>
-<li><p><span class="guilabel">タブ距離`を使用すると、ラベル内の:kbd:</span> Tab <a href="#id1"><span class="problematic" id="id2">`</span></a>文字を置き換えるスペース間隔をサポートされている任意の単位で調整できます。これにより、レイアウト凡例テキストの要素を適切に区切ったり、縦方向に揃えたりすることが可能になります。</p></li>
+<li><p><span class="guilabel">タブ距離`を使用すると、ラベル内の :kbd:</span> Tab <a href="#id1"><span class="problematic" id="id2">`</span></a>文字を置き換えるスペース間隔をサポートされている任意の単位で調整できます。これにより、レイアウト凡例テキストの要素を適切に区切ったり、縦方向に揃えたりすることが可能になります。</p></li>
 <li><p><span class="guilabel">Stretch</span> 率: テキストの水平方向の伸縮率を指定します。ラベルに余分なテキストを入れるためにフォントの幅を調整するのに便利です。</p></li>
 <li><p>テキストフォントの <a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">カーニングを有効にする</span></p></li>
 <li><p><span class="guilabel">テキストの向き</span> は <span class="guilabel">水平</span> または <span class="guilabel">垂直</span> を設定できます。ラベルの設定時には、 <span class="guilabel">回転（Rotation-based）</span> を設定することもできます（例： <a class="reference internal" href="#labels-line-placement"><span class="std std-ref">線に平行</span></a> に配置するモードでライン地物に適切にラベル付けできます）。</p></li>
@@ -523,7 +523,7 @@ For HTML5 compatibility, prefer using the CSS property <code class="docutils lit
 <p>テキストに影を追加するには、 <a class="reference internal" href="../../../_images/labelshadow.png"><img alt="labelshadow" src="../../../_images/labelshadow.png" style="width: 1.5em;" /></a> <span class="guilabel">影</span> タブを有効にして <a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">影を描画</span> のチェックボックスをオンにします。その後、次の設定ができます。</p>
 <ul>
 <li><p><span class="guilabel">影の対象</span> で、影を生成するために使用するアイテムを指定します。これには、 <span class="guilabel">最下位ラベルコンポーネント</span> 、あるいは <span class="guilabel">テキスト</span> 自体、 <span class="guilabel">バッファ</span> 、 <span class="guilabel">背景</span> 等の特定のコンポーネントを指定できます。</p></li>
-<li><p>影を付与する要素からの:guilabel: <cite>Offset</cite> を設定します。すなわち:</p>
+<li><p>影を付与する要素からの :guilabel: <cite>Offset</cite> を設定します。すなわち:</p>
 <ul class="simple">
 <li><p>角度： 時計回りの角度を指定します。角度は元のアイテムの方向に依存します。</p></li>
 <li><p>影を付与する要素からのオフセットの距離</p></li>
@@ -598,7 +598,7 @@ For HTML5 compatibility, prefer using the CSS property <code class="docutils lit
 <tbody>
 <tr class="row-even"><td><p><span class="guilabel">Fill style</span></p></td>
 <td rowspan="4"><p>バルーン</p></td>
-<td><p>レイヤ効果やデータ定義など、あらゆる表示機能に対応する、バルーン形状用の:ref:<cite>fill symbol  1</cite></p></td>
+<td><p>レイヤ効果やデータ定義など、あらゆる表示機能に対応する、バルーン形状用の <span class="xref std std-ref">fill symbol1</span></p></td>
 </tr>
 <tr class="row-odd"><td><p><span class="guilabel">Corner radius</span></p></td>
 <td><p>吹き出しの角丸半径を指定します</p></td>
@@ -611,23 +611,23 @@ For HTML5 compatibility, prefer using the CSS property <code class="docutils lit
 </tr>
 <tr class="row-even"><td><p><span class="guilabel">Line style</span></p></td>
 <td><p>バルーン以外</p></td>
-<td><p>レイヤ効果やデータ定義設定など、あらゆる表示機能に対応する、コネクタ線用の <span class="xref std std-ref">fill symbol 1</span></p></td>
+<td><p>レイヤ効果やデータ定義設定など、あらゆる表示機能に対応する、コネクタ線用の <span class="xref std std-ref">fill symbol1</span></p></td>
 </tr>
-<tr class="row-odd"><td><p>:guilabel:` 曲率 `</p></td>
+<tr class="row-odd"><td><p><span class="guilabel">曲率</span></p></td>
 <td rowspan="2"><p>曲線</p></td>
 <td><p>コネクタ線の湾曲率をパーセンテージで指定します。</p></td>
 </tr>
-<tr class="row-even"><td><p>:guilabel:` 方向 `</p></td>
-<td><p>ラベルから地物に向かうコネクタ線の方向を指定します。:guilabel: <a href="#id1"><span class="problematic" id="id2">`</span></a>Clockwise`（時計回り）、:guilabel:<a href="#id3"><span class="problematic" id="id4">`</span></a>Counter-clockwise`（反時計回り）、:guilabel:<a href="#id5"><span class="problematic" id="id6">`</span></a>Automatic`（最適方向を自動判定）のいずれかを選択できます。</p></td>
+<tr class="row-even"><td><p><span class="guilabel">方向</span></p></td>
+<td><p>ラベルから地物に向かうコネクタ線の方向を指定します。:guilabel:<a href="#id1"><span class="problematic" id="id2">`</span></a>Clockwise`(時計回り)、:guilabel:<a href="#id3"><span class="problematic" id="id4">`</span></a>Counter-clockwise`(反時計回り)、:guilabel:<a href="#id5"><span class="problematic" id="id6">`</span></a>Automatic`(最適方向を自動判定)のいずれかを選択できます。</p></td>
 </tr>
-<tr class="row-odd"><td><p><span class="guilabel">Minimum length</span></p></td>
+<tr class="row-odd"><td><p><span class="guilabel">最短長</span></p></td>
 <td rowspan="4"><p>バルーン以外</p></td>
 <td><p>コネクタ線の最小長を指定します。</p></td>
 </tr>
-<tr class="row-even"><td><p><span class="guilabel">Draw lines to all feature parts</span></p></td>
+<tr class="row-even"><td><p><span class="guilabel">全パートに線を描画する</span></p></td>
 <td><p>マルチパート地物の場合、ラベルから各ジオメトリパートへのコネクタ線を描画するかどうかを指定します。</p></td>
 </tr>
-<tr class="row-odd"><td><p>:guilabel:` ラベルのアンカーポイント `</p></td>
+<tr class="row-odd"><td><p><span class="guilabel">ラベルのアンカーポイント</span></p></td>
 <td><p>コネクタ線がラベル テキストに接続される位置を制御します。利用可能なオプションは次のとおりです：</p>
 <ul class="simple">
 <li><p><span class="guilabel">最近傍点（Closest Point）</span></p></li>
@@ -636,14 +636,14 @@ For HTML5 compatibility, prefer using the CSS property <code class="docutils lit
 </ul>
 </td>
 </tr>
-<tr class="row-even"><td><p>:guilabel:` ラベルからのオフセット `</p></td>
+<tr class="row-even"><td><p><span class="guilabel">ラベルからのオフセット</span></p></td>
 <td><p>ラベルアンカーポイント（引き出し線の終端となる位置）からの距離を制御します。テキストに線が直接触れてしまうのを防ぎます。</p></td>
 </tr>
 <tr class="row-odd"><td><p><span class="guilabel">Offset from feature</span></p></td>
 <td rowspan="2"><p>All</p></td>
 <td><p>地物（ポリゴンの場合はアンカーポイント）から引き出し線が終端する位置までの距離を制御します。例:地物の縁に線が重なる描画を回避できます。</p></td>
 </tr>
-<tr class="row-even"><td><p>:guilabel:` 地物のアンカーポイント `</p></td>
+<tr class="row-even"><td><p><span class="guilabel">地物のアンカーポイント</span></p></td>
 <td><p>コネクタ線がポリゴン地物上のどこに終端するかを指定します。利用可能なオプションは以下の通りです：</p>
 <ul class="simple">
 <li><p><span class="guilabel">到達不能極（境界から最も遠い点）</span></p></li>
@@ -653,13 +653,13 @@ For HTML5 compatibility, prefer using the CSS property <code class="docutils lit
 </ul>
 </td>
 </tr>
-<tr class="row-odd"><td><p>:guilabel:` 終点マーカー `</p></td>
+<tr class="row-odd"><td><p><span class="guilabel">終点マーカー</span></p></td>
 <td><p>バルーン</p></td>
-<td><p>レイヤー効果やデータ定義設定を含む完全表示機能付きの:ref: ` marker symbol` で、バルーン吹き出しの終点の下にマーカーシンボルを描画するための、レイヤー効果、データ定義などを含む完全な表示機能を持つマーカーシンボル。</p></td>
+<td><p>レイヤー効果やデータ定義設定を含む完全表示機能付きの <span class="xref std std-ref">marker symbol</span> で、バルーン吹き出しの終点の下にマーカーシンボルを描画するための、レイヤー効果、データ定義などを含む完全な表示機能を持つマーカーシンボル。</p></td>
 </tr>
-<tr class="row-even"><td><p>:guilabel:` 混合モード `</p></td>
+<tr class="row-even"><td><p><span class="guilabel">混合モード</span></p></td>
 <td><p>All</p></td>
-<td><p>引き出し全体の:ref: <cite>blending</cite> を制御します。</p></td>
+<td><p>引き出し全体の <span class="xref std std-ref">blending</span> を制御します。</p></td>
 </tr>
 </tbody>
 </table>
@@ -669,7 +669,7 @@ For HTML5 compatibility, prefer using the CSS property <code class="docutils lit
 </section>
 <section id="placement-tab">
 <span id="labels-placement"></span><h3><a class="toc-backref" href="#id26" role="doc-backlink"><span class="section-number">10.3.2.3. </span>配置タブ</a><a class="headerlink" href="#placement-tab" title="Link to this heading"></a></h3>
-<p><a href="#id1"><span class="problematic" id="id2">|</span></a>labelplacement|の:guilabel: <cite>配置</cite> タブを選択し、ラベルの配置方法と優先度を設定します。ポイント／ライン／ポリゴンの各レイヤータイプで異なるオプションが用意されており、グローバル :ref: <cite>PAL</cite> 設定 の影響を受けます。</p>
+<p><a href="#id1"><span class="problematic" id="id2">|</span></a>labelplacement|の:guilabel:<cite>配置</cite> タブを選択し、ラベルの配置方法と優先度を設定します。ポイント／ライン／ポリゴンの各レイヤータイプで異なるオプションが用意されており、グローバル <span class="xref std std-ref">PAL</span> 設定 の影響を受けます。</p>
 <section id="placement-for-point-layers">
 <span id="labels-point-placement"></span><h4><a class="toc-backref" href="#id27" role="doc-backlink">ポイントレイヤのラベルの配置</a><a class="headerlink" href="#placement-for-point-layers" title="Link to this heading"></a></h4>
 <p>ポイントラベルの配置モードには、以下のものがあります</p>
@@ -677,21 +677,14 @@ For HTML5 compatibility, prefer using the CSS property <code class="docutils lit
 <li><p><span class="guilabel">カルトグラフィックに配置</span> ：ポイントラベルは以下の理想的なカルトグラフィック配置ルールに従い、ポイント地物とより良い視覚的関係性で生成されます。ラベルは、</p>
 <ul>
 <li><p><a class="reference internal" href="../introduction/general_tools.html#unit-selector"><span class="std std-ref">サポートされている単位</span></a> で設定された <span class="guilabel">距離</span> に配置することができます。距離の基準は、ポイント地物自体から、もしくは地物を表すシンボルからの距離です（ <span class="guilabel">オフセット距離の基準</span> で設定）。後者のオプションはシンボルサイズが固定されていない場合、例えばサイズがデータによって定義されている場合や、 <a class="reference internal" href="../working_with_vector/vector_properties.html#categorized-renderer"><span class="std std-ref">カテゴリ値による定義</span></a> レンダラで様々なシンボルを使用している場合に特に有用です。</p></li>
-<li><p>:guilabel:` 最大距離 ` に設定された範囲内でラベルを配置します。これはオプションの設定で、ラベルを対象の地物からどれだけ離して配置できるかを制御できます。この機能は :guilabel:` 距離 ` の設定と連動し、ラベル配置の範囲を指定することで、地物が密集した地図上でもラベルをより効果的に配置できる柔軟性を提供し、対応する地物の周囲にラベルをきれいに収めることを可能にします。</p></li>
+<li><p><span class="guilabel">最大距離</span> に設定された範囲内でラベルを配置します。これはオプションの設定で、ラベルを対象の地物からどれだけ離して配置できるかを制御できます。この機能は <span class="guilabel">距離</span> の設定と連動し、ラベル配置の範囲を指定することで、地物が密集した地図上でもラベルをより効果的に配置できる柔軟性を提供し、対応する地物の周囲にラベルをきれいに収めることを可能にします。</p></li>
 <li><p><span class="guilabel">Prioritize Placement</span> オプションを使用すると、ラベル配置時の優先基準を決定できます。選択肢は2つあります:</p>
 <ul class="simple">
-<li><p><span class="guilabel">Prefer closer labels</span>: By default, labels are kept close to the feature.</p></li>
-<li><p><span class="guilabel">Prefer position ordering</span>: The label will try to stay in a specific position
-(like top left or top right), even if it's a bit farther away from the feature. The label
-only moves to other positions if there's no room within the maximum distance at your
-preferred position.</p></li>
+<li><p><span class="guilabel">ラベルを接近させる</span>: デフォルトでは、ラベルを地物にできるだけ近い位置に配置します。</p></li>
+<li><p>:guilabel:` 位置の順序づけをする` : ラベルは特定の位置(左上、右上など)を優先し、たとえ地物から多少離れていてもその位置に配置されるよう試みます。指定位置内にスペースがない場合のみ、別の位置に移動します。</p></li>
 </ul>
 </li>
-<li><p>following a <span class="guilabel">Position priority</span> which dictates placement candidates
-for anchoring labels around and (centered) over the point feature,
-and the order in which the positions are tested.
-The default order, based on <a class="reference external" href="https://www.researchgate.net/publication/44463780_Making_maps_a_visual_guide_to_map_design_for_GIS_John_Krygier_Denis_Wood">guidelines from Krygier and Wood (2011)</a>
-and other cartographic textbooks, is as follows:</p>
+<li><p><span class="guilabel">配置を優先</span> に従い、ポイント地物の周囲および(地物中央の上部へ)ラベルをアンカー配置する候補位置と、それらをテストする順序を定義します。デフォルトの順序は  <a class="reference external" href="https://www.researchgate.net/publication/44463780_Making_maps_a_visual_guide_to_map_design_for_GIS_John_Krygier_Denis_Wood">guidelines from Krygier and Wood (2011)</a> およびその他の地図作成文献に基づき、以下のとおりです :</p>
 <ol class="arabic simple">
 <li><p>右上</p></li>
 <li><p>左上</p></li>
@@ -702,16 +695,11 @@ and other cartographic textbooks, is as follows:</p>
 <li><p>わずかに右寄りの上</p></li>
 <li><p>わずかに左寄りの下</p></li>
 </ol>
-<p><a class="reference internal" href="../../../_images/mIconDataDefine.png"><img alt="dataDefine" src="../../../_images/mIconDataDefine.png" style="width: 1.5em;" /></a>  :sup: <cite>Data-defined override</cite> ボタンを使用すると、優先順位順にコンマ区切りで配置候補を指定できます。また、この機能により、特定の地物にのみ適用する配置を限定することも可能です。例、海岸線の地物ではラベルが陸地上に配置されないように制限できます。</p>
+<p><a class="reference internal" href="../../../_images/mIconDataDefine.png"><img alt="dataDefine" src="../../../_images/mIconDataDefine.png" style="width: 1.5em;" /></a><sup>Data-defined override</sup> ボタンを使用すると、優先順位順にコンマ区切りで配置候補を指定できます。また、この機能により、特定の地物にのみ適用する配置を限定することも可能です。例、海岸線の地物ではラベルが陸地上に配置されないように制限できます。</p>
 </li>
 </ul>
 </li>
-<li><p><span class="guilabel">Around Point</span>: labels are placed in a circle around the feature
-with an equal radius set in <span class="guilabel">Distance</span>.
-Additionally you can set <span class="guilabel">Maximum Distance</span> from the feature,
-to control how far a label can be placed from the feature it's labeling.
-The placement priority is clockwise from the &quot;top right&quot;. The position can
-be constrained using the data-defined <span class="guilabel">Quadrant</span> option.</p></li>
+<li><p><span class="guilabel">Around Point</span>:<span class="guilabel">Distance</span> で設定した半径を中心に、地物を取り囲むようにラベルを円形に配置します。さらに、ラベルを対象地物からどれだけ離して配置するかを制御するために、 <span class="guilabel">Maximum Distance</span> を設定できます。配置優先順は「右上」から時計回りで評価されます。また、データ定義オプションの <span class="guilabel">Quadrant</span> を使用すると、配置位置を象限単位で制限できます。</p></li>
 <li><p><span class="guilabel">点からのオフセット</span> ：ラベルはポイント地物から <span class="guilabel">オフセット量（X, Y）</span> 離れた位置に配置されます。オフセット量はさまざまな単位で設定でき、望むならば地物の上に重ねることもできます。データで定義された <span class="guilabel">配置する象限</span> を使用して配置を制限することができ、ラベルの <span class="guilabel">回転</span> を設定することもできます。</p></li>
 </ul>
 </section>
@@ -913,11 +901,10 @@ reset and its value cleared from the attribute table.</p>
 </li>
 <li><p><span class="guilabel">内部配置を許可</span>： デフォルトでは、QGISは設定に従って最適な配置でラベルをレンダリングしようとします。 このモードにチェックを入れると、他に選択肢がない場合に、機能がより悪い配置オプションにフォールバックすることを許します。例えば、線が短すぎてカーブしたラベルテキストが入らない場合、ラベルを地物の中心点のすぐ上に水平に配置することができます。</p></li>
 <li><p><span class="guilabel">表示</span> および <span class="guilabel">常に表示するか否かを示す式</span> にデータによる定義式を使用して、どのラベルをレンダリングするかを細かく調整することができます。</p></li>
-<li><p>Allow to <span class="guilabel">Show upside-down labels</span>: alternatives are <strong>never</strong>,
-<strong>when rotation defined</strong> or <strong>always</strong>.</p>
+<li><p><span class="guilabel">逆さま禁止</span> の設定は、以下のいずれかで選択できます:禁止、回転を定義した場合のみ、常に。</p>
 <ul class="simple">
 <li><p><strong>never</strong> – デフォルト設定では画面の可読性を優先します。</p></li>
-<li><p><strong>when rotation defined</strong>–ラベルの回転は、<a class="reference internal" href="../../../_images/labelplacement.png"><img alt="labelplacement" src="../../../_images/labelplacement.png" style="width: 1.5em;" /></a> の :guilabel: <cite>Placement</cite> タブ内の :guilabel: <cite>Data Defined</cite> グループで定義されている必要があります。</p></li>
+<li><p><strong>when rotation defined</strong>–ラベルの回転は、<a class="reference internal" href="../../../_images/labelplacement.png"><img alt="labelplacement" src="../../../_images/labelplacement.png" style="width: 1.5em;" /></a> の <span class="guilabel">Placement</span> タブ内の <span class="guilabel">Data Defined</span> グループで定義されている必要があります。</p></li>
 <li><p><strong>always</strong>–ラベルの上下逆を常に許可します。</p></li>
 </ul>
 </li>
@@ -965,7 +952,7 @@ reset and its value cleared from the attribute table.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 16, 17:11 +0900
+      <span class="lastupdated">最終更新: 2025 7月 17, 09:46 +0900
       </span></p>
   </div>
 

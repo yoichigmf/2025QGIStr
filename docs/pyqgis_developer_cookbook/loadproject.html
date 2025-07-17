@@ -5,7 +5,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>2. プロジェクトをロードする &mdash; QGIS Documentation  ドキュメント</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/qgis_docs.css?v=01847ad1" />
       <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
       <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -20,7 +20,7 @@
         <script src="../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../../_static/documentation_options.js?v=c033477b"></script>
-        <script src="../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
         <script src="../../_static/copybutton.js?v=f281be69"></script>
@@ -28,7 +28,7 @@
         <script>let toggleHintHide = 'Click to hide';</script>
         <script>let toggleOpenOnPrint = 'true';</script>
         <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
-        <script src="../../_static/translations.js?v=91613774"></script>
+        <script src="../../_static/translations.js?v=4dbe4bdc"></script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/js/theme.js"></script>
@@ -194,13 +194,13 @@
 <div class="admonition hint">
 <p class="admonition-title">ヒント</p>
 <p>pyqgisコンソールを使わない場合、このページにあるコードスニペットは次のインポートが必要です:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.core</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="p">(</span>
 <span class="linenos">2</span>    <span class="n">Qgis</span><span class="p">,</span>
 <span class="linenos">3</span>    <span class="n">QgsProject</span><span class="p">,</span>
 <span class="linenos">4</span>    <span class="n">QgsPathResolver</span>
 <span class="linenos">5</span><span class="p">)</span>
 <span class="linenos">6</span>
-<span class="linenos">7</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.gui</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+<span class="linenos">7</span><span class="kn">from</span> <span class="nn">qgis.gui</span> <span class="kn">import</span> <span class="p">(</span>
 <span class="linenos">8</span>    <span class="n">QgsLayerTreeMapCanvasBridge</span><span class="p">,</span>
 <span class="linenos">9</span><span class="p">)</span>
 </pre></div>
@@ -216,7 +216,7 @@
 <p id="index-0">プロジェクトを現在のQGISアプリケーションにロードするには、 <a class="reference external" href="https://qgis.org/pyqgis/3.40/core/QgsProject.html#qgis.core.QgsProject" title="(in QGIS Python API v3.40)"><code class="xref py py-class docutils literal notranslate"><span class="pre">QgsProject</span></code></a> クラスのインスタンスを作成する必要があります。これはシングルトンクラスなので、それを行うには <a class="reference external" href="https://qgis.org/pyqgis/3.40/core/QgsProject.html#qgis.core.QgsProject.instance" title="(in QGIS Python API v3.40)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">instance()</span></code></a> メソッドを使わなければなりません。  <a class="reference external" href="https://qgis.org/pyqgis/3.40/core/QgsProject.html#qgis.core.QgsProject.read" title="(in QGIS Python API v3.40)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">read()</span></code></a> メソッドを呼び出して、読み込むプロジェクトのパスを渡すことができます。</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># If you are not inside a QGIS console you first need to import</span>
 <span class="linenos"> 2</span><span class="c1"># qgis and PyQt classes you will use in this script as shown below:</span>
-<span class="linenos"> 3</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">QgsProject</span>
+<span class="linenos"> 3</span><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="n">QgsProject</span>
 <span class="linenos"> 4</span><span class="c1"># Get the project instance</span>
 <span class="linenos"> 5</span><span class="n">project</span> <span class="o">=</span> <span class="n">QgsProject</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span>
 <span class="linenos"> 6</span><span class="c1"># Print the current project file name (might be empty in case no projects have been loaded)</span>
@@ -256,7 +256,7 @@
 <p>使用例：</p>
 <ol class="arabic">
 <li><p>旧パスを置き換え：</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">my_processor</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">my_processor</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">path</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;c:/Users/ClintBarton/Documents/Projects&#39;</span><span class="p">,</span> <span class="s1">&#39;x:/Projects/&#39;</span><span class="p">)</span>
 
 <span class="n">QgsPathResolver</span><span class="o">.</span><span class="n">setPathPreprocessor</span><span class="p">(</span><span class="n">my_processor</span><span class="p">)</span>
@@ -264,7 +264,7 @@
 </div>
 </li>
 <li><p>データベースのホストアドレスを新しいもので置き換え：</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">my_processor</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">my_processor</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">path</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;host=10.1.1.115&#39;</span><span class="p">,</span> <span class="s1">&#39;host=10.1.1.116&#39;</span><span class="p">)</span>
 
 <span class="n">QgsPathResolver</span><span class="o">.</span><span class="n">setPathPreprocessor</span><span class="p">(</span><span class="n">my_processor</span><span class="p">)</span>
@@ -272,7 +272,7 @@
 </div>
 </li>
 <li><p>保存されているデータベースのクレデンシャルを新しいものに置き換え：</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">def</span><span class="w"> </span><span class="nf">my_processor</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">def</span> <span class="nf">my_processor</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
 <span class="linenos">2</span>    <span class="n">path</span><span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;user=&#39;gis_team&#39;&quot;</span><span class="p">,</span> <span class="s2">&quot;user=&#39;team_awesome&#39;&quot;</span><span class="p">)</span>
 <span class="linenos">3</span>    <span class="n">path</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;password=&#39;cats&#39;&quot;</span><span class="p">,</span> <span class="s2">&quot;password=&#39;g7as!m*&#39;&quot;</span><span class="p">)</span>
 <span class="linenos">4</span>    <span class="k">return</span> <span class="n">path</span>
@@ -284,7 +284,7 @@
 </ol>
 <p>同様に、パスライタ機能として <a class="reference external" href="https://qgis.org/pyqgis/3.40/core/QgsPathResolver.html#qgis.core.QgsPathResolver.setPathWriter" title="(in QGIS Python API v3.40)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setPathWriter()</span></code></a> メソッドが利用可能です。</p>
 <p>パスを変数で置き換える例:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">my_processor</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">my_processor</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
   <span class="k">return</span> <span class="n">path</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;c:/Users/ClintBarton/Documents/Projects&#39;</span><span class="p">,</span> <span class="s1">&#39;$projectdir$&#39;</span><span class="p">)</span>
 
 <span class="n">QgsPathResolver</span><span class="o">.</span><span class="n">setPathWriter</span><span class="p">(</span><span class="n">my_processor</span><span class="p">)</span>
@@ -318,7 +318,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 11, 16:21 +0900
+      <span class="lastupdated">最終更新: 2025 7月 17, 09:46 +0900
       </span></p>
   </div>
 

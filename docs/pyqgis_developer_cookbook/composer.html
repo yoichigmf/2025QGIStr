@@ -5,7 +5,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>10. 地図のレンダリングと印刷 &mdash; QGIS Documentation  ドキュメント</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/qgis_docs.css?v=01847ad1" />
       <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
       <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -20,7 +20,7 @@
         <script src="../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../../_static/documentation_options.js?v=c033477b"></script>
-        <script src="../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
         <script src="../../_static/copybutton.js?v=f281be69"></script>
@@ -28,7 +28,7 @@
         <script>let toggleHintHide = 'Click to hide';</script>
         <script>let toggleOpenOnPrint = 'true';</script>
         <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
-        <script src="../../_static/translations.js?v=91613774"></script>
+        <script src="../../_static/translations.js?v=4dbe4bdc"></script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/js/theme.js"></script>
@@ -200,9 +200,9 @@
 <div class="admonition hint">
 <p class="admonition-title">ヒント</p>
 <p>このページのコードスニペットは、以下のインポートが必要です:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">os</span>
 <span class="linenos"> 2</span>
-<span class="linenos"> 3</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.core</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+<span class="linenos"> 3</span><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="p">(</span>
 <span class="linenos"> 4</span>    <span class="n">QgsGeometry</span><span class="p">,</span>
 <span class="linenos"> 5</span>    <span class="n">QgsMapSettings</span><span class="p">,</span>
 <span class="linenos"> 6</span>    <span class="n">QgsPrintLayout</span><span class="p">,</span>
@@ -224,12 +224,12 @@
 <span class="linenos">22</span>    <span class="n">check</span><span class="p">,</span>
 <span class="linenos">23</span><span class="p">)</span>
 <span class="linenos">24</span>
-<span class="linenos">25</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.PyQt.QtGui</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+<span class="linenos">25</span><span class="kn">from</span> <span class="nn">qgis.PyQt.QtGui</span> <span class="kn">import</span> <span class="p">(</span>
 <span class="linenos">26</span>    <span class="n">QPolygonF</span><span class="p">,</span>
 <span class="linenos">27</span>    <span class="n">QColor</span><span class="p">,</span>
 <span class="linenos">28</span><span class="p">)</span>
 <span class="linenos">29</span>
-<span class="linenos">30</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.PyQt.QtCore</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+<span class="linenos">30</span><span class="kn">from</span> <span class="nn">qgis.PyQt.QtCore</span> <span class="kn">import</span> <span class="p">(</span>
 <span class="linenos">31</span>    <span class="n">QPointF</span><span class="p">,</span>
 <span class="linenos">32</span>    <span class="n">QRectF</span><span class="p">,</span>
 <span class="linenos">33</span>    <span class="n">QSize</span><span class="p">,</span>
@@ -266,7 +266,7 @@
 <span class="linenos"> 9</span>
 <span class="linenos">10</span><span class="n">render</span> <span class="o">=</span> <span class="n">QgsMapRendererParallelJob</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
 <span class="linenos">11</span>
-<span class="linenos">12</span><span class="k">def</span><span class="w"> </span><span class="nf">finished</span><span class="p">():</span>
+<span class="linenos">12</span><span class="k">def</span> <span class="nf">finished</span><span class="p">():</span>
 <span class="linenos">13</span>    <span class="n">img</span> <span class="o">=</span> <span class="n">render</span><span class="o">.</span><span class="n">renderedImage</span><span class="p">()</span>
 <span class="linenos">14</span>    <span class="c1"># save the image; e.g. img.save(&quot;/Users/myuser/render.png&quot;,&quot;png&quot;)</span>
 <span class="linenos">15</span>    <span class="n">img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">image_location</span><span class="p">,</span> <span class="s2">&quot;png&quot;</span><span class="p">)</span>
@@ -278,7 +278,7 @@
 <span class="linenos">21</span>
 <span class="linenos">22</span><span class="c1"># The following loop is not normally required, we</span>
 <span class="linenos">23</span><span class="c1"># are using it here because this is a standalone example.</span>
-<span class="linenos">24</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.PyQt.QtCore</span><span class="w"> </span><span class="kn">import</span> <span class="n">QEventLoop</span>
+<span class="linenos">24</span><span class="kn">from</span> <span class="nn">qgis.PyQt.QtCore</span> <span class="kn">import</span> <span class="n">QEventLoop</span>
 <span class="linenos">25</span><span class="n">loop</span> <span class="o">=</span> <span class="n">QEventLoop</span><span class="p">()</span>
 <span class="linenos">26</span><span class="n">render</span><span class="o">.</span><span class="n">finished</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">loop</span><span class="o">.</span><span class="n">quit</span><span class="p">)</span>
 <span class="linenos">27</span><span class="n">loop</span><span class="o">.</span><span class="n">exec_</span><span class="p">()</span>
@@ -390,14 +390,14 @@
 <p>レイアウトは相互に接続された項目の集合で構成され、修正中にこれらの接続が壊れてしまったり（削除されたマップに接続された凡例、ソースファイルが見つからない画像アイテムなど）、レイアウト項目にカスタム制約を適用したい場合があります。 <a class="reference external" href="https://qgis.org/pyqgis/3.40/core/QgsAbstractValidityCheck.html#qgis.core.QgsAbstractValidityCheck" title="(in QGIS Python API v3.40)"><code class="xref py py-class docutils literal notranslate"><span class="pre">QgsAbstractValidityCheck</span></code></a> は、これを実現するのに役立ちます。</p>
 <p>基本的なチェックはこのようなものです：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@check</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="n">QgsAbstractValidityCheck</span><span class="o">.</span><span class="n">TypeLayoutCheck</span><span class="p">)</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">my_layout_check</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">feedback</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">my_layout_check</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">feedback</span><span class="p">):</span>
   <span class="n">results</span> <span class="o">=</span> <span class="o">...</span>
   <span class="k">return</span> <span class="n">results</span>
 </pre></div>
 </div>
 <p>レイアウトマップ項目がウェブメルカトル図法に設定されるたびに警告を投げるチェックです：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nd">@check</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="n">QgsAbstractValidityCheck</span><span class="o">.</span><span class="n">TypeLayoutCheck</span><span class="p">)</span>
-<span class="linenos"> 2</span><span class="k">def</span><span class="w"> </span><span class="nf">layout_map_crs_choice_check</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">feedback</span><span class="p">):</span>
+<span class="linenos"> 2</span><span class="k">def</span> <span class="nf">layout_map_crs_choice_check</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">feedback</span><span class="p">):</span>
 <span class="linenos"> 3</span>  <span class="n">layout</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">layout</span>
 <span class="linenos"> 4</span>  <span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="linenos"> 5</span>  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">layout</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
@@ -413,7 +413,7 @@
 </div>
 <p>さらに複雑な例を挙げます。レイアウトマップ項目に、そのマップ項目に表示されている範囲の外でしか有効でないCRSが設定された場合、警告が投げられます：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nd">@check</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="nb">type</span><span class="o">=</span><span class="n">QgsAbstractValidityCheck</span><span class="o">.</span><span class="n">TypeLayoutCheck</span><span class="p">)</span>
-<span class="linenos"> 2</span><span class="k">def</span><span class="w"> </span><span class="nf">layout_map_crs_area_check</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">feedback</span><span class="p">):</span>
+<span class="linenos"> 2</span><span class="k">def</span> <span class="nf">layout_map_crs_area_check</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">feedback</span><span class="p">):</span>
 <span class="linenos"> 3</span>    <span class="n">layout</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">layout</span>
 <span class="linenos"> 4</span>    <span class="n">results</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="linenos"> 5</span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">layout</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
@@ -468,7 +468,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 11, 16:21 +0900
+      <span class="lastupdated">最終更新: 2025 7月 17, 09:46 +0900
       </span></p>
   </div>
 

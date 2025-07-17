@@ -5,7 +5,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>8. 一般ツール &mdash; QGIS Documentation  ドキュメント</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/qgis_docs.css?v=01847ad1" />
       <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
       <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
@@ -20,7 +20,7 @@
         <script src="../../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../../../_static/documentation_options.js?v=c033477b"></script>
-        <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
         <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
         <script src="../../../_static/copybutton.js?v=f281be69"></script>
@@ -28,7 +28,7 @@
         <script>let toggleHintHide = 'Click to hide';</script>
         <script>let toggleOpenOnPrint = 'true';</script>
         <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
-        <script src="../../../_static/translations.js?v=91613774"></script>
+        <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/js/theme.js"></script>
@@ -1745,7 +1745,7 @@ and returned in the results panel.</p></li>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p><strong>レイヤのコンテキストメニューからスタイル管理</strong></p>
-<p>レイヤーのスタイルをコピー、貼り付け、追加、または名前変更するには、 <span class="guilabel">レイヤー</span> パネルでレイヤーを右クリックします。ベクタレイヤーとラスタレイヤーのどちらでも、コピー/貼り付けするスタイルカテゴリを選択できます。レイヤーの種類に応じて、 <span class="guilabel">全てのスタイルカテゴリ</span> または利用可能なカテゴリのいずれかを選択してください。ラスタレイヤーの場合、 <span class="guilabel">シンボロジー</span> と <span class="guilabel">レンダリング</span> カテゴリは常に一緒にコピーされることに注意してください。</p>
+<p>レイヤーのスタイルをコピー、貼り付け、追加、または名前変更するには、 <span class="guilabel">レイヤー</span> パネルでレイヤーを右クリックします。ベクタレイヤーとラスタレイヤーのどちらでも、コピー/貼り付けするスタイルカテゴリを選択できます。レイヤーの種類に応じて、 <span class="guilabel">全スタイルカテゴリ</span> または利用可能なカテゴリのいずれかを選択してください。ラスタレイヤーの場合、 <span class="guilabel">シンボロジー</span> と <span class="guilabel">レンダリング</span> カテゴリは常に一緒にコピーされることに注意してください。</p>
 </div>
 </section>
 <section id="storing-styles-in-a-file-or-a-database">
@@ -1943,7 +1943,7 @@ and returned in the results panel.</p></li>
 <p>お使いの方法にかかわらず、選択した色は常に <span class="guilabel">カラーモデル</span> のオプションで表示されます。これはデフォルトで <a class="reference internal" href="qgis_configuration.html#project-colors"><span class="std std-ref">プロジェクトのカラーモデル</span></a> に準拠します。</p>
 <ul class="simple">
 <li><p><span class="guilabel">RGB</span> : 色は HSV（色相、彩度、明度）または RGB（赤、緑、青）の値のスライダーを使って設定します。</p></li>
-<li><p>:guilabel:<a href="#id1"><span class="problematic" id="id2">`</span></a>CMYK`（シアン、マゼンタ、イエロー、ブラック）</p></li>
+<li><p><span class="guilabel">CMYK</span> (シアン、マゼンタ、イエロー、ブラック)</p></li>
 </ul>
 <p>色の変更は、カラーホイールやカラーランプ、任意の色パラメータのスライダーをクリックすることで簡単に行えます。色パラメータは横のスピンボックスを使うか、対応するスライダー上でマウスホイールをスクロールすることで調整することができます。また、HTML表記法で色を入力することもできます。最後に、透明度を設定するための <span class="guilabel">不透明度</span> スライダーがあります。</p>
 <p>このダイアログには（オブジェクトに適用されている） <span class="guilabel">前の色</span> と（選択した） <span class="guilabel">現在の色</span> を視覚的に比較する機能もあります。ドラッグドロップするか、 <a class="reference internal" href="../../../_images/mActionAtlasNext.png"><img alt="atlasNext" src="../../../_images/mActionAtlasNext.png" style="width: 1.5em;" /></a> <sup>見本に色を追加</sup> ボタンを押すと、これらの色をスロットに保存し、簡単にアクセスできます。</p>
@@ -2033,7 +2033,7 @@ and returned in the results panel.</p></li>
 <ul class="simple">
 <li><p><span class="guilabel">ファイルを選択…</span> は、ファイルシステムからファイルを読み込むためのものです。ファイルはファイルパスによって識別され、QGIS は対応する画像を表示するためにそのパスを解決する必要があります。</p></li>
 <li><p><span class="guilabel">URLから…</span> は、リモートURLからファイルを読み込むためのものです。上記と同様に、画像はリモートリソースの取得が成功した場合にのみ読み込まれます。</p></li>
-<li><p><span class="guilabel">ファイルを埋め込み…</span> は、現在のプロジェクト、スタイルデータベース、または印刷レイアウトテンプレート内にファイルを埋め込むためのものです。これにより、ファイルは常にアイテムの一部としてレンダリングされます。これは、カスタムシンボルを含む自己完結型のプロジェクトを作成し、異なるユーザーやQGISのインストール間で簡単に共有するための便利な方法です。</p></li>
+<li><p><span class="guilabel">ファイルを埋め込む…</span> は、現在のプロジェクト、スタイルデータベース、または印刷レイアウトテンプレート内にファイルを埋め込むためのものです。これにより、ファイルは常にアイテムの一部としてレンダリングされます。これは、カスタムシンボルを含む自己完結型のプロジェクトを作成し、異なるユーザーやQGISのインストール間で簡単に共有するための便利な方法です。</p></li>
 <li><p><span class="guilabel">埋め込みファイルを抽出…</span> は、ウィジェットから埋め込まれたファイルを抽出し、ディスクに保存するためのものです。</p></li>
 </ul>
 </section>
@@ -2086,7 +2086,7 @@ and returned in the results panel.</p></li>
 <li><p><span class="guilabel">現在のテキストフォーマットをクリア</span> ウィジェットに割り当てられているテキストフォーマットを解除します（特定の箇所で利用可能）</p></li>
 <li><p><span class="guilabel">フォントサイズ</span> を関連づけられた単位で設定します</p></li>
 <li><p><span class="menuselection">最近使ったフォント ►</span> メニューは、最近使ったフォントと共に、アクティブなフォントが（最上部に）チェックされた状態で表示されます</p></li>
-<li><p><span class="guilabel">フォーマットを構成...</span> を選択すると、フォントセレクタウィジェットを押した場合と同じ動作になります。これは <a class="reference internal" href="../style_library/label_settings.html#text-format"><span class="std std-ref">テキストフォーマット</span></a> ダイアログを開き、色、不透明度、向き、HTML表記、バッファ、背景、影など、高度な書式設定オプションを提供します。</p></li>
+<li><p><span class="guilabel">フォーマットを設定...</span> を選択すると、フォントセレクタウィジェットを押した場合と同じ動作になります。これは <a class="reference internal" href="../style_library/label_settings.html#text-format"><span class="std std-ref">テキストフォーマット</span></a> ダイアログを開き、色、不透明度、向き、HTML表記、バッファ、背景、影など、高度な書式設定オプションを提供します。</p></li>
 <li><p><span class="guilabel">フォーマットをコピ</span> ：テキストのフォーマットをコピーします</p></li>
 <li><p><span class="guilabel">フォーマットを貼り付け</span> ：コピーしたフォーマットをテキストに貼りつけ、フォーマットを素早く設定できます</p></li>
 <li><p><a class="reference internal" href="#color-widget"><span class="std std-ref">色ウィジェット</span></a> ：簡単に色設定ができます</p></li>
@@ -2229,7 +2229,7 @@ and returned in the results panel.</p></li>
 <p><a class="reference internal" href="../../../_images/mIconDataDefine.png"><img alt="dataDefine" src="../../../_images/mIconDataDefine.png" style="width: 1.5em;" /></a> <sup>データによって定義された上書き</sup> アイコンをクリックすると、以下のエントリが表示されます：</p>
 <ul class="simple">
 <li><p><span class="guilabel">説明...</span> は、オプションが有効化されているか、予想される入力値、有効な入力型、そして現在の定義を表示します。ウィジェットの上にマウスカーソルを乗せることでも、この情報を表示します。</p></li>
-<li><p><span class="guilabel">プロジェクト内にデータを保存</span> は、 <span class="xref std std-ref">ベクタ補助ストレージ</span> のメカニズムを使ってプロパティを保存できるボタンです。</p></li>
+<li><p><span class="guilabel">データをプロジェクトに格納する</span> は、 <a class="reference internal" href="../working_with_vector/vector_properties.html#vector-auxiliary-storage"><span class="std std-ref">補助テーブルプロパティ</span></a> のメカニズムを使ってプロパティを保存できるボタンです。</p></li>
 <li><p><span class="guilabel">フィールドの型</span>: レイヤのフィールドのうち、有効な入力型に一致するフィールドから選択するためのエントリです。</p></li>
 <li><p><span class="guilabel">色</span>: ウィジェットが色プロパティと関連しているときには、このメニューから現在の <a class="reference internal" href="qgis_configuration.html#project-colors"><span class="std std-ref">プロジェクトの色</span></a> スキームとして定義されている色にアクセスできます。</p></li>
 <li><p><span class="guilabel">変数</span> ：利用可能なユーザー定義の <a class="reference internal" href="#general-tools-variables"><span class="std std-ref">変数</span></a> へアクセスするためのメニューです。</p></li>
@@ -2298,7 +2298,7 @@ and returned in the results panel.</p></li>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 15, 08:14 +0900
+      <span class="lastupdated">最終更新: 2025 7月 17, 09:46 +0900
       </span></p>
   </div>
 

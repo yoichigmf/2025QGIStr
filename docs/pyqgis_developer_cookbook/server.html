@@ -5,7 +5,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>20. QGIS ServerとPython &mdash; QGIS Documentation  ドキュメント</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/qgis_docs.css?v=01847ad1" />
       <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
       <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -20,7 +20,7 @@
         <script src="../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../../_static/documentation_options.js?v=c033477b"></script>
-        <script src="../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
         <script src="../../_static/copybutton.js?v=f281be69"></script>
@@ -28,7 +28,7 @@
         <script>let toggleHintHide = 'Click to hide';</script>
         <script>let toggleOpenOnPrint = 'true';</script>
         <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
-        <script src="../../_static/translations.js?v=91613774"></script>
+        <script src="../../_static/translations.js?v=4dbe4bdc"></script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/js/theme.js"></script>
@@ -267,8 +267,8 @@
 <h2><a class="toc-backref" href="#id7" role="doc-backlink"><span class="section-number">20.3. </span>STANDALONE 又は EMBEDDING</a><a class="headerlink" href="#standalone-or-embedding" title="Link to this heading"></a></h2>
 <p>スタンドアロン・サーバー・アプリケーションや組み込みの場合は、上記のサーバー・クラスを直接使用し、クライアントとのすべてのHTTPプロトコルのやり取りを管理するウェブ・サーバー実装にまとめる必要があります。</p>
 <p>QGIS Server APIの最小限の使用例（HTTP部分を除く）を以下に示します:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">QgsApplication</span>
-<span class="linenos"> 2</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.server</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="n">QgsApplication</span>
+<span class="linenos"> 2</span><span class="kn">from</span> <span class="nn">qgis.server</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="linenos"> 3</span><span class="n">app</span> <span class="o">=</span> <span class="n">QgsApplication</span><span class="p">([],</span> <span class="kc">False</span><span class="p">)</span>
 <span class="linenos"> 4</span>
 <span class="linenos"> 5</span><span class="c1"># Create the server instance, it may be a single one that</span>
@@ -293,7 +293,7 @@
 <span class="linenos">24</span><span class="n">app</span><span class="o">.</span><span class="n">exitQgis</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>これは、QGISソースコードリポジトリの継続的な統合テストのために開発された完全なスタンドアロンアプリケーションの例で、さまざまなプラグインフィルタと認証スキームが紹介されています（本番用ではなく、テスト目的のみで開発されていますが、学習には興味深いものです）: <a class="extlink-source reference external" href="https://github.com/qgis/QGIS/blob/release-3_40/tests/src/python/qgis_wrapped_server.py">qgis_wrapped_server.py</a></p>
+<p>これは、QGISソースコードリポジトリの継続的な統合テストのために開発された完全なスタンドアロンアプリケーションの例で、さまざまなプラグインフィルタと認証スキームが紹介されています（本番用ではなく、テスト目的のみで開発されていますが、学習には興味深いものです）: <a class="reference external" href="https://github.com/qgis/QGIS/blob/release-3_40/tests/src/python/qgis_wrapped_server.py">qgis_wrapped_server.py</a></p>
 </section>
 <section id="id2">
 <h2><a class="toc-backref" href="#id8" role="doc-backlink"><span class="section-number">20.4. </span>サーバー・プラグイン</a><a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
@@ -325,7 +325,7 @@
 <section id="i-o-filters">
 <h4><a class="toc-backref" href="#id10" role="doc-backlink"><span class="section-number">20.4.1.1. </span>i/O フィルタ</a><a class="headerlink" href="#i-o-filters" title="Link to this heading"></a></h4>
 <p>I/Oフィルタは、コアサービス（WMS、WFSなど）のサーバー入力と出力（リクエストとレスポンス）を変更し、サービスのワークフローにあらゆる操作を加えることができます。例えば、選択したレイヤーへのアクセスを制限したり、XMLレスポンスにXSLスタイルシートを注入したり、生成されたWMS画像に透かしを追加したりすることができます。</p>
-<p>この時点で、 <a class="extlink-pyqgis reference external" href="https://qgis.org/pyqgis/3.40/server">server plugins API docs</a> をざっと見ておくと役に立つかもしれません。</p>
+<p>この時点で、 <a class="reference external" href="https://qgis.org/pyqgis/3.40/server">server plugins API docs</a> をざっと見ておくと役に立つかもしれません。</p>
 <p>各フィルタは、3つのコールバックのうち少なくとも1つを実装する必要があります:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://qgis.org/pyqgis/3.40/server/QgsServerFilter.html#qgis.server.QgsServerFilter.onRequestReady" title="(in QGIS Python API v3.40)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">onRequestReady()</span></code></a></p></li>
@@ -405,8 +405,8 @@
 <section id="init-py">
 <span id="index-2"></span><h6 aria-level="7"><span class="section-number">20.4.1.1.5.1.1. </span>__init__.py<a class="headerlink" href="#init-py" title="Link to this heading"></a></h6>
 <p>このファイルはPythonのインポートシステムによって要求されます。また、QGIS Serverはこのファイルに <code class="xref py py-func docutils literal notranslate"><span class="pre">serverClassFactory()</span></code> 関数を含めることを要求します。この関数は、サーバーが開始して、QGIS Serverにプラグインが読み込まれるときに呼び出されます。それは <a class="reference external" href="https://qgis.org/pyqgis/3.40/server/QgsServerInterface.html#qgis.server.QgsServerInterface" title="(in QGIS Python API v3.40)"><code class="xref py py-class docutils literal notranslate"><span class="pre">QgsServerInterface</span></code></a> のインスタンスへの参照を受け取り、プラグインのクラスのインスタンスを返す必要があります。プラグインの例 <code class="file docutils literal notranslate"><span class="pre">__init__.py</span></code> はこのようになっています:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">serverClassFactory</span><span class="p">(</span><span class="n">serverIface</span><span class="p">):</span>
-    <span class="kn">from</span><span class="w"> </span><span class="nn">.HelloServer</span><span class="w"> </span><span class="kn">import</span> <span class="n">HelloServerServer</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">serverClassFactory</span><span class="p">(</span><span class="n">serverIface</span><span class="p">):</span>
+    <span class="kn">from</span> <span class="nn">.HelloServer</span> <span class="kn">import</span> <span class="n">HelloServerServer</span>
     <span class="k">return</span> <span class="n">HelloServerServer</span><span class="p">(</span><span class="n">serverIface</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -422,20 +422,20 @@
 <li><p><a class="reference external" href="https://qgis.org/pyqgis/3.40/server/QgsServerFilter.html#qgis.server.QgsServerFilter.onSendResponse" title="(in QGIS Python API v3.40)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">onSendResponse()</span></code></a></p></li>
 </ul>
 <p>次の例は、<strong>SERVICE</strong> パラメーターが &quot;HELLO &quot;に等しい場合に、<em>HelloServer!</em> を印字する最小のフィルタを実施しています:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span><span class="w"> </span><span class="nc">HelloFilter</span><span class="p">(</span><span class="n">QgsServerFilter</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span> <span class="nc">HelloFilter</span><span class="p">(</span><span class="n">QgsServerFilter</span><span class="p">):</span>
 <span class="linenos"> 2</span>
-<span class="linenos"> 3</span>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">serverIface</span><span class="p">):</span>
+<span class="linenos"> 3</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">serverIface</span><span class="p">):</span>
 <span class="linenos"> 4</span>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">serverIface</span><span class="p">)</span>
 <span class="linenos"> 5</span>
-<span class="linenos"> 6</span>    <span class="k">def</span><span class="w"> </span><span class="nf">onRequestReady</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="linenos"> 6</span>    <span class="k">def</span> <span class="nf">onRequestReady</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="linenos"> 7</span>        <span class="n">QgsMessageLog</span><span class="o">.</span><span class="n">logMessage</span><span class="p">(</span><span class="s2">&quot;HelloFilter.onRequestReady&quot;</span><span class="p">)</span>
 <span class="linenos"> 8</span>        <span class="k">return</span> <span class="kc">True</span>
 <span class="linenos"> 9</span>
-<span class="linenos">10</span>    <span class="k">def</span><span class="w"> </span><span class="nf">onSendResponse</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="linenos">10</span>    <span class="k">def</span> <span class="nf">onSendResponse</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="linenos">11</span>        <span class="n">QgsMessageLog</span><span class="o">.</span><span class="n">logMessage</span><span class="p">(</span><span class="s2">&quot;HelloFilter.onSendResponse&quot;</span><span class="p">)</span>
 <span class="linenos">12</span>        <span class="k">return</span> <span class="kc">True</span>
 <span class="linenos">13</span>
-<span class="linenos">14</span>    <span class="k">def</span><span class="w"> </span><span class="nf">onResponseComplete</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="linenos">14</span>    <span class="k">def</span> <span class="nf">onResponseComplete</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="linenos">15</span>        <span class="n">QgsMessageLog</span><span class="o">.</span><span class="n">logMessage</span><span class="p">(</span><span class="s2">&quot;HelloFilter.onResponseComplete&quot;</span><span class="p">)</span>
 <span class="linenos">16</span>        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">serverInterface</span><span class="p">()</span><span class="o">.</span><span class="n">requestHandler</span><span class="p">()</span>
 <span class="linenos">17</span>        <span class="n">params</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">parameterMap</span><span class="p">()</span>
@@ -448,8 +448,8 @@
 </pre></div>
 </div>
 <p>フィルターは、以下の例のように、<strong>serverIface</strong> に登録されなければなりません:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">HelloServerServer</span><span class="p">:</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">serverIface</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">HelloServerServer</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">serverIface</span><span class="p">):</span>
         <span class="n">serverIface</span><span class="o">.</span><span class="n">registerFilter</span><span class="p">(</span><span class="n">HelloFilter</span><span class="p">(</span><span class="n">serverIface</span><span class="p">),</span> <span class="mi">100</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -461,18 +461,18 @@
 <section id="modifying-the-input">
 <h6><span class="section-number">20.4.1.1.5.2. </span>入力を変更する<a class="headerlink" href="#modifying-the-input" title="Link to this heading"></a></h6>
 <p>プラグイン例には、クエリ文字列から来る入力パラメータを変えるテスト例が含まれています。この例では、新しいパラメータが（すでにパースされた）``parameterMap`` に注入され、このパラメータはコアサービス（WMSなど）から見えるようになります：</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span><span class="w"> </span><span class="nc">ParamsFilter</span><span class="p">(</span><span class="n">QgsServerFilter</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span> <span class="nc">ParamsFilter</span><span class="p">(</span><span class="n">QgsServerFilter</span><span class="p">):</span>
 <span class="linenos"> 2</span>
-<span class="linenos"> 3</span>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">serverIface</span><span class="p">):</span>
+<span class="linenos"> 3</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">serverIface</span><span class="p">):</span>
 <span class="linenos"> 4</span>        <span class="nb">super</span><span class="p">(</span><span class="n">ParamsFilter</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">serverIface</span><span class="p">)</span>
 <span class="linenos"> 5</span>
-<span class="linenos"> 6</span>    <span class="k">def</span><span class="w"> </span><span class="nf">onRequestReady</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="linenos"> 6</span>    <span class="k">def</span> <span class="nf">onRequestReady</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="linenos"> 7</span>        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">serverInterface</span><span class="p">()</span><span class="o">.</span><span class="n">requestHandler</span><span class="p">()</span>
 <span class="linenos"> 8</span>        <span class="n">params</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">parameterMap</span><span class="p">(</span> <span class="p">)</span>
 <span class="linenos"> 9</span>        <span class="n">request</span><span class="o">.</span><span class="n">setParameter</span><span class="p">(</span><span class="s1">&#39;TEST_NEW_PARAM&#39;</span><span class="p">,</span> <span class="s1">&#39;ParamsFilter&#39;</span><span class="p">)</span>
 <span class="linenos">10</span>        <span class="k">return</span> <span class="kc">True</span>
 <span class="linenos">11</span>
-<span class="linenos">12</span>    <span class="k">def</span><span class="w"> </span><span class="nf">onResponseComplete</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="linenos">12</span>    <span class="k">def</span> <span class="nf">onResponseComplete</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="linenos">13</span>        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">serverInterface</span><span class="p">()</span><span class="o">.</span><span class="n">requestHandler</span><span class="p">()</span>
 <span class="linenos">14</span>        <span class="n">params</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">parameterMap</span><span class="p">(</span> <span class="p">)</span>
 <span class="linenos">15</span>        <span class="k">if</span> <span class="n">params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;TEST_NEW_PARAM&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;ParamsFilter&#39;</span><span class="p">:</span>
@@ -501,16 +501,16 @@
 <section id="modifying-or-replacing-the-output">
 <h6><span class="section-number">20.4.1.1.5.3. </span>出力を変更または置き換えする<a class="headerlink" href="#modifying-or-replacing-the-output" title="Link to this heading"></a></h6>
 <p>透かしフィルタの例は、WMSコアサービスによって作成されたWMS画像の上に透かし画像を加算した新たな画像でWMS出力を置き換える方法を示しています：</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.server</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="linenos"> 2</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.PyQt.QtCore</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="linenos"> 3</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.PyQt.QtGui</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">qgis.server</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="linenos"> 2</span><span class="kn">from</span> <span class="nn">qgis.PyQt.QtCore</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="linenos"> 3</span><span class="kn">from</span> <span class="nn">qgis.PyQt.QtGui</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="linenos"> 4</span>
-<span class="linenos"> 5</span><span class="k">class</span><span class="w"> </span><span class="nc">WatermarkFilter</span><span class="p">(</span><span class="n">QgsServerFilter</span><span class="p">):</span>
+<span class="linenos"> 5</span><span class="k">class</span> <span class="nc">WatermarkFilter</span><span class="p">(</span><span class="n">QgsServerFilter</span><span class="p">):</span>
 <span class="linenos"> 6</span>
-<span class="linenos"> 7</span>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">serverIface</span><span class="p">):</span>
+<span class="linenos"> 7</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">serverIface</span><span class="p">):</span>
 <span class="linenos"> 8</span>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">serverIface</span><span class="p">)</span>
 <span class="linenos"> 9</span>
-<span class="linenos">10</span>    <span class="k">def</span><span class="w"> </span><span class="nf">onResponseComplete</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="linenos">10</span>    <span class="k">def</span> <span class="nf">onResponseComplete</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="linenos">11</span>        <span class="n">request</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">serverInterface</span><span class="p">()</span><span class="o">.</span><span class="n">requestHandler</span><span class="p">()</span>
 <span class="linenos">12</span>        <span class="n">params</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">parameterMap</span><span class="p">(</span> <span class="p">)</span>
 <span class="linenos">13</span>        <span class="c1"># Do some checks</span>
@@ -564,45 +564,45 @@
 <section id="id4">
 <h6><span class="section-number">20.4.1.2.1.1. </span>__init__.py<a class="headerlink" href="#id4" title="Link to this heading"></a></h6>
 <p>このファイルはPythonのインポートシステムによって必要とされます。全てのQGISサーバプラグインと同様に、このファイルには <code class="xref py py-func docutils literal notranslate"><span class="pre">serverClassFactory()</span></code> 関数が含まれており、プラグインが起動時にQGIS Serverにロードされる際に呼び出されます。この関数は <a class="reference external" href="https://qgis.org/pyqgis/3.40/server/QgsServerInterface.html#qgis.server.QgsServerInterface" title="(in QGIS Python API v3.40)"><code class="xref py py-class docutils literal notranslate"><span class="pre">QgsServerInterface</span></code></a> のインスタンスへの参照を受け取り、プラグインのクラスのインスタンスを返す必要があります。プラグインの例 <code class="file docutils literal notranslate"><span class="pre">__init__.py</span></code> はこのようになります：</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">serverClassFactory</span><span class="p">(</span><span class="n">serverIface</span><span class="p">):</span>
-    <span class="kn">from</span><span class="w"> </span><span class="nn">MyAccessControl.AccessControl</span><span class="w"> </span><span class="kn">import</span> <span class="n">AccessControlServer</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">serverClassFactory</span><span class="p">(</span><span class="n">serverIface</span><span class="p">):</span>
+    <span class="kn">from</span> <span class="nn">MyAccessControl.AccessControl</span> <span class="kn">import</span> <span class="n">AccessControlServer</span>
     <span class="k">return</span> <span class="n">AccessControlServer</span><span class="p">(</span><span class="n">serverIface</span><span class="p">)</span>
 </pre></div>
 </div>
 </section>
 <section id="accesscontrol-py">
 <h6><span class="section-number">20.4.1.2.1.2. </span>AccessControl.py<a class="headerlink" href="#accesscontrol-py" title="Link to this heading"></a></h6>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span><span class="w"> </span><span class="nc">AccessControlFilter</span><span class="p">(</span><span class="n">QgsAccessControlFilter</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span> <span class="nc">AccessControlFilter</span><span class="p">(</span><span class="n">QgsAccessControlFilter</span><span class="p">):</span>
 <span class="linenos"> 2</span>
-<span class="linenos"> 3</span>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">server_iface</span><span class="p">):</span>
+<span class="linenos"> 3</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">server_iface</span><span class="p">):</span>
 <span class="linenos"> 4</span>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">server_iface</span><span class="p">)</span>
 <span class="linenos"> 5</span>
-<span class="linenos"> 6</span>    <span class="k">def</span><span class="w"> </span><span class="nf">layerFilterExpression</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">):</span>
+<span class="linenos"> 6</span>    <span class="k">def</span> <span class="nf">layerFilterExpression</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">):</span>
 <span class="linenos"> 7</span><span class="w">        </span><span class="sd">&quot;&quot;&quot; Return an additional expression filter &quot;&quot;&quot;</span>
 <span class="linenos"> 8</span>        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">layerFilterExpression</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
 <span class="linenos"> 9</span>
-<span class="linenos">10</span>    <span class="k">def</span><span class="w"> </span><span class="nf">layerFilterSubsetString</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">):</span>
+<span class="linenos">10</span>    <span class="k">def</span> <span class="nf">layerFilterSubsetString</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">):</span>
 <span class="linenos">11</span><span class="w">        </span><span class="sd">&quot;&quot;&quot; Return an additional subset string (typically SQL) filter &quot;&quot;&quot;</span>
 <span class="linenos">12</span>        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">layerFilterSubsetString</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
 <span class="linenos">13</span>
-<span class="linenos">14</span>    <span class="k">def</span><span class="w"> </span><span class="nf">layerPermissions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">):</span>
+<span class="linenos">14</span>    <span class="k">def</span> <span class="nf">layerPermissions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">):</span>
 <span class="linenos">15</span><span class="w">        </span><span class="sd">&quot;&quot;&quot; Return the layer rights &quot;&quot;&quot;</span>
 <span class="linenos">16</span>        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">layerPermissions</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
 <span class="linenos">17</span>
-<span class="linenos">18</span>    <span class="k">def</span><span class="w"> </span><span class="nf">authorizedLayerAttributes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">,</span> <span class="n">attributes</span><span class="p">):</span>
+<span class="linenos">18</span>    <span class="k">def</span> <span class="nf">authorizedLayerAttributes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">,</span> <span class="n">attributes</span><span class="p">):</span>
 <span class="linenos">19</span><span class="w">        </span><span class="sd">&quot;&quot;&quot; Return the authorised layer attributes &quot;&quot;&quot;</span>
 <span class="linenos">20</span>        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">authorizedLayerAttributes</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="n">attributes</span><span class="p">)</span>
 <span class="linenos">21</span>
-<span class="linenos">22</span>    <span class="k">def</span><span class="w"> </span><span class="nf">allowToEdit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">,</span> <span class="n">feature</span><span class="p">):</span>
+<span class="linenos">22</span>    <span class="k">def</span> <span class="nf">allowToEdit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">,</span> <span class="n">feature</span><span class="p">):</span>
 <span class="linenos">23</span><span class="w">        </span><span class="sd">&quot;&quot;&quot; Are we authorised to modify the following geometry &quot;&quot;&quot;</span>
 <span class="linenos">24</span>        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">allowToEdit</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="n">feature</span><span class="p">)</span>
 <span class="linenos">25</span>
-<span class="linenos">26</span>    <span class="k">def</span><span class="w"> </span><span class="nf">cacheKey</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">26</span>    <span class="k">def</span> <span class="nf">cacheKey</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos">27</span>        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">cacheKey</span><span class="p">()</span>
 <span class="linenos">28</span>
-<span class="linenos">29</span><span class="k">class</span><span class="w"> </span><span class="nc">AccessControlServer</span><span class="p">:</span>
+<span class="linenos">29</span><span class="k">class</span> <span class="nc">AccessControlServer</span><span class="p">:</span>
 <span class="linenos">30</span>
-<span class="linenos">31</span>   <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">serverIface</span><span class="p">):</span>
+<span class="linenos">31</span>   <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">serverIface</span><span class="p">):</span>
 <span class="linenos">32</span><span class="w">      </span><span class="sd">&quot;&quot;&quot; Register AccessControlFilter &quot;&quot;&quot;</span>
 <span class="linenos">33</span>      <span class="n">serverIface</span><span class="o">.</span><span class="n">registerAccessControl</span><span class="p">(</span><span class="n">AccessControlFilter</span><span class="p">(</span><span class="n">serverIface</span><span class="p">),</span> <span class="mi">100</span><span class="p">)</span>
 </pre></div>
@@ -616,7 +616,7 @@
 <h5><span class="section-number">20.4.1.2.2. </span>layerFilterExpression<a class="headerlink" href="#layerfilterexpression" title="Link to this heading"></a></h5>
 <p>結果を制限する式を追加するために使用されます。</p>
 <p>例えば、属性 <code class="docutils literal notranslate"><span class="pre">role</span></code> が <code class="docutils literal notranslate"><span class="pre">user</span></code> に等しい地物に制限します。</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">layerFilterExpression</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">layerFilterExpression</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">):</span>
     <span class="k">return</span> <span class="s2">&quot;$role = &#39;user&#39;&quot;</span>
 </pre></div>
 </div>
@@ -625,7 +625,7 @@
 <h5><span class="section-number">20.4.1.2.3. </span>layerFilterSubsetString<a class="headerlink" href="#layerfiltersubsetstring" title="Link to this heading"></a></h5>
 <p>以前よりも同じですが、（データベース内で実行） <code class="docutils literal notranslate"><span class="pre">SubsetString</span></code> を使用</p>
 <p>例えば、属性 <code class="docutils literal notranslate"><span class="pre">role</span></code> が <code class="docutils literal notranslate"><span class="pre">user</span></code> に等しい地物に制限します。</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">layerFilterSubsetString</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">layerFilterSubsetString</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">):</span>
     <span class="k">return</span> <span class="s2">&quot;role = &#39;user&#39;&quot;</span>
 </pre></div>
 </div>
@@ -641,7 +641,7 @@
 <li><p><a class="reference external" href="https://qgis.org/pyqgis/3.40/server/QgsAccessControlFilter.html#qgis.server.QgsAccessControlFilter.LayerPermissions.canDelete" title="(in QGIS Python API v3.40)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">canDelete</span></code></a> で地物を削除できるようになります。</p></li>
 </ul>
 <p>例えば、すべてを読み取り専用アクセスに制限するには：</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">def</span><span class="w"> </span><span class="nf">layerPermissions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">def</span> <span class="nf">layerPermissions</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">):</span>
 <span class="linenos">2</span>    <span class="n">rights</span> <span class="o">=</span> <span class="n">QgsAccessControlFilter</span><span class="o">.</span><span class="n">LayerPermissions</span><span class="p">()</span>
 <span class="linenos">3</span>    <span class="n">rights</span><span class="o">.</span><span class="n">canRead</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="linenos">4</span>    <span class="n">rights</span><span class="o">.</span><span class="n">canInsert</span> <span class="o">=</span> <span class="n">rights</span><span class="o">.</span><span class="n">canUpdate</span> <span class="o">=</span> <span class="n">rights</span><span class="o">.</span><span class="n">canDelete</span> <span class="o">=</span> <span class="kc">False</span>
@@ -654,7 +654,7 @@
 <p>属性の特定のサブセットの可視性を制限するために使用します。</p>
 <p>引数の属性が表示属性の現在のセットを返します。</p>
 <p>例えば、<code class="docutils literal notranslate"><span class="pre">role</span></code> 属性を隠します:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">authorizedLayerAttributes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">,</span> <span class="n">attributes</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">authorizedLayerAttributes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">,</span> <span class="n">attributes</span><span class="p">):</span>
     <span class="k">return</span> <span class="p">[</span><span class="n">a</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">attributes</span> <span class="k">if</span> <span class="n">a</span> <span class="o">!=</span> <span class="s2">&quot;role&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -664,7 +664,7 @@
 <p>これは、地物のサブセットに編集を制限するために使用されます。</p>
 <p>これは、 <code class="docutils literal notranslate"><span class="pre">WFS-Transaction</span></code> プロトコルで使用されています。</p>
 <p>例えば、<code class="docutils literal notranslate"><span class="pre">role</span></code> という属性に <code class="docutils literal notranslate"><span class="pre">user</span></code> という値を持つ地物だけを編集できるようにします：</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">allowToEdit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">,</span> <span class="n">feature</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">allowToEdit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">,</span> <span class="n">feature</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">feature</span><span class="o">.</span><span class="n">attribute</span><span class="p">(</span><span class="s1">&#39;role&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;user&#39;</span>
 </pre></div>
 </div>
@@ -680,29 +680,29 @@
 <p>QGIS Serverでは、WMS、WFS、WCSなどのコアサービスは <a class="reference external" href="https://qgis.org/pyqgis/3.40/server/QgsService.html#qgis.server.QgsService" title="(in QGIS Python API v3.40)"><code class="xref py py-class docutils literal notranslate"><span class="pre">QgsService</span></code></a> のサブクラスとして実装されています。</p>
 <p>クエリ文字列パラメータ <code class="docutils literal notranslate"><span class="pre">SERVICE</span></code> がサービス名にマッチした時に実行される新しいサービスを実装するには、独自の <a class="reference external" href="https://qgis.org/pyqgis/3.40/server/QgsService.html#qgis.server.QgsService" title="(in QGIS Python API v3.40)"><code class="xref py py-class docutils literal notranslate"><span class="pre">QgsService</span></code></a> を実装し、その <a class="reference external" href="https://qgis.org/pyqgis/3.40/server/QgsServerInterface.html#qgis.server.QgsServerInterface.serviceRegistry" title="(in QGIS Python API v3.40)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">registerService(service)</span></code></a> を呼び出して <a class="reference external" href="https://qgis.org/pyqgis/3.40/server/QgsServiceRegistry.html#qgis.server.QgsServiceRegistry.registerService" title="(in QGIS Python API v3.40)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">serviceRegistry()</span></code></a> にサービスを登録します。</p>
 <p>以下は <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code> という名前のカスタムサービスの例です:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.server</span><span class="w"> </span><span class="kn">import</span> <span class="n">QgsService</span>
-<span class="linenos"> 2</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">QgsMessageLog</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">qgis.server</span> <span class="kn">import</span> <span class="n">QgsService</span>
+<span class="linenos"> 2</span><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="n">QgsMessageLog</span>
 <span class="linenos"> 3</span>
-<span class="linenos"> 4</span><span class="k">class</span><span class="w"> </span><span class="nc">CustomServiceService</span><span class="p">(</span><span class="n">QgsService</span><span class="p">):</span>
+<span class="linenos"> 4</span><span class="k">class</span> <span class="nc">CustomServiceService</span><span class="p">(</span><span class="n">QgsService</span><span class="p">):</span>
 <span class="linenos"> 5</span>
-<span class="linenos"> 6</span>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos"> 6</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos"> 7</span>        <span class="n">QgsService</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 <span class="linenos"> 8</span>
-<span class="linenos"> 9</span>    <span class="k">def</span><span class="w"> </span><span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos"> 9</span>    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos">10</span>        <span class="k">return</span> <span class="s2">&quot;CUSTOM&quot;</span>
 <span class="linenos">11</span>
-<span class="linenos">12</span>    <span class="k">def</span><span class="w"> </span><span class="nf">version</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">12</span>    <span class="k">def</span> <span class="nf">version</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos">13</span>        <span class="k">return</span> <span class="s2">&quot;1.0.0&quot;</span>
 <span class="linenos">14</span>
-<span class="linenos">15</span>    <span class="k">def</span><span class="w"> </span><span class="nf">executeRequest</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">project</span><span class="p">):</span>
+<span class="linenos">15</span>    <span class="k">def</span> <span class="nf">executeRequest</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">project</span><span class="p">):</span>
 <span class="linenos">16</span>        <span class="n">response</span><span class="o">.</span><span class="n">setStatusCode</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
 <span class="linenos">17</span>        <span class="n">QgsMessageLog</span><span class="o">.</span><span class="n">logMessage</span><span class="p">(</span><span class="s1">&#39;Custom service executeRequest&#39;</span><span class="p">)</span>
 <span class="linenos">18</span>        <span class="n">response</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Custom service executeRequest&quot;</span><span class="p">)</span>
 <span class="linenos">19</span>
 <span class="linenos">20</span>
-<span class="linenos">21</span><span class="k">class</span><span class="w"> </span><span class="nc">CustomService</span><span class="p">():</span>
+<span class="linenos">21</span><span class="k">class</span> <span class="nc">CustomService</span><span class="p">():</span>
 <span class="linenos">22</span>
-<span class="linenos">23</span>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">serverIface</span><span class="p">):</span>
+<span class="linenos">23</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">serverIface</span><span class="p">):</span>
 <span class="linenos">24</span>        <span class="n">serverIface</span><span class="o">.</span><span class="n">serviceRegistry</span><span class="p">()</span><span class="o">.</span><span class="n">registerService</span><span class="p">(</span><span class="n">CustomServiceService</span><span class="p">())</span>
 </pre></div>
 </div>
@@ -712,11 +712,11 @@
 <p>QGIS Serverでは、OAPIF（別名WFS3）のようなコアOGC APIは <a class="reference external" href="https://qgis.org/pyqgis/3.40/server/QgsServerOgcApiHandler.html#qgis.server.QgsServerOgcApiHandler" title="(in QGIS Python API v3.40)"><code class="xref py py-class docutils literal notranslate"><span class="pre">QgsServerOgcApiHandler</span></code></a> サブクラスのコレクションとして実装されており、 <a class="reference external" href="https://qgis.org/pyqgis/3.40/server/QgsServerOgcApi.html#qgis.server.QgsServerOgcApi" title="(in QGIS Python API v3.40)"><code class="xref py py-class docutils literal notranslate"><span class="pre">QgsServerOgcApi</span></code></a> (またはその親クラス <a class="reference external" href="https://qgis.org/pyqgis/3.40/server/QgsServerApi.html#qgis.server.QgsServerApi" title="(in QGIS Python API v3.40)"><code class="xref py py-class docutils literal notranslate"><span class="pre">QgsServerApi</span></code></a>) のインスタンスに登録されます。</p>
 <p>urlパスが特定のURLにマッチした時に実行される新しいAPIを実装するには、独自の <a class="reference external" href="https://qgis.org/pyqgis/3.40/server/QgsServerOgcApiHandler.html#qgis.server.QgsServerOgcApiHandler" title="(in QGIS Python API v3.40)"><code class="xref py py-class docutils literal notranslate"><span class="pre">QgsServerOgcApiHandler</span></code></a> インスタンスを実装し、それらを <code class="xref py py-class docutils literal notranslate"><span class="pre">QgsServerOgcApi</span></code> の <a class="reference external" href="https://qgis.org/pyqgis/3.40/server/QgsServiceRegistry.html#qgis.server.QgsServiceRegistry.registerApi" title="(in QGIS Python API v3.40)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">registerApi(api)</span></code></a> を呼び出してAPIを登録します。</p>
 <p>以下は、URLに <code class="docutils literal notranslate"><span class="pre">/customapi</span></code> が含まれる場合に実行されるカスタムAPIの例です:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
-<span class="linenos"> 2</span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">import</span> <span class="nn">json</span>
+<span class="linenos"> 2</span><span class="kn">import</span> <span class="nn">os</span>
 <span class="linenos"> 3</span>
-<span class="linenos"> 4</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.PyQt.QtCore</span><span class="w"> </span><span class="kn">import</span> <span class="n">QBuffer</span><span class="p">,</span> <span class="n">QIODevice</span><span class="p">,</span> <span class="n">QTextStream</span><span class="p">,</span> <span class="n">QRegularExpression</span>
-<span class="linenos"> 5</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.server</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+<span class="linenos"> 4</span><span class="kn">from</span> <span class="nn">qgis.PyQt.QtCore</span> <span class="kn">import</span> <span class="n">QBuffer</span><span class="p">,</span> <span class="n">QIODevice</span><span class="p">,</span> <span class="n">QTextStream</span><span class="p">,</span> <span class="n">QRegularExpression</span>
+<span class="linenos"> 5</span><span class="kn">from</span> <span class="nn">qgis.server</span> <span class="kn">import</span> <span class="p">(</span>
 <span class="linenos"> 6</span>    <span class="n">QgsServiceRegistry</span><span class="p">,</span>
 <span class="linenos"> 7</span>    <span class="n">QgsService</span><span class="p">,</span>
 <span class="linenos"> 8</span>    <span class="n">QgsServerFilter</span><span class="p">,</span>
@@ -725,7 +725,7 @@
 <span class="linenos">11</span>    <span class="n">QgsServerOgcApiHandler</span><span class="p">,</span>
 <span class="linenos">12</span><span class="p">)</span>
 <span class="linenos">13</span>
-<span class="linenos">14</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.core</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+<span class="linenos">14</span><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="p">(</span>
 <span class="linenos">15</span>    <span class="n">QgsMessageLog</span><span class="p">,</span>
 <span class="linenos">16</span>    <span class="n">QgsJsonExporter</span><span class="p">,</span>
 <span class="linenos">17</span>    <span class="n">QgsCircle</span><span class="p">,</span>
@@ -735,31 +735,31 @@
 <span class="linenos">21</span><span class="p">)</span>
 <span class="linenos">22</span>
 <span class="linenos">23</span>
-<span class="linenos">24</span><span class="k">class</span><span class="w"> </span><span class="nc">CustomApiHandler</span><span class="p">(</span><span class="n">QgsServerOgcApiHandler</span><span class="p">):</span>
+<span class="linenos">24</span><span class="k">class</span> <span class="nc">CustomApiHandler</span><span class="p">(</span><span class="n">QgsServerOgcApiHandler</span><span class="p">):</span>
 <span class="linenos">25</span>
-<span class="linenos">26</span>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">26</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos">27</span>        <span class="nb">super</span><span class="p">(</span><span class="n">CustomApiHandler</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
 <span class="linenos">28</span>        <span class="bp">self</span><span class="o">.</span><span class="n">setContentTypes</span><span class="p">([</span><span class="n">QgsServerOgcApi</span><span class="o">.</span><span class="n">HTML</span><span class="p">,</span> <span class="n">QgsServerOgcApi</span><span class="o">.</span><span class="n">JSON</span><span class="p">])</span>
 <span class="linenos">29</span>
-<span class="linenos">30</span>    <span class="k">def</span><span class="w"> </span><span class="nf">path</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">30</span>    <span class="k">def</span> <span class="nf">path</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos">31</span>        <span class="k">return</span> <span class="n">QRegularExpression</span><span class="p">(</span><span class="s2">&quot;/customapi&quot;</span><span class="p">)</span>
 <span class="linenos">32</span>
-<span class="linenos">33</span>    <span class="k">def</span><span class="w"> </span><span class="nf">operationId</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">33</span>    <span class="k">def</span> <span class="nf">operationId</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos">34</span>        <span class="k">return</span> <span class="s2">&quot;CustomApiXYCircle&quot;</span>
 <span class="linenos">35</span>
-<span class="linenos">36</span>    <span class="k">def</span><span class="w"> </span><span class="nf">summary</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">36</span>    <span class="k">def</span> <span class="nf">summary</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos">37</span>        <span class="k">return</span> <span class="s2">&quot;Creates a circle around a point&quot;</span>
 <span class="linenos">38</span>
-<span class="linenos">39</span>    <span class="k">def</span><span class="w"> </span><span class="nf">description</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">39</span>    <span class="k">def</span> <span class="nf">description</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos">40</span>        <span class="k">return</span> <span class="s2">&quot;Creates a circle around a point&quot;</span>
 <span class="linenos">41</span>
-<span class="linenos">42</span>    <span class="k">def</span><span class="w"> </span><span class="nf">linkTitle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">42</span>    <span class="k">def</span> <span class="nf">linkTitle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos">43</span>        <span class="k">return</span> <span class="s2">&quot;Custom Api XY Circle&quot;</span>
 <span class="linenos">44</span>
-<span class="linenos">45</span>    <span class="k">def</span><span class="w"> </span><span class="nf">linkType</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">45</span>    <span class="k">def</span> <span class="nf">linkType</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos">46</span>        <span class="k">return</span> <span class="n">QgsServerOgcApi</span><span class="o">.</span><span class="n">data</span>
 <span class="linenos">47</span>
-<span class="linenos">48</span>    <span class="k">def</span><span class="w"> </span><span class="nf">handleRequest</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+<span class="linenos">48</span>    <span class="k">def</span> <span class="nf">handleRequest</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
 <span class="linenos">49</span><span class="w">        </span><span class="sd">&quot;&quot;&quot;Simple Circle&quot;&quot;&quot;</span>
 <span class="linenos">50</span>
 <span class="linenos">51</span>        <span class="n">values</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">values</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
@@ -772,20 +772,20 @@
 <span class="linenos">58</span>        <span class="n">exporter</span> <span class="o">=</span> <span class="n">QgsJsonExporter</span><span class="p">()</span>
 <span class="linenos">59</span>        <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">exporter</span><span class="o">.</span><span class="n">exportFeature</span><span class="p">(</span><span class="n">f</span><span class="p">)),</span> <span class="n">context</span><span class="p">)</span>
 <span class="linenos">60</span>
-<span class="linenos">61</span>    <span class="k">def</span><span class="w"> </span><span class="nf">templatePath</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+<span class="linenos">61</span>    <span class="k">def</span> <span class="nf">templatePath</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
 <span class="linenos">62</span>        <span class="c1"># The template path is used to serve HTML content</span>
 <span class="linenos">63</span>        <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="vm">__file__</span><span class="p">),</span> <span class="s1">&#39;circle.html&#39;</span><span class="p">)</span>
 <span class="linenos">64</span>
-<span class="linenos">65</span>    <span class="k">def</span><span class="w"> </span><span class="nf">parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+<span class="linenos">65</span>    <span class="k">def</span> <span class="nf">parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
 <span class="linenos">66</span>        <span class="k">return</span> <span class="p">[</span><span class="n">QgsServerQueryStringParameter</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">QgsServerQueryStringParameter</span><span class="o">.</span><span class="n">Type</span><span class="o">.</span><span class="n">Double</span><span class="p">,</span> <span class="s1">&#39;X coordinate&#39;</span><span class="p">),</span>
 <span class="linenos">67</span>                <span class="n">QgsServerQueryStringParameter</span><span class="p">(</span>
 <span class="linenos">68</span>                    <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">QgsServerQueryStringParameter</span><span class="o">.</span><span class="n">Type</span><span class="o">.</span><span class="n">Double</span><span class="p">,</span> <span class="s1">&#39;Y coordinate&#39;</span><span class="p">),</span>
 <span class="linenos">69</span>                <span class="n">QgsServerQueryStringParameter</span><span class="p">(</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="n">QgsServerQueryStringParameter</span><span class="o">.</span><span class="n">Type</span><span class="o">.</span><span class="n">Double</span><span class="p">,</span> <span class="s1">&#39;radius&#39;</span><span class="p">)]</span>
 <span class="linenos">70</span>
 <span class="linenos">71</span>
-<span class="linenos">72</span><span class="k">class</span><span class="w"> </span><span class="nc">CustomApi</span><span class="p">():</span>
+<span class="linenos">72</span><span class="k">class</span> <span class="nc">CustomApi</span><span class="p">():</span>
 <span class="linenos">73</span>
-<span class="linenos">74</span>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">serverIface</span><span class="p">):</span>
+<span class="linenos">74</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">serverIface</span><span class="p">):</span>
 <span class="linenos">75</span>        <span class="n">api</span> <span class="o">=</span> <span class="n">QgsServerOgcApi</span><span class="p">(</span><span class="n">serverIface</span><span class="p">,</span> <span class="s1">&#39;/customapi&#39;</span><span class="p">,</span>
 <span class="linenos">76</span>                            <span class="s1">&#39;custom api&#39;</span><span class="p">,</span> <span class="s1">&#39;a custom api&#39;</span><span class="p">,</span> <span class="s1">&#39;1.1&#39;</span><span class="p">)</span>
 <span class="linenos">77</span>        <span class="n">handler</span> <span class="o">=</span> <span class="n">CustomApiHandler</span><span class="p">()</span>
@@ -809,7 +809,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 11, 16:21 +0900
+      <span class="lastupdated">最終更新: 2025 7月 17, 09:46 +0900
       </span></p>
   </div>
 
