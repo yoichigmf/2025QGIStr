@@ -511,7 +511,7 @@ This section describes how to work with these specifics.</p>
 </pre></div>
 </div>
 <p>このコマンドは、シェープファイル形式のデータセット <code class="file docutils literal notranslate"><span class="pre">alaska.shp</span></code> をホストサーバー <em>myhost.de</em> 上のPostGISデータベース <em>postgis</em> にユーザー <em>postgres</em> 、パスワード <em>topsecret</em> を使用してインポートします。</p>
-<p>GDALはPostGISをサポートするためにPostgreSQLと一緒にビルドされなければならないことに注意してください。(<a href="#id1"><span class="problematic" id="id2">|</span></a>nix|で)入力することでこれを確認できます:</p>
+<p>GDALはPostGISをサポートするためにPostgreSQLと一緒にビルドされなければならないことに注意してください。タイプすることで確認できます (in <a class="reference internal" href="../../../_images/nix.png"><img alt="nix" src="../../../_images/nix.png" style="width: 1em;" /></a>):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ogrinfo</span> <span class="o">--</span><span class="n">formats</span> <span class="o">|</span> <span class="n">grep</span> <span class="o">-</span><span class="n">i</span> <span class="n">post</span>
 </pre></div>
 </div>
@@ -664,7 +664,7 @@ and a -180..180° representation of a 0..360° data.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 19, 14:31 +0900
+      <span class="lastupdated">最終更新: 2025 7月 19, 18:50 +0900
       </span></p>
   </div>
 
