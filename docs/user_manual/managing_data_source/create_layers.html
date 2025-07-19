@@ -5,7 +5,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>11.2. レイヤを作成する &mdash; QGIS Documentation  ドキュメント</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/qgis_docs.css?v=01847ad1" />
       <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
       <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
@@ -20,7 +20,7 @@
         <script src="../../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../../../_static/documentation_options.js?v=c033477b"></script>
-        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/doctools.js?v=9a2dae69"></script>
         <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
         <script src="../../../_static/copybutton.js?v=f281be69"></script>
@@ -28,7 +28,7 @@
         <script>let toggleHintHide = 'Click to hide';</script>
         <script>let toggleOpenOnPrint = 'true';</script>
         <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
-        <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
+        <script src="../../../_static/translations.js?v=91613774"></script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/js/theme.js"></script>
@@ -176,7 +176,7 @@
 	<ul>
 		
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/qgis/QGIS-Documentation/blob/master/docs/user_manual/managing_data_source/create_layers.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/qgis/QGIS-Documentation/edit/master/docs/user_manual/managing_data_source/create_layers.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
 	</ul>
 
@@ -202,7 +202,7 @@
   <blockquote>
 <div><div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 100.00% 翻訳されています。</p>
+<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 97.30% 翻訳されています。</p>
 </div>
 </div></blockquote>
 <section id="creating-layers">
@@ -273,6 +273,8 @@
 <li><p>選択したデータ型にもよりますが、値の <span class="guilabel">最大長さ</span> を入力します。</p></li>
 <li><p><a class="reference internal" href="../../../_images/mActionNewAttribute.png"><img alt="newAttribute" src="../../../_images/mActionNewAttribute.png" style="width: 1.5em;" /></a> <span class="guilabel">属性リストに追加</span> ボタンをクリックします</p></li>
 <li><p>追加する必要のある各属性について、上記の手順を繰り返します</p></li>
+<li><p>You can later change the fields order using the <a class="reference internal" href="../../../_images/mActionArrowUp.png"><img alt="arrowUp" src="../../../_images/mActionArrowUp.png" style="width: 1.5em;" /></a> <sup>Move Up</sup>
+and <a class="reference internal" href="../../../_images/mActionArrowDown.png"><img alt="arrowDown" src="../../../_images/mActionArrowDown.png" style="width: 1.5em;" /></a> <sup>Move Down</sup> buttons</p></li>
 <li><p>属性の設定に満足したら、 <span class="guilabel">OK</span> をクリックします。QGISが新しいレイヤを凡例に追加し、 <a class="reference internal" href="../working_with_vector/editing_geometry_attributes.html#sec-edit-existing-layer"><span class="std std-ref">既存レイヤのデジタイズ</span></a> セクションで説明するように編集することができます。</p></li>
 </ol>
 <p>デフォルトでは、GeoPackageレイヤを作成する際にQGISは <code class="docutils literal notranslate"><span class="pre">fid</span></code> という名前の <span class="guilabel">地物IDカラム</span> を作成します。このカラムはレイヤの主キーとして機能します。この名前は変更することが可能です。ジオメトリフィールドがある場合には <code class="docutils literal notranslate"><span class="pre">geometry</span></code> という名前になり、これに対して <span class="guilabel">空間インデックスを作成する</span> かを選択することができます。 これらのオプションは <span class="guilabel">高度なオプション</span> の下にあり、この他に <span class="guilabel">レイヤ識別子</span> （人間が読める短いレイヤ名）と <span class="guilabel">レイヤの説明</span> フィールドがあります。</p>
@@ -297,10 +299,14 @@
 <p>作成するレイヤにフィールドを追加するには、</p>
 <ol class="arabic simple">
 <li><p>フィールドの <span class="guilabel">名前</span> を入力します</p></li>
-<li><p>データの <span class="guilabel">型</span> を選択します。 <span class="guilabel">小数点付き数値</span> 、 <span class="guilabel">整数値</span> 、 <span class="guilabel">テキストデータ</span> 、 <span class="guilabel">日付</span> 属性のみをサポートしています。</p></li>
+<li><p>Select the data <span class="guilabel">Type</span>. Only <span class="guilabel">Decimal number</span>,
+<span class="guilabel">Whole number</span>, <span class="guilabel">Text data</span>, <span class="guilabel">Date</span>, and
+<span class="guilabel">Boolean</span> data types attributes are supported.</p></li>
 <li><p>選択したデータ形式に応じて、 <span class="guilabel">長さ</span> と <span class="guilabel">精度</span> を入力します。</p></li>
 <li><p><a class="reference internal" href="../../../_images/mActionNewAttribute.png"><img alt="newAttribute" src="../../../_images/mActionNewAttribute.png" style="width: 1.5em;" /></a> <span class="guilabel">属性リストに追加</span> ボタンをクリックします</p></li>
 <li><p>追加する必要のある各属性について、上記の手順を繰り返します</p></li>
+<li><p>You can later change the fields order using the <a class="reference internal" href="../../../_images/mActionArrowUp.png"><img alt="arrowUp" src="../../../_images/mActionArrowUp.png" style="width: 1.5em;" /></a> <sup>Move Up</sup>
+and <a class="reference internal" href="../../../_images/mActionArrowDown.png"><img alt="arrowDown" src="../../../_images/mActionArrowDown.png" style="width: 1.5em;" /></a> <sup>Move Down</sup> buttons</p></li>
 <li><p>属性の設定に満足したら、 <span class="guilabel">OK</span> をクリックします。QGISが新しいレイヤを凡例に追加し、 <a class="reference internal" href="../working_with_vector/editing_geometry_attributes.html#sec-edit-existing-layer"><span class="std std-ref">既存レイヤのデジタイズ</span></a> セクションで説明するように編集することができます。</p></li>
 </ol>
 <p>デフォルトでは、最初に整数値タイプの <code class="docutils literal notranslate"><span class="pre">id</span></code> カラムが追加されますが、これは削除できます。</p>
@@ -326,6 +332,8 @@
 <li><p><span class="guilabel">データ型</span> を選択します。サポートしている型は、 <span class="guilabel">テキストデータ</span> 、 <span class="guilabel">整数値</span> 、 <span class="guilabel">小数点付き数値</span> 、 <span class="guilabel">日付</span> および <span class="guilabel">日付時刻</span> です。</p></li>
 <li><p><a class="reference internal" href="../../../_images/mActionNewAttribute.png"><img alt="newAttribute" src="../../../_images/mActionNewAttribute.png" style="width: 1.5em;" /></a> <span class="guilabel">属性リストに追加</span> ボタンをクリックします</p></li>
 <li><p>追加する必要のある各属性について、上記の手順を繰り返します</p></li>
+<li><p>You can later change the fields order using the <a class="reference internal" href="../../../_images/mActionArrowUp.png"><img alt="arrowUp" src="../../../_images/mActionArrowUp.png" style="width: 1.5em;" /></a> <sup>Move Up</sup>
+and <a class="reference internal" href="../../../_images/mActionArrowDown.png"><img alt="arrowDown" src="../../../_images/mActionArrowDown.png" style="width: 1.5em;" /></a> <sup>Move Down</sup> buttons</p></li>
 <li><p>属性の設定に満足したら、 <span class="guilabel">OK</span> をクリックします。QGISが新しいレイヤを凡例に追加し、 <a class="reference internal" href="../working_with_vector/editing_geometry_attributes.html#sec-edit-existing-layer"><span class="std std-ref">既存レイヤのデジタイズ</span></a> セクションで説明するように編集することができます。</p></li>
 </ol>
 <p>必要に応じて、 <a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">詳細オプション</span> セクション下にある <a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">自動インクリメントするプライマリキーを作成する</span> を選択することができます。また、 <span class="guilabel">ジオメトリカラム</span> の名前（デフォルトは <code class="docutils literal notranslate"><span class="pre">geometry</span></code> ）を変えることもできます。</p>
@@ -393,6 +401,8 @@
 <li><p>選択したデータ型に応じて、 <span class="guilabel">長さ</span> や <span class="guilabel">精度</span> を入力します。</p></li>
 <li><p><a class="reference internal" href="../../../_images/mActionNewAttribute.png"><img alt="newAttribute" src="../../../_images/mActionNewAttribute.png" style="width: 1.5em;" /></a> <span class="guilabel">属性リストに追加</span> ボタンをクリックします</p></li>
 <li><p>追加する必要のある各フィールドについて、上記の手順を繰り返します</p></li>
+<li><p>You can later change the fields order using the <a class="reference internal" href="../../../_images/mActionArrowUp.png"><img alt="arrowUp" src="../../../_images/mActionArrowUp.png" style="width: 1.5em;" /></a> <sup>Move Up</sup>
+and <a class="reference internal" href="../../../_images/mActionArrowDown.png"><img alt="arrowDown" src="../../../_images/mActionArrowDown.png" style="width: 1.5em;" /></a> <sup>Move Down</sup> buttons</p></li>
 </ol>
 </li>
 <li><p>設定に満足したら、 <span class="guilabel">OK</span> をクリックします。QGISは新しいレイヤを <span class="guilabel">レイヤ</span> パネルに追加し、 <a class="reference internal" href="../working_with_vector/editing_geometry_attributes.html#sec-edit-existing-layer"><span class="std std-ref">既存レイヤのデジタイズ</span></a> のセクションで説明するように編集することができます。</p></li>
@@ -703,7 +713,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 17, 21:02 +0900
+      <span class="lastupdated">最終更新: 2025 7月 19, 14:31 +0900
       </span></p>
   </div>
 
@@ -767,7 +777,7 @@ with the md5 value of "github#qgis/QGIS-Documentation#release_3.28#locale/en/LC_
         
           <dd><a href="https://docs.qgis.org/3.40/ru/docs/user_manual/managing_data_source/create_layers.html">ru</a></dd>
         
-          <dd><a href="https://docs.qgis.org/3.40/zh_Hans/docs/user_manual/managing_data_source/create_layers.html">zh_Hans</a></dd>
+          <dd><a href="https://docs.qgis.org/3.40/zh-Hans/docs/user_manual/managing_data_source/create_layers.html">zh-Hans</a></dd>
         
       </dl>
 

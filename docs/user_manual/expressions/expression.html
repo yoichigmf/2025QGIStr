@@ -5,7 +5,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>9.1. 式 &mdash; QGIS Documentation  ドキュメント</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/qgis_docs.css?v=01847ad1" />
       <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
       <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
@@ -20,7 +20,7 @@
         <script src="../../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../../../_static/documentation_options.js?v=c033477b"></script>
-        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/doctools.js?v=9a2dae69"></script>
         <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
         <script src="../../../_static/copybutton.js?v=f281be69"></script>
@@ -28,7 +28,7 @@
         <script>let toggleHintHide = 'Click to hide';</script>
         <script>let toggleOpenOnPrint = 'true';</script>
         <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
-        <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
+        <script src="../../../_static/translations.js?v=91613774"></script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/js/theme.js"></script>
@@ -171,7 +171,7 @@
 	<ul>
 		
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/qgis/QGIS-Documentation/blob/master/docs/user_manual/expressions/expression.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/qgis/QGIS-Documentation/edit/master/docs/user_manual/expressions/expression.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
 	</ul>
 
@@ -197,7 +197,7 @@
   <blockquote>
 <div><div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 91.34% 翻訳されています。</p>
+<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 100.00% 翻訳されています。</p>
 </div>
 </div></blockquote>
 <section id="expressions">
@@ -343,7 +343,7 @@
 </div>
 <p>以下のようにしてはいけません:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">attribute</span><span class="p">(</span> <span class="nd">@atlas_feature</span><span class="p">,</span> <span class="s2">&quot;height&quot;</span> <span class="p">)</span> <span class="o">--</span> <span class="n">fetches</span> <span class="n">the</span> <span class="n">value</span> <span class="n">of</span> <span class="n">the</span> <span class="n">attribute</span> <span class="n">named</span> <span class="s2">&quot;height&quot;</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="mi">100</span><span class="p">),</span> <span class="ow">and</span> <span class="n">use</span> <span class="n">that</span> <span class="n">value</span> <span class="k">as</span> <span class="n">a</span> <span class="n">field</span>
-                                      <span class="o">--</span> <span class="kn">from</span> <span class="nn">which</span> <span class="n">to</span> <span class="k">return</span> <span class="n">the</span> <span class="n">atlas</span> <span class="n">feature</span> <span class="n">value</span><span class="o">.</span> <span class="n">Probably</span> <span class="n">wrong</span> <span class="k">as</span> <span class="n">a</span> <span class="n">field</span> <span class="n">named</span> <span class="s2">&quot;100&quot;</span> <span class="n">may</span> <span class="ow">not</span> <span class="n">exist</span><span class="o">.</span>
+                                      <span class="o">--</span> <span class="kn">from</span><span class="w"> </span><span class="nn">which</span> <span class="n">to</span> <span class="k">return</span> <span class="n">the</span> <span class="n">atlas</span> <span class="n">feature</span> <span class="n">value</span><span class="o">.</span> <span class="n">Probably</span> <span class="n">wrong</span> <span class="k">as</span> <span class="n">a</span> <span class="n">field</span> <span class="n">named</span> <span class="s2">&quot;100&quot;</span> <span class="n">may</span> <span class="ow">not</span> <span class="n">exist</span><span class="o">.</span>
 </pre></div>
 </div>
 </div>
@@ -452,34 +452,20 @@
 <p>新しい関数を作成するには次のようにします。</p>
 <ol class="arabic">
 <li><p><a class="reference internal" href="../../../_images/symbologyAdd.png"><img alt="symbologyAdd" src="../../../_images/symbologyAdd.png" style="width: 1.5em;" /></a> <sup>新規ファイル</sup> ボタンをクリックします。</p></li>
-<li><p>Select where to store the new function. You can choose to save it either in a
-<span class="guilabel">Function file</span> or in <span class="guilabel">Project functions</span>.</p>
+<li><p>新しい関数を保存する場所を選択します。保存先は、<span class="guilabel">関数ファイル</span> または <span class="guilabel">プロジェクト関数</span> から選択できます。</p>
 <ul>
-<li><p>If you select <span class="guilabel">Function file</span>, you need to enter a name for the Python <code class="file docutils literal notranslate"><span class="pre">.py</span></code> file,
-which is based on a QGIS template file and is stored in the <code class="file docutils literal notranslate"><span class="pre">/python/expressions</span></code> folder
-under the active <a class="reference internal" href="../introduction/qgis_configuration.html#user-profiles"><span class="std std-ref">user profile</span></a> directory,
-thus available for all projects you may open with that profile.</p>
-<p>Custom Python functions stored as Function files are auto loaded
-whenever you start a new project under the user profile.
-Be aware that for sharing such Python functions,
-you need to share the <code class="file docutils literal notranslate"><span class="pre">.py</span></code> file in the <code class="file docutils literal notranslate"><span class="pre">/python/expressions</span></code> folder.</p>
+<li><p><span class="guilabel">関数ファイル</span> を選択した場合、QGISのテンプレートファイルを基にしたPython <code class="file docutils literal notranslate"><span class="pre">.py</span></code> ファイルの名前を入力する必要があります。このファイルは、アクティブな <a class="reference internal" href="../introduction/qgis_configuration.html#user-profiles"><span class="std std-ref">ユーザープロファイル</span></a> ディレクトリ下の <code class="file docutils literal notranslate"><span class="pre">/python/expressions</span></code> フォルダーに保存され、そのプロファイルで開く全てのプロジェクトで利用可能になります。</p>
+<p>関数ファイルとして保存されたカスタムPython関数は、ユーザープロファイルの下で新しいプロジェクトを開始する度に自動的に読み込まれます。このようなPython関数を共有するには、<code class="file docutils literal notranslate"><span class="pre">/python/expressions</span></code> フォルダー内にあるその <code class="file docutils literal notranslate"><span class="pre">.py</span></code> ファイルを共有する必要があることに注意してください。</p>
 </li>
-<li><p>If you select <span class="guilabel">Project functions</span>, the new function is stored in the project file
-and only available for that project.</p>
-<p>Custom Python functions stored as Project functions can be easily shared
-by sharing the project file where they were saved.
-When opening a project with project functions, QGIS can load or ignore them
-depending on whether <a class="reference internal" href="../introduction/qgis_configuration.html#load-project-code"><span class="std std-ref">embedded Python code is enabled</span></a>.</p>
+<li><p><span class="guilabel">プロジェクト関数</span> を選択した場合、その新しい関数はそのプロジェクトファイルに保存され、そのプロジェクトでのみ利用可能になります。</p>
+<p>プロジェクト関数として保存されたカスタムPython関数は、それらが保存されたプロジェクトファイルを共有することで簡単に共有できます。プロジェクト関数を含むプロジェクトを開く際、QGIS は <a class="reference internal" href="../introduction/qgis_configuration.html#load-project-code"><span class="std std-ref">埋め込まれたPythonコードを有効にする</span></a> かどうかに応じて、それらを読み込むか無視するかを選択できます。</p>
 </li>
 </ul>
-<p>A new item is added in the left panel of the <span class="guilabel">Function Editor</span> tab.</p>
+<p><span class="guilabel">関数エディタ</span> タブの左パネルに新しい項目が追加されました。</p>
 </li>
-<li><p>The right panel displays the content of the file: a python script template.</p></li>
-<li><p>Uncomment the code block and start editing it according to your needs.
-You can rely on code autocompletion, code formatting and typing helpers,
-as defined in <a class="reference internal" href="../introduction/qgis_configuration.html#console-options"><span class="std std-ref">Python設定</span></a>.</p>
-<p>You will find in the <span class="guilabel">Help</span> widget general information
-for setting the &#64;qgsfunction decorator.</p>
+<li><p>右側のパネルには、ファイルの内容: Python スクリプトのテンプレート、が表示されます。</p></li>
+<li><p>コードブロックのコメントを解除し、必要に応じて編集を開始します。<a class="reference internal" href="../introduction/qgis_configuration.html#console-options"><span class="std std-ref">Python設定</span></a> で定義されているコード自動補完機能、コードフォーマット、タイピングヘルパーを利用することができます。</p>
+<p><span class="guilabel">ヘルプ</span> ウィジェットには、&#64;qgsfunction デコレータの設定に関する一般的な情報が記載されています。</p>
 </li>
 <li><p><a class="reference internal" href="../../../_images/mActionStart.png"><img alt="start" src="../../../_images/mActionStart.png" style="width: 1.5em;" /></a> <span class="guilabel">関数の保存と読み込み</span> ボタンをクリックします。あなたの書いた関数が <span class="guilabel">式</span> タブの関数ツリーの中に追加されます。デフォルトでは <code class="docutils literal notranslate"><span class="pre">Custom</span></code> グループの中に追加されます。</p></li>
 <li><p>新しい関数を使いましょう。</p></li>
@@ -487,25 +473,21 @@ for setting the &#64;qgsfunction decorator.</p>
 </ol>
 <p>カスタム関数を削除するには：</p>
 <ol class="arabic simple">
-<li><p><span class="guilabel">関数エディタ</span> タブを有効にします。</p></li>
+<li><p><span class="guilabel">関数エディタ</span> タブを有効にします</p></li>
 <li><p>リストから削除したい関数を選択します。</p></li>
-<li><p>Press the <a class="reference internal" href="../../../_images/symbologyRemove.png"><img alt="symbologyRemove" src="../../../_images/symbologyRemove.png" style="width: 1.5em;" /></a> <sup>Remove selected function</sup>. The function is
-removed from the list and, depending on the storage, the corresponding <code class="docutils literal notranslate"><span class="pre">.py</span></code>
-file is deleted from the user profile folder, or the Python functions are removed
-from the project file.</p></li>
+<li><p><a class="reference internal" href="../../../_images/symbologyRemove.png"><img alt="symbologyRemove" src="../../../_images/symbologyRemove.png" style="width: 1.5em;" /></a> <sup>選択した機能を削除</sup> をクリックします。関数はリストから削除され、ストレージの種類に応じて、対応する <code class="docutils literal notranslate"><span class="pre">.py</span></code> ファイルがユーザープロファイルフォルダから削除されるか、そのPython関数がプロジェクトファイルから削除されます。</p></li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
-<p>When a project file with Project functions is closed, the corresponding Project
-functions are unloaded and are no longer available in the QGIS session.</p>
+<p>プロジェクト関数のあるプロジェクトファイルを閉じると、対応するプロジェクト関数はアンロードされ、QGIS セッション内で利用できなくなります。</p>
 </div>
 <p><strong>例</strong></p>
 <p>これは、2つの値を操作する独自の <code class="docutils literal notranslate"><span class="pre">my_sum</span></code> 関数を作成する簡単な例です。</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">qgis.gui</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.core</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qgis.gui</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="nd">@qgsfunction</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="n">group</span><span class="o">=</span><span class="s1">&#39;Custom&#39;</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">my_sum</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">,</span> <span class="n">feature</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">my_sum</span><span class="p">(</span><span class="n">value1</span><span class="p">,</span> <span class="n">value2</span><span class="p">,</span> <span class="n">feature</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Calculates the sum of the two parameters value1 and value2.</span>
 <span class="sd">    &lt;h2&gt;Example usage:&lt;/h2&gt;</span>
@@ -555,7 +537,7 @@ functions are unloaded and are no longer available in the QGIS session.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 17, 21:02 +0900
+      <span class="lastupdated">最終更新: 2025 7月 19, 14:31 +0900
       </span></p>
   </div>
 
@@ -619,7 +601,7 @@ with the md5 value of "github#qgis/QGIS-Documentation#release_3.28#locale/en/LC_
         
           <dd><a href="https://docs.qgis.org/3.40/ru/docs/user_manual/expressions/expression.html">ru</a></dd>
         
-          <dd><a href="https://docs.qgis.org/3.40/zh_Hans/docs/user_manual/expressions/expression.html">zh_Hans</a></dd>
+          <dd><a href="https://docs.qgis.org/3.40/zh-Hans/docs/user_manual/expressions/expression.html">zh-Hans</a></dd>
         
       </dl>
 

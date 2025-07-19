@@ -5,7 +5,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>16.1. Python プラグインを構成する &mdash; QGIS Documentation  ドキュメント</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/qgis_docs.css?v=01847ad1" />
       <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
       <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
@@ -20,7 +20,7 @@
         <script src="../../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../../../_static/documentation_options.js?v=c033477b"></script>
-        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/doctools.js?v=9a2dae69"></script>
         <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
         <script src="../../../_static/copybutton.js?v=f281be69"></script>
@@ -28,7 +28,7 @@
         <script>let toggleHintHide = 'Click to hide';</script>
         <script>let toggleOpenOnPrint = 'true';</script>
         <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
-        <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
+        <script src="../../../_static/translations.js?v=91613774"></script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/js/theme.js"></script>
@@ -171,7 +171,7 @@
 	<ul>
 		
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/qgis/QGIS-Documentation/blob/master/docs/pyqgis_developer_cookbook/plugins/plugins.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/qgis/QGIS-Documentation/edit/master/docs/pyqgis_developer_cookbook/plugins/plugins.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
 	</ul>
 
@@ -443,7 +443,7 @@ with no file extension in the filename.</p></li>
 <span class="p">;</span> <span class="p">(</span><span class="ow">or</span> <span class="n">upgraded</span><span class="p">)</span> <span class="n">can</span> <span class="n">be</span> <span class="n">specified</span><span class="o">.</span>
 <span class="p">;</span> <span class="n">The</span> <span class="n">example</span> <span class="n">below</span> <span class="n">will</span> <span class="k">try</span> <span class="n">to</span> <span class="n">install</span> <span class="p">(</span><span class="ow">or</span> <span class="n">upgrade</span><span class="p">)</span> <span class="s2">&quot;MyOtherPlugin&quot;</span> <span class="n">version</span> <span class="mf">1.12</span>
 <span class="p">;</span> <span class="ow">and</span> <span class="nb">any</span> <span class="n">version</span> <span class="n">of</span> <span class="s2">&quot;YetAnotherPlugin&quot;</span><span class="o">.</span>
-<span class="p">;</span> <span class="n">Both</span> <span class="s2">&quot;MyOtherPlugin&quot;</span> <span class="ow">and</span> <span class="s2">&quot;YetAnotherPlugin&quot;</span> <span class="n">names</span> <span class="n">come</span> <span class="kn">from</span> <span class="nn">their</span> <span class="n">own</span> <span class="n">metadata</span><span class="s1">&#39;s</span>
+<span class="p">;</span> <span class="n">Both</span> <span class="s2">&quot;MyOtherPlugin&quot;</span> <span class="ow">and</span> <span class="s2">&quot;YetAnotherPlugin&quot;</span> <span class="n">names</span> <span class="n">come</span> <span class="kn">from</span><span class="w"> </span><span class="nn">their</span> <span class="n">own</span> <span class="n">metadata</span><span class="s1">&#39;s</span>
 <span class="p">;</span> <span class="n">name</span> <span class="n">field</span>
 <span class="n">plugin_dependencies</span><span class="o">=</span><span class="n">MyOtherPlugin</span><span class="o">==</span><span class="mf">1.12</span><span class="p">,</span><span class="n">YetAnotherPlugin</span>
 </pre></div>
@@ -452,8 +452,8 @@ with no file extension in the filename.</p></li>
 <section id="init-py">
 <span id="index-4"></span><h3><a class="toc-backref" href="#id6" role="doc-backlink"><span class="section-number">16.1.2.2. </span>__init__.py</a><a class="headerlink" href="#init-py" title="Link to this heading"></a></h3>
 <p>このファイルはPythonのインポートシステムで必要とされます。同時にQGISはこのファイルの <code class="xref py py-func docutils literal notranslate"><span class="pre">classFactory()</span></code> 関数を必要とします。この関数はプラグインがQGISに読み込まれる時に呼ばれます。この関数は <code class="xref py py-class docutils literal notranslate"><span class="pre">QgisInterface</span> <span class="pre">`</span> <span class="pre">のインスタンスへの参照を受け取り、</span> <span class="pre">:file:`mainplugin.py</span></code> ファイルのあなたのプラグインオブジェクトを返さなければなりません（ここでの事例では <code class="docutils literal notranslate"><span class="pre">TestPlugin</span></code> がそれに当たります。以下を見てください）。 <code class="file docutils literal notranslate"><span class="pre">__init__.py</span></code> は次のようにならなければなりません。</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">classFactory</span><span class="p">(</span><span class="n">iface</span><span class="p">):</span>
-  <span class="kn">from</span> <span class="nn">.mainPlugin</span> <span class="kn">import</span> <span class="n">TestPlugin</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">classFactory</span><span class="p">(</span><span class="n">iface</span><span class="p">):</span>
+  <span class="kn">from</span><span class="w"> </span><span class="nn">.mainPlugin</span><span class="w"> </span><span class="kn">import</span> <span class="n">TestPlugin</span>
   <span class="k">return</span> <span class="n">TestPlugin</span><span class="p">(</span><span class="n">iface</span><span class="p">)</span>
 
 <span class="c1"># any other initialisation needed</span>
@@ -463,19 +463,19 @@ with no file extension in the filename.</p></li>
 <section id="mainplugin-py">
 <h3><a class="toc-backref" href="#id7" role="doc-backlink"><span class="section-number">16.1.2.3. </span>mainPlugin.py</a><a class="headerlink" href="#mainplugin-py" title="Link to this heading"></a></h3>
 <p>このファイルが魔法の起こる場所です。魔法はこんな風です（例えば <code class="file docutils literal notranslate"><span class="pre">mainPlugin.py</span></code> の場合）。</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">qgis.PyQt.QtGui</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="kn">from</span> <span class="nn">qgis.PyQt.QtWidgets</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.PyQt.QtGui</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qgis.PyQt.QtWidgets</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="c1"># initialize Qt resources from file resources.py</span>
-<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">resources</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">.</span><span class="w"> </span><span class="kn">import</span> <span class="n">resources</span>
 
-<span class="k">class</span> <span class="nc">TestPlugin</span><span class="p">:</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">TestPlugin</span><span class="p">:</span>
 
-  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">iface</span><span class="p">):</span>
+  <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">iface</span><span class="p">):</span>
     <span class="c1"># save reference to the QGIS interface</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">iface</span> <span class="o">=</span> <span class="n">iface</span>
 
-  <span class="k">def</span> <span class="nf">initGui</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+  <span class="k">def</span><span class="w"> </span><span class="nf">initGui</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="c1"># create action that will start plugin configuration</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">action</span> <span class="o">=</span> <span class="n">QAction</span><span class="p">(</span><span class="n">QIcon</span><span class="p">(</span><span class="s2">&quot;testplug:icon.png&quot;</span><span class="p">),</span>
                           <span class="s2">&quot;Test plugin&quot;</span><span class="p">,</span>
@@ -493,7 +493,7 @@ with no file extension in the filename.</p></li>
     <span class="c1"># rendering is done</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">iface</span><span class="o">.</span><span class="n">mapCanvas</span><span class="p">()</span><span class="o">.</span><span class="n">renderComplete</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">renderTest</span><span class="p">)</span>
 
-  <span class="k">def</span> <span class="nf">unload</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+  <span class="k">def</span><span class="w"> </span><span class="nf">unload</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="c1"># remove the plugin menu item and icon</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">iface</span><span class="o">.</span><span class="n">removePluginMenu</span><span class="p">(</span><span class="s2">&quot;&amp;Test plugins&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">action</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">iface</span><span class="o">.</span><span class="n">removeToolBarIcon</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">action</span><span class="p">)</span>
@@ -501,11 +501,11 @@ with no file extension in the filename.</p></li>
     <span class="c1"># disconnect form signal of the canvas</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">iface</span><span class="o">.</span><span class="n">mapCanvas</span><span class="p">()</span><span class="o">.</span><span class="n">renderComplete</span><span class="o">.</span><span class="n">disconnect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">renderTest</span><span class="p">)</span>
 
-  <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+  <span class="k">def</span><span class="w"> </span><span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="c1"># create and show a configuration dialog or something similar</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;TestPlugin: run called!&quot;</span><span class="p">)</span>
 
-  <span class="k">def</span> <span class="nf">renderTest</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">painter</span><span class="p">):</span>
+  <span class="k">def</span><span class="w"> </span><span class="nf">renderTest</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">painter</span><span class="p">):</span>
     <span class="c1"># use painter for drawing to map canvas</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;TestPlugin: renderTest called!&quot;</span><span class="p">)</span>
 </pre></div>
@@ -525,7 +525,7 @@ with no file extension in the filename.</p></li>
 </ul>
 <p>いずれも <a class="reference external" href="https://qgis.org/pyqgis/3.40/gui/QgisInterface.html#qgis.gui.QgisInterface.addPluginToMenu" title="(in QGIS Python API v3.40)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">addPluginToMenu()</span></code></a> メソッドと同じ構文になっています。</p>
 <p>これらのあらかじめ定義されたメソッドのうちのひとつに、あなたのプラグインメニューを追加することは、プラグインエントリがどのように組織されているかの一貫性を保つためにも推奨されます。しかし、次の例が示すように、独自のカスタムメニューグループを直接メニューバーに追加することもできます。</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">initGui</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">initGui</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">menu</span> <span class="o">=</span> <span class="n">QMenu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">iface</span><span class="o">.</span><span class="n">mainWindow</span><span class="p">())</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">menu</span><span class="o">.</span><span class="n">setObjectName</span><span class="p">(</span><span class="s2">&quot;testMenu&quot;</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">menu</span><span class="o">.</span><span class="n">setTitle</span><span class="p">(</span><span class="s2">&quot;MyMenu&quot;</span><span class="p">)</span>
@@ -543,13 +543,13 @@ with no file extension in the filename.</p></li>
     <span class="n">menuBar</span><span class="o">.</span><span class="n">insertMenu</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">iface</span><span class="o">.</span><span class="n">firstRightStandardMenu</span><span class="p">()</span><span class="o">.</span><span class="n">menuAction</span><span class="p">(),</span>
                        <span class="bp">self</span><span class="o">.</span><span class="n">menu</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">unload</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">unload</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">menu</span><span class="o">.</span><span class="n">deleteLater</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>カスタマイズが可能になるように、<code class="xref py py-class docutils literal notranslate"><span class="pre">QAction</span></code> クラスと <code class="xref py py-class docutils literal notranslate"><span class="pre">QMenu</span></code> クラスの <code class="docutils literal notranslate"><span class="pre">objectName</span></code> にあなたのプラグインの固有名を設定するのを忘れないでください。</p>
 <p>ヘルプやアバウトのアクションはカスタムメニューに追加することもできますが、QGISのメインメニューである <span class="menuselection">ヘルプ ► プラグイン</span> メニューで利用できるようにすると便利です。これは <a class="reference external" href="https://qgis.org/pyqgis/3.40/gui/QgisInterface.html#qgis.gui.QgisInterface.pluginHelpMenu" title="(in QGIS Python API v3.40)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">pluginHelpMenu()</span></code></a> メソッドを使って行われます。</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">initGui</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">initGui</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
     <span class="bp">self</span><span class="o">.</span><span class="n">help_action</span> <span class="o">=</span> <span class="n">QAction</span><span class="p">(</span>
         <span class="n">QIcon</span><span class="p">(</span><span class="s2">&quot;testplug:icon.png&quot;</span><span class="p">),</span>
@@ -562,11 +562,11 @@ with no file extension in the filename.</p></li>
     <span class="bp">self</span><span class="o">.</span><span class="n">help_action</span><span class="o">.</span><span class="n">triggered</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">show_help</span><span class="p">)</span>
 
 <span class="nd">@staticmethod</span>
-<span class="k">def</span> <span class="nf">show_help</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">show_help</span><span class="p">():</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Open the online help. &quot;&quot;&quot;</span>
     <span class="n">QDesktopServices</span><span class="o">.</span><span class="n">openUrl</span><span class="p">(</span><span class="n">QUrl</span><span class="p">(</span><span class="s1">&#39;https://docs.qgis.org&#39;</span><span class="p">))</span>
 
-<span class="k">def</span> <span class="nf">unload</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">unload</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 
     <span class="bp">self</span><span class="o">.</span><span class="n">iface</span><span class="o">.</span><span class="n">pluginHelpMenu</span><span class="p">()</span><span class="o">.</span><span class="n">removeAction</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">help_action</span><span class="p">)</span>
     <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">help_action</span>
@@ -734,7 +734,7 @@ as well as <a class="reference external" href="https://www.transifex.com">Transi
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 17, 21:02 +0900
+      <span class="lastupdated">最終更新: 2025 7月 19, 14:31 +0900
       </span></p>
   </div>
 
@@ -798,7 +798,7 @@ with the md5 value of "github#qgis/QGIS-Documentation#release_3.28#locale/en/LC_
         
           <dd><a href="https://docs.qgis.org/3.40/ru/docs/pyqgis_developer_cookbook/plugins/plugins.html">ru</a></dd>
         
-          <dd><a href="https://docs.qgis.org/3.40/zh_Hans/docs/pyqgis_developer_cookbook/plugins/plugins.html">zh_Hans</a></dd>
+          <dd><a href="https://docs.qgis.org/3.40/zh-Hans/docs/pyqgis_developer_cookbook/plugins/plugins.html">zh-Hans</a></dd>
         
       </dl>
 

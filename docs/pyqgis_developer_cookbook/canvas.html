@@ -5,7 +5,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>9. マップキャンバスを使う &mdash; QGIS Documentation  ドキュメント</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/qgis_docs.css?v=01847ad1" />
       <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
       <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -20,7 +20,7 @@
         <script src="../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../../_static/documentation_options.js?v=c033477b"></script>
-        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/doctools.js?v=9a2dae69"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
         <script src="../../_static/copybutton.js?v=f281be69"></script>
@@ -28,7 +28,7 @@
         <script>let toggleHintHide = 'Click to hide';</script>
         <script>let toggleOpenOnPrint = 'true';</script>
         <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
-        <script src="../../_static/translations.js?v=4dbe4bdc"></script>
+        <script src="../../_static/translations.js?v=91613774"></script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/js/theme.js"></script>
@@ -167,7 +167,7 @@
 	<ul>
 		
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/qgis/QGIS-Documentation/blob/master/docs/pyqgis_developer_cookbook/canvas.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/qgis/QGIS-Documentation/edit/master/docs/pyqgis_developer_cookbook/canvas.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
 	</ul>
 
@@ -201,15 +201,15 @@
 <div class="admonition hint">
 <p class="admonition-title">ヒント</p>
 <p>pyqgisコンソールを使わない場合、このページにあるコードスニペットは次のインポートが必要です:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">qgis.PyQt.QtGui</span> <span class="kn">import</span> <span class="p">(</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.PyQt.QtGui</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
 <span class="linenos"> 2</span>    <span class="n">QColor</span><span class="p">,</span>
 <span class="linenos"> 3</span><span class="p">)</span>
 <span class="linenos"> 4</span>
-<span class="linenos"> 5</span><span class="kn">from</span> <span class="nn">qgis.PyQt.QtCore</span> <span class="kn">import</span> <span class="n">Qt</span><span class="p">,</span> <span class="n">QRectF</span>
+<span class="linenos"> 5</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.PyQt.QtCore</span><span class="w"> </span><span class="kn">import</span> <span class="n">Qt</span><span class="p">,</span> <span class="n">QRectF</span>
 <span class="linenos"> 6</span>
-<span class="linenos"> 7</span><span class="kn">from</span> <span class="nn">qgis.PyQt.QtWidgets</span> <span class="kn">import</span> <span class="n">QMenu</span>
+<span class="linenos"> 7</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.PyQt.QtWidgets</span><span class="w"> </span><span class="kn">import</span> <span class="n">QMenu</span>
 <span class="linenos"> 8</span>
-<span class="linenos"> 9</span><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="p">(</span>
+<span class="linenos"> 9</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.core</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
 <span class="linenos">10</span>    <span class="n">QgsVectorLayer</span><span class="p">,</span>
 <span class="linenos">11</span>    <span class="n">QgsPoint</span><span class="p">,</span>
 <span class="linenos">12</span>    <span class="n">QgsPointXY</span><span class="p">,</span>
@@ -219,7 +219,7 @@
 <span class="linenos">16</span>    <span class="n">QgsWkbTypes</span><span class="p">,</span>
 <span class="linenos">17</span><span class="p">)</span>
 <span class="linenos">18</span>
-<span class="linenos">19</span><span class="kn">from</span> <span class="nn">qgis.gui</span> <span class="kn">import</span> <span class="p">(</span>
+<span class="linenos">19</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.gui</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
 <span class="linenos">20</span>    <span class="n">QgsMapCanvas</span><span class="p">,</span>
 <span class="linenos">21</span>    <span class="n">QgsVertexMarker</span><span class="p">,</span>
 <span class="linenos">22</span>    <span class="n">QgsMapCanvasItem</span><span class="p">,</span>
@@ -244,7 +244,7 @@
 </ul>
 </nav>
 <p>マップキャンバスウィジェットはQGISで最も重要なウィジェットでしょう。なぜなら、重ね合う地図レイヤから構成される地図を表示し、地図やレイヤの対話処理を可能にするからです。キャンバスは常に、現在のキャンバスの範囲によって決まるマップの一部を表示します。対話処理は <strong>マップツール</strong> の使用により行われます。マップツールには:パン、ズーム、レイヤの識別、測定、ベクタ編集などがあります。他のグラフィックプログラムと同様に、常に1つのツールがアクティブで、ユーザーは利用可能なツールの間で切り替えることができます。</p>
-<p>マップキャンバスは <a class="reference external" href="https://qgis.org/pyqgis/3.40/gui">qgis.gui</a> モジュールの <a class="reference external" href="https://qgis.org/pyqgis/3.40/gui/QgsMapCanvas.html#qgis.gui.QgsMapCanvas" title="(in QGIS Python API v3.40)"><code class="xref py py-class docutils literal notranslate"><span class="pre">QgsMapCanvas</span></code></a> クラスで実装されます。この実装は、Qt Graphics Viewフレームワークをベースにしています。このフレームワークは一般的に、カスタムグラフィックアイテムが配置され、ユーザーがそれらを操作することができるサーフェスとビューを提供します。 ここでは、グラフィックシーン、ビュー、アイテムの概念を理解できるほどQtに精通していることを前提とします。もしそうでなければ、<a class="reference external" href="https://doc.qt.io/qt-5/graphicsview.html">フレームワークの概要</a> を読んでください。</p>
+<p>マップキャンバスは <a class="extlink-pyqgis reference external" href="https://qgis.org/pyqgis/3.40/gui">qgis.gui</a> モジュールの <a class="reference external" href="https://qgis.org/pyqgis/3.40/gui/QgsMapCanvas.html#qgis.gui.QgsMapCanvas" title="(in QGIS Python API v3.40)"><code class="xref py py-class docutils literal notranslate"><span class="pre">QgsMapCanvas</span></code></a> クラスで実装されます。この実装は、Qt Graphics Viewフレームワークをベースにしています。このフレームワークは一般的に、カスタムグラフィックアイテムが配置され、ユーザーがそれらを操作することができるサーフェスとビューを提供します。 ここでは、グラフィックシーン、ビュー、アイテムの概念を理解できるほどQtに精通していることを前提とします。もしそうでなければ、<a class="reference external" href="https://doc.qt.io/qt-5/graphicsview.html">フレームワークの概要</a> を読んでください。</p>
 <p>マップがパン、ズームイン/アウト（またはリフレッシュをトリガーする他のアクション）されるたびに、マップは現在の範囲内で再レンダリングされます。レイヤは画像にレンダリングされ（ <a class="reference external" href="https://qgis.org/pyqgis/3.40/core/QgsMapRendererJob.html#qgis.core.QgsMapRendererJob" title="(in QGIS Python API v3.40)"><code class="xref py py-class docutils literal notranslate"><span class="pre">QgsMapRendererJob</span></code></a> クラスを使用）、その画像はキャンバス上に表示されます。また、 <a class="reference external" href="https://qgis.org/pyqgis/3.40/gui/QgsMapCanvas.html#qgis.gui.QgsMapCanvas" title="(in QGIS Python API v3.40)"><code class="xref py py-class docutils literal notranslate"><span class="pre">QgsMapCanvas</span></code></a> クラスはレンダリングされたマップの更新を制御します。背景として機能するこのアイテムの他にも、<strong>マップキャンバスアイテム</strong> がある場合があります。</p>
 <p>典型的なマップキャンバスアイテムは、ラバーバンド（測定、ベクター編集などに使用）または頂点マーカーです。キャンバスアイテムは通常、マップツールの視覚的なフィードバックを与えるために使用されます。例えば、新しいポリゴンを作成するとき、マップツールはポリゴンの現在の形状を示すラバーバンドのキャンバスアイテムを作成します。全てのマップキャンバスアイテムは <a class="reference external" href="https://qgis.org/pyqgis/3.40/gui/QgsMapCanvasItem.html#qgis.gui.QgsMapCanvasItem" title="(in QGIS Python API v3.40)"><code class="xref py py-class docutils literal notranslate"><span class="pre">QgsMapCanvasItem</span></code></a> のサブクラスで、基本的な <code class="docutils literal notranslate"><span class="pre">QGraphicsItem</span></code> オブジェクトにさらにいくつかの機能を追加しています。</p>
 <p id="index-1">要約すると、マップキャンバスアーキテクチャは３つのコンセプトからなります:</p>
@@ -328,12 +328,12 @@
 <section id="using-map-tools-with-canvas">
 <span id="index-4"></span><h2><a class="toc-backref" href="#id4" role="doc-backlink"><span class="section-number">9.3. </span>キャンバスで地図ツールを使用する</a><a class="headerlink" href="#using-map-tools-with-canvas" title="Link to this heading"></a></h2>
 <p>以下の例では、マップキャンバスと、地図のパンニングとズームのための基本的な地図ツールを含むウィンドウを作成します。パンニングは <a class="reference external" href="https://qgis.org/pyqgis/3.40/gui/QgsMapToolPan.html#qgis.gui.QgsMapToolPan" title="(in QGIS Python API v3.40)"><code class="xref py py-class docutils literal notranslate"><span class="pre">QgsMapToolPan</span></code></a> で行い、ズームイン/ズームアウトは <a class="reference external" href="https://qgis.org/pyqgis/3.40/gui/QgsMapToolZoom.html#qgis.gui.QgsMapToolZoom" title="(in QGIS Python API v3.40)"><code class="xref py py-class docutils literal notranslate"><span class="pre">QgsMapToolZoom</span></code></a> インスタンスのペアで行います。アクションはチェック可能に設定されており、後からツールに割り当てられ、アクションのチェック済み/チェック解除状態の自動処理を可能にします -- 地図ツールがアクティブになると、そのアクションは選択されたと印が付き、前の地図ツールのアクションは選択解除されます。地図ツールは <a class="reference external" href="https://qgis.org/pyqgis/3.40/gui/QgsMapCanvas.html#qgis.gui.QgsMapCanvas.setMapTool" title="(in QGIS Python API v3.40)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setMapTool()</span></code></a> メソッドを使って起動します。</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">qgis.gui</span> <span class="kn">import</span> <span class="o">*</span>
-<span class="linenos"> 2</span><span class="kn">from</span> <span class="nn">qgis.PyQt.QtWidgets</span> <span class="kn">import</span> <span class="n">QAction</span><span class="p">,</span> <span class="n">QMainWindow</span>
-<span class="linenos"> 3</span><span class="kn">from</span> <span class="nn">qgis.PyQt.QtCore</span> <span class="kn">import</span> <span class="n">Qt</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.gui</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span class="linenos"> 2</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.PyQt.QtWidgets</span><span class="w"> </span><span class="kn">import</span> <span class="n">QAction</span><span class="p">,</span> <span class="n">QMainWindow</span>
+<span class="linenos"> 3</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.PyQt.QtCore</span><span class="w"> </span><span class="kn">import</span> <span class="n">Qt</span>
 <span class="linenos"> 4</span>
-<span class="linenos"> 5</span><span class="k">class</span> <span class="nc">MyWnd</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
-<span class="linenos"> 6</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">):</span>
+<span class="linenos"> 5</span><span class="k">class</span><span class="w"> </span><span class="nc">MyWnd</span><span class="p">(</span><span class="n">QMainWindow</span><span class="p">):</span>
+<span class="linenos"> 6</span>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layer</span><span class="p">):</span>
 <span class="linenos"> 7</span>        <span class="n">QMainWindow</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 <span class="linenos"> 8</span>
 <span class="linenos"> 9</span>        <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span> <span class="o">=</span> <span class="n">QgsMapCanvas</span><span class="p">()</span>
@@ -371,13 +371,13 @@
 <span class="linenos">41</span>
 <span class="linenos">42</span>        <span class="bp">self</span><span class="o">.</span><span class="n">pan</span><span class="p">()</span>
 <span class="linenos">43</span>
-<span class="linenos">44</span>    <span class="k">def</span> <span class="nf">zoomIn</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">44</span>    <span class="k">def</span><span class="w"> </span><span class="nf">zoomIn</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos">45</span>        <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">setMapTool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">toolZoomIn</span><span class="p">)</span>
 <span class="linenos">46</span>
-<span class="linenos">47</span>    <span class="k">def</span> <span class="nf">zoomOut</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">47</span>    <span class="k">def</span><span class="w"> </span><span class="nf">zoomOut</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos">48</span>        <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">setMapTool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">toolZoomOut</span><span class="p">)</span>
 <span class="linenos">49</span>
-<span class="linenos">50</span>    <span class="k">def</span> <span class="nf">pan</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">50</span>    <span class="k">def</span><span class="w"> </span><span class="nf">pan</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos">51</span>        <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">setMapTool</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">toolPan</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -389,7 +389,7 @@
 <section id="select-a-feature-using-qgsmaptoolidentifyfeature">
 <h3><a class="toc-backref" href="#id5" role="doc-backlink"><span class="section-number">9.3.1. </span>QgsMapToolIdentifyFeatureを使って地物を選択します</a><a class="headerlink" href="#select-a-feature-using-qgsmaptoolidentifyfeature" title="Link to this heading"></a></h3>
 <p>マップツール <a class="reference external" href="https://qgis.org/pyqgis/3.40/gui/QgsMapToolIdentifyFeature.html#qgis.gui.QgsMapToolIdentifyFeature" title="(in QGIS Python API v3.40)"><code class="xref py py-class docutils literal notranslate"><span class="pre">QgsMapToolIdentifyFeature</span></code></a> を使って、コールバック関数に送られる地物をユーザーに選択させることができます。</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">def</span> <span class="nf">callback</span><span class="p">(</span><span class="n">feature</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">def</span><span class="w"> </span><span class="nf">callback</span><span class="p">(</span><span class="n">feature</span><span class="p">):</span>
 <span class="linenos"> 2</span><span class="w">  </span><span class="sd">&quot;&quot;&quot;Code called when the feature is selected by the user&quot;&quot;&quot;</span>
 <span class="linenos"> 3</span>  <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You clicked on feature </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">feature</span><span class="o">.</span><span class="n">id</span><span class="p">()))</span>
 <span class="linenos"> 4</span>
@@ -412,7 +412,7 @@
 <p>マップキャンバスとの対話処理は、 <a class="reference external" href="https://qgis.org/pyqgis/3.40/gui/QgsMapCanvas.html#qgis.gui.QgsMapCanvas.contextMenuAboutToShow" title="(in QGIS Python API v3.40)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">contextMenuAboutToShow</span></code></a> シグナルを使って、コンテキストメニューに追加した項目からも行うことができます。</p>
 <p>次のコードは、マップキャンバス上で右クリックしたときに、デフォルトのエントリーの横に <span class="menuselection">My menu ► My Action</span> アクションを追加します。</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># a slot to populate the context menu</span>
-<span class="linenos">2</span><span class="k">def</span> <span class="nf">populateContextMenu</span><span class="p">(</span><span class="n">menu</span><span class="p">:</span> <span class="n">QMenu</span><span class="p">,</span> <span class="n">event</span><span class="p">:</span> <span class="n">QgsMapMouseEvent</span><span class="p">):</span>
+<span class="linenos">2</span><span class="k">def</span><span class="w"> </span><span class="nf">populateContextMenu</span><span class="p">(</span><span class="n">menu</span><span class="p">:</span> <span class="n">QMenu</span><span class="p">,</span> <span class="n">event</span><span class="p">:</span> <span class="n">QgsMapMouseEvent</span><span class="p">):</span>
 <span class="linenos">3</span>    <span class="n">subMenu</span> <span class="o">=</span> <span class="n">menu</span><span class="o">.</span><span class="n">addMenu</span><span class="p">(</span><span class="s1">&#39;My Menu&#39;</span><span class="p">)</span>
 <span class="linenos">4</span>    <span class="n">action</span> <span class="o">=</span> <span class="n">subMenu</span><span class="o">.</span><span class="n">addAction</span><span class="p">(</span><span class="s1">&#39;My Action&#39;</span><span class="p">)</span>
 <span class="linenos">5</span>    <span class="n">action</span><span class="o">.</span><span class="n">triggered</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="k">lambda</span> <span class="o">*</span><span class="n">args</span><span class="p">:</span>
@@ -429,8 +429,8 @@
 <p>カスタムツールを作成することで、ユーザーがキャンバス上で行ったアクションに対してカスタマイズした振る舞いを実装することができます。</p>
 <p>マップツールは <a class="reference external" href="https://qgis.org/pyqgis/3.40/gui/QgsMapTool.html#qgis.gui.QgsMapTool" title="(in QGIS Python API v3.40)"><code class="xref py py-class docutils literal notranslate"><span class="pre">QgsMapTool</span></code></a> クラスまたは派生クラスを継承し、既に見たように <a class="reference external" href="https://qgis.org/pyqgis/3.40/gui/QgsMapCanvas.html#qgis.gui.QgsMapCanvas.setMapTool" title="(in QGIS Python API v3.40)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setMapTool()</span></code></a> メソッドを用いてキャンバス上でアクティブツールとして選択しなければなりません。</p>
 <p>キャンバスをクリックしてドラッグすることで矩形範囲を定義できる地図ツールの例を次に示します。矩形が定義されると、境界座標がコンソールに表示されます。前述のラバーバンド要素を使用して、選択されている矩形が定義されていることを示します。</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span> <span class="nc">RectangleMapTool</span><span class="p">(</span><span class="n">QgsMapToolEmitPoint</span><span class="p">):</span>
-<span class="linenos"> 2</span>  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">canvas</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span><span class="w"> </span><span class="nc">RectangleMapTool</span><span class="p">(</span><span class="n">QgsMapToolEmitPoint</span><span class="p">):</span>
+<span class="linenos"> 2</span>  <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">canvas</span><span class="p">):</span>
 <span class="linenos"> 3</span>    <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span> <span class="o">=</span> <span class="n">canvas</span>
 <span class="linenos"> 4</span>    <span class="n">QgsMapToolEmitPoint</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="p">)</span>
 <span class="linenos"> 5</span>    <span class="bp">self</span><span class="o">.</span><span class="n">rubberBand</span> <span class="o">=</span> <span class="n">QgsRubberBand</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">canvas</span><span class="p">,</span> <span class="n">QgsWkbTypes</span><span class="o">.</span><span class="n">PolygonGeometry</span><span class="p">)</span>
@@ -438,18 +438,18 @@
 <span class="linenos"> 7</span>    <span class="bp">self</span><span class="o">.</span><span class="n">rubberBand</span><span class="o">.</span><span class="n">setWidth</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="linenos"> 8</span>    <span class="bp">self</span><span class="o">.</span><span class="n">reset</span><span class="p">()</span>
 <span class="linenos"> 9</span>
-<span class="linenos">10</span>  <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">10</span>  <span class="k">def</span><span class="w"> </span><span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos">11</span>    <span class="bp">self</span><span class="o">.</span><span class="n">startPoint</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">endPoint</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="linenos">12</span>    <span class="bp">self</span><span class="o">.</span><span class="n">isEmittingPoint</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="linenos">13</span>    <span class="bp">self</span><span class="o">.</span><span class="n">rubberBand</span><span class="o">.</span><span class="n">reset</span><span class="p">(</span><span class="n">QgsWkbTypes</span><span class="o">.</span><span class="n">PolygonGeometry</span><span class="p">)</span>
 <span class="linenos">14</span>
-<span class="linenos">15</span>  <span class="k">def</span> <span class="nf">canvasPressEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
+<span class="linenos">15</span>  <span class="k">def</span><span class="w"> </span><span class="nf">canvasPressEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
 <span class="linenos">16</span>    <span class="bp">self</span><span class="o">.</span><span class="n">startPoint</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">toMapCoordinates</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">pos</span><span class="p">())</span>
 <span class="linenos">17</span>    <span class="bp">self</span><span class="o">.</span><span class="n">endPoint</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">startPoint</span>
 <span class="linenos">18</span>    <span class="bp">self</span><span class="o">.</span><span class="n">isEmittingPoint</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="linenos">19</span>    <span class="bp">self</span><span class="o">.</span><span class="n">showRect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">startPoint</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">endPoint</span><span class="p">)</span>
 <span class="linenos">20</span>
-<span class="linenos">21</span>  <span class="k">def</span> <span class="nf">canvasReleaseEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
+<span class="linenos">21</span>  <span class="k">def</span><span class="w"> </span><span class="nf">canvasReleaseEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
 <span class="linenos">22</span>    <span class="bp">self</span><span class="o">.</span><span class="n">isEmittingPoint</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="linenos">23</span>    <span class="n">r</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rectangle</span><span class="p">()</span>
 <span class="linenos">24</span>    <span class="k">if</span> <span class="n">r</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -457,14 +457,14 @@
 <span class="linenos">26</span>            <span class="n">r</span><span class="o">.</span><span class="n">yMinimum</span><span class="p">(),</span> <span class="n">r</span><span class="o">.</span><span class="n">xMaximum</span><span class="p">(),</span> <span class="n">r</span><span class="o">.</span><span class="n">yMaximum</span><span class="p">()</span>
 <span class="linenos">27</span>           <span class="p">)</span>
 <span class="linenos">28</span>
-<span class="linenos">29</span>  <span class="k">def</span> <span class="nf">canvasMoveEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
+<span class="linenos">29</span>  <span class="k">def</span><span class="w"> </span><span class="nf">canvasMoveEvent</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">e</span><span class="p">):</span>
 <span class="linenos">30</span>    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">isEmittingPoint</span><span class="p">:</span>
 <span class="linenos">31</span>      <span class="k">return</span>
 <span class="linenos">32</span>
 <span class="linenos">33</span>    <span class="bp">self</span><span class="o">.</span><span class="n">endPoint</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">toMapCoordinates</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">pos</span><span class="p">())</span>
 <span class="linenos">34</span>    <span class="bp">self</span><span class="o">.</span><span class="n">showRect</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">startPoint</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">endPoint</span><span class="p">)</span>
 <span class="linenos">35</span>
-<span class="linenos">36</span>  <span class="k">def</span> <span class="nf">showRect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">startPoint</span><span class="p">,</span> <span class="n">endPoint</span><span class="p">):</span>
+<span class="linenos">36</span>  <span class="k">def</span><span class="w"> </span><span class="nf">showRect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">startPoint</span><span class="p">,</span> <span class="n">endPoint</span><span class="p">):</span>
 <span class="linenos">37</span>    <span class="bp">self</span><span class="o">.</span><span class="n">rubberBand</span><span class="o">.</span><span class="n">reset</span><span class="p">(</span><span class="n">QgsWkbTypes</span><span class="o">.</span><span class="n">PolygonGeometry</span><span class="p">)</span>
 <span class="linenos">38</span>    <span class="k">if</span> <span class="n">startPoint</span><span class="o">.</span><span class="n">x</span><span class="p">()</span> <span class="o">==</span> <span class="n">endPoint</span><span class="o">.</span><span class="n">x</span><span class="p">()</span> <span class="ow">or</span> <span class="n">startPoint</span><span class="o">.</span><span class="n">y</span><span class="p">()</span> <span class="o">==</span> <span class="n">endPoint</span><span class="o">.</span><span class="n">y</span><span class="p">():</span>
 <span class="linenos">39</span>      <span class="k">return</span>
@@ -480,7 +480,7 @@
 <span class="linenos">49</span>    <span class="bp">self</span><span class="o">.</span><span class="n">rubberBand</span><span class="o">.</span><span class="n">addPoint</span><span class="p">(</span><span class="n">point4</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>    <span class="c1"># true to update canvas</span>
 <span class="linenos">50</span>    <span class="bp">self</span><span class="o">.</span><span class="n">rubberBand</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 <span class="linenos">51</span>
-<span class="linenos">52</span>  <span class="k">def</span> <span class="nf">rectangle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">52</span>  <span class="k">def</span><span class="w"> </span><span class="nf">rectangle</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos">53</span>    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">startPoint</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">endPoint</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
 <span class="linenos">54</span>      <span class="k">return</span> <span class="kc">None</span>
 <span class="linenos">55</span>    <span class="k">elif</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">startPoint</span><span class="o">.</span><span class="n">x</span><span class="p">()</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">endPoint</span><span class="o">.</span><span class="n">x</span><span class="p">()</span> <span class="ow">or</span> \
@@ -489,7 +489,7 @@
 <span class="linenos">58</span>
 <span class="linenos">59</span>      <span class="k">return</span> <span class="n">QgsRectangle</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">startPoint</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">endPoint</span><span class="p">)</span>
 <span class="linenos">60</span>
-<span class="linenos">61</span>  <span class="k">def</span> <span class="nf">deactivate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">61</span>  <span class="k">def</span><span class="w"> </span><span class="nf">deactivate</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos">62</span>    <span class="n">QgsMapTool</span><span class="o">.</span><span class="n">deactivate</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 <span class="linenos">63</span>    <span class="bp">self</span><span class="o">.</span><span class="n">deactivated</span><span class="o">.</span><span class="n">emit</span><span class="p">()</span>
 </pre></div>
@@ -498,31 +498,31 @@
 <section id="writing-custom-map-canvas-items">
 <span id="index-6"></span><h2><a class="toc-backref" href="#id8" role="doc-backlink"><span class="section-number">9.5. </span>カスタムマップキャンバスアイテムを書く</a><a class="headerlink" href="#writing-custom-map-canvas-items" title="Link to this heading"></a></h2>
 <p>ここでは、円を描くカスタムキャンバスアイテムの例を紹介します:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span> <span class="nc">CircleCanvasItem</span><span class="p">(</span><span class="n">QgsMapCanvasItem</span><span class="p">):</span>
-<span class="linenos"> 2</span>  <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">canvas</span><span class="p">):</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="k">class</span><span class="w"> </span><span class="nc">CircleCanvasItem</span><span class="p">(</span><span class="n">QgsMapCanvasItem</span><span class="p">):</span>
+<span class="linenos"> 2</span>  <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">canvas</span><span class="p">):</span>
 <span class="linenos"> 3</span>    <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">canvas</span><span class="p">)</span>
 <span class="linenos"> 4</span>    <span class="bp">self</span><span class="o">.</span><span class="n">center</span> <span class="o">=</span> <span class="n">QgsPoint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 <span class="linenos"> 5</span>    <span class="bp">self</span><span class="o">.</span><span class="n">size</span>   <span class="o">=</span> <span class="mi">100</span>
 <span class="linenos"> 6</span>
-<span class="linenos"> 7</span>  <span class="k">def</span> <span class="nf">setCenter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">center</span><span class="p">):</span>
+<span class="linenos"> 7</span>  <span class="k">def</span><span class="w"> </span><span class="nf">setCenter</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">center</span><span class="p">):</span>
 <span class="linenos"> 8</span>    <span class="bp">self</span><span class="o">.</span><span class="n">center</span> <span class="o">=</span> <span class="n">center</span>
 <span class="linenos"> 9</span>
-<span class="linenos">10</span>  <span class="k">def</span> <span class="nf">center</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">10</span>  <span class="k">def</span><span class="w"> </span><span class="nf">center</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos">11</span>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">center</span>
 <span class="linenos">12</span>
-<span class="linenos">13</span>  <span class="k">def</span> <span class="nf">setSize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+<span class="linenos">13</span>  <span class="k">def</span><span class="w"> </span><span class="nf">setSize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
 <span class="linenos">14</span>    <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="n">size</span>
 <span class="linenos">15</span>
-<span class="linenos">16</span>  <span class="k">def</span> <span class="nf">size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">16</span>  <span class="k">def</span><span class="w"> </span><span class="nf">size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos">17</span>    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span>
 <span class="linenos">18</span>
-<span class="linenos">19</span>  <span class="k">def</span> <span class="nf">boundingRect</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">19</span>  <span class="k">def</span><span class="w"> </span><span class="nf">boundingRect</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos">20</span>    <span class="k">return</span> <span class="n">QRectF</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">center</span><span class="o">.</span><span class="n">x</span><span class="p">()</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span>
 <span class="linenos">21</span>      <span class="bp">self</span><span class="o">.</span><span class="n">center</span><span class="o">.</span><span class="n">y</span><span class="p">()</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span>
 <span class="linenos">22</span>      <span class="bp">self</span><span class="o">.</span><span class="n">center</span><span class="o">.</span><span class="n">x</span><span class="p">()</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span>
 <span class="linenos">23</span>      <span class="bp">self</span><span class="o">.</span><span class="n">center</span><span class="o">.</span><span class="n">y</span><span class="p">()</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
 <span class="linenos">24</span>
-<span class="linenos">25</span>  <span class="k">def</span> <span class="nf">paint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">painter</span><span class="p">,</span> <span class="n">option</span><span class="p">,</span> <span class="n">widget</span><span class="p">):</span>
+<span class="linenos">25</span>  <span class="k">def</span><span class="w"> </span><span class="nf">paint</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">painter</span><span class="p">,</span> <span class="n">option</span><span class="p">,</span> <span class="n">widget</span><span class="p">):</span>
 <span class="linenos">26</span>    <span class="n">path</span> <span class="o">=</span> <span class="n">QPainterPath</span><span class="p">()</span>
 <span class="linenos">27</span>    <span class="n">path</span><span class="o">.</span><span class="n">moveTo</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">center</span><span class="o">.</span><span class="n">x</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">center</span><span class="o">.</span><span class="n">y</span><span class="p">());</span>
 <span class="linenos">28</span>    <span class="n">path</span><span class="o">.</span><span class="n">arcTo</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">boundingRect</span><span class="p">(),</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">360.0</span><span class="p">)</span>
@@ -550,7 +550,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 17, 21:02 +0900
+      <span class="lastupdated">最終更新: 2025 7月 19, 14:31 +0900
       </span></p>
   </div>
 
@@ -614,7 +614,7 @@ with the md5 value of "github#qgis/QGIS-Documentation#release_3.28#locale/en/LC_
         
           <dd><a href="https://docs.qgis.org/3.40/ru/docs/pyqgis_developer_cookbook/canvas.html">ru</a></dd>
         
-          <dd><a href="https://docs.qgis.org/3.40/zh_Hans/docs/pyqgis_developer_cookbook/canvas.html">zh_Hans</a></dd>
+          <dd><a href="https://docs.qgis.org/3.40/zh-Hans/docs/pyqgis_developer_cookbook/canvas.html">zh-Hans</a></dd>
         
       </dl>
 
