@@ -605,7 +605,7 @@
 </div>
 </li>
 <li><p>ライン地物については、 <kbd class="kbd docutils literal notranslate">Shift</kbd> キーを押しながら右クリックすることで、ラインの輪を自動的に閉じます。</p></li>
-<li><p>属性ウィンドウが表示され、新しい地物のための情報を入力します。 <a class="reference internal" href="#figure-edit-values"><span class="std std-numref">図 12.83</span></a> では、架空の新しい川に属性を設定しています。ところで、 <span class="menuselection">設定 ► オプション</span> メニュー下の :guilabel:<a href="#id1"><span class="problematic" id="id2">`</span></a>デジタイズ ` メニューでは以下の設定もできます：</p>
+<li><p>属性ウィンドウが表示され、新しい地物のための情報を入力します。 :numref:` Figure_edit_values`  では、架空の新しい川に属性を設定しています。ところで、 :menuselection:` 設定 --&gt; オプション`  メニュー下の :guilabel:` デジタイズ`  メニューでは以下の設定もできます:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">地物作成後に属性フォームをポップアップさせない</span> にチェックを入れると、フォームが開くのを抑制します。</p></li>
 <li><p><a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">最後に入力した値を利用する</span> にチェックを入れると、フォームを開いたときに最後の入力値がフィールドに自動的に入っており、変化させる値を入力するだけでよくなります。</p></li>
@@ -945,7 +945,7 @@
 <p class="admonition-title">注釈</p>
 <p><strong>ポリゴンパーツにおける頂点の順序</strong></p>
 <p>OGC標準とは異なり、QGISではポリゴン地物の外部境界の頂点が反時計回りに並ぶように制限されていません。そのため、1つのレイヤ内で両方向の頂点順序が存在する可能性があります。ただし、同一のマルチポリゴン地物内のすべての部分については、その外部頂点は同じ方向に沿って並べられます。</p>
-<p>しかし、 <span class="xref std std-ref">右手ルールを強制</span> アルゴリズムを使用することで、レイヤ内の地物の外部境界の頂点を時計回りに並ぶよう制約することが可能です。</p>
+<p>しかし、 <a class="reference internal" href="../processing_algs/qgis/vectorgeometry.html#qgisforcerhr"><span class="std std-ref">右手ルールを強制</span></a> アルゴリズムを使用することで、レイヤ内の地物の外部境界の頂点を時計回りに並ぶよう制約することが可能です。</p>
 </div>
 </section>
 <section id="delete-part">
@@ -966,7 +966,7 @@
 <p class="admonition-title">注釈</p>
 <p><strong>ポリゴンリングにおける頂点の順序</strong></p>
 <p>OGC標準とは異なり、QGISではポリゴン地物の外部境界の頂点が反時計回りに並ぶように制約されていません。そのため、1つのレイヤ内で両方向の頂点順序が存在する可能性があります。ただし、同一の（複数）ポリゴン地物内の各リングについては、外部境界とは逆方向に頂点が並べられます。</p>
-<p>しかし、 <span class="xref std std-ref">右手ルールを強制</span> アルゴリズムを使用することで、レイヤ内の地物の外部境界の頂点を時計回りに、内部リングの頂点を反時計回りに並ぶように制約することができます。</p>
+<p>しかし、 <a class="reference internal" href="../processing_algs/qgis/vectorgeometry.html#qgisforcerhr"><span class="std std-ref">右手ルールを強制</span></a> アルゴリズムを使用することで、レイヤ内の地物の外部境界の頂点を時計回りに、内部リングの頂点を反時計回りに並ぶように制約することができます。</p>
 </div>
 </section>
 <section id="fill-ring">
@@ -1251,7 +1251,7 @@
 <li><p><a class="reference internal" href="../../../_images/unchecked.png"><img alt="unchecked" src="../../../_images/unchecked.png" style="width: 1.3em;" /></a> <span class="guilabel">X/Y点</span>: 頂点にカーソルを合わせると、そのXまたはY座標に沿って、マップキャンバス上に紫色の点線が表示されます。この仮想線上の任意の場所に頂点をスナップすることができます。2つの異なる頂点にカーソルを合わせると、両方の仮想座標線が生成され、その交点にスナップすることも可能です。</p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="../../../_images/circlesintersection.png"><img alt="circlesIntersection" src="../../../_images/circlesintersection.png" style="width: 1.5em;" /></a> <sup>2-circle Point Intersection</sup>: 2つの円の交差点にポイントや頂点をデジタイズすることができます。（詳しくは <span class="xref std std-ref">2円の交差</span> をご覧ください。）</p></li>
+<li><p><a class="reference internal" href="../../../_images/circlesintersection.png"><img alt="circlesIntersection" src="../../../_images/circlesintersection.png" style="width: 1.5em;" /></a> <sup>2-circle Point Intersection</sup>: 2つの円の交差点にポイントや頂点をデジタイズすることができます。（詳しくは <a class="reference internal" href="#circle-intersection"><span class="std std-ref">2円の交点</span></a> をご覧ください。）</p></li>
 <li><p><a class="reference internal" href="../../../_images/settings.png"><img alt="settings" src="../../../_images/settings.png" style="width: 1.5em;" /></a> <sup>共通角にスナップ</sup>: カーソルを動かすと、次の頂点を追加するためにスナップできる仮想線を表示します。スナップする線は、最後に追加した頂点と、事前設定リスト（0.1°、0.5°、1°、5°、10°、15°、18°、22.5°、30°、45°、90°のステップ）にある（絶対または直前のセグメントへの相対）角度で定義されます。この機能を無効にするには <span class="guilabel">共通角にスナップしない</span> を選択します。</p>
 <p><a class="reference internal" href="#snapping-options"><span class="std std-ref">Snapping to features</span></a> は、正確なデジタイジングのために、共通角にスナップとともに使用することができます。スナップするターゲット要素をどのように保持するかを細かくコントロールするために、 <span class="guilabel">スナップの優先順位</span> の項目で、共通角よりも地物へのスナップを優先するか、またはその逆を優先するかを指定することができます。デジタイジング中にどちらかの方法に切り替えることができ、その間にスナップオプションが無効になるのを防ぐことができます。デジタイジング中に <kbd class="kbd docutils literal notranslate">N</kbd> （または <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>+<kbd class="kbd docutils literal notranslate">N</kbd></kbd>）を押すと、角度リストが循環します。</p>
 </li>
@@ -1533,7 +1533,7 @@ where you can choose to:</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 19, 14:31 +0900
+      <span class="lastupdated">最終更新: 2025 7月 21, 22:33 +0900
       </span></p>
   </div>
 
