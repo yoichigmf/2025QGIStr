@@ -267,7 +267,7 @@
 </ol>
 </li>
 <li><p><span class="guilabel">ラベルの設定</span> ：テキストの位置や、他のテキストや地物との相互関係に関連したプロパティでテキスト形式の設定を拡張します（ <a class="reference internal" href="#labels-callouts"><span class="std std-ref">引出し線付きラベル</span></a> 、 <a class="reference internal" href="#labels-placement"><span class="std std-ref">配置</span></a> 、 <a class="reference internal" href="#labels-rendering"><span class="std std-ref">重なり、縮尺に応じた表示</span></a> 、マスクグリッド ...）</p>
-<p>これらは、ベクトルまたはメッシュ レイヤーの :guilabel:(レイヤー プロパティ)ダイアログの :guilabel:(ラベル)タブ、または :guilabel:(レイヤー スタイリング)パネルからスマートラベリングを設定する際に使用するか、:ref:(ラベル)ツールバーの :sup:(レイヤー ラベリング オプション)ボタンを使って呼び出します。</p>
+<p>これらは、ベクトルまたはメッシュ レイヤーの <span class="guilabel">レイヤー プロパティ</span> ダイアログまたは <span class="guilabel">レイヤスタイル</span> パネルの  <a class="reference internal" href="../../../_images/labelingSingle.png"><img alt="labelingSingle" src="../../../_images/labelingSingle.png" style="width: 1.5em;" /></a> <span class="guilabel">ラベル</span> タブ、 または <a class="reference internal" href="../working_with_vector/vector_properties.html#label-toolbar"><span class="std std-ref">Label toolbar</span></a> の <a class="reference internal" href="../../../_images/labelingSingle.png"><img alt="labelingSingle" src="../../../_images/labelingSingle.png" style="width: 1.5em;" /></a> <sup>レイヤーラベリングオプション</sup> ボタンを使って呼び出します。</p>
 <p><span class="guilabel">ラベルの設定</span> アイテムを作成するには、</p>
 <ol class="arabic">
 <li><p><a class="reference internal" href="../../../_images/mActionStyleManager.png"><img alt="styleManager" src="../../../_images/mActionStyleManager.png" style="width: 1.5em;" /></a> <span class="guilabel">スタイルマネージャ</span> ダイアログを開きます。</p></li>
@@ -365,7 +365,7 @@
 </pre></div>
 </div>
 </li>
-<li><p>上付き文字・下付き文字：テキストを縦方向に:sup:<a href="#id1"><span class="problematic" id="id2">`</span></a>super`または:sub:<a href="#id3"><span class="problematic" id="id4">`</span></a>sub`に位置合わせし、親フォントサイズの2/3に自動調整します。CSS ルールで固定フォントサイズを指定することも可能です。例:</p>
+<li><p>上付き文字・下付き文字：テキストを縦方向に <sup>super</sup> または <sub>sub</sub> に位置合わせし、親フォントサイズの2/3に自動調整します。CSS ルールで固定フォントサイズを指定することも可能です。例:</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">sup</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;font-size:33pt&quot;</span><span class="p">&gt;</span>my superscript text<span class="p">&lt;/</span><span class="nt">sup</span><span class="p">&gt;</span>
 </pre></div>
 </div>
@@ -385,7 +385,7 @@ For HTML5 compatibility, prefer using the CSS property <code class="docutils lit
 </pre></div>
 </div>
 </li>
-<li><p>画像挿入:QGISが読み込める任意の画像形式をHTMLラベルに使用できます。ローカルファイルパス、HTTPリンク、base64埋め込みなどを`` src=&quot;xxx&quot; <code class="docutils literal notranslate"><span class="pre">属性で指定し、</span></code> width=&quot;##&quot; <code class="docutils literal notranslate"><span class="pre">と</span></code> height=&quot;##&quot; <code class="docutils literal notranslate"><span class="pre">でサイズ</span></code> point <a href="#id1"><span class="problematic" id="id2">``</span></a>単位を指定します。未指定時は元画像サイズから自動計算されます。画像はインライン配置のみ対応し、曲線ラベルでは使用できません。</p>
+<li><p>画像挿入:QGISが読み込める任意の画像形式をHTMLラベルに使用できます。ローカルファイルパス、HTTPリンク、base64埋め込みなどを `` src=&quot;xxx&quot; `` 属性で指定し、 `` width=&quot;##&quot; `` と `` height=&quot;##&quot; `` でサイズ `` point `` 単位を指定します。未指定時は元画像サイズから自動計算されます。画像はインライン配置のみ対応し、曲線ラベルでは使用できません。</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;qgis.png&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">40</span> <span class="na">height</span><span class="o">=</span><span class="s">60</span><span class="p">&gt;</span>
 </pre></div>
 </div>
@@ -393,7 +393,7 @@ For HTML5 compatibility, prefer using the CSS property <code class="docutils lit
 </ul>
 <p><strong>サポートされているCSSプロパティの例</strong></p>
 <ul class="simple">
-<li><p>フォントプロパティ(<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">font-family</span></code>, <code class="docutils literal notranslate"><span class="pre">font-size</span></code>, <code class="docutils literal notranslate"><span class="pre">font-weight</span></code>, <code class="docutils literal notranslate"><span class="pre">font-style</span></code>, <code class="docutils literal notranslate"><span class="pre">word-spacing</span></code> )。<a href="#id1"><span class="problematic" id="id2">``</span></a>word-spacing``は常にポイント単位です。</p></li>
+<li><p>フォントプロパティ( <code class="docutils literal notranslate"><span class="pre">color</span></code> ,  <code class="docutils literal notranslate"><span class="pre">font-family</span></code> ,  <code class="docutils literal notranslate"><span class="pre">font-size</span></code> ,  <code class="docutils literal notranslate"><span class="pre">font-weight</span></code> ,  <code class="docutils literal notranslate"><span class="pre">font-style</span></code> ,  <code class="docutils literal notranslate"><span class="pre">word-spacing</span></code>  )。<code class="docutils literal notranslate"><span class="pre">word-spacing</span></code> は常にポイント単位です。</p></li>
 <li><p>テキスト装飾(underline、overline、line-through、<code class="docutils literal notranslate"><span class="pre">text-decoration</span></code> )。</p></li>
 <li><p>テキスト配置(<code class="docutils literal notranslate"><span class="pre">vertical-align</span></code>, <code class="docutils literal notranslate"><span class="pre">text-align</span></code>)。曲線ラベルでは水平方向配置は使用不可。</p></li>
 </ul>
@@ -437,7 +437,7 @@ For HTML5 compatibility, prefer using the CSS property <code class="docutils lit
 </ul>
 </li>
 <li><p><span class="guilabel">間隔</span> は、単語間および個々の文字間のスペースを変更します。</p></li>
-<li><p><span class="guilabel">タブ距離`を使用すると、ラベル内の :kbd:</span> Tab <a href="#id1"><span class="problematic" id="id2">`</span></a>文字を置き換えるスペース間隔をサポートされている任意の単位で調整できます。これにより、レイアウト凡例テキストの要素を適切に区切ったり、縦方向に揃えたりすることが可能になります。</p></li>
+<li><p><span class="guilabel">タブ距離</span> を使用すると、ラベル内の <kbd class="kbd docutils literal notranslate">Tab</kbd>  文字を置き換えるスペース間隔をサポートされている任意の単位で調整できます。これにより、レイアウト凡例テキストの要素を適切に区切ったり、縦方向に揃えたりすることが可能になります。</p></li>
 <li><p><span class="guilabel">Stretch</span> 率: テキストの水平方向の伸縮率を指定します。ラベルに余分なテキストを入れるためにフォントの幅を調整するのに便利です。</p></li>
 <li><p>テキストフォントの <a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">カーニングを有効にする</span></p></li>
 <li><p><span class="guilabel">テキストの向き</span> は <span class="guilabel">水平</span> または <span class="guilabel">垂直</span> を設定できます。ラベルの設定時には、 <span class="guilabel">回転（Rotation-based）</span> を設定することもできます（例： <a class="reference internal" href="#labels-line-placement"><span class="std std-ref">線に平行</span></a> に配置するモードでライン地物に適切にラベル付けできます）。</p></li>
@@ -618,7 +618,7 @@ For HTML5 compatibility, prefer using the CSS property <code class="docutils lit
 <td><p>コネクタ線の湾曲率をパーセンテージで指定します。</p></td>
 </tr>
 <tr class="row-even"><td><p><span class="guilabel">方向</span></p></td>
-<td><p>ラベルから地物に向かうコネクタ線の方向を指定します。:guilabel:<a href="#id1"><span class="problematic" id="id2">`</span></a>Clockwise`(時計回り)、:guilabel:<a href="#id3"><span class="problematic" id="id4">`</span></a>Counter-clockwise`(反時計回り)、:guilabel:<a href="#id5"><span class="problematic" id="id6">`</span></a>Automatic`(最適方向を自動判定)のいずれかを選択できます。</p></td>
+<td><p>ラベルから地物に向かうコネクタ線の方向を指定します。<span class="guilabel">Clockwise</span> (時計回り)、<span class="guilabel">Counter-clockwise</span> (反時計回り)、<span class="guilabel">Automatic</span> (最適方向を自動判定)のいずれかを選択できます。</p></td>
 </tr>
 <tr class="row-odd"><td><p><span class="guilabel">最短長</span></p></td>
 <td rowspan="4"><p>バルーン以外</p></td>
@@ -669,7 +669,7 @@ For HTML5 compatibility, prefer using the CSS property <code class="docutils lit
 </section>
 <section id="placement-tab">
 <span id="labels-placement"></span><h3><a class="toc-backref" href="#id26" role="doc-backlink"><span class="section-number">10.3.2.3. </span>配置タブ</a><a class="headerlink" href="#placement-tab" title="Link to this heading"></a></h3>
-<p><a href="#id1"><span class="problematic" id="id2">|</span></a>labelplacement|の:guilabel:<cite>配置</cite> タブを選択し、ラベルの配置方法と優先度を設定します。ポイント／ライン／ポリゴンの各レイヤータイプで異なるオプションが用意されており、グローバル <span class="xref std std-ref">PAL</span> 設定 の影響を受けます。</p>
+<p><a class="reference internal" href="../../../_images/labelplacement.png"><img alt="labelplacement" src="../../../_images/labelplacement.png" style="width: 1.5em;" /></a> <span class="guilabel">配置</span> タブを選択し、ラベルの配置方法と優先度を設定します。配置オプションはベクターまたはメッシュレイヤの種類(ポイント、ライン、ポリゴン）によって異なり グローバルの <a class="reference internal" href="../working_with_vector/vector_properties.html#automated-placement"><span class="std std-ref">PAL setting</span></a>  の影響を受けることに気を付けて下さい。</p>
 <section id="placement-for-point-layers">
 <span id="labels-point-placement"></span><h4><a class="toc-backref" href="#id27" role="doc-backlink">ポイントレイヤのラベルの配置</a><a class="headerlink" href="#placement-for-point-layers" title="Link to this heading"></a></h4>
 <p>ポイントラベルの配置モードには、以下のものがあります</p>
@@ -952,7 +952,7 @@ reset and its value cleared from the attribute table.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 19, 14:31 +0900
+      <span class="lastupdated">最終更新: 2025 7月 21, 19:09 +0900
       </span></p>
   </div>
 
