@@ -279,7 +279,7 @@
 <li><p>または、<a class="reference internal" href="../../../_images/mActionIconView.png"><img alt="iconView" src="../../../_images/mActionIconView.png" style="width: 1.5em;" /></a> <sup>アイコンビュー</sup> ボタンを使用して、アイコンのプレビュー表示</p></li>
 </ul>
 </li>
-<li><p><a href="#id1"><span class="problematic" id="id2">:guialbel:`シンボルを保存`</span></a> ボタンを押すと、<span class="guilabel">新しいシンボルの保存</span> ダイアログが開きます。ここでは、編集中のシンボルを追加したい <span class="guilabel">保存先</span> を選び、:guilabel::<cite>名前を付け</cite>、<span class="guilabel">タグ</span> を追加することができます。また、<a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <sup>お気に入りに追加</sup> オプションを選択して、新しいシンボルをお気に入りに追加することも可能です。</p></li>
+<li><p><span class="guilabel">シンボルを保存</span> ボタンを押すと、<span class="guilabel">新しいシンボルの保存</span> ダイアログが開きます。ここでは、編集中のシンボルを追加したい <span class="guilabel">保存先</span> を選び、:guilabel::<cite>名前を付け</cite>、<span class="guilabel">タグ</span> を追加することができます。また、<a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <sup>お気に入りに追加</sup> オプションを選択して、新しいシンボルをお気に入りに追加することも可能です。</p></li>
 <li><p><span class="guilabel">詳細設定</span> <a class="reference internal" href="../../../_images/selectstring.png"><img alt="selectString" src="../../../_images/selectstring.png" style="width: 2.5em;" /></a> オプションでは、以下の設定ができます：</p>
 <ul>
 <li><p>ラインと塗りつぶしシンボルに対しては、 <span class="guilabel">キャンバス範囲に地物を切り抜く</span> かどうかの設定</p>
@@ -489,7 +489,7 @@
 <ul class="simple">
 <li><p><span class="guilabel">Skip multiples of</span>: この値の倍数にあたるラベルをスキップします。これにより複雑なリファレンスラベルを構築できます。例えば、シンボルに 2 つの線形リファレンスのシンボルレイヤを持たせ、小さいフォントで 100m ごとにラベルを付けつつ 1000 の倍数はスキップし、もう一方は大きく太字のフォントで 1000m ごとにラベルを付ける、といった設定が可能です。</p></li>
 <li><p><span class="guilabel">Average angle over</span>: ラベルの回転角度を、ラインストリングの平均角度から計算して適用します。これにより、小さな鋭いギザギザによってラベルが不自然に回転するのを防ぎます。</p></li>
-<li><p>:guilabel:'Show marker symbols` ラインフィーチャ内の参照ポイントに、QGIS のフル機能のマーカーシンボルを使用してマーカーを表示します。これにより、ラベル位置にクロスハッチを表示して &quot;定規&quot; スタイルのラインを表現することなどが可能です。</p></li>
+<li><p><span class="guilabel">Show marker symbols</span> ライン地物内の参照ポイントに、QGIS のフル機能のマーカーシンボルを使用してマーカーを表示します。これにより、ラベル位置にクロスハッチを表示して &quot;ruler&quot; スタイルのラインを表現することなどが可能です。</p></li>
 </ul>
 <figure class="align-center" id="id9">
 <span id="figure-linear-referencing-symbol"></span><a class="reference internal image-reference" href="../../../_images/linearReferencingSymbol.png"><img alt="../../../_images/linearReferencingSymbol.png" src="../../../_images/linearReferencingSymbol.png" style="width: 100%;" /></a>
@@ -510,7 +510,7 @@
 </li>
 </ul>
 <ul id="filled-line-symbol">
-<li><p><strong>塗りつぶしライン</strong>: 塗りつぶしシンボルを使ってラインの内部を描画します。グラデーションやラインハッチなどで塗りつぶされたラインを表現できます。<span class="guilabel">線幅</span>、<span class="guilabel">オフセット</span>、<span class="guilabel">結合スタイル</span>、:guilabel:<a href="#id1"><span class="problematic" id="id2">`</span></a>線端スタイルの調整`が可能です。</p>
+<li><p><strong>塗りつぶしライン</strong> : 塗りつぶしシンボルを使ってラインの内部を描画します。グラデーションやラインハッチなどで塗りつぶされたラインを表現できます。<span class="guilabel">線幅</span> 　、 <span class="guilabel">オフセット</span> 、 <span class="guilabel">結合スタイル</span> 、 <span class="guilabel">線端スタイルの調整</span> が可能です。</p>
 <figure class="align-center" id="id11">
 <span id="figure-filled-line-symbol"></span><a class="reference internal image-reference" href="../../../_images/filledLineSymbol.png"><img alt="../../../_images/filledLineSymbol.png" src="../../../_images/filledLineSymbol.png" style="width: 100%;" /></a>
 <figcaption>
@@ -625,7 +625,7 @@ independently adjust the width and height of the fill pattern, enabling
 stretched raster fills in either the horizontal or vertical directions.
 The image width and height can be set using any of the
 <a class="reference internal" href="../introduction/general_tools.html#unit-selector"><span class="std std-ref">common units</span></a> or as a percentage of the original size.</p></li>
-<li><p><strong>SVG塗りつぶし</strong>: 与えられた大きさ（<span class="guilabel">テクスチャ幅</span>）の <span class="xref std std-ref">SVGマーカー</span> を用いてポリゴンを塗りつぶします。</p></li>
+<li><p><strong>SVG 塗りつぶし</strong> : 与えられた大きさ (<span class="guilabel">テクスチャ幅</span>). <a class="reference internal" href="#svg-marker"><span class="std std-ref">SVG markers</span></a>  を用いてポリゴンを塗りつぶします。</p></li>
 <li><p><strong>Shapeburst塗りつぶし</strong>: ポリゴンの境界からポリゴンの中心に向かってグラデーションが描かれるグラデーション塗りつぶしをバッファリングします。設定可能なパラメータには、境界からシェードまでの距離、カラーランプまたは単純な2つの色のグラデーションの使用、オプションで塗りつぶしのぼかし、オフセットなどがあります。</p></li>
 <li><p><strong>アウトライン：矢印</strong> ：ポリゴン境界の表現にラインの <a class="reference internal" href="#arrow-symbol"><span class="std std-ref">矢印シンボル</span></a> レイヤを使用します。アウトライン矢印の設定は、ラインの矢印シンボルの設定と同様です。</p></li>
 <li><p><strong>アウトライン：ハッシュ線</strong> ：ポリゴン境界（ <span class="guilabel">リング</span> ）の表現に <a class="reference internal" href="#hashed-line-symbol"><span class="std std-ref">ハッシュ線シンボル</span></a> レイヤを使用します。リングは、内側リングのみ、外側リングのみ、またはすべてのリングを対象にできます。その他の設定は、ラインのハッシュ線シンボルと同様です。</p></li>
@@ -748,7 +748,7 @@ The number of points varies based on a field.</p>
 </tbody>
 </table>
 </li>
-<li><p>2 つのレイヤの :ref:<a href="#id1"><span class="problematic" id="id2">`</span></a>relation &lt;project_relations&gt;`に基づいて、地物同士を接続する曲線矢印ラインを作成する</p>
+<li><p>2 つのレイヤの <a class="reference internal" href="../introduction/qgis_configuration.html#project-relations"><span class="std std-ref">relation</span></a> に基づいて、地物同士を接続する曲線矢印ラインを作成します</p>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 15.0%" />
@@ -850,7 +850,7 @@ The number of points varies based on a field.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 19, 14:31 +0900
+      <span class="lastupdated">最終更新: 2025 7月 21, 21:21 +0900
       </span></p>
   </div>
 
