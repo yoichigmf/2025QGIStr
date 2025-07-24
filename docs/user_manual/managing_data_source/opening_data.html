@@ -204,7 +204,7 @@
   <blockquote>
 <div><div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 98.52% 翻訳されています。</p>
+<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 97.96% 翻訳されています。</p>
 </div>
 </div></blockquote>
 <section id="opening-data">
@@ -875,9 +875,23 @@ To use this option:</p>
 <p><span class="guilabel">データベースの詳細</span> セクションに移動し、<span class="guilabel">データベースの一覧表示</span> ボタンをクリックして、利用可能なデータセットを表示します。必要なデータセットを選択し、<span class="guilabel">OK</span> をクリックします。オプションとして、<span class="guilabel">接続テスト</span> を実行することもできます。<span class="guilabel">OK</span> をクリックすると、<cite>新規MS SQLサーバー接続を作成</cite> ダイアログが閉じ、<cite>データソースマネージャ</cite> で <span class="guilabel">接続</span> をクリックし、レイヤを選択して <span class="guilabel">追加</span> をクリックします。</p>
 <p>オプションで、以下のオプションを有効にできます：</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">テーブルgeometry_columnsメタデータテーブルにあるテーブルのみ参照する</span> 。</p></li>
-<li><p><a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">geometry_columnsテーブルのレイヤ範囲を使用</span>、このチェックボックスは最初のものに依存しています。最初のオプションがチェックされない限り、これは無効のままです。</p></li>
-<li><p><a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">geometry_columnsテーブルのプライマリキーを使用</span></p></li>
+<li><p><a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">Only look in the geometry_columns metadata table</span>:
+restricts the available tables to the ones in the <code class="docutils literal notranslate"><span class="pre">geometry_columns</span></code>
+metadata table when scanning for tables.
+This can speed up the table scanning.</p></li>
+<li><p><a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">Use layer extent from geometry_columns table</span>:
+this option, dependent on the previous one, allows QGIS to skip extent calculation
+when loading layers and thus lowering the amount of time needed to load them.
+It relies on extent manually specified using additional QGIS-specific columns
+(<code class="docutils literal notranslate"><span class="pre">qgis_xmin</span></code>, <code class="docutils literal notranslate"><span class="pre">qgis_xmax</span></code>, <code class="docutils literal notranslate"><span class="pre">qgis_ymin</span></code>, <code class="docutils literal notranslate"><span class="pre">qgis_ymax</span></code>)
+in the <code class="docutils literal notranslate"><span class="pre">geometry_columns</span></code> table.</p></li>
+<li><p><a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">Use primary key from geometry_columns table</span>:
+allows QGIS to skip primary key calculation for views when loading them,
+thus lowering the amount of time needed to load them.
+It relies on names manually filled in a QGIS-specific <code class="docutils literal notranslate"><span class="pre">qgis_pkey</span></code> column
+set in the <code class="docutils literal notranslate"><span class="pre">geometry_columns</span></code> table.
+If more than one column is used for the primary key,
+they should be filled as comma separated values.</p></li>
 <li><p><a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">ジオメトリを持たないテーブルもリストする</span>: ジオメトリ列が付随しないテーブルも、利用可能なテーブルのリストに表示されます。</p></li>
 <li><p><a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">推定されるテーブルパラメータを使う</span>: 推定されるテーブルメタデータのみを使います。これにより、遅いテーブルスキャンを回避できますが、レイヤ範囲などのレイヤプロパティが不正確になる可能性があります。</p></li>
 <li><p><a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">不正なジオメトリの処理をスキップする</span>: 不正なジオメトリを持つレコードの処理は全て無効になります。これによりプロバイダの処理速度は向上しますが、テーブルに不正なジオメトリが存在する場合、結果は予測できず、レコードが欠落する可能性もあります。データベース内のジオメトリが全て有効であり、新たに追加されるジオメトリやテーブルも有効であることが確実な場合にのみ、このオプションをチェックしてください。</p></li>
@@ -1210,7 +1224,7 @@ or <span class="guilabel">Load Connection</span> from an XML file.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 19, 14:31 +0900
+      <span class="lastupdated">最終更新: 2025 7月 24, 11:41 +0900
       </span></p>
   </div>
 
