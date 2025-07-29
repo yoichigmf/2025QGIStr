@@ -5,7 +5,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>10.3. ラベルの設定 &mdash; QGIS Documentation  ドキュメント</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/qgis_docs.css?v=01847ad1" />
       <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
       <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
@@ -20,7 +20,7 @@
         <script src="../../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../../../_static/documentation_options.js?v=c033477b"></script>
-        <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
         <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
         <script src="../../../_static/copybutton.js?v=f281be69"></script>
@@ -28,7 +28,7 @@
         <script>let toggleHintHide = 'Click to hide';</script>
         <script>let toggleOpenOnPrint = 'true';</script>
         <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
-        <script src="../../../_static/translations.js?v=91613774"></script>
+        <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/js/theme.js"></script>
@@ -199,7 +199,7 @@
   <blockquote>
 <div><div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 97.78% 翻訳されています。</p>
+<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 98.06% 翻訳されています。</p>
 </div>
 </div></blockquote>
 <section id="setting-a-label">
@@ -357,7 +357,7 @@
 </div>
 <section id="allow-html-formatting">
 <span id="labels-text-html"></span><h4><a class="toc-backref" href="#id18" role="doc-backlink">HTMLフォーマットを使用する</a><a class="headerlink" href="#allow-html-formatting" title="Link to this heading"></a></h4>
-<p>:guilabel:HTMLフォーマットを使用するを有効にすると、「値」フィールドにHTMLコードを入力できます。インデントにはタブではなくスペースを使用してください。式は解析され、サポートされている HTML タグはラベル プロパティの対応設定を上書きします。QGIS が現在サポートしているすべての HTMLタグやCSSプロパティを網羅的にリスト化・詳細化することは困難なため、基盤となる Qt ライブラリでサポートされているものを実際のラベルで試用・検証することをおすすめします。&lt;<a class="reference external" href="https://doc.qt.io/qt-5/richtext-html-subset.html">https://doc.qt.io/qt-5/richtext-html-subset.html</a>&gt;_ by the underlying Qt library.</p>
+<p><span class="guilabel">HTMLフォーマットを使用する</span> 有効にすると  <span class="guilabel">Value</span>  にHTMLコードを入力できます。インデントにはタブではなくスペースを使用してください。式は解析され、サポートされている HTML タグはラベル プロパティの対応設定を上書きします。QGIS が現在サポートしているすべての HTMLタグやCSSプロパティを網羅的にリスト化・詳細化することは困難なため、基盤となる Qt ライブラリでサポートされているものを実際のラベルで試用・検証を次の場所でやることをお勧めします <a class="reference external" href="https://doc.qt.io/qt-5/richtext-html-subset.html">the ones supported</a> by the underlying Qt library.</p>
 <p><strong>サポートされているHTMLタグの例</strong></p>
 <ul>
 <li><p>斜体や太字などのテキスト書式設定、例：</p>
@@ -828,19 +828,7 @@ For HTML5 compatibility, prefer using the CSS property <code class="docutils lit
 <li><p><span class="guilabel">垂直方向</span> ： <strong>Bottom</strong> 、 <strong>Base</strong> 、 <strong>Half</strong> 、 <strong>Cap</strong> 、 <strong>Top</strong> のいずれかの値をとります</p></li>
 </ul>
 </li>
-<li><p>the text <span class="guilabel">Rotation</span>. Rotation is defined as clockwise angle with 0°
-pointing in the direction of East for <code class="docutils literal notranslate"><span class="pre">Horizontal</span></code> oriented text and with 0°
-pointing in North direction for <code class="docutils literal notranslate"><span class="pre">Vertical</span></code> oriented text. Different units can
-be defined for the labeling rotation (e.g. <code class="docutils literal notranslate"><span class="pre">degrees</span></code>, <code class="docutils literal notranslate"><span class="pre">minutes</span> <span class="pre">of</span> <span class="pre">arc</span></code>, <code class="docutils literal notranslate"><span class="pre">turns</span></code>).
-QGIS prioritizes screen display rotation angles by default and always rotates text
-to be most readable on screen, so &quot;upside-down&quot; rotation angles are overridden while
-rendering. To change this behavior and force QGIS to render exact data-defined
-rotation angles there is an option in <a class="reference internal" href="../../../_images/render.png"><img alt="render" src="../../../_images/render.png" style="width: 1.5em;" /></a> <span class="guilabel">Rendering</span> tab, under
-<span class="guilabel">Show upside-down labels</span>.
-Check the <span class="guilabel">Preserve data rotation values</span> entry if you want to keep
-the rotation value in the associated field and apply it to the label, whether
-the label is pinned or not. If unchecked, unpinning the label rotation is
-reset and its value cleared from the attribute table.</p>
+<li><p><span class="guilabel">回転</span>  。回転は時計回りの角度で定義され <code class="docutils literal notranslate"><span class="pre">Horizontal</span></code> 方向のテキストの場合は東方向を 0°  <code class="docutils literal notranslate"><span class="pre">Vertical</span></code> 方向のテキストの場合は北方向を0° として定義されます。ラベルの回転には異なる単位を定義できます (例 <code class="docutils literal notranslate"><span class="pre">degrees</span></code>, <code class="docutils literal notranslate"><span class="pre">minutes</span> <span class="pre">of</span> <span class="pre">arc</span></code>, <code class="docutils literal notranslate"><span class="pre">turns</span></code>)。QGIS はデフォルトで画面表示の回転角度を優先し、常に画面上で最も読みやすいようにテキストを回転します。そのため、レンダリング時に「逆さま」の回転角度は上書きされます。この動作を変更し、QGIS がデータで定義された正確な回転角度をレンダリングするようにするには、<a class="reference internal" href="../../../_images/render.png"><img alt="render" src="../../../_images/render.png" style="width: 1.5em;" /></a> <span class="guilabel">Rendering</span> タブの <span class="guilabel">Show upside-down labels</span> のオプションがあります。 ラベルがピン留めされているかどうかに関係なく、関連フィールドの回転値を保持してラベルに適用する場合は、 <span class="guilabel">Preserve data rotation values</span>  エントリにチェックを入れます。チェックを外すと、ラベルの回転の固定解除がリセットされ、その値が属性テーブルからクリアされます。</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
 <p>ポリゴン地物に対するデータ定義の回転は現在のところ、 <span class="guilabel">重心の周り</span> 配置モードでのみサポートしています。</p>
@@ -954,7 +942,7 @@ reset and its value cleared from the attribute table.</p>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 21, 20:50 +0900
+      <span class="lastupdated">最終更新: 2025 7月 30, 06:28 +0900
       </span></p>
   </div>
 

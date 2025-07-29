@@ -5,7 +5,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>5. QGISの設定 &mdash; QGIS Documentation  ドキュメント</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/qgis_docs.css?v=01847ad1" />
       <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
       <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
@@ -20,7 +20,7 @@
         <script src="../../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../../../_static/documentation_options.js?v=c033477b"></script>
-        <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
         <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
         <script src="../../../_static/copybutton.js?v=f281be69"></script>
@@ -28,7 +28,7 @@
         <script>let toggleHintHide = 'Click to hide';</script>
         <script>let toggleOpenOnPrint = 'true';</script>
         <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
-        <script src="../../../_static/translations.js?v=91613774"></script>
+        <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/js/theme.js"></script>
@@ -245,7 +245,7 @@
   <blockquote>
 <div><div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 99.76% 翻訳されています。</p>
+<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 99.65% 翻訳されています。</p>
 </div>
 </div></blockquote>
 <section id="qgis-configuration">
@@ -1310,22 +1310,27 @@ It can also be accessed using the <a class="reference internal" href="../../../_
 <li><p><span class="guilabel">属性テーブルの状態を記憶</span>: プロジェクトでこのオプションにチェックを入れると、開いた任意の属性テーブルはプロジェクト内に保存され、次にそのプロジェクトを開いたときに即座に属性テーブルが復元されます。この機能により、要件に合わせて属性テーブルを特定の設定で構築したプロジェクトを作成し、これらの属性テーブルを再設定するには苦労するような場合には、ワークフローが改善されます。</p></li>
 </ul>
 <p id="measurements-ellipsoid">GISでは面積や距離の計算がしばしば必要になります。しかしながら、これらの値は実際には基礎となる投影設定に関連付けられています。 <span class="guilabel">計測</span> フレームではこれらのパラメータを制御できます。以下が選択できます。</p>
-<ul class="simple">
-<li><p>距離、面積及び角度の計算の基礎となっている <span class="guilabel">楕円体</span>; 以下の値があります:</p>
 <ul>
+<li><p>距離、面積及び角度の計算の基礎となっている <span class="guilabel">楕円体</span>; 以下の値があります:</p>
+<ul class="simple">
 <li><p><strong>None/Planimetric</strong>：この場合、返される値はデカルト測定値です。このオプションは、新規プロジェクトのデフォルトとして <span class="menuselection">設定 ►</span> <a class="reference internal" href="../../../_images/mActionOptions.png"><img alt="options" src="../../../_images/mActionOptions.png" style="width: 1em;" /></a> <span class="menuselection">オプション ►</span> <a class="reference internal" href="../../../_images/CRS.png"><img alt="crs" src="../../../_images/CRS.png" style="width: 1.5em;" /></a> <span class="menuselection">CRSの扱い</span> メニューから設定することができます</p></li>
 <li><p><strong>カスタム</strong> : 楕円体の長軸と短軸の値を設定する必要があります。</p></li>
 <li><p>または定義済みのリスト（Clarke 1866、 Clarke 1880 IGN、 New International 1967、 WGS 84 など） から既存のものを選択します。</p></li>
 </ul>
 </li>
 <li><p>長さと周長のための <span class="guilabel">距離計測の単位</span> と、 <span class="guilabel">面積計測の単位</span> 。これらの設定は、デフォルトでは対応する <a class="reference internal" href="#global-measure-tool"><span class="std std-ref">グローバルオプション</span></a> の設定が使われますが、現在のプロジェクトの単位で上書きされ、以下の値の単位に使用されます。</p>
-<ul>
+<ul class="simple">
 <li><p>属性テーブルのフィールド更新バー</p></li>
 <li><p>フィールド計算機の計算</p></li>
 <li><p><a class="reference internal" href="general_tools.html#identify"><span class="std std-ref">地物情報表示ツール</span></a> で表示される長さ、周長および面積値</p></li>
 <li><p><a class="reference internal" href="../map_views/map_view.html#sec-measure"><span class="std std-ref">計測ダイアログ</span></a></p></li>
 <li><p><a class="reference internal" href="../map_views/map_view.html#scalebar-decoration"><span class="std std-ref">地図整飾のスケールバー</span></a></p></li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>To ensure measurement units (for distance and area) always reflect the units of the current project's CRS,
+select <span class="guilabel">Map Units</span> for these options.</p>
+</div>
 </li>
 </ul>
 <p id="coordinate-and-bearing"><span class="guilabel">座標と方位を表示</span> では、以下の表示に関するカスタマイズができます：</p>
@@ -1827,7 +1832,7 @@ Usage: /usr/bin/qgis.bin [OPTION] [FILE]
 <span id="code-commandline"></span><h4><span class="section-number">5.6.1.16. </span><code class="docutils literal notranslate"><span class="pre">--code</span></code><a class="headerlink" href="#code" title="Link to this heading"></a></h4>
 <p>このオプションを使用すると、指定したpython ファイルを QGIS を開始した直後に実行します。</p>
 <p>例えば、以下の内容の <code class="file docutils literal notranslate"><span class="pre">load_alaska.py</span></code> という名前の python ファイルがあるとします。</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">iface</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">qgis.utils</span> <span class="kn">import</span> <span class="n">iface</span>
 <span class="n">raster_file</span> <span class="o">=</span> <span class="s2">&quot;/home/gisadmin/Documents/qgis_sample_data/raster/landcover.img&quot;</span>
 <span class="n">layer_name</span> <span class="o">=</span> <span class="s2">&quot;Alaska&quot;</span>
 <span class="n">iface</span><span class="o">.</span><span class="n">addRasterLayer</span><span class="p">(</span><span class="n">raster_file</span><span class="p">,</span> <span class="n">layer_name</span><span class="p">)</span>
@@ -1944,7 +1949,7 @@ Usage: /usr/bin/qgis.bin [OPTION] [FILE]
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 19, 14:31 +0900
+      <span class="lastupdated">最終更新: 2025 7月 30, 06:28 +0900
       </span></p>
   </div>
 

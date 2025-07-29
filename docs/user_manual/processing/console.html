@@ -5,7 +5,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>23.7. プロセシングアルゴリズムをコンソールから使う &mdash; QGIS Documentation  ドキュメント</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/qgis_docs.css?v=01847ad1" />
       <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
       <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
@@ -20,7 +20,7 @@
         <script src="../../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../../../_static/documentation_options.js?v=c033477b"></script>
-        <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
         <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
         <script src="../../../_static/copybutton.js?v=f281be69"></script>
@@ -28,7 +28,7 @@
         <script>let toggleHintHide = 'Click to hide';</script>
         <script>let toggleOpenOnPrint = 'true';</script>
         <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
-        <script src="../../../_static/translations.js?v=91613774"></script>
+        <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/js/theme.js"></script>
@@ -232,7 +232,7 @@
 <section id="calling-algorithms-from-the-python-console">
 <h2><a class="toc-backref" href="#id2" role="doc-backlink"><span class="section-number">23.7.1. </span>Python コンソールからアルゴリズムを呼び出す</a><a class="headerlink" href="#calling-algorithms-from-the-python-console" title="Link to this heading"></a></h2>
 <p>最初にやるべきことは、次のコードでプロセシングの機能をインポートすることです。</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis</span><span class="w"> </span><span class="kn">import</span> <span class="n">processing</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">qgis</span> <span class="kn">import</span> <span class="n">processing</span>
 </pre></div>
 </div>
 <p>さて、基本的にコンソールからできる（興味深い）ことはただ一つ、アルゴリズムの実行です。これは <a class="reference external" href="https://qgis.org/pyqgis/3.40/core/QgsProcessingAlgorithm.html#qgis.core.QgsProcessingAlgorithm.run" title="(in QGIS Python API v3.40)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run()</span></code></a> メソッドを使って実行します。このメソッドは最初のパラメータとして実行するアルゴリズムの名前を取り、アルゴリズムの要求に応じて追加のパラメータを可変個数取ります。つまり、最初に知る必要があるのは、実行するアルゴリズムの名前です。これはツールボックスに表示される名前ではなく、一意のコマンドライン名です。あなたのアルゴリズムに適した名前を見つけるには、<a class="reference external" href="https://qgis.org/pyqgis/3.40/core/QgsProcessingRegistry.html#qgis.core.QgsProcessingRegistry" title="(in QGIS Python API v3.40)"><code class="xref py py-class docutils literal notranslate"><span class="pre">processingRegistry</span></code></a> を使います。コンソールに以下の行を入力してください：</p>
@@ -490,31 +490,31 @@ you can use the <code class="docutils literal notranslate"><span class="pre">run
 <p>Pythonコードを書くことによって自分独自のアルゴリズムを書くことができます。プロセシングスクリプトは <a class="reference external" href="https://qgis.org/pyqgis/3.40/core/QgsProcessingAlgorithm.html#qgis.core.QgsProcessingAlgorithm" title="(in QGIS Python API v3.40)"><code class="xref py py-class docutils literal notranslate"><span class="pre">QgsProcessingAlgorithm</span></code></a> クラスを拡張します。そのため必要な機能を実装するためにはそこにさらにコードを追加する必要があります。プロセシングツールボックス最上部の <span class="guilabel">スクリプト</span> ドロップダウンメニューから <span class="guilabel">新しいスクリプトを作成...</span> （白紙）と <span class="guilabel">テンプレートから新しいスクリプトを作成...</span> （必須の関数 <a class="reference external" href="https://qgis.org/pyqgis/3.40/core/QgsProcessingAlgorithm.html#qgis.core.QgsProcessingAlgorithm" title="(in QGIS Python API v3.40)"><code class="xref py py-class docutils literal notranslate"><span class="pre">QgsProcessingAlgorithm</span></code></a> のコードを含むテンプレート）を選ぶことができます。するとコードを入力するためのプロセシングスクリプトエディタが開きます。ここでスクリプトを保存すると <code class="file docutils literal notranslate"><span class="pre">scripts</span></code> フォルダ（スクリプトを保存ダイアログを開いたときのデフォルトフォルダ）に <code class="file docutils literal notranslate"><span class="pre">.py</span></code> 拡張子でアルゴリズムとして保存されます。</p>
 <p>アルゴリズムの名前（ツールボックスに表示されるもの）はコードの中で定義されます。</p>
 <p>プロセシングアルゴリズムを定義する次のコード例を見てみましょう。このアルゴリズムは、最初のレイヤ平滑化の後に、ユーザによって指定されたベクタレイヤに対する、ユーザ定義のバッファ距離によるバッファ操作を行うアルゴリズムとして機能するものです。</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.core</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span><span class="n">QgsProcessingAlgorithm</span><span class="p">,</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="p">(</span><span class="n">QgsProcessingAlgorithm</span><span class="p">,</span>
 <span class="linenos"> 2</span>       <span class="n">QgsProcessingParameterNumber</span><span class="p">,</span>
 <span class="linenos"> 3</span>       <span class="n">QgsProcessingParameterFeatureSource</span><span class="p">,</span>
 <span class="linenos"> 4</span>       <span class="n">QgsProcessingParameterFeatureSink</span><span class="p">)</span>
 <span class="linenos"> 5</span>
-<span class="linenos"> 6</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis</span><span class="w"> </span><span class="kn">import</span> <span class="n">processing</span>
+<span class="linenos"> 6</span><span class="kn">from</span> <span class="nn">qgis</span> <span class="kn">import</span> <span class="n">processing</span>
 <span class="linenos"> 7</span>
-<span class="linenos"> 8</span><span class="k">class</span><span class="w"> </span><span class="nc">algTest</span><span class="p">(</span><span class="n">QgsProcessingAlgorithm</span><span class="p">):</span>
+<span class="linenos"> 8</span><span class="k">class</span> <span class="nc">algTest</span><span class="p">(</span><span class="n">QgsProcessingAlgorithm</span><span class="p">):</span>
 <span class="linenos"> 9</span>    <span class="n">INPUT_BUFFERDIST</span> <span class="o">=</span> <span class="s1">&#39;BUFFERDIST&#39;</span>
 <span class="linenos">10</span>    <span class="n">OUTPUT_BUFFER</span> <span class="o">=</span> <span class="s1">&#39;OUTPUT_BUFFER&#39;</span>
 <span class="linenos">11</span>    <span class="n">INPUT_VECTOR</span> <span class="o">=</span> <span class="s1">&#39;INPUT_VECTOR&#39;</span>
 <span class="linenos">12</span>
-<span class="linenos">13</span>    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">13</span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos">14</span>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
 <span class="linenos">15</span>
-<span class="linenos">16</span>    <span class="k">def</span><span class="w"> </span><span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">16</span>    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos">17</span>        <span class="k">return</span> <span class="s2">&quot;algTest&quot;</span>
 <span class="linenos">18</span>
-<span class="linenos">19</span>    <span class="k">def</span><span class="w"> </span><span class="nf">displayName</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">19</span>    <span class="k">def</span> <span class="nf">displayName</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos">20</span>        <span class="k">return</span> <span class="s2">&quot;algTest script&quot;</span>
 <span class="linenos">21</span>
-<span class="linenos">22</span>    <span class="k">def</span><span class="w"> </span><span class="nf">createInstance</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos">22</span>    <span class="k">def</span> <span class="nf">createInstance</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="linenos">23</span>        <span class="k">return</span> <span class="nb">type</span><span class="p">(</span><span class="bp">self</span><span class="p">)()</span>
 <span class="linenos">24</span>
-<span class="linenos">25</span>    <span class="k">def</span><span class="w"> </span><span class="nf">initAlgorithm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="linenos">25</span>    <span class="k">def</span> <span class="nf">initAlgorithm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
 <span class="linenos">26</span>        <span class="bp">self</span><span class="o">.</span><span class="n">addParameter</span><span class="p">(</span><span class="n">QgsProcessingParameterFeatureSource</span><span class="p">(</span>
 <span class="linenos">27</span>            <span class="bp">self</span><span class="o">.</span><span class="n">INPUT_VECTOR</span><span class="p">,</span> <span class="s2">&quot;Input vector&quot;</span><span class="p">))</span>
 <span class="linenos">28</span>        <span class="bp">self</span><span class="o">.</span><span class="n">addParameter</span><span class="p">(</span><span class="n">QgsProcessingParameterNumber</span><span class="p">(</span>
@@ -524,7 +524,7 @@ you can use the <code class="docutils literal notranslate"><span class="pre">run
 <span class="linenos">32</span>        <span class="bp">self</span><span class="o">.</span><span class="n">addParameter</span><span class="p">(</span><span class="n">QgsProcessingParameterFeatureSink</span><span class="p">(</span>
 <span class="linenos">33</span>            <span class="bp">self</span><span class="o">.</span><span class="n">OUTPUT_BUFFER</span><span class="p">,</span> <span class="s2">&quot;Output buffer&quot;</span><span class="p">))</span>
 <span class="linenos">34</span>
-<span class="linenos">35</span>    <span class="k">def</span><span class="w"> </span><span class="nf">processAlgorithm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">feedback</span><span class="p">):</span>
+<span class="linenos">35</span>    <span class="k">def</span> <span class="nf">processAlgorithm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parameters</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">feedback</span><span class="p">):</span>
 <span class="linenos">36</span>        <span class="c1">#DO SOMETHING</span>
 <span class="linenos">37</span>        <span class="n">algresult</span> <span class="o">=</span> <span class="n">processing</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;native:smoothgeometry&quot;</span><span class="p">,</span>
 <span class="linenos">38</span>            <span class="p">{</span><span class="s1">&#39;INPUT&#39;</span><span class="p">:</span> <span class="n">parameters</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">INPUT_VECTOR</span><span class="p">],</span>
@@ -610,7 +610,7 @@ you can use the <code class="docutils literal notranslate"><span class="pre">run
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 19, 14:31 +0900
+      <span class="lastupdated">最終更新: 2025 7月 30, 06:28 +0900
       </span></p>
   </div>
 

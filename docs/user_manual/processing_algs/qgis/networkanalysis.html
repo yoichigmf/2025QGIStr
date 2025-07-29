@@ -5,7 +5,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>24.1.10. ネットワーク解析 &mdash; QGIS Documentation  ドキュメント</title>
-      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/css/qgis_docs.css?v=01847ad1" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css?v=13237357" />
       <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css?v=76b2166b" />
@@ -20,7 +20,7 @@
         <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../../../../_static/documentation_options.js?v=c033477b"></script>
-        <script src="../../../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../../../_static/doctools.js?v=888ff710"></script>
         <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="../../../../_static/clipboard.min.js?v=a7894cd8"></script>
         <script src="../../../../_static/copybutton.js?v=f281be69"></script>
@@ -28,7 +28,7 @@
         <script>let toggleHintHide = 'Click to hide';</script>
         <script>let toggleOpenOnPrint = 'true';</script>
         <script src="../../../../_static/togglebutton.js?v=4a39c7ea"></script>
-        <script src="../../../../_static/translations.js?v=91613774"></script>
+        <script src="../../../../_static/translations.js?v=4dbe4bdc"></script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../../_static/js/theme.js"></script>
@@ -223,7 +223,7 @@
   <blockquote>
 <div><div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>翻訳は <a class="reference internal" href="../../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 87.50% 翻訳されています。</p>
+<p>翻訳は <a class="reference internal" href="../../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 86.82% 翻訳されています。</p>
 </div>
 </div></blockquote>
 <section id="network-analysis">
@@ -244,6 +244,11 @@ reached within a distance or a time, starting from a point layer.
 This allows evaluation of accessibility within a network,
 e.g., what are the places I can navigate to on a road network without spending
 cost greater than a given value (the cost can be distance or time).</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>This algorithm uses ellipsoid based measurements
+and respects the current <a class="reference internal" href="../../introduction/qgis_configuration.html#measurements-ellipsoid"><span class="std std-ref">ellipsoid settings</span></a>.</p>
+</div>
 <section id="parameters">
 <h3>パラメータ<a class="headerlink" href="#parameters" title="Link to this heading"></a></h3>
 <section id="basic-parameters">
@@ -515,7 +520,7 @@ which could not be routed (e.g., those which are too far from the network layer)
 <section id="python-code">
 <h3>Python コード<a class="headerlink" href="#python-code" title="Link to this heading"></a></h3>
 <p><strong>Algorithm ID</strong>: <code class="docutils literal notranslate"><span class="pre">qgis:serviceareafromlayer</span></code></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">processing</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">processing</span>
 <span class="n">processing</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;algorithm_id&quot;</span><span class="p">,</span> <span class="p">{</span><span class="n">parameter_dictionary</span><span class="p">})</span>
 </pre></div>
 </div>
@@ -529,6 +534,11 @@ within a given distance or time, starting from a point feature.
 This allows the evaluation of accessibility within a network,
 e.g., what are the places I can navigate to on a road network without spending a cost
 greater than a given value (the cost can be distance or time).</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>This algorithm uses ellipsoid based measurements
+and respects the current <a class="reference internal" href="../../introduction/qgis_configuration.html#measurements-ellipsoid"><span class="std std-ref">ellipsoid settings</span></a>.</p>
+</div>
 <section id="id2">
 <h3>パラメータ<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
 <section id="id3">
@@ -783,7 +793,7 @@ regardless of how far away from the network it actually is.</p></td>
 <section id="id6">
 <h3>Python コード<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
 <p><strong>Algorithm ID</strong>: <code class="docutils literal notranslate"><span class="pre">native:serviceareafrompoint</span></code></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">processing</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">processing</span>
 <span class="n">processing</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;algorithm_id&quot;</span><span class="p">,</span> <span class="p">{</span><span class="n">parameter_dictionary</span><span class="p">})</span>
 </pre></div>
 </div>
@@ -793,6 +803,11 @@ regardless of how far away from the network it actually is.</p></td>
 <section id="shortest-path-layer-to-point">
 <span id="qgisshortestpathlayertopoint"></span><h2><a class="toc-backref" href="#id24" role="doc-backlink"><span class="section-number">24.1.10.3. </span>最短経路（始点レイヤから指定終点）</a><a class="headerlink" href="#shortest-path-layer-to-point" title="Link to this heading"></a></h2>
 <p>ベクタレイヤで定義された複数の始点から指定した終点までの最適経路（最短または最速）を計算します。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>This algorithm uses ellipsoid based measurements
+and respects the current <a class="reference internal" href="../../introduction/qgis_configuration.html#measurements-ellipsoid"><span class="std std-ref">ellipsoid settings</span></a>.</p>
+</div>
 <section id="id7">
 <h3>パラメータ<a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
 <section id="id8">
@@ -1038,7 +1053,7 @@ which could not be routed (e.g., those which are too far from the network layer)
 <section id="id11">
 <h3>Python コード<a class="headerlink" href="#id11" title="Link to this heading"></a></h3>
 <p><strong>Algorithm ID</strong>: <code class="docutils literal notranslate"><span class="pre">native:shortestpathlayertopoint</span></code></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">processing</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">processing</span>
 <span class="n">processing</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;algorithm_id&quot;</span><span class="p">,</span> <span class="p">{</span><span class="n">parameter_dictionary</span><span class="p">})</span>
 </pre></div>
 </div>
@@ -1048,6 +1063,11 @@ which could not be routed (e.g., those which are too far from the network layer)
 <section id="shortest-path-point-to-layer">
 <span id="qgisshortestpathpointtolayer"></span><h2><a class="toc-backref" href="#id25" role="doc-backlink"><span class="section-number">24.1.10.4. </span>最短経路（指定始点から終点レイヤ）</a><a class="headerlink" href="#shortest-path-point-to-layer" title="Link to this heading"></a></h2>
 <p>指定した始点とポイントベクタレイヤで定義された複数の終点の間の最適経路（最短または最速）を計算します。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>This algorithm uses ellipsoid based measurements
+and respects the current <a class="reference internal" href="../../introduction/qgis_configuration.html#measurements-ellipsoid"><span class="std std-ref">ellipsoid settings</span></a>.</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
 <p>This algorithm drops existing primary keys or FID values and regenerates them in output layers.</p>
@@ -1297,7 +1317,7 @@ which could not be routed (e.g., those which are too far from the network layer)
 <section id="id16">
 <h3>Python コード<a class="headerlink" href="#id16" title="Link to this heading"></a></h3>
 <p><strong>Algorithm ID</strong>: <code class="docutils literal notranslate"><span class="pre">native:shortestpathpointtolayer</span></code></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">processing</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">processing</span>
 <span class="n">processing</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;algorithm_id&quot;</span><span class="p">,</span> <span class="p">{</span><span class="n">parameter_dictionary</span><span class="p">})</span>
 </pre></div>
 </div>
@@ -1307,6 +1327,11 @@ which could not be routed (e.g., those which are too far from the network layer)
 <section id="shortest-path-point-to-point">
 <span id="qgisshortestpathpointtopoint"></span><h2><a class="toc-backref" href="#id26" role="doc-backlink"><span class="section-number">24.1.10.5. </span>最短経路（指定始点から指定終点）</a><a class="headerlink" href="#shortest-path-point-to-point" title="Link to this heading"></a></h2>
 <p>指定した始点と指定した終点の間の最適経路（最短または最速）を計算します。</p>
+<div class="admonition note">
+<p class="admonition-title">注釈</p>
+<p>This algorithm uses ellipsoid based measurements
+and respects the current <a class="reference internal" href="../../introduction/qgis_configuration.html#measurements-ellipsoid"><span class="std std-ref">ellipsoid settings</span></a>.</p>
+</div>
 <section id="id17">
 <h3>パラメータ<a class="headerlink" href="#id17" title="Link to this heading"></a></h3>
 <section id="id18">
@@ -1526,7 +1551,7 @@ regardless of how far away from the network they actually are.</p></td>
 <section id="id21">
 <h3>Python コード<a class="headerlink" href="#id21" title="Link to this heading"></a></h3>
 <p><strong>Algorithm ID</strong>: <code class="docutils literal notranslate"><span class="pre">native:shortestpathpointtopoint</span></code></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">processing</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">processing</span>
 <span class="n">processing</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="s2">&quot;algorithm_id&quot;</span><span class="p">,</span> <span class="p">{</span><span class="n">parameter_dictionary</span><span class="p">})</span>
 </pre></div>
 </div>
@@ -1547,7 +1572,7 @@ regardless of how far away from the network they actually are.</p></td>
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 19, 14:31 +0900
+      <span class="lastupdated">最終更新: 2025 7月 30, 06:28 +0900
       </span></p>
   </div>
 

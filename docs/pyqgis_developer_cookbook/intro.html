@@ -5,7 +5,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>1. はじめに &mdash; QGIS Documentation  ドキュメント</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/qgis_docs.css?v=01847ad1" />
       <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
       <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
@@ -20,7 +20,7 @@
         <script src="../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../../_static/documentation_options.js?v=c033477b"></script>
-        <script src="../../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
         <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
         <script src="../../_static/copybutton.js?v=f281be69"></script>
@@ -28,7 +28,7 @@
         <script>let toggleHintHide = 'Click to hide';</script>
         <script>let toggleOpenOnPrint = 'true';</script>
         <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
-        <script src="../../_static/translations.js?v=91613774"></script>
+        <script src="../../_static/translations.js?v=4dbe4bdc"></script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../_static/js/theme.js"></script>
@@ -248,7 +248,7 @@
 <li><p>QGIS APIを利用するカスタムアプリケーションの作成</p></li>
 </ul>
 <p>QGISサーバでもPythonプラグインを含むPythonバインディングが提供されています(参照 <a class="reference internal" href="server.html#server-plugins"><span class="std std-ref">QGIS ServerとPython</span></a>)  そしてPythonバインディングを使うことによってPythonアプリケーションにQGSサーバを埋め込むこともできます。</p>
-<p id="index-0">QGISライブラリのクラスのドキュメントである <a class="extlink-api reference external" href="https://api.qgis.org/api/3.40/">完全なQGIS C++ API</a> リファレンスがあります。 <a class="extlink-pyqgis reference external" href="https://qgis.org/pyqgis/3.40/">Python用の QGIS API（pyqgis）</a> はC ++ APIとほぼ同じです。</p>
+<p id="index-0">QGISライブラリのクラスのドキュメントである <a class="reference external" href="https://api.qgis.org/api/3.40/">完全なQGIS C++ API</a> リファレンスがあります。 <a class="reference external" href="https://qgis.org/pyqgis/3.40/">Python用の QGIS API（pyqgis）</a> はC ++ APIとほぼ同じです。</p>
 <p>頻出タスクの実行方法を学習するには、 <a class="reference external" href="https://plugins.qgis.org/">プラグインのリポジトリ</a>  から既存のプラグインをダウンロードして、そのコードを研究するのもよい方法です。</p>
 <section id="scripting-in-the-python-console">
 <span id="pythonconsole"></span><span id="index-1"></span><h2><a class="toc-backref" href="#id5" role="doc-backlink"><span class="section-number">1.1. </span>Pythonコンソールでのスクリプティング</a><a class="headerlink" href="#scripting-in-the-python-console" title="Link to this heading"></a></h2>
@@ -261,8 +261,8 @@
 </figure>
 <p>上のスクリーンショットは、レイヤリストで現在選択されているレイヤを取得し、その ID を表示し、オプションでベクタレイヤの場合は地物数を表示する方法を示しています。QGIS 環境とのやりとりのために、 <a class="reference external" href="https://qgis.org/pyqgis/3.40/gui/QgisInterface.html#qgis.gui.QgisInterface" title="(in QGIS Python API v3.40)"><code class="xref py py-class docutils literal notranslate"><span class="pre">QgisInterface</span></code></a> のインスタンスである <code class="xref py py-data docutils literal notranslate"><span class="pre">iface</span></code> 変数があります。このインタフェースにより、地図 キャンバス、メニュー、ツールバー、および QGIS アプリケーションのその他の部分へのアクセスが可能になります。</p>
 <p>ユーザーの便宜のために、コンソールの起動時に次のステートメントが実行されます（将来的にはさらに初期コマンドを設定できるようになります）</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.core</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">qgis.utils</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">qgis.utils</span>
 </pre></div>
 </div>
 <p>コンソールを頻繁に使用する場合は、コンソールを起動するためのショートカットを設定すると便利な場合があります（ <span class="menuselection">設定 ► キーボードショートカット...</span> 内）</p>
@@ -326,8 +326,8 @@
 </section>
 <section id="python-applications">
 <span id="pythonapplications"></span><h2><a class="toc-backref" href="#id13" role="doc-backlink"><span class="section-number">1.4. </span>Python アプリケーション</a><a class="headerlink" href="#python-applications" title="Link to this heading"></a></h2>
-<p>多くの場合、プロセスを自動化するためのスクリプトを作成すると便利です。 PyQGISを使用すると、これは完全に可能です--- <a class="extlink-pyqgis reference external" href="https://qgis.org/pyqgis/3.40/core">qgis.core</a> モジュールをインポートし、初期化すると、処理の準備が整います。</p>
-<p>または、GIS機能を使用するインタラクティブなアプリケーションを作成することもできます---測定を実行し、地図をPDFとしてエクスポートします...。 <a class="extlink-pyqgis reference external" href="https://qgis.org/pyqgis/3.40/gui">qgis.gui</a> モジュールではさまざまなGUIコンポーネントを提供します。特に地図キャンバスウィジェットは、ズーム、パン、その他のカスタムの地図ツールをサポートしてアプリケーションに組み込むことができます。</p>
+<p>多くの場合、プロセスを自動化するためのスクリプトを作成すると便利です。 PyQGISを使用すると、これは完全に可能です--- <a class="reference external" href="https://qgis.org/pyqgis/3.40/core">qgis.core</a> モジュールをインポートし、初期化すると、処理の準備が整います。</p>
+<p>または、GIS機能を使用するインタラクティブなアプリケーションを作成することもできます---測定を実行し、地図をPDFとしてエクスポートします...。 <a class="reference external" href="https://qgis.org/pyqgis/3.40/gui">qgis.gui</a> モジュールではさまざまなGUIコンポーネントを提供します。特に地図キャンバスウィジェットは、ズーム、パン、その他のカスタムの地図ツールをサポートしてアプリケーションに組み込むことができます。</p>
 <p>PyQGISカスタムアプリケーションやスタンドアロンスクリプトは、ベクタレイヤとラスタレイヤを読み取るための投影情報やプロバイダーなどのQGISリソースを見つけるように構成する必要があります。 QGISリソースは、アプリケーションまたはスクリプトの先頭に数行を追加することで初期化されます。カスタムアプリケーションとスタンドアロンスクリプトのQGISを初期化するコードは似ています。それぞれの例を以下に示します。</p>
 <div class="admonition note">
 <p class="admonition-title">注釈</p>
@@ -336,7 +336,7 @@
 <section id="using-pyqgis-in-standalone-scripts">
 <span id="standalonescript"></span><h3><a class="toc-backref" href="#id14" role="doc-backlink"><span class="section-number">1.4.1. </span>スタンドアロンスクリプトでPyQGISを使用する</a><a class="headerlink" href="#using-pyqgis-in-standalone-scripts" title="Link to this heading"></a></h3>
 <p>スタンドアロンスクリプトを始めるには、スクリプトの初めにQGISリソースを初期化します:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.core</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="linenos"> 2</span>
 <span class="linenos"> 3</span><span class="c1"># Supply path to qgis install location</span>
 <span class="linenos"> 4</span><span class="n">QgsApplication</span><span class="o">.</span><span class="n">setPrefixPath</span><span class="p">(</span><span class="s2">&quot;/path/to/qgis/installation&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
@@ -356,7 +356,7 @@
 <span class="linenos">18</span><span class="n">qgs</span><span class="o">.</span><span class="n">exitQgis</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>まず、 <a class="extlink-pyqgis reference external" href="https://qgis.org/pyqgis/3.40/core">qgis.core</a> モジュールをインポートし、プレフィックスパスを設定します。プレフィックスパスは、QGISがシステムにインストールされている場所です。  <a class="reference external" href="https://qgis.org/pyqgis/3.40/core/QgsApplication.html#qgis.core.QgsApplication.setPrefixPath" title="(in QGIS Python API v3.40)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setPrefixPath()</span></code></a> メソッドを呼び出すことでスクリプトで構成されます。 <a class="reference external" href="https://qgis.org/pyqgis/3.40/core/QgsApplication.html#qgis.core.QgsApplication.setPrefixPath" title="(in QGIS Python API v3.40)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setPrefixPath()</span></code></a> の2番目の引数は <code class="xref py py-const docutils literal notranslate"><span class="pre">True</span></code> に設定されます。これはデフォルトのパスが使用されることを指定しています。</p>
+<p>まず、 <a class="reference external" href="https://qgis.org/pyqgis/3.40/core">qgis.core</a> モジュールをインポートし、プレフィックスパスを設定します。プレフィックスパスは、QGISがシステムにインストールされている場所です。  <a class="reference external" href="https://qgis.org/pyqgis/3.40/core/QgsApplication.html#qgis.core.QgsApplication.setPrefixPath" title="(in QGIS Python API v3.40)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setPrefixPath()</span></code></a> メソッドを呼び出すことでスクリプトで構成されます。 <a class="reference external" href="https://qgis.org/pyqgis/3.40/core/QgsApplication.html#qgis.core.QgsApplication.setPrefixPath" title="(in QGIS Python API v3.40)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">setPrefixPath()</span></code></a> の2番目の引数は <code class="xref py py-const docutils literal notranslate"><span class="pre">True</span></code> に設定されます。これはデフォルトのパスが使用されることを指定しています。</p>
 <p>QGISのインストールパスはプラットフォームによって異なります。お手元のシステムに対するインストールパスを見つける最も簡単な方法は、QGIS内から <a class="reference internal" href="#pythonconsole"><span class="std std-ref">Pythonコンソールでのスクリプティング</span></a> を使用し、実行からの出力を見ることです：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">QgsApplication</span><span class="o">.</span><span class="n">prefixPath</span><span class="p">()</span>
 </pre></div>
@@ -373,7 +373,7 @@
 <section id="using-pyqgis-in-custom-applications">
 <h3><a class="toc-backref" href="#id15" role="doc-backlink"><span class="section-number">1.4.2. </span>カスタムアプリケーションでPyQGISを使用する</a><a class="headerlink" href="#using-pyqgis-in-custom-applications" title="Link to this heading"></a></h3>
 <p><a class="reference internal" href="#standalonescript"><span class="std std-ref">スタンドアロンスクリプトでPyQGISを使用する</span></a> とカスタムPyQGISアプリケーションが違うのは、 <code class="xref py py-class docutils literal notranslate"><span class="pre">QgsApplication</span> <span class="pre">&lt;qgis.core.QgsApplication&gt;</span> <span class="pre">`</span> <span class="pre">をインスタンス化するときの2番目の引数だけです。</span> <span class="pre">:const:`False</span></code> の代わりに <code class="xref py py-const docutils literal notranslate"><span class="pre">True</span></code> を渡して、GUIを使用する予定であることを示します。</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span><span class="w"> </span><span class="nn">qgis.core</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="kn">from</span> <span class="nn">qgis.core</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="linenos"> 2</span>
 <span class="linenos"> 3</span><span class="c1"># Supply the path to the qgis install location</span>
 <span class="linenos"> 4</span><span class="n">QgsApplication</span><span class="o">.</span><span class="n">setPrefixPath</span><span class="p">(</span><span class="s2">&quot;/path/to/qgis/installation&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
@@ -400,7 +400,7 @@
 <section id="running-custom-applications">
 <span id="index-6"></span><h3><a class="toc-backref" href="#id16" role="doc-backlink"><span class="section-number">1.4.3. </span>カスタムアプリケーションを実行する</a><a class="headerlink" href="#running-custom-applications" title="Link to this heading"></a></h3>
 <p>QGISライブラリと適切なPythonモジュールがよく知られた場所にない場合、どこに検索をかけるかをシステムに指示する必要があります:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">qgis.core</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">qgis.core</span>
 <span class="go">ImportError: No module named qgis.core</span>
 </pre></div>
 </div>
@@ -411,7 +411,7 @@
 <li><p>macOSでは: <strong class="command">export PYTHONPATH=/&lt;qgispath&gt;/Contents/Resources/python</strong></p></li>
 </ul>
 <p>これで、PyQGISモジュールへのパスがわかりましたが、それらは <code class="docutils literal notranslate"><span class="pre">qgis_core</span></code> および <code class="docutils literal notranslate"><span class="pre">qgis_gui</span></code> ライブラリに依存しています（Pythonモジュールはラッパーとしてのみ機能します）。これらのライブラリへのパスがオペレーティングシステムに認識されていない可能性があり、その後、インポートエラーが再度発生します（メッセージはシステムによって異なる場合があります）:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span><span class="w"> </span><span class="nn">qgis.core</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">qgis.core</span>
 <span class="go">ImportError: libqgis_core.so.3.2.0: cannot open shared object file:</span>
 <span class="go">  No such file or directory</span>
 </pre></div>
@@ -447,7 +447,7 @@
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 19, 14:31 +0900
+      <span class="lastupdated">最終更新: 2025 7月 30, 06:28 +0900
       </span></p>
   </div>
 
