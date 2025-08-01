@@ -5,7 +5,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>10.3. ラベルの設定 &mdash; QGIS Documentation  ドキュメント</title>
-      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../../../_static/css/qgis_docs.css?v=01847ad1" />
       <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css?v=13237357" />
       <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
@@ -20,7 +20,7 @@
         <script src="../../../_static/jquery.js?v=5d32c60e"></script>
         <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
         <script src="../../../_static/documentation_options.js?v=c033477b"></script>
-        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/doctools.js?v=9a2dae69"></script>
         <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
         <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
         <script src="../../../_static/copybutton.js?v=f281be69"></script>
@@ -28,7 +28,7 @@
         <script>let toggleHintHide = 'Click to hide';</script>
         <script>let toggleOpenOnPrint = 'true';</script>
         <script src="../../../_static/togglebutton.js?v=4a39c7ea"></script>
-        <script src="../../../_static/translations.js?v=4dbe4bdc"></script>
+        <script src="../../../_static/translations.js?v=91613774"></script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
         <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../../../_static/js/theme.js"></script>
@@ -199,7 +199,7 @@
   <blockquote>
 <div><div class="admonition important">
 <p class="admonition-title">重要</p>
-<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 98.06% 翻訳されています。</p>
+<p>翻訳は <a class="reference internal" href="../../documentation_guidelines/do_translations.html#translation-guidelines"><span class="std std-ref">あなたが参加できる</span></a>  コミュニティの取り組みです。このページは現在 98.61% 翻訳されています。</p>
 </div>
 </div></blockquote>
 <section id="setting-a-label">
@@ -357,7 +357,7 @@
 </div>
 <section id="allow-html-formatting">
 <span id="labels-text-html"></span><h4><a class="toc-backref" href="#id18" role="doc-backlink">HTMLフォーマットを使用する</a><a class="headerlink" href="#allow-html-formatting" title="Link to this heading"></a></h4>
-<p><span class="guilabel">HTMLフォーマットを使用する</span> 有効にすると  <span class="guilabel">Value</span>  にHTMLコードを入力できます。インデントにはタブではなくスペースを使用してください。式は解析され、サポートされている HTML タグはラベル プロパティの対応設定を上書きします。QGIS が現在サポートしているすべての HTMLタグやCSSプロパティを網羅的にリスト化・詳細化することは困難なため、基盤となる Qt ライブラリでサポートされているものを実際のラベルで試用・検証を次の場所でやることをお勧めします <a class="reference external" href="https://doc.qt.io/qt-5/richtext-html-subset.html">the ones supported</a> by the underlying Qt library.</p>
+<p><span class="guilabel">HTMLフォーマットを使用する</span> を有効にすると  <span class="guilabel">Value</span>  にHTMLコードを入力できます。インデントにはタブではなくスペースを使用してください。式は解析され、サポートされている HTML タグはラベル プロパティの対応設定を上書きします。QGIS が現在サポートしているすべての HTMLタグやCSSプロパティを網羅的にリスト化・詳細化することは困難なため、基盤となる Qt ライブラリでサポートされているものを実際のラベルで試用・検証を次の場所でやることをお勧めします <a class="reference external" href="https://doc.qt.io/qt-5/richtext-html-subset.html">the ones supported</a> by the underlying Qt library.</p>
 <p><strong>サポートされているHTMLタグの例</strong></p>
 <ul>
 <li><p>斜体や太字などのテキスト書式設定、例：</p>
@@ -370,8 +370,7 @@
 </pre></div>
 </div>
 </li>
-<li><p>Text horizontal alignment, using either HTML the <code class="docutils literal notranslate"><span class="pre">align=&quot;xxx&quot;</span></code> attribute or  <code class="docutils literal notranslate"><span class="pre">center</span></code> tag.
-For HTML5 compatibility, prefer using the CSS property <code class="docutils literal notranslate"><span class="pre">text-align</span></code>.</p>
+<li><p>水平方向配置、 HTML の <code class="docutils literal notranslate"><span class="pre">align=&quot;xxx&quot;</span></code> 属性または  <code class="docutils literal notranslate"><span class="pre">center</span></code> タグを利用できます。HTML5の互換性を重視する場合は <code class="docutils literal notranslate"><span class="pre">text-align</span></code> CSSプロパティの利用を推奨します。</p>
 <div class="admonition attention">
 <p class="admonition-title">注意</p>
 <p>曲線ラベルでは水平方向配置は使用できません。</p>
@@ -484,9 +483,7 @@ For HTML5 compatibility, prefer using the CSS property <code class="docutils lit
 <span id="labels-background"></span><h3><a class="toc-backref" href="#id21" role="doc-backlink"><span class="section-number">10.3.1.4. </span>背景タブ</a><a class="headerlink" href="#background-tab" title="Link to this heading"></a></h3>
 <p><a class="reference internal" href="../../../_images/labelbackground.png"><img alt="labelbackground" src="../../../_images/labelbackground.png" style="width: 1.5em;" /></a> <span class="guilabel">背景</span> タブでは、各ラベルの下に表示される図形を設定することができます。背景を追加するには、 <a class="reference internal" href="../../../_images/unchecked.png"><img alt="unchecked" src="../../../_images/unchecked.png" style="width: 1.3em;" /></a> <span class="guilabel">背景を描画</span> のチェックボックスをオンにし、 <span class="guilabel">図形</span> タイプを選択します。次の設定ができます：</p>
 <ul class="simple">
-<li><p>a regular shape such as <span class="guilabel">Rectangle</span>, <span class="guilabel">Square</span>,
-<span class="guilabel">Circle</span> or <span class="guilabel">Ellipse</span> using full properties of a
-<a class="reference internal" href="symbol_selector.html#vector-fill-symbols"><span class="std std-ref">fill symbol</span></a></p></li>
+<li><p><span class="guilabel">四角形</span>, <span class="guilabel">Square</span>, <span class="guilabel">円</span> または <span class="guilabel">楕円</span> のような通常の図形で <a class="reference internal" href="symbol_selector.html#vector-fill-symbols"><span class="std std-ref">fill symbol</span></a>  の完全なプロパティを利用します</p></li>
 <li><p>ファイル、URL、またはプロジェクトやスタイルデータベースに埋め込み（ <a class="reference internal" href="../introduction/general_tools.html#embedded-file-selector"><span class="std std-ref">詳細はこちら</span></a> ）の <span class="guilabel">SVG</span> シンボル</p></li>
 <li><p>あるいは、 <a class="reference internal" href="symbol_selector.html#vector-marker-symbols"><span class="std std-ref">シンボルライブラリ</span></a> から作成または選択することができる <span class="guilabel">マーカーシンボル</span> 。</p></li>
 </ul>
@@ -525,7 +522,7 @@ For HTML5 compatibility, prefer using the CSS property <code class="docutils lit
 <p>テキストに影を追加するには、 <a class="reference internal" href="../../../_images/labelshadow.png"><img alt="labelshadow" src="../../../_images/labelshadow.png" style="width: 1.5em;" /></a> <span class="guilabel">影</span> タブを有効にして <a class="reference internal" href="../../../_images/checkbox.png"><img alt="checkbox" src="../../../_images/checkbox.png" style="width: 1.3em;" /></a> <span class="guilabel">影を描画</span> のチェックボックスをオンにします。その後、次の設定ができます。</p>
 <ul>
 <li><p><span class="guilabel">影の対象</span> で、影を生成するために使用するアイテムを指定します。これには、 <span class="guilabel">最下位ラベルコンポーネント</span> 、あるいは <span class="guilabel">テキスト</span> 自体、 <span class="guilabel">バッファ</span> 、 <span class="guilabel">背景</span> 等の特定のコンポーネントを指定できます。</p></li>
-<li><p>影を付与する要素からの :guilabel: <cite>Offset</cite> を設定します。すなわち:</p>
+<li><p>影を付与する要素からの :guilabel:‘Offset‘ を設定します。すなわち:</p>
 <ul class="simple">
 <li><p>角度： 時計回りの角度を指定します。角度は元のアイテムの方向に依存します。</p></li>
 <li><p>影を付与する要素からのオフセットの距離</p></li>
@@ -942,7 +939,7 @@ For HTML5 compatibility, prefer using the CSS property <code class="docutils lit
 
   <div role="contentinfo">
     <p>&#169; Copyright 2002-now, QGIS project.
-      <span class="lastupdated">最終更新: 2025 7月 30, 06:28 +0900
+      <span class="lastupdated">最終更新: 2025 8月 01, 15:52 +0900
       </span></p>
   </div>
 
